@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.d4rk.qrcodescanner.plus">
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:logo="@drawable/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:appCategory="image"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        tools:targetApi="s">
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+            android:theme="@style/AppThemeActionBar"/>
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
+            android:theme="@style/AppThemeActionBar"/>
+        <activity
+            android:name=".feature.tabs.BottomTabsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.SCAN"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity>
+        <activity
+            android:name=".feature.tabs.settings.more.MoreFragment"
+            android:label="@string/fragment_more_tittle"
+            android:theme="@style/AppThemeActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".feature.tabs.settings.more.MoreFragment"/>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.d4rk.qrcodescanner.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <service
+            android:name=".feature.tile.QuickSettingsTileService"
+            android:icon="@drawable/ic_scan"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".feature.tabs.scan.file.ScanBarcodeFromFileActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"
+            tools:ignore="AppLinkUrlError"
+            android:exported="true">
+            <intent-filter android:label="@string/intent_filter_scan_image">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter android:label="@string/intent_filter_scan_image">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".feature.tabs.create.CreateBarcodeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateVisible"
+            android:exported="true">
+            <intent-filter android:label="@string/intent_filter_create_qr_code_text">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter android:label="@string/intent_filter_create_qr_code_text">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/x-vcard"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".feature.tabs.create.qr.CreateQrCodeAllActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.tabs.create.barcode.CreateBarcodeAllActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.barcode.BarcodeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.barcode.BarcodeImageActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.barcode.otp.OtpActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.barcode.save.SaveBarcodeAsTextActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.barcode.save.SaveBarcodeAsImageActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.tabs.history.export.ExportHistoryActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.tabs.settings.theme.ChooseThemeActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.tabs.settings.camera.ChooseCameraActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.tabs.settings.formats.SupportedFormatsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.tabs.settings.search.ChooseSearchEngineActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <activity
+            android:name=".feature.tabs.settings.permissions.AllPermissionsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor"/>
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+    </application>
+</manifest>

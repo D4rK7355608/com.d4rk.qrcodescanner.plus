@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingHorizontal="@dimen/default_margin"
+    android:paddingBottom="@dimen/default_margin"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:lines="1"
+        android:maxLines="1"
+        android:hint="@string/barcode_schema_phone"
+        android:imeOptions="actionDone"
+        android:backgroundTint="@color/colorAccent"
+        android:inputType="phone"
+        android:digits="+0123456789"/>
+</LinearLayout>

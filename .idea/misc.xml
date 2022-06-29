@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/drawable-anydpi/ic_aztec.xml" value="0.1825" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/drawable-anydpi/ic_play_store.xml" value="0.196" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/drawable-anydpi/ic_rotate_left.xml" value="0.196" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/drawable-anydpi/ic_rotate_right.xml" value="0.196" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/drawable-anydpi/ic_share.xml" value="0.196" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/drawable-anydpi/ic_sms.xml" value="0.196" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/drawable-anydpi/ic_text.xml" value="0.196" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/layout/activity_create_barcode_all.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/layout/activity_more.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/layout/activity_scan_barcode_from_file.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/layout/fragment_settings.xml" value="0.3416666666666667" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_barcode.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_barcode_history.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_barcode_image.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_create_qr_code_contacts.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

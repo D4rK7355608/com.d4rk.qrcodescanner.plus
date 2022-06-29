@@ -1,0 +1,1 @@
+package com.d4rk.qrcodescanner.plus.feature.tabs.history

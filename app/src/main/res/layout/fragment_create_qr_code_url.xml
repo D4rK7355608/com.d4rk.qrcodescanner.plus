@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingHorizontal="@dimen/default_margin"
+    android:paddingBottom="@dimen/default_margin"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|top"
+        android:lines="1"
+        android:maxLines="1"
+        android:hint="@string/barcode_schema_url"
+        android:inputType="textUri"
+        android:imeOptions="actionDone"
+        android:backgroundTint="@color/colorAccent"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_big"
+        android:text="@string/fragment_create_barcode_alternative"
+        style="@style/SettingsGroupTitleTextViewStyle"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/fragment_create_qr_code_url_alternative"
+        style="@style/CreateBarcodeFragmentAlternativeTextViewStyle"/>
+</LinearLayout>
