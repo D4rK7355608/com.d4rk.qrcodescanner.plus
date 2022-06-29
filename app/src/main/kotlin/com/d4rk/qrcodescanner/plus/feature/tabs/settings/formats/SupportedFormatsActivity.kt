@@ -3,17 +3,15 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.databinding.ActivitySupportedFormatsBinding
 import com.d4rk.qrcodescanner.plus.di.settings
 import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.usecase.SupportedBarcodeFormats
 import com.google.zxing.BarcodeFormat
-import kotlinx.android.synthetic.main.activity_supported_formats.root_view
-import kotlinx.android.synthetic.main.activity_supported_formats.recycler_view_formats
-import kotlinx.android.synthetic.main.activity_supported_formats.toolbar
 class SupportedFormatsActivity : BaseActivity(), FormatsAdapter.Listener {
+    private lateinit var binding: ActivitySupportedFormatsBinding
     companion object {
         fun start(context: Context) {
             val intent = Intent(context, SupportedFormatsActivity::class.java)
@@ -25,7 +23,8 @@ class SupportedFormatsActivity : BaseActivity(), FormatsAdapter.Listener {
     private val formatsAdapter by unsafeLazy { FormatsAdapter(this, formats, formatSelection) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_supported_formats)
+        binding = ActivitySupportedFormatsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         initRecyclerView()
         handleToolbarBackClicked()
@@ -34,16 +33,16 @@ class SupportedFormatsActivity : BaseActivity(), FormatsAdapter.Listener {
         settings.setFormatSelected(format, isChecked)
     }
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
     private fun initRecyclerView() {
-        recycler_view_formats.apply {
+        binding.recyclerViewFormats.apply {
             layoutManager = LinearLayoutManager(this@SupportedFormatsActivity)
             adapter = formatsAdapter
         }
     }
     private fun handleToolbarBackClicked() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }

@@ -8,12 +8,12 @@ plugins {
 }
 android {
     compileSdk 32
-    def tagName = '1.0_aplha1'
+    def tagName = '1.0_aplha2'
     defaultConfig {
         applicationId "com.d4rk.qrcodescanner.plus"
         minSdk 24
         targetSdk 32
-        versionCode 1
+        versionCode 2
         versionName tagName
         buildConfigField "String", "VERSION_NAME", "\"${tagName}\""
         archivesBaseName = "com.d4rk.qrcodescanner.plus-v${versionName}"
@@ -48,6 +48,7 @@ android {
     }
 }
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation platform('com.google.firebase:firebase-bom:30.2.0')
     implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.11'
     implementation 'com.google.firebase:firebase-analytics-ktx:21.0.0'
@@ -62,6 +63,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.preference:preference-ktx:1.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'
+    annotationProcessor 'androidx.room:room-compiler:2.4.2'
     implementation 'androidx.room:room-runtime:2.4.2'
     implementation "androidx.room:room-ktx:2.4.2"
     implementation 'androidx.room:room-rxjava2:2.4.2'

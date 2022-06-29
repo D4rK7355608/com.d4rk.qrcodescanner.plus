@@ -15,9 +15,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 class DateTimePickerButton : FrameLayout {
     private val dateFormatter = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.ENGLISH)
-    private val view: View = LayoutInflater
-        .from(context)
-        .inflate(R.layout.layout_date_time_picker_button, this, true)
+    private val view: View = LayoutInflater.from(context).inflate(R.layout.layout_date_time_picker_button, this, true)
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, -1)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {

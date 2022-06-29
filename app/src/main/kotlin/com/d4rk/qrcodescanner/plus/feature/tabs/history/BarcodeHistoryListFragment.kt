@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.paging.PagedList
 import androidx.paging.RxPagedListBuilder
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.databinding.FragmentBarcodeHistoryListBinding
 import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
 import com.d4rk.qrcodescanner.plus.extension.orZero
 import com.d4rk.qrcodescanner.plus.extension.showError
@@ -17,8 +17,9 @@ import io.reactivex.BackpressureStrategy
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
-import kotlinx.android.synthetic.main.fragment_barcode_history_list.recycler_view_history
 class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
+    private lateinit var _binding: FragmentBarcodeHistoryListBinding
+    private val binding get() = _binding
     companion object {
         private const val PAGE_SIZE = 20
         private const val TYPE_ALL = 0
@@ -41,8 +42,9 @@ class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
     }
     private val disposable = CompositeDisposable()
     private val scanHistoryAdapter = BarcodeHistoryAdapter(this)
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_barcode_history_list, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = FragmentBarcodeHistoryListBinding.inflate(inflater, container, false)
+        return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -57,15 +59,13 @@ class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
         disposable.clear()
     }
     private fun initRecyclerView() {
-        recycler_view_history.apply {
+        binding.recyclerViewHistory.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = scanHistoryAdapter
         }
     }
     private fun loadHistory() {
-        val config = PagedList.Config.Builder()
-            .setEnablePlaceholders(false)
-            .setPageSize(PAGE_SIZE)
+        val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(PAGE_SIZE)
             .build()
         val dataSource = when (arguments?.getInt(TYPE_KEY).orZero()) {
             TYPE_ALL -> barcodeDatabase.getAll()
@@ -75,10 +75,7 @@ class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
         RxPagedListBuilder(dataSource, config)
             .buildFlowable(BackpressureStrategy.LATEST)
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                scanHistoryAdapter::submitList,
-                ::showError
-            )
+            .subscribe(scanHistoryAdapter::submitList, ::showError)
             .addTo(disposable)
     }
 }

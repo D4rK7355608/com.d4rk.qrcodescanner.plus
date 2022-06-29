@@ -6,19 +6,18 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.core.widget.addTextChangedListener
 import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.databinding.FragmentCreateQrCodeCryptocurrencyBinding
 import com.d4rk.qrcodescanner.plus.extension.isNotBlank
 import com.d4rk.qrcodescanner.plus.extension.textString
 import com.d4rk.qrcodescanner.plus.feature.tabs.create.BaseCreateBarcodeFragment
 import com.d4rk.qrcodescanner.plus.model.schema.Cryptocurrency
 import com.d4rk.qrcodescanner.plus.model.schema.Schema
-import kotlinx.android.synthetic.main.fragment_create_qr_code_cryptocurrency.spinner_cryptocurrency
-import kotlinx.android.synthetic.main.fragment_create_qr_code_cryptocurrency.edit_text_address
-import kotlinx.android.synthetic.main.fragment_create_qr_code_cryptocurrency.edit_text_amount
-import kotlinx.android.synthetic.main.fragment_create_qr_code_cryptocurrency.edit_text_label
-import kotlinx.android.synthetic.main.fragment_create_qr_code_cryptocurrency.edit_text_message
 class CreateQrCodeCryptocurrencyFragment : BaseCreateBarcodeFragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_create_qr_code_cryptocurrency, container, false)
+    private lateinit var _binding: FragmentCreateQrCodeCryptocurrencyBinding
+    private val binding get() = _binding
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = FragmentCreateQrCodeCryptocurrencyBinding.inflate(inflater, container, false)
+        return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -27,7 +26,7 @@ class CreateQrCodeCryptocurrencyFragment : BaseCreateBarcodeFragment() {
         handleTextChanged()
     }
     override fun getBarcodeSchema(): Schema {
-        val cryptocurrency = when (spinner_cryptocurrency.selectedItemPosition) {
+        val cryptocurrency = when (binding.spinnerCryptocurrency.selectedItemPosition) {
             0 -> "bitcoin"
             1 -> "bitcoincash"
             2 -> "ethereum"
@@ -37,28 +36,28 @@ class CreateQrCodeCryptocurrencyFragment : BaseCreateBarcodeFragment() {
         }
         return Cryptocurrency(
             cryptocurrency = cryptocurrency,
-            address = edit_text_address.textString,
-            label = edit_text_label.textString,
-            amount = edit_text_amount.textString,
-            message = edit_text_message.textString
+            address = binding.editTextAddress.textString,
+            label = binding.editTextLabel.textString,
+            amount = binding.editTextAmount.textString,
+            message = binding.editTextMessage.textString
         )
     }
     private fun initCryptocurrenciesSpinner() {
-        spinner_cryptocurrency.adapter = ArrayAdapter.createFromResource(
+        binding.spinnerCryptocurrency.adapter = ArrayAdapter.createFromResource(
             requireContext(), R.array.fragment_create_qr_code_cryptocurrencies, R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
         }
     }
     private fun initAddressEditText() {
-        edit_text_address.requestFocus()
+        binding.editTextAddress.requestFocus()
     }
     private fun handleTextChanged() {
-        listOf(edit_text_address, edit_text_amount, edit_text_label, edit_text_message).forEach { editText ->
+        listOf(binding.editTextAddress, binding.editTextAmount, binding.editTextLabel, binding.editTextMessage).forEach { editText ->
             editText.addTextChangedListener { toggleCreateBarcodeButton() }
         }
     }
     private fun toggleCreateBarcodeButton() {
-        parentActivity.isCreateBarcodeButtonEnabled = edit_text_address.isNotBlank()
+        parentActivity.isCreateBarcodeButtonEnabled = binding.editTextAddress.isNotBlank()
     }
 }

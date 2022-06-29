@@ -11,6 +11,7 @@ import android.view.MotionEvent.ACTION_UP
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.databinding.ActivityScanBarcodeFromFileBinding
 import com.d4rk.qrcodescanner.plus.di.settings
 import com.d4rk.qrcodescanner.plus.di.barcodeParser
 import com.d4rk.qrcodescanner.plus.di.permissionsHelper
@@ -28,13 +29,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_scan_barcode_from_file.root_view
-import kotlinx.android.synthetic.main.activity_scan_barcode_from_file.crop_image_view
-import kotlinx.android.synthetic.main.activity_scan_barcode_from_file.button_scan
-import kotlinx.android.synthetic.main.activity_scan_barcode_from_file.toolbar
-import kotlinx.android.synthetic.main.activity_scan_barcode_from_file.progress_bar_loading
 import java.util.concurrent.TimeUnit
 class ScanBarcodeFromFileActivity : BaseActivity() {
+    private lateinit var binding: ActivityScanBarcodeFromFileBinding
     companion object {
         private const val CHOOSE_FILE_REQUEST_CODE = 12
         private const val CHOOSE_FILE_AGAIN_REQUEST_CODE = 13
@@ -51,7 +48,8 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     private val scanDisposable = CompositeDisposable()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scan_barcode_from_file)
+        binding = ActivityScanBarcodeFromFileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         handleToolbarBackPressed()
         handleToolbarMenuItemClicked()
@@ -87,7 +85,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         disposable.clear()
     }
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
     private fun showImageFromIntent(): Boolean {
         var uri: Uri? = null
@@ -122,22 +120,22 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         }
     }
     private fun handleToolbarBackPressed() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
     private fun handleToolbarMenuItemClicked() {
-        toolbar.setOnMenuItemClickListener { item ->
+        binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
-                R.id.item_rotate_left -> crop_image_view.rotateImage(CropImageView.RotateDegrees.ROTATE_M90D)
-                R.id.item_rotate_right -> crop_image_view.rotateImage(CropImageView.RotateDegrees.ROTATE_90D)
+                R.id.item_rotate_left -> binding.cropImageView.rotateImage(CropImageView.RotateDegrees.ROTATE_M90D)
+                R.id.item_rotate_right -> binding.cropImageView.rotateImage(CropImageView.RotateDegrees.ROTATE_90D)
                 R.id.item_change_image -> startChooseImageActivityAgain()
             }
             return@setOnMenuItemClickListener true
         }
     }
     private fun handleImageCropAreaChanged() {
-        crop_image_view.touches()
+        binding.cropImageView.touches()
             .filter { it.action == ACTION_UP }
             .debounce(400, TimeUnit.MILLISECONDS)
             .observeOn(AndroidSchedulers.mainThread())
@@ -145,13 +143,13 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
             .addTo(disposable)
     }
     private fun handleScanButtonClicked() {
-        button_scan.setOnClickListener {
+        binding.buttonScan.setOnClickListener {
             saveScanResult()
         }
     }
     private fun showImage(imageUri: Uri) {
         this.imageUri = imageUri
-        crop_image_view
+        binding.cropImageView
             .load(imageUri)
             .executeAsCompletable()
             .subscribeOn(Schedulers.io())
@@ -173,7 +171,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         showScanButtonEnabled(false)
         scanDisposable.clear()
         lastScanResult = null
-        crop_image_view
+        binding.cropImageView
             .cropAsSingle()
             .subscribeOn(Schedulers.io())
             .subscribe(::scanCroppedImage, ::showError)
@@ -215,11 +213,11 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
             .addTo(disposable)
     }
     private fun showLoading(isLoading: Boolean) {
-        progress_bar_loading.isVisible = isLoading
-        button_scan.isInvisible = isLoading
+        binding.progressBarLoading.isVisible = isLoading
+        binding.buttonScan.isInvisible = isLoading
     }
     private fun showScanButtonEnabled(isEnabled: Boolean) {
-        button_scan.isEnabled = isEnabled
+        binding.buttonScan.isEnabled = isEnabled
     }
     private fun navigateToBarcodeScreen(barcode: Barcode) {
         BarcodeActivity.start(this, barcode)

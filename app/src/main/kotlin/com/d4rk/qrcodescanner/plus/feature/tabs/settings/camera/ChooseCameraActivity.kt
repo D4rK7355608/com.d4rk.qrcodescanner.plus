@@ -2,15 +2,12 @@ package com.d4rk.qrcodescanner.plus.feature.tabs.settings.camera
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.databinding.ActivityChooseCameraBinding
 import com.d4rk.qrcodescanner.plus.di.settings
 import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
-import kotlinx.android.synthetic.main.activity_choose_camera.button_back_camera
-import kotlinx.android.synthetic.main.activity_choose_camera.button_front_camera
-import kotlinx.android.synthetic.main.activity_choose_camera.root_view
-import kotlinx.android.synthetic.main.activity_choose_camera.toolbar
 class ChooseCameraActivity : BaseActivity() {
+    private lateinit var binding: ActivityChooseCameraBinding
     companion object {
         fun start(context: Context) {
             val intent = Intent(context, ChooseCameraActivity::class.java)
@@ -19,7 +16,8 @@ class ChooseCameraActivity : BaseActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_camera)
+        binding = ActivityChooseCameraBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         handleToolbarBackClicked()
     }
@@ -31,29 +29,29 @@ class ChooseCameraActivity : BaseActivity() {
     }
     private fun showSelectedCamera() {
         val isBackCamera = settings.isBackCamera
-        button_back_camera.isChecked = isBackCamera
-        button_front_camera.isChecked = isBackCamera.not()
+        binding.buttonBackCamera.isChecked = isBackCamera
+        binding.buttonFrontCamera.isChecked = isBackCamera.not()
     }
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
     private fun handleToolbarBackClicked() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
     private fun handleBackCameraButtonChecked() {
-        button_back_camera.setCheckedChangedListener { isChecked ->
+        binding.buttonBackCamera.setCheckedChangedListener { isChecked ->
             if (isChecked) {
-                button_front_camera.isChecked = false
+                binding.buttonFrontCamera.isChecked = false
             }
             settings.isBackCamera = isChecked
         }
     }
     private fun handleFrontCameraButtonChecked() {
-        button_front_camera.setCheckedChangedListener { isChecked ->
+        binding.buttonFrontCamera.setCheckedChangedListener { isChecked ->
             if (isChecked) {
-                button_back_camera.isChecked = false
+                binding.buttonBackCamera.isChecked = false
             }
             settings.isBackCamera = isChecked.not()
         }

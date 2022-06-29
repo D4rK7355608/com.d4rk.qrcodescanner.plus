@@ -11,9 +11,7 @@ import kotlinx.android.synthetic.main.layout_settings_radio_button.view.radio_bu
 import kotlinx.android.synthetic.main.layout_settings_radio_button.view.delimiter
 import kotlinx.android.synthetic.main.layout_settings_radio_button.view.text_view_text
 class SettingsRadioButton : FrameLayout {
-    private val view: View = LayoutInflater
-        .from(context)
-        .inflate(R.layout.layout_settings_radio_button, this, true)
+    private val view: View = LayoutInflater.from(context).inflate(R.layout.layout_settings_radio_button, this, true)
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, -1)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {

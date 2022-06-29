@@ -2,12 +2,11 @@ package com.d4rk.qrcodescanner.plus.feature.tabs.settings.permissions
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.databinding.ActivityAllPermissionsBinding
 import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
-import kotlinx.android.synthetic.main.activity_all_permissions.toolbar
-import kotlinx.android.synthetic.main.activity_all_permissions.root_view
 class AllPermissionsActivity : BaseActivity() {
+    private lateinit var binding: ActivityAllPermissionsBinding
     companion object {
         fun start(context: Context) {
             val intent = Intent(context, AllPermissionsActivity::class.java)
@@ -16,8 +15,9 @@ class AllPermissionsActivity : BaseActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_all_permissions)
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
-        toolbar.setNavigationOnClickListener { finish() }
+        binding = ActivityAllPermissionsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.toolbar.setNavigationOnClickListener { finish() }
     }
 }

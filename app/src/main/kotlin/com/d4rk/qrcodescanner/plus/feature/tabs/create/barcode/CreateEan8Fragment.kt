@@ -4,24 +4,26 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
-import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.databinding.FragmentCreateEan8Binding
 import com.d4rk.qrcodescanner.plus.extension.textString
 import com.d4rk.qrcodescanner.plus.feature.tabs.create.BaseCreateBarcodeFragment
 import com.d4rk.qrcodescanner.plus.model.schema.Other
 import com.d4rk.qrcodescanner.plus.model.schema.Schema
-import kotlinx.android.synthetic.main.fragment_create_ean_8.edit_text
 class CreateEan8Fragment : BaseCreateBarcodeFragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_create_ean_8, container, false)
+    private lateinit var _binding: FragmentCreateEan8Binding
+    private val binding get() = _binding
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = FragmentCreateEan8Binding.inflate(inflater, container, false)
+        return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        edit_text.requestFocus()
-        edit_text.addTextChangedListener {
-            parentActivity.isCreateBarcodeButtonEnabled = edit_text.text!!.length == 7
+        binding.editText.requestFocus()
+        binding.editText.addTextChangedListener {
+            parentActivity.isCreateBarcodeButtonEnabled = binding.editText.text!!.length == 7
         }
     }
     override fun getBarcodeSchema(): Schema {
-        return Other(edit_text.textString)
+        return Other(binding.editText.textString)
     }
 }

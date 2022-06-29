@@ -1,20 +1,21 @@
 <p align="center">
-<img src="/app/src/play/listings/en-US/graphics/feature-graphic/feature_graphic.png">
+<img src="/app/src/main/play/listings/en-US/graphics/ic_launcher-playstore.png" width="300">
 </p>
 
-![Works with Android](https://img.shields.io/badge/Works%20with-Android-blue)
-![GitHub issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.qrcodescanner)
-![Pull requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.qrcodescanner)
-![GitHub license](https://img.shields.io/github/license/D4rK7355608/com.d4rk.qrcodescanner)
-![code-grade](https://api.codiga.io/project/30506/status/svg)
+![Works with Android](https://img.shields.io/badge/Made%20for-Android-lime?style=for-the-badge&logo=android)
+![GitHub Downloads](https://img.shields.io/github/downloads/D4rK7355608/com.d4rk.com.d4rk.qrcodescanner.plus/total?color=green&style=for-the-badge&logo=github)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/D4rK7355608/com.d4rk.qrcodescanner.plus/Android%20CI/master?style=for-the-badge&logo=github)
+![GitHub Issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
+![GitHub Pull Requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
+![GitHub License](https://img.shields.io/github/license/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
 
-## D4rK QR & Bar Code Scanner
+## D4rK QR & Bar Code Scanner Plus
 
 - ╔╦╦╦═╦╗╔═╦═╦══╦═╗
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-# D4rK QR & Bar Code Scanner is a free open-source scanner app for every Android.✌
+## D4rK QR & Bar Code Scanner Plus is a free open-source scanner app for every Android.✌
 
 ## Check the trailer [here](https://youtu.be/CgX31Oy2etM)!
 
@@ -38,12 +39,10 @@ Bugs can be reported here.
 
 ## Opening Issues :warning:
 
-> Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. You can ask for help at [Stack Overflow](https://stackoverflow.com/questions/tagged/android).
+> Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk.
 > For support, informations and requests, please contact <d4rk7355608@gmail.com>.
 
-- Create an Android/general issue/bug.
-
-- Known bugs: You tell me XD
+- Create an scanner/camera/qr code/bar code/general bug. 🐞
 
 __🖤 D4rK QR & Bar Code Scanner is 100% free, open-source inspired by QrAndBarcodeScanner by wewewe718, ad free, and scan everything it claims to!__
 
@@ -101,7 +100,7 @@ Also the app can support the next search engines:
 
 ## Screenshots:
 
-<img src="/app/src/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png" width="300">
+<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png"  width="400">
 
 <details>
   <summary>Special Thanks</summary>
@@ -110,22 +109,32 @@ Also the app can support the next search engines:
 
 </details>
 
-### 👨🏻‍💻 &nbsp;More About Me:
-<a href="mailto:d4rk7355608@gmail.com"><img src="https://img.shields.io/badge/-d4rk7355608@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
-<a href="https://developers.google.com/profile/u/D4rK7355608"><img src="https://img.shields.io/badge/-Android%20Developers-3DDC84?style=flat&logo=Android&logoColor=white"/></a>
-<a href="https://www.deviantart.com/d4rk7355608"><img src="https://img.shields.io/badge/-d4rk7355608-05CC46?style=flat&logo=Deviantart&logoColor=white"/></a>
-<a href="https://gamejolt.com/@D4rK_S-A-D"><img src="https://img.shields.io/badge/-D4rK7355608-307f70?style=flat&logo=Gamejolt&logoColor=white"/></a>
-<a href="https://www.youtube.com/channel/UCLDi-rmSRry0pNL-oVvGJAw"><img src="https://img.shields.io/badge/-D4rK-FF0000?style=flat&logo=Youtube&logoColor=white"/></a>
-<a href="https://www.youtube.com/channel/UCee5YBhGHVCF4JnQzoLFzVA"><img src="https://img.shields.io/badge/-Michael Tutorials-FF0000?style=flat&logo=Youtube&logoColor=white"/></a>
-<a href="https://www.youtube.com/channel/UCgtHCg34rrDvdkjjjPW2jhQ"><img src="https://img.shields.io/badge/-Desene Animate-FF0000?style=flat&logo=Youtube&logoColor=white"/></a>
-<a href="https://patreon.com/D4rK7355608"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DD4rK7355608%26type%3Dpatrons&style=flat"/></a>
-<a href="https://www.paypal.me/d4rkmichaeltutorials"><img src="https://img.shields.io/badge/PayPal-white?style=flat&logo=PayPal"/></a>
-<a href="https://twitter.com/D4rK7355608/"><img src="https://img.shields.io/twitter/follow/D4rK7355608?style=social"/></a>
+## 🛑 Disclaimer!
+- D4rK QR & Bar Code Scanner is ready for scanning any code you want. Is also made to fit your phone design!
+- Some music from our audios belong to their respective owners and principal voice is from Lidia Melinte.
 
-[<img src="https://github.com/D4rK7355608/com.d4rk.cleaner/blob/master/img/badges/google_play_store.png"
+## 💬 Feedback!
+If you have any suggested features or improvement, please leave a comment. In case something is not working correctly please let me know. When posting low rating please describe what is wrong to give the possibility to fix that issue.
+
+Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app.
+
+## 👨🏻‍💻 &nbsp;More About Me:
+<a href="mailto:d4rk7355608@gmail.com"><img src="https://img.shields.io/badge/d4rk7355608@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://developers.google.com/profile/u/D4rK7355608"><img src="https://img.shields.io/badge/Android%20Developers-white?style=for-the-badge&logo=android"/></a>
+<a href="https://forum.xda-developers.com/m/d4rk7355608.10095012/"><img src="https://img.shields.io/badge/XDA%20Developers-grey?style=for-the-badge&logo=xdadevelopers"/></a>
+<a href="https://www.deviantart.com/d4rk7355608"><img src="https://img.shields.io/badge/DeviantArt-default?style=for-the-badge&logo=deviantart&logoColor=white"/></a>
+<a href="https://gamejolt.com/@D4rK_S-A-D"><img src="https://img.shields.io/badge/GameJolt-grey?style=for-the-badge&logo=gamejolt&logoColor=white"/></a>
+<a href="https://patreon.com/D4rK7355608"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DD4rK7355608%26type%3Dpatrons&style=for-the-badge"/></a>
+<a href="https://www.paypal.me/d4rkmichaeltutorials"><img src="https://img.shields.io/badge/Paypal-white?style=for-the-badge&logo=paypal"/></a>
+<a href="https://twitter.com/D4rK7355608/"><img src="https://img.shields.io/twitter/follow/D4rK7355608?color=blue&label=Twitter&logo=Twitter&style=for-the-badge"/></a>
+<a href="https://www.youtube.com/c/D4rK7355608/"><img src="https://img.shields.io/youtube/channel/subscribers/UCLDi-rmSRry0pNL-oVvGJAw?color=darkred&label=D4rK&logo=youtube&logoColor=darkred&style=for-the-badge"/></a>
+<a href="https://github.com/D4rK7355608/"><img src="https://img.shields.io/github/followers/D4rK7355608?color=white&logo=GitHub&style=for-the-badge"/></a>
+
+[<img src="https://raw.githubusercontent.com/steverichey/google-play-badge-svg/master/img/en_get.svg"
 alt="Get it on Google Play"
-height="90">](https://play.google.com/store/apps/details?id=com.d4rk.qrcodescanner)
+height="90">](https://play.google.com/store/apps/details?id=com.d4rk.qrcodescanner.plus)
 
-__Privacy Policy__ [here](https://bit.ly/qrcodescannerprivacypolicy).
+__Privacy Policy__ [here](https://sites.google.com/view/d4rk7355608/more/apps/qr-bar-code-scanner/privacy-policy).
+__Terms of Service__ [here](https://sites.google.com/view/d4rk7355608/more/apps/qr-bar-code-scanner/terms-of-service).
 
 ![license](https://imgur.com/QQlcEVT.png)
