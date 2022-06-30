@@ -1,4 +1,5 @@
 package com.d4rk.qrcodescanner.plus.feature.tabs.create.qr
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ class AppAdapter(private val listener: Listener) : RecyclerView.Adapter<AppAdapt
         fun onAppClicked(packageName: String)
     }
     var apps: List<ResolveInfo> = emptyList()
+        @SuppressLint("NotifyDataSetChanged")
         set(value) {
             field = value
             notifyDataSetChanged()

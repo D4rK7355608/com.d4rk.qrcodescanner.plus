@@ -17,9 +17,7 @@ import kotlinx.android.synthetic.main.layout_icon_button_with_delimiter.view.ima
 import kotlinx.android.synthetic.main.layout_icon_button_with_delimiter.view.delimiter
 import kotlinx.android.synthetic.main.layout_icon_button_with_delimiter.view.image_view_schema
 class IconButtonWithDelimiter : FrameLayout {
-    private val view: View = LayoutInflater
-        .from(context)
-        .inflate(R.layout.layout_icon_button_with_delimiter, this, true)
+    private val view: View = LayoutInflater.from(context).inflate(R.layout.layout_icon_button_with_delimiter, this, true)
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, -1)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {

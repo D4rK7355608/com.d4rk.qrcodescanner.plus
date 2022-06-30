@@ -6,6 +6,8 @@
     <color name="colorContainer">#D8E1FC</color>
     <color name="colorBackground">#FDFBFE</color>
     <color name="colorBackground2">#FDFBFE</color>
+    <color name="colorBackground3">#fefbfa</color>
+    <color name="colorBackground4">#FDFBFE</color>
     <color name="colorGitHub">#0F0C0D</color>
     <color name="colorAccent">#4285F4</color>
     <color name="colorGoogleGreen">#0F9D58</color>

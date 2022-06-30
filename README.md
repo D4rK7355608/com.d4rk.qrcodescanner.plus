@@ -15,7 +15,7 @@
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-## D4rK QR & Bar Code Scanner Plus is a free open-source scanner app for every Android.✌
+## D4rK QR & Bar Code Scanner Plus is a free open-source scanner app for every Android. 📷
 
 ## Check the trailer [here](https://youtu.be/CgX31Oy2etM)!
 
@@ -23,11 +23,11 @@
 
 It uses the [ZXing](https://github.com/zxing/zxing) scanning library and is compatible with latest Material-You design on Android 12+ devices with changeable themes in settings for new and old devices. 📱
 
-QR & Bar Code Scanner app is also QR code generator in your pocket. Using QR generator is extremely easy to use, simply enter the data you wish on QR code and click to generate QR codes. After generating your code you can export it as SVG or PNG file type. 🖼️
+QR & Bar Code Scanner Plus app is also QR code generator in your pocket. Using QR generator is extremely easy to use, simply enter the data you wish on QR code and click to generate QR codes. After generating your code you can export it as SVG or PNG file type. 🖼️
 
-QR and bar codes are everywhere! Install QR & Bar Code Scanner app to scan every code you want. QR & Bar Code Scanner app is the only free scanner app you will ever need. 📷 Turn on the flashlight for scanning in the dark or use pinch to zoom to scan QRs far away. 📸
+QR and bar codes are everywhere! Install QR & Bar Code Scanner Plus app to scan every code you want. QR & Bar Code Scanner Plus app is the only free scanner app you will ever need. 📷 Turn on the flashlight for scanning in the dark or use pinch to zoom to scan QRs far away. 📸
 
-Also D4rK QR & Bar Code Scanner scan all common barcode formats: QR, Data Matrix, Aztec, UPC, EAN and many more. It can use flashlight to scan in the dark, zoom to read barcodes from far distances and links, connect to Wi-Fi, view geolocations, add calendar events, find product information, etc.
+Also D4rK QR & Bar Code Scanner Plus scan all common barcode formats: QR, Data Matrix, Aztec, UPC, EAN and many more. It can use flashlight to scan in the dark, zoom to read barcodes from far distances and links, connect to Wi-Fi, view geolocations, add calendar events, find product information, etc.
 
 Designed with security as a top priority, the best QR utility on the market offers a simple interface with abundant functionality This functionality for improved usability requires access to certain permissions in your device. 🛡️
 
@@ -44,7 +44,7 @@ Bugs can be reported here.
 
 - Create an scanner/camera/qr code/bar code/general bug. 🐞
 
-__🖤 D4rK QR & Bar Code Scanner is 100% free, open-source inspired by QrAndBarcodeScanner by wewewe718, ad free, and scan everything it claims to!__
+__🖤 D4rK QR & Bar Code Scanner Plus is 100% free, open-source inspired by QrAndBarcodeScanner by wewewe718, ad free, and scan everything it claims to!__
 
 <details>
 
@@ -96,6 +96,15 @@ Also the app can support the next search engines:
 
 </details>
 
+## 💿 Features!
+- ⭐️ Material-You.
+- ⭐️ Fast and lightweight.
+- ⭐️ Fast scanning.
+- ⭐️ Generate codes.
+- ⭐️ Free Open source & secure.
+
+__❗️Note❗️__ Some features are still in progress or needs more improvements and investigations.
+
 ## Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner/master/CHANGELOG.md)!
 
 ## Screenshots:
@@ -110,7 +119,7 @@ Also the app can support the next search engines:
 </details>
 
 ## 🛑 Disclaimer!
-- D4rK QR & Bar Code Scanner is ready for scanning any code you want. Is also made to fit your phone design!
+- D4rK QR & Bar Code Scanner Plus is ready for scanning any code you want. Is also made to fit your phone design!
 - Some music from our audios belong to their respective owners and principal voice is from Lidia Melinte.
 
 ## 💬 Feedback!

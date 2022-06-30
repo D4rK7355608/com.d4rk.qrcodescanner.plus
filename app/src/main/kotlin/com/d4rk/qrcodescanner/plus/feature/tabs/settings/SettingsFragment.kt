@@ -8,22 +8,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.d4rk.qrcodescanner.plus.BuildConfig
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.FragmentSettingsBinding
 import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
 import com.d4rk.qrcodescanner.plus.di.settings
 import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
-import com.d4rk.qrcodescanner.plus.extension.packageManager
 import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.feature.common.dialog.DeleteConfirmationDialogFragment
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.camera.ChooseCameraActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.formats.SupportedFormatsActivity
-import com.d4rk.qrcodescanner.plus.feature.tabs.settings.more.MoreFragment
+import com.d4rk.qrcodescanner.plus.feature.tabs.settings.about.AboutActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.permissions.AllPermissionsActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.search.ChooseSearchEngineActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.theme.ChooseThemeActivity
-import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
+import com.google.android.material.textview.MaterialTextView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -44,25 +42,53 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
             }
         }
         binding.buttonMore.setOnClickListener {
-            val intent = Intent(activity, MoreFragment::class.java)
+            val intent = Intent(activity, AboutActivity::class.java)
             startActivity(intent)
+        }
+        binding.buttonPrivacyPolicy.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/qr-bar-code-scanner/privacy-policy"))
+            startActivity(intent)
+        }
+        binding.buttonTermsOfService.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/qr-bar-code-scanner/terms-of-service"))
+            startActivity(intent)
+        }
+        binding.buttonCodeOfConduct.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/code-of-conduct"))
+            startActivity(intent)
+        }
+        binding.buttonMoreApps.setOnClickListener {
+            val alertDialog: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+            alertDialog.setTitle(R.string.more_apps)
+            val view: View = layoutInflater.inflate(R.layout.fragment_dialog, null)
+            val musicSleepTimerString: MaterialTextView = view.findViewById(R.id.musicSleepTimerString)
+            val englishWithLidiaString: MaterialTextView = view.findViewById(R.id.englishWithLidiaString)
+            alertDialog.setView(view)
+            alertDialog.create()
+            view.findViewById<View?>(R.id.musicSleepTimer)?.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus"))
+                startActivity(intent)
+            }
+            musicSleepTimerString.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.musicsleeptimer.plus"))
+                startActivity(intent)
+            }
+            view.findViewById<View?>(R.id.englishWithLidia)?.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus"))
+                startActivity(intent)
+            }
+            englishWithLidiaString.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus"))
+                startActivity(intent)
+            }
+            alertDialog.setNegativeButton(R.string.cool, null)
+            alertDialog.show()
         }
         binding.buttonPermissions.setOnClickListener {
             AllPermissionsActivity.start(requireActivity())
         }
-        binding.buttonSourceCode.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/qrcodescannergithub"))
-            if (intent.resolveActivity(packageManager) != null) {
-                startActivity(intent)
-            }
-        }
         binding.buttonChooseCamera.setOnClickListener{
             ChooseCameraActivity.start(requireActivity())
-        }
-        binding.buttonOssLibraries.setOnClickListener {
-            OssLicensesMenuActivity.setActivityTitle(getString(R.string.fragment_settings_license_title))
-            val intent = Intent(activity, OssLicensesMenuActivity::class.java)
-            startActivity(intent)
         }
         binding.buttonChooseTheme.setOnClickListener {
             ChooseThemeActivity.start(requireActivity())
@@ -125,7 +151,6 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
     override fun onResume() {
         super.onResume()
         showSettings()
-        showAppVersion()
     }
     override fun onDeleteConfirmed() {
         clearHistory()
@@ -171,8 +196,5 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
     private fun showDeleteHistoryConfirmationDialog() {
         val dialog = DeleteConfirmationDialogFragment.newInstance(R.string.dialog_delete_clear_history_message)
         dialog.show(childFragmentManager, "")
-    }
-    private fun showAppVersion() {
-        binding.buttonAppVersion.hint = BuildConfig.VERSION_NAME
     }
 }

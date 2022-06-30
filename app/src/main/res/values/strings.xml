@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">QR &amp; Barcode Scanner</string>
+    <string name="app_version">Version %1s</string>
 
     <!--Shortcuts-->
     <string name="shortcut_scan_from_camera">Scan!</string>
@@ -165,7 +166,14 @@
     <string name="fragment_create_upc_a_hint">11 digits</string>
     <string name="fragment_create_upc_e_hint">7 digits</string>
 
-    <string name="fragment_more_tittle">More.</string>
+    <string name="fragment_more_tittle">More!</string>
+    <string name="privacy_policy">Privacy Policy.</string>
+    <string name="terms_of_service">Terms of Service.</string>
+    <string name="code_of_conduct">Code of Conduct.</string>
+    <string name="more_apps">More apps.</string>
+    <string name="cool">Cool!</string>
+    <string name="music_sleep_timer">Music Sleep Timer.</string>
+    <string name="english_with_lidia">English with Lidia.</string>
     <string name="fragment_more_github_tittle">GitHub.</string>
     <string name="fragment_more_github_sum">My official GitHub profile. See more OSS apps and projects here,</string>
     <string name="fragment_more_google_play_store_tittle">Google Play Store.</string>
@@ -184,13 +192,23 @@
     <string name="fragment_more_deviantart_sum">My official DeviantArt page.</string>
 
     <!--Barcode history fragment-->
-    <string name="fragment_barcode_history_title">History</string>
+    <string name="fragment_barcode_history_title">History.</string>
     <string-array name="fragment_barcode_history_tab_titles">
         <item>All</item>
         <item>Favorites</item>
     </string-array>
     <string name="fragment_barcode_history_menu_title_export">Export history</string>
     <string name="fragment_barcode_history_menu_title_delete_all">Clear history</string>
+
+    <!--More activity-->
+    <string name="twitter">Twitter</string>
+    <string name="youtube">YouTube</string>
+    <string name="github">GitHub</string>
+    <string name="xda">XDA</string>
+    <string name="google_dev">Google Dev</string>
+    <string name="libraries">Third Party Libraries</string>
+    <string name="open_me">Open me :)</string>
+    <string name="still_in_progress">Still in progress…</string>
 
     <!--Export history activity-->
     <string name="activity_export_history_title">Export history</string>
@@ -205,7 +223,7 @@
     <string name="activity_export_history_exported">Saved to Downloads</string>
 
     <!--Settings fragment-->
-    <string name="fragment_settings_title">Settings!</string>
+    <string name="fragment_settings_title">Settings.</string>
     <string name="fragment_settings_appearance_settings">Appearance!</string>
     <string name="fragment_settings_theme">Theme.</string>
     <string name="fragment_settings_inverse_barcode_colors_in_dark_theme">Inverse code colors in dark theme.</string>
@@ -236,7 +254,7 @@
     <string name="fragment_settings_advanced_settings">Advanced!</string>
     <string name="fragment_settings_choose_search_engines">Search Engines.</string>
     <string name="fragment_settings_choose_search_engines_hint">Choose a search engine for web searches.</string>
-    <string name="fragment_settings_about">About!</string>
+    <string name="fragment_settings_about">About.</string>
     <string name="fragment_settings_check_updates">Check for updates…</string>
     <string name="fragment_settings_permissions">Permissions.</string>
     <string name="fragment_settings_source_code">Source code.</string>

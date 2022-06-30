@@ -19,6 +19,68 @@
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_barcode_image.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/D4rKQRBarCodeScanner/app/src/main/res/menu/menu_create_qr_code_contacts.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/background_circle.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/card.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_about.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_app.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_arrow_back.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_aztec.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_barcode.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_bitcoin.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_codes_card_illustration.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_community.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_confirm_disabled.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_confirm_enabled.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_contact.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_contact_add.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_copy.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_create.xml" value="0.179" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_d4rk.xml" value="0.179" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_data_matrix.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_dev.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_deviantart.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_download.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_edit.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_flash.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_flash_enabled.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_gamejolt.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_github.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_image_white.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground_english_with_lidia.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_launcher_foreground_music_sleep_timer.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_libraries.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_link.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_location.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_minus.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_mms.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_open_app.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_pdf417.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_phone.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_play_store.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_print.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_qr_code.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_rotate_right.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_scan.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_share.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_shortcut_barcode_foreground.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_shortcut_history_foreground.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_shortcut_image_foreground.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_twitter.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_xda.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_youtube.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_yt.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout-v26/activity_more.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/activity_all_permissions.xml" value="0.32974358974358975" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/activity_more.xml" value="0.33" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/fragment_dialog.xml" value="0.33" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/fragment_scan_barcode_from_camera.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/layout_date_time_picker_button.xml" value="0.3489583333333333" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/mipmap-anydpi-v26/ic_launcher_english_with_lidia.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/mipmap-anydpi-v26/ic_launcher_music_sleep_timer.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher_english_with_lidia.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/mipmap-night-anydpi-v26/ic_launcher_music_sleep_timer.xml" value="0.2075" />
       </map>
     </option>
   </component>

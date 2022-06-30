@@ -24,6 +24,7 @@
         android:logo="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:appCategory="image"
+        android:isGame="false"
         android:hardwareAccelerated="true"
         android:theme="@style/AppTheme"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -49,12 +50,12 @@
                 android:resource="@xml/shortcuts"/>
         </activity>
         <activity
-            android:name=".feature.tabs.settings.more.MoreFragment"
-            android:label="@string/fragment_more_tittle"
+            android:name=".feature.tabs.settings.about.AboutActivity"
+            android:label="@string/fragment_settings_about"
             android:theme="@style/AppThemeActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".feature.tabs.settings.more.MoreFragment"/>
+                android:value=".feature.tabs.settings.about.AboutActivity"/>
         </activity>
         <provider
             android:name="androidx.core.content.FileProvider"

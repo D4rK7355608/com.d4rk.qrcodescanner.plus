@@ -15,10 +15,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.fragment_barcode_history.app_bar_layout
-import kotlinx.android.synthetic.main.fragment_barcode_history.view_pager
-import kotlinx.android.synthetic.main.fragment_barcode_history.toolbar
-import kotlinx.android.synthetic.main.fragment_barcode_history.tab_layout
 class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
     private lateinit var _binding: FragmentBarcodeHistoryBinding
     private val binding get() = _binding
@@ -41,14 +37,14 @@ class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.List
         disposable.clear()
     }
     private fun supportEdgeToEdge() {
-        app_bar_layout.applySystemWindowInsets(applyTop = true)
+        binding.appBarLayout.applySystemWindowInsets(applyTop = true)
     }
     private fun initTabs() {
-        view_pager.adapter = BarcodeHistoryViewPagerAdapter(requireContext(), childFragmentManager)
-        tab_layout.setupWithViewPager(view_pager)
+        binding.viewPager.adapter = BarcodeHistoryViewPagerAdapter(requireContext(), childFragmentManager)
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
     private fun handleMenuClicked() {
-        toolbar.setOnMenuItemClickListener { item ->
+        binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.item_export_history -> navigateToExportHistoryScreen()
                 R.id.item_clear_history -> showDeleteHistoryConfirmationDialog()

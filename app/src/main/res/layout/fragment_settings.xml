@@ -169,8 +169,26 @@
                 android:layout_marginTop="@dimen/default_margin_very_big"
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
-                android:text="@string/fragment_settings_about"
+                android:text="@string/fragment_more_tittle"
                 style="@style/SettingsGroupTitleTextViewStyle"/>
+            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
+                android:id="@+id/button_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/privacy_policy"
+                app:isSwitchVisible="false"/>
+            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
+                android:id="@+id/button_terms_of_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/terms_of_service"
+                app:isSwitchVisible="false"/>
+            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
+                android:id="@+id/button_code_of_conduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/code_of_conduct"
+                app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_check_updates"
                 android:layout_width="match_parent"
@@ -184,36 +202,22 @@
                 app:text="@string/fragment_settings_changelog"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
+                android:id="@+id/button_more_apps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/more_apps"
+                app:isSwitchVisible="false"/>
+            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_permissions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_permissions"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
-                android:id="@+id/button_source_code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_source_code"
-                app:isSwitchVisible="false"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
-                android:id="@+id/button_oss_libraries"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_license_title"
-                app:isDelimiterVisible="false"
-                app:isSwitchVisible="false"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_more"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_more_tittle"
-                app:isSwitchVisible="false"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
-                android:id="@+id/button_app_version"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_app_version"
-                app:isDelimiterVisible="false"
+                app:text="@string/fragment_settings_about"
                 app:isSwitchVisible="false"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -10,11 +10,7 @@ import com.google.zxing.BarcodeFormat
 import kotlinx.android.synthetic.main.item_barcode_format.view.delimiter
 import kotlinx.android.synthetic.main.item_barcode_format.view.check_box
 import kotlinx.android.synthetic.main.item_barcode_format.view.text_view_text
-class FormatsAdapter(
-    private val listener: Listener,
-    private val formats: List<BarcodeFormat>,
-    private val formatSelection: List<Boolean>
-) : RecyclerView.Adapter<FormatsAdapter.ViewHolder>() {
+class FormatsAdapter(private val listener: Listener, private val formats: List<BarcodeFormat>, private val formatSelection: List<Boolean>) : RecyclerView.Adapter<FormatsAdapter.ViewHolder>() {
     interface Listener {
         fun onFormatChecked(format: BarcodeFormat, isChecked: Boolean)
     }

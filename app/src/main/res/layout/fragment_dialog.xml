@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.gridlayout.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    app:columnCount="2">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/musicSleepTimer"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher_music_sleep_timer"
+        android:background="@android:color/transparent"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/musicSleepTimerString"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/music_sleep_timer"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/englishWithLidia"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher_english_with_lidia"
+        android:background="@android:color/transparent"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/englishWithLidiaString"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/english_with_lidia"/>
+</androidx.gridlayout.widget.GridLayout>
