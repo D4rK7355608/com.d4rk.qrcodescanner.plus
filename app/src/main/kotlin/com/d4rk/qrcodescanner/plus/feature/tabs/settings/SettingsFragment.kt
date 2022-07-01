@@ -18,6 +18,8 @@ import com.d4rk.qrcodescanner.plus.feature.common.dialog.DeleteConfirmationDialo
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.camera.ChooseCameraActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.formats.SupportedFormatsActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.about.AboutActivity
+import com.d4rk.qrcodescanner.plus.feature.tabs.settings.feedback.FeedbackActivity
+import com.d4rk.qrcodescanner.plus.feature.tabs.settings.language.LanguageActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.permissions.AllPermissionsActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.search.ChooseSearchEngineActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.theme.ChooseThemeActivity
@@ -43,6 +45,14 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
         }
         binding.buttonMore.setOnClickListener {
             val intent = Intent(activity, AboutActivity::class.java)
+            startActivity(intent)
+        }
+        binding.buttonFeedback.setOnClickListener {
+            val intent = Intent(activity, FeedbackActivity::class.java)
+            startActivity(intent)
+        }
+        binding.buttonLanguage.setOnClickListener {
+            val intent = Intent(activity, LanguageActivity::class.java)
             startActivity(intent)
         }
         binding.buttonPrivacyPolicy.setOnClickListener {

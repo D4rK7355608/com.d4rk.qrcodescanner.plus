@@ -7,6 +7,7 @@
     <color name="colorBackground2">#414758</color>
     <color name="colorBackground3">#504442</color>
     <color name="colorBackground4">#414758</color>
+    <color name="colorBackground5">#392e2c</color>
     <color name="colorContainer">#414758</color>
     <color name="colorGitHub">@android:color/white</color>
     <color name="colorShortcutBackground">#2D2D2D</color>

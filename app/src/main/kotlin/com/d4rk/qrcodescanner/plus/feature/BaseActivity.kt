@@ -1,9 +1,9 @@
 package com.d4rk.qrcodescanner.plus.feature
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import com.d4rk.qrcodescanner.plus.di.rotationHelper
-abstract class BaseActivity : AppCompatActivity() {
+import com.kieronquinn.monetcompat.app.MonetCompatActivity
+abstract class BaseActivity : MonetCompatActivity() {
     @Suppress("DEPRECATION")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

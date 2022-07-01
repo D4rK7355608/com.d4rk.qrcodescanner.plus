@@ -7,8 +7,11 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
@@ -17,29 +20,34 @@
     </queries>
     <application
         android:allowBackup="true"
-        android:fullBackupContent="true"
-        android:label="@string/app_name"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:logo="@drawable/ic_launcher_foreground"
-        android:supportsRtl="true"
         android:appCategory="image"
-        android:isGame="false"
-        android:hardwareAccelerated="true"
-        android:theme="@style/AppTheme"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:isGame="false"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher_foreground"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
         tools:targetApi="s">
+        <activity
+            android:name=".feature.tabs.settings.feedback.FeedbackActivity"
+            android:label="@string/feedback"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".feature.tabs.settings.feedback.FeedbackActivity"/>
+        </activity>
         <activity
             android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
             android:theme="@style/AppThemeActionBar"/>
         <activity
-            android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
-            android:theme="@style/AppThemeActionBar"/>
-        <activity
             android:name=".feature.tabs.BottomTabsActivity"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="fullSensor"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="com.google.zxing.client.android.SCAN"/>
                 <action android:name="android.intent.action.MAIN"/>
@@ -57,6 +65,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".feature.tabs.settings.about.AboutActivity"/>
         </activity>
+        <activity
+            android:name=".feature.tabs.settings.language.LanguageActivity"
+            android:label="@string/language"
+            android:theme="@style/AppThemeActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".feature.tabs.settings.language.LanguageActivity"/>
+        </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.d4rk.qrcodescanner.fileprovider"
@@ -68,10 +84,10 @@
         </provider>
         <service
             android:name=".feature.tile.QuickSettingsTileService"
+            android:exported="true"
             android:icon="@drawable/ic_scan"
             android:label="@string/app_name"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
@@ -79,9 +95,9 @@
         <activity
             android:name=".feature.tabs.scan.file.ScanBarcodeFromFileActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="true"
             android:screenOrientation="fullSensor"
-            tools:ignore="AppLinkUrlError"
-            android:exported="true">
+            tools:ignore="AppLinkUrlError">
             <intent-filter android:label="@string/intent_filter_scan_image">
                 <action android:name="android.intent.action.SEND"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -96,9 +112,9 @@
         <activity
             android:name=".feature.tabs.create.CreateBarcodeActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="true"
             android:screenOrientation="fullSensor"
-            android:windowSoftInputMode="stateVisible"
-            android:exported="true">
+            android:windowSoftInputMode="stateVisible">
             <intent-filter android:label="@string/intent_filter_create_qr_code_text">
                 <action android:name="android.intent.action.SEND"/>
                 <category android:name="android.intent.category.DEFAULT"/>

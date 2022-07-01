@@ -171,6 +171,14 @@
     <string name="terms_of_service">Terms of Service.</string>
     <string name="code_of_conduct">Code of Conduct.</string>
     <string name="more_apps">More apps.</string>
+    <string name="feedback">Feedback.</string>
+    <string name="feedback_tooltip">Send us your review on Google Play Store.</string>
+    <string name="feedback_toast">Thanks for rating us!</string>
+    <string name="rate_us">Rate our app!</string>
+    <string name="language">Language.</string>
+    <string name="language_default">Default Language.</string>
+    <string name="language_en">English (International)</string>
+    <string name="language_ro">Romana (Romania)</string>
     <string name="cool">Cool!</string>
     <string name="music_sleep_timer">Music Sleep Timer.</string>
     <string name="english_with_lidia">English with Lidia.</string>

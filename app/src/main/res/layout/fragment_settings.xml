@@ -41,6 +41,12 @@
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_inverse_barcode_colors_in_dark_theme"
                 app:hint="@string/fragment_settings_inverse_barcode_colors_in_dark_theme_hint"/>
+            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
+                android:id="@+id/button_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/language"
+                app:isSwitchVisible="false"/>
             <View style="@style/DelimiterStyle"/>
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
@@ -194,6 +200,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_check_updates"
+                app:isSwitchVisible="false"/>
+            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
+                android:id="@+id/button_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/feedback"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_changelog"
