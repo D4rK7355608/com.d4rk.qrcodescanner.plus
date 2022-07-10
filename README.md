@@ -3,7 +3,7 @@
 </p>
 
 ![Works with Android](https://img.shields.io/badge/Made%20for-Android-lime?style=for-the-badge&logo=android)
-![GitHub Downloads](https://img.shields.io/github/downloads/D4rK7355608/com.d4rk.com.d4rk.qrcodescanner.plus/total?color=green&style=for-the-badge&logo=github)
+![GitHub Downloads](https://img.shields.io/github/downloads/D4rK7355608/com.d4rk.qrcodescanner.plus/total?color=green&style=for-the-badge&logo=github)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/D4rK7355608/com.d4rk.qrcodescanner.plus/Android%20CI/master?style=for-the-badge&logo=github)
 ![GitHub Issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
@@ -15,7 +15,7 @@
 - ║║║║╩╣╚╣═╣║║║║║╩╣
 - ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-## D4rK QR & Bar Code Scanner Plus is a free open-source scanner app for every Android. 📷
+## D4rK QR & Bar Code Scanner Plus is a FOSS scanner app for every Android. 📷
 
 ## Check the trailer [here](https://youtu.be/CgX31Oy2etM)!
 
@@ -96,11 +96,13 @@ Also the app can support the next search engines:
 
 </details>
 
-## 💿 Features!
-- ⭐️ Material-You.
-- ⭐️ Fast and lightweight.
+## 🛠️ Features!
 - ⭐️ Fast scanning.
-- ⭐️ Generate codes.
+- ⭐️ Build in QR/Bar code generator.
+- ⭐️ Save codes in history.
+- ⭐️ Adaptive themes + Material-You.
+- ⭐️ Simple and easy to use.
+- ⭐️ Fast and lightweight.
 - ⭐️ Free Open source & secure.
 
 __❗️Note❗️__ Some features are still in progress or needs more improvements and investigations.

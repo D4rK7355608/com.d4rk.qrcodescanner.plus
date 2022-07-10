@@ -72,6 +72,10 @@
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_xda.xml" value="0.2075" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_youtube.xml" value="0.2075" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/ic_yt.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/settingslib_switch_thumb.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/settingslib_switch_track.xml" value="0.2075" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/switch_thumb.xml" value="0.179" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/drawable-anydpi/switch_track.xml" value="0.179" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout-v26/activity_feedback.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout-v26/activity_more.xml" value="0.25" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/activity_all_permissions.xml" value="0.32974358974358975" />
@@ -80,7 +84,7 @@
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/activity_more.xml" value="0.33" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/fragment_dialog.xml" value="0.33" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/fragment_scan_barcode_from_camera.xml" value="0.21458333333333332" />
-        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/layout/layout_date_time_picker_button.xml" value="0.3489583333333333" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/mipmap-anydpi-v26/ic_launcher_english_with_lidia.xml" value="0.2075" />
         <entry key="..\:/Users/d4rk7/AndroidStudioProjects/com.d4rk.qrcodescanner.plus/app/src/main/res/mipmap-anydpi-v26/ic_launcher_music_sleep_timer.xml" value="0.2075" />

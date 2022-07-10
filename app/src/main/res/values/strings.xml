@@ -413,82 +413,8 @@
     <string name="barcode_format_pdf_417" translatable="false">PDF417</string>
     <string name="barcode_format_upc_a" translatable="false">UPC-A</string>
     <string name="barcode_format_upc_e" translatable="false">UPC-E</string>
-
-    <string name="changelog">
-	<br> </br>
-		<b>Version 1.0_r7:\n</b>
-    <br> </br>
-			•Improvements to strings, icons &amp; shortcuts;\n
-	<br> </br>
-			•Bug fixes;\n
-	<br> </br>
-			•Under the hood improvements.\n
-    <br> </br>
-\n
-		<b>Version 1.0_r6:\n</b>
-    <br> </br>
-			•Improvements to icons &amp; shortcuts;\n
-	<br> </br>
-			•Under the hood improvements.\n
-    <br> </br>
-\n
-		<b>Version 1.0_r5:\n</b>
-    <br> </br>
-			•Added Startpage engine;\n
-    <br> </br>
-			•Improvements to shortcuts;\n
-	<br> </br>
-			•Under the hood improvements.\n
-    <br> </br>
-\n
-	<br> </br>
-		<b>Version 1.0_r4:\n</b>
-    <br> </br>
-			•Added changelog;\n
-    <br> </br>
-			•Updated description + README.md file;\n
-	<br> </br>
-			•Under the hood improvements;\n
-	<br> </br>
-			•Added open-source libraries.\n
-    <br> </br>
-\n
-	<br> </br>
-		<b>Version 1.0_r3:\n</b>
-    <br> </br>
-			•Updated Gradle dependencies;\n
-	<br> </br>
-			•Icon tweaks;\n
-	<br> </br>
-			•Implemented Firebase Crashlytics;\n
-	<br> </br>
-			•Added shortcuts;\n
-	<br> </br>
-			•Updated README.md;\n
-	<br> </br>
-			•Improvements for strings &amp; translations;\n
-	<br> </br>
-			•Fixed versions on settings.\n
-	<br> </br>
-\n
-	<br> </br>
-		<b>Version 1.0_r2:\n</b>
-	<br> </br>
-			•Fixed GitHub README.md;\n
-    <br> </br>
-			•Added missing files in project;\n
-	<br> </br>
-			•Fixed versions on settings (I hope);\n
-	<br> </br>
-			•Updated dependencies;\n
-    <br> </br>
-			•Fixed some icons.\n
-	<br> </br>
-\n
-	<br> </br>
-		<b>Version 1.0_r1:\n</b>
-	<br> </br>
-			•Initial stable release build.\n
-    <br> </br>
-	</string>
+    <string name="changelog"><b>Version 1.0_r1:\n</b>
+        • Initial stable version.
+        <br> </br>
+    </string>
 </resources>

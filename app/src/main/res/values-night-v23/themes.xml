@@ -14,6 +14,7 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="switchStyle">@style/SwitchTheme</item>
     </style>
     <style name="AppThemeActionBar" parent="Theme.Material3.DayNight">
         <item name="colorAccent">@color/colorAccent</item>
@@ -30,5 +31,6 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="actionBarStyle">@style/ActionBarTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="switchStyle">@style/SwitchTheme</item>
     </style>
 </resources>

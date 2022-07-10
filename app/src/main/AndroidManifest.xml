@@ -11,7 +11,6 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage"/>
     <uses-permission android:name="android.permission.INTERNET"/>
-
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
@@ -35,7 +34,8 @@
         <activity
             android:name=".feature.tabs.settings.feedback.FeedbackActivity"
             android:label="@string/feedback"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/AppThemeActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".feature.tabs.settings.feedback.FeedbackActivity"/>

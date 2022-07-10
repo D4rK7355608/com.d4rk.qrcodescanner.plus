@@ -9,12 +9,12 @@ plugins {
 }
 android {
     compileSdk 32
-    def tagName = '1.0_beta-debug1'
+    def tagName = '1.0_r1'
     defaultConfig {
         applicationId "com.d4rk.qrcodescanner.plus"
         minSdk 24
         targetSdk 32
-        versionCode 5
+        versionCode 6
         versionName tagName
         buildConfigField "String", "VERSION_NAME", "\"${tagName}\""
         archivesBaseName = "com.d4rk.qrcodescanner.plus-v${tagName}"
@@ -79,7 +79,7 @@ dependencies {
     implementation 'commons-codec:commons-codec:1.15'
     implementation 'dev.turingcomplete:kotlin-onetimepassword:2.2.0'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.6'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
     testImplementation 'junit:junit:4.13.2'
     kapt 'androidx.room:room-compiler:2.4.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

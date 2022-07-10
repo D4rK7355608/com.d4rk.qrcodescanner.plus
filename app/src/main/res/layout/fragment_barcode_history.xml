@@ -14,7 +14,7 @@
             android:id="@+id/toolbar"
             app:title="@string/fragment_barcode_history_title"
             app:menu="@menu/menu_barcode_history"
-            style="@style/ToolbarStyle"/>
+            style="@style/ActionBarTheme"/>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"

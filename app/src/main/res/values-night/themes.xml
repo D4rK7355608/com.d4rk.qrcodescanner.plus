@@ -11,6 +11,7 @@
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="switchStyle">@style/SwitchTheme</item>
     </style>
     <style name="AppThemeActionBar" parent="Theme.Material3.DayNight">
         <item name="colorAccent">@color/colorAccent</item>
@@ -26,13 +27,7 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="actionBarStyle">@style/ActionBarTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>
-    </style>
-    <style name="SwitchStyle" parent="Theme.MaterialComponents.DayNight">
-        <item name="enforceMaterialTheme">true</item>
-        <item name="useMaterialThemeColors">true</item>
-        <item name="colorControlActivated">@color/colorAccent</item>
-        <item name="colorSwitchThumbNormal">#B9B9B9</item>
-        <item name="android:colorForeground">#787878</item>
+        <item name="switchStyle">@style/SwitchTheme</item>
     </style>
     <style name="AppBarLayoutStyle" parent="BaseAppBarLayoutStyle">
         <item name="liftOnScroll">false</item>

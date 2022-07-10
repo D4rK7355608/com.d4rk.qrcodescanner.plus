@@ -16,14 +16,9 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:splashScreenTheme">@style/Theme.App.Starting</item>
-        <item name="android:switchStyle">@style/SwitchTheme</item>
+        <item name="switchStyle">@style/SwitchTheme</item>
         <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>
-    </style>
-    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
-        <item name="colorPrimary">@color/colorAccent</item>
-        <item name="colorPrimaryDark">@color/colorAccent</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="AppThemeActionBar" parent="Theme.Material3.DayNight">
         <item name="colorAccent">@color/colorAccent</item>
@@ -43,6 +38,7 @@
         <item name="android:splashScreenTheme">@style/Theme.App.Starting</item>
         <item name="actionBarStyle">@style/ActionBarTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="switchStyle">@style/SwitchTheme</item>
     </style>
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/colorBackground</item>

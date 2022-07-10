@@ -8,10 +8,10 @@
         android:id="@+id/app_bar_layout"
         android:background="@android:color/transparent"
         style="@style/AppBarLayoutStyle">
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             app:title="@string/fragment_settings_title"
-            style="@style/ToolbarStyle"/>
+            style="@style/ActionBarTheme"/>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll_view"
@@ -36,7 +36,7 @@
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_inverse_barcode_colors_in_dark_theme"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_inverse_barcode_colors_in_dark_theme"
@@ -60,47 +60,47 @@
                 android:id="@+id/button_open_links_automatically"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 app:text="@string/fragment_settings_open_content_automatically"
                 app:hint="@string/fragment_settings_open_content_automatically_hint"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_copy_to_clipboard"
                 android:layout_width="match_parent"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_copy_to_clipboard"
                 app:hint="@string/fragment_settings_copy_to_clipboard_hint"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_simple_auto_focus"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_simple_auto_focus"
                 app:hint="@string/fragment_settings_simple_auto_focus_hint"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_flashlight"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_flash"
                 app:hint="@string/fragment_settings_flash_hint"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_vibrate"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_vibrate"
                 app:hint="@string/fragment_settings_vibrate_hint"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_continuous_scanning"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
-                android:theme="@style/SwitchStyle"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_continuous_scanning"
                 app:hint="@string/fragment_settings_continuous_scanning_hint"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_confirm_scans_manually"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_confirm_scans_manually"
@@ -128,19 +128,19 @@
                 style="@style/SettingsGroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_save_scanned_barcodes"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_save_scanned_barcodes_to_history"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_save_created_barcodes"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_save_created_barcodes_to_history"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_do_not_save_duplicates"
-                android:theme="@style/SwitchStyle"
+                android:theme="@style/SwitchTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_do_not_save_duplicates"

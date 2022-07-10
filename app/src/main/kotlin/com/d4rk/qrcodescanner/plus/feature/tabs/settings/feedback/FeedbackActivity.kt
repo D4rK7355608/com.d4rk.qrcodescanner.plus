@@ -6,7 +6,6 @@ import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivityFeedbackBinding
 import com.google.android.play.core.review.ReviewManager
 import com.google.android.play.core.review.ReviewManagerFactory
-
 class FeedbackActivity : AppCompatActivity() {
     private lateinit var reviewManager: ReviewManager
     private lateinit var binding: ActivityFeedbackBinding

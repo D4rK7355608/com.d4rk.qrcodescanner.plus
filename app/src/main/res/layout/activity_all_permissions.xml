@@ -8,7 +8,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:background="@android:color/transparent"
         style="@style/AppBarLayoutStyle">
-        <androidx.appcompat.widget.Toolbar
+        <com.kieronquinn.monetcompat.view.MonetToolbar
             android:id="@+id/toolbar"
             app:title="@string/activity_all_permissions_title"
             style="@style/ToolbarWithBackButtonStyle"/>

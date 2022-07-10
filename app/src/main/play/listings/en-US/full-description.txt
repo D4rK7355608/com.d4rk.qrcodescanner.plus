@@ -29,11 +29,13 @@ GitHub: https://github.com/D4rK7355608/com.d4rk.qrcodescanner.plus
 
 🖤 D4rK QR & Bar Code Scanner Plus is 100% free, open-source inspired by QrAndBarcodeScanner by wewewe718, ad free, and scan everything it claims to!
 
-💿 Features!
-⭐️ Material-You.
-⭐️ Fast and lightweight.
+🛠️ Features!
 ⭐️ Fast scanning.
-⭐️ Generate codes.
+⭐️ Build in QR/Bar code generator.
+⭐️ Save codes in history.
+⭐️ Adaptive themes + Material-You.
+⭐️ Simple and easy to use.
+⭐️ Fast and lightweight.
 ⭐️ Free Open source & secure.
 
 The app can make QR Codes for:
