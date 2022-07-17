@@ -47,6 +47,10 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
             val intent = Intent(activity, AboutActivity::class.java)
             startActivity(intent)
         }
+        binding.buttonLicense.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gnu.org/licenses/gpl-3.0"))
+            startActivity(intent)
+        }
         binding.buttonFeedback.setOnClickListener {
             val intent = Intent(activity, FeedbackActivity::class.java)
             startActivity(intent)

@@ -1,6 +1,9 @@
 package com.d4rk.qrcodescanner.plus.feature.tabs.settings.feedback
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivityFeedbackBinding
@@ -14,6 +17,23 @@ class FeedbackActivity : AppCompatActivity() {
         binding = ActivityFeedbackBinding.inflate(layoutInflater)
         setContentView(binding.root)
         init()
+    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_feedback, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.dev_mail -> {
+            val email = Intent(Intent.ACTION_SEND)
+            email.type = "text/email"
+            email.putExtra(Intent.EXTRA_EMAIL, arrayOf("d4rk7355608@gmail.com"))
+            email.putExtra(Intent.EXTRA_SUBJECT, "Feedback for Android Studio Tutorials")
+            email.putExtra(Intent.EXTRA_TEXT, "Dear developer, ")
+            startActivity(Intent.createChooser(email, "Send mail to Developer:"))
+            true
+        }  else -> {
+            super.onOptionsItemSelected(item)
+        }
     }
     private fun init() {
         reviewManager = ReviewManagerFactory.create(this)

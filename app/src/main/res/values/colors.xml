@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorWhite">@android:color/white</color>
-    <color name="colorDayNight">@android:color/black</color>
-    <color name="colorDarkShortcuts">#2D2D2D</color>
-    <color name="colorContainer">#D8E1FC</color>
-    <color name="colorBackground">#FDFBFE</color>
-    <color name="colorBackground2">#FDFBFE</color>
-    <color name="colorBackground3">#fefbfa</color>
-    <color name="colorBackground4">#FDFBFE</color>
-    <color name="colorBackground5">#fcedea</color>
-    <color name="colorGitHub">#0F0C0D</color>
     <color name="colorAccent">#4285F4</color>
     <color name="colorGoogleGreen">#0F9D58</color>
     <color name="colorGoogleRed">#DB4437</color>
     <color name="colorGoogleYellow">#F4B400</color>
     <color name="colorAndroidGreen">#3DDC84</color>
     <color name="colorFirebaseOrange">#F57C00</color>
-    <color name="colorLauncherAccent">#4285F4</color>
-    <color name="colorLauncherGoogleGreen">#0F9D58</color>
-    <color name="colorLauncherGoogleRed">#DB4437</color>
-    <color name="colorLauncherGoogleYellow">#F4B400</color>
-    <color name="colorShortcutBackground">#F5F5F5</color>
-    <color name="colorShortcutForeground">@color/colorAccent</color>
+    <color name="colorBackground">#FDFBFE</color>
+    <color name="colorDialogBackground">#FDFBFE</color>
+    <color name="colorOverflowMenuBackground">#EBF1F8</color>
+    <color name="colorShortcutBackground">#C1E8FF</color>
+    <color name="colorShortcutForeground">#40484D</color>
+    <color name="colorLauncherBackground">#FFFFFF</color>
+    <color name="colorLauncherForeground">#000000</color>
 </resources>

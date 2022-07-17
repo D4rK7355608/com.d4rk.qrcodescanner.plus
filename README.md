@@ -9,7 +9,7 @@
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
 ![GitHub License](https://img.shields.io/github/license/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
 
-## D4rK QR & Bar Code Scanner Plus
+## 📷 QR & Bar Code Scanner Plus 📷
 
 - ╔╦╦╦═╦╗╔═╦═╦══╦═╗
 - ║║║║╩╣╚╣═╣║║║║║╩╣
@@ -35,9 +35,9 @@ In case if anyone have curiosity about permissions check on settings to see for 
 
 You can customize in app experience, like preferred camera (back or front), search engine, history settings or preferred theme using app settings. ⚙️
 
-Bugs can be reported here.
+## ⚠ Opening Issues ⚠
 
-## Opening Issues :warning:
+Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.qrcodescanner.plus/issues).
 
 > Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk.
 > For support, informations and requests, please contact <d4rk7355608@gmail.com>.
@@ -107,9 +107,9 @@ Also the app can support the next search engines:
 
 __❗️Note❗️__ Some features are still in progress or needs more improvements and investigations.
 
-## Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner/master/CHANGELOG.md)!
+## 📝 Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner/master/CHANGELOG.md)!
 
-## Screenshots:
+## 🖼️ App preview:
 
 <img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png"  width="400">
 

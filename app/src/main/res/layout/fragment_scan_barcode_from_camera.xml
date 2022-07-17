@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:autoFocusButtonVisible="false"
         app:flashButtonVisible="false"
-        app:frameColor="@color/colorWhite"
+        app:frameColor="?android:textColorPrimary"
         app:frameThickness="2.5dp"
         app:frameAspectRatioWidth="1"
         app:frameAspectRatioHeight="1"

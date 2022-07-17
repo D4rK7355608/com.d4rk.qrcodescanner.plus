@@ -9,18 +9,17 @@
         android:id="@+id/feedbackCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="21dp"
+        app:cardCornerRadius="24dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginStart="21dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
         style="@style/Widget.Material3.CardView.Elevated"
-        app:cardBackgroundColor="@color/colorBackground3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/rateAnimation">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="21dp">
+            android:padding="24dp">
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_rate_now"
                 style="@style/Widget.Material3.Button"
@@ -28,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/rate_us"
                 android:textColor="@android:color/white"
-                app:cardBackgroundColor="@color/colorBackground5"
+                android:tooltipText="@string/feedback_tooltip"
                 app:cornerRadius="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

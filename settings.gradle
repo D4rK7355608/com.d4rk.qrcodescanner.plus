@@ -3,8 +3,6 @@ pluginManagement {
         gradlePluginPortal()
         google()
         maven { url 'https://jitpack.io' }
-        //noinspection JcenterRepositoryObsolete
-        jcenter()
         mavenCentral()
     }
 }

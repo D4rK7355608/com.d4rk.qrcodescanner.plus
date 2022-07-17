@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">#8AB4F8</color>
-    <color name="colorWhite">#131313</color>
-    <color name="colorDayNight">@android:color/white</color>
     <color name="colorBackground">#1C1B1F</color>
-    <color name="colorBackground2">#414758</color>
-    <color name="colorBackground3">#504442</color>
-    <color name="colorBackground4">#414758</color>
-    <color name="colorBackground5">#392e2c</color>
-    <color name="colorContainer">#414758</color>
-    <color name="colorGitHub">@android:color/white</color>
-    <color name="colorShortcutBackground">#2D2D2D</color>
+    <color name="colorDialogBackground">#414758</color>
+    <color name="colorOverflowMenuBackground">#40484D</color>
+    <color name="colorShortcutBackground">#2E3133</color>
+    <color name="colorShortcutForeground">#C1E8FF</color>
+    <color name="colorLauncherBackground">#2D2D2D</color>
+    <color name="colorLauncherForeground">#FFFFFF</color>
 </resources>
