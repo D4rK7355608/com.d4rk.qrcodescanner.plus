@@ -416,15 +416,8 @@
     <string name="barcode_format_pdf_417" translatable="false">PDF417</string>
     <string name="barcode_format_upc_a" translatable="false">UPC-A</string>
     <string name="barcode_format_upc_e" translatable="false">UPC-E</string>
-    <string name="changelog"><b>Version 1.1_r1:\n</b>
-        • Changed themes;\n
-        • Added license in settings;\n
-        • Added mail to dev;\n
-        • Changed some colors;\n
-        • Target SDK now is 26;\n
-        • Removed unused resources;\n
-        • Fixed switches;\n
-        • Under the hood improvements.
+    <string name="changelog"><b>Version 1.1_r2:\n</b>
+        • Fixed crashes.
         <br> </br>
     </string>
 </resources>

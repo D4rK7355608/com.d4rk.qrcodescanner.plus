@@ -9,12 +9,12 @@ plugins {
 }
 android {
     compileSdk 32
-    def tagName = '1.1_r1'
+    def tagName = '1.1_r2'
     defaultConfig {
         applicationId "com.d4rk.qrcodescanner.plus"
         minSdk 26
         targetSdk 32
-        versionCode 8
+        versionCode 9
         versionName tagName
         buildConfigField "String", "VERSION_NAME", "\"${tagName}\""
         archivesBaseName = "com.d4rk.qrcodescanner.plus-v${tagName}"

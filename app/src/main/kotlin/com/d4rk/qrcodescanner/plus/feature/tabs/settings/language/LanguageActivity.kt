@@ -1,8 +1,8 @@
 package com.d4rk.qrcodescanner.plus.feature.tabs.settings.language
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.d4rk.qrcodescanner.plus.databinding.ActivityLanguageBinding
-class LanguageActivity : AppCompatActivity() {
+import com.kieronquinn.monetcompat.app.MonetCompatActivity
+class LanguageActivity : MonetCompatActivity() {
     private lateinit var binding: ActivityLanguageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
