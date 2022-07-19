@@ -417,7 +417,9 @@
     <string name="barcode_format_upc_a" translatable="false">UPC-A</string>
     <string name="barcode_format_upc_e" translatable="false">UPC-E</string>
     <string name="changelog"><b>Version 1.1_r2:\n</b>
-        • Fixed crashes.
+        • Fixed policy;\n
+        • Added funding in GitHub;\n
+        • Under the hood improvements.
         <br> </br>
     </string>
 </resources>

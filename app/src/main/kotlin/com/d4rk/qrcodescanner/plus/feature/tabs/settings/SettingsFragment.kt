@@ -60,11 +60,11 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
             startActivity(intent)
         }
         binding.buttonPrivacyPolicy.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/qr-bar-code-scanner/privacy-policy"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy"))
             startActivity(intent)
         }
         binding.buttonTermsOfService.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/qr-bar-code-scanner/terms-of-service"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/apps/terms-of-service"))
             startActivity(intent)
         }
         binding.buttonCodeOfConduct.setOnClickListener {
