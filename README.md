@@ -44,7 +44,7 @@ Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.qrcodescanne
 
 - Create an scanner/camera/qr code/bar code/general bug. 🐞
 
-__🖤 D4rK QR & Bar Code Scanner Plus is 100% free, open-source inspired by QrAndBarcodeScanner by wewewe718, ad free, and scan everything it claims to! 🖤__
+__🖤 D4rK QR & Bar Code Scanner Plus is 100% Free, Open Source, inspired by QrAndBarcodeScanner by wewewe718 and scan everything it claims to! 🖤__
 
 <details>
 
