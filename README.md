@@ -105,8 +105,6 @@ Also the app can support the next search engines:
 - ⭐️ Fast and lightweight.
 - ⭐️ Free Open source & secure.
 
-__❗️Note❗️__ Some features are still in progress or needs more improvements and investigations.
-
 ## 📝 Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner/master/CHANGELOG.md)!
 
 ## 🖼️ App preview:
