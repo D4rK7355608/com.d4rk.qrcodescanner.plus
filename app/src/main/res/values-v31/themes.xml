@@ -6,7 +6,7 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
         <item name="android:splashScreenTheme">@style/Theme.App.Starting</item>
         <item name="actionBarStyle">@style/ActionBarTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>

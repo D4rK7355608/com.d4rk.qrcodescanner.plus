@@ -36,24 +36,20 @@
                 android:layout_margin="12dp"
                 android:layout_height="wrap_content">
                 <androidx.appcompat.widget.AppCompatRadioButton
-                    android:id="@+id/romanianButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layoutDirection="rtl"
-                    android:text="@string/language_ro"/>
-                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/englishButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layoutDirection="rtl"
                     android:text="@string/language_en"/>
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/romanianButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:visibility="invisible"
+                    android:text="@string/language_ro"/>
             </RadioGroup>
         </LinearLayout>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/still_in_progress"
-            android:layout_gravity="center"/>
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="wrap_content"
             android:layout_height="252dp"

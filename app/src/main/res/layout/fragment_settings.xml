@@ -204,6 +204,13 @@
                 app:text="@string/feedback"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
+                android:id="@+id/button_free_support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:text="@string/fragment_settings_support"
+                app:hint="@string/fragment_settings_support_sum"
+                app:isSwitchVisible="false"/>
+            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_changelog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

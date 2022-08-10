@@ -71,12 +71,18 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/d4rk7355608/more/code-of-conduct"))
             startActivity(intent)
         }
+        binding.buttonFreeSupport.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://bit.ly/3p8bpjj"))
+            startActivity(intent)
+        }
         binding.buttonMoreApps.setOnClickListener {
             val alertDialog: AlertDialog.Builder = AlertDialog.Builder(requireContext())
             alertDialog.setTitle(R.string.more_apps)
             val view: View = layoutInflater.inflate(R.layout.fragment_dialog, null)
             val musicSleepTimerString: MaterialTextView = view.findViewById(R.id.musicSleepTimerString)
             val englishWithLidiaString: MaterialTextView = view.findViewById(R.id.englishWithLidiaString)
+            val androidStudioTutorialsString: MaterialTextView = view.findViewById(R.id.androidStudioTutorialsString)
+            val lowBrightnessString: MaterialTextView = view.findViewById(R.id.lowBrightnessString)
             alertDialog.setView(view)
             alertDialog.create()
             view.findViewById<View?>(R.id.musicSleepTimer)?.setOnClickListener {
@@ -93,6 +99,22 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
             }
             englishWithLidiaString.setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.englishwithlidia.plus"))
+                startActivity(intent)
+            }
+            view.findViewById<View?>(R.id.androidStudioTutorials)?.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials"))
+                startActivity(intent)
+            }
+            androidStudioTutorialsString.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.androidtutorials"))
+                startActivity(intent)
+            }
+            view.findViewById<View?>(R.id.lowBrightness)?.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness"))
+                startActivity(intent)
+            }
+            lowBrightnessString.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness"))
                 startActivity(intent)
             }
             alertDialog.setNegativeButton(R.string.cool, null)

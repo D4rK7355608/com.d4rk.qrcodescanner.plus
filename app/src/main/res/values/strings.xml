@@ -182,9 +182,12 @@
     <string name="language_default">Default Language.</string>
     <string name="language_en">English (International)</string>
     <string name="language_ro">Romana (Romania)</string>
+    <string name="language_selected">Language already selected!</string>
     <string name="cool">Cool!</string>
     <string name="music_sleep_timer">Music Sleep Timer.</string>
     <string name="english_with_lidia">English with Lidia.</string>
+    <string name="android_studio_tutorials">Android Studio Tutorials</string>
+    <string name="low_brightness">Low Brightness</string>
     <string name="fragment_more_github_tittle">GitHub.</string>
     <string name="fragment_more_github_sum">My official GitHub profile. See more OSS apps and projects here,</string>
     <string name="fragment_more_google_play_store_tittle">Google Play Store.</string>
@@ -272,6 +275,8 @@
     <string name="fragment_settings_changelog">Changelog.</string>
     <string name="fragment_settings_license_title">Open-source libraries.</string>
     <string name="fragment_settings_app_version">App version.</string>
+    <string name="fragment_settings_support">Support me.</string>
+    <string name="fragment_settings_support_sum">Click here if you want to support me without paying money. Just some time for viewing an add.</string>
 
     <!--Choose theme activity-->
     <string name="activity_choose_theme_title">Theme!</string>
@@ -416,9 +421,7 @@
     <string name="barcode_format_pdf_417" translatable="false">PDF417</string>
     <string name="barcode_format_upc_a" translatable="false">UPC-A</string>
     <string name="barcode_format_upc_e" translatable="false">UPC-E</string>
-    <string name="changelog"><b>Version 1.1_r2:\n</b>
-        • Fixed policy;\n
-        • Added funding in GitHub;\n
+    <string name="changelog"><b>Version 1.1_r4:\n</b>
         • Under the hood improvements.
         <br> </br>
     </string>

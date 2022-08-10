@@ -1,3 +1,6 @@
+# Version 1.1_r4:
+- Under the hood improvements.
+
 # Version 1.1_r3:
 - Fixed policy;
 - Added funding in GitHub;

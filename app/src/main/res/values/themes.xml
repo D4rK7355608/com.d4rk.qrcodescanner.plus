@@ -8,7 +8,7 @@
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
         <item name="actionBarStyle">@style/ActionBarTheme</item>
         <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item>
         <item name="alertDialogTheme">@style/DialogTheme</item>

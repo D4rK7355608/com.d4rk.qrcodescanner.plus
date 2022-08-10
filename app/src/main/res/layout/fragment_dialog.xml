@@ -44,4 +44,43 @@
         android:gravity="center"
         android:textStyle="bold"
         android:text="@string/english_with_lidia"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/androidStudioTutorials"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher_android_studio_tutorials"
+        android:background="@android:color/transparent"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/androidStudioTutorialsString"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/android_studio_tutorials"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lowBrightness"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher_low_brightness"
+        android:background="@android:color/transparent"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/lowBrightnessString"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/low_brightness"/>
 </androidx.gridlayout.widget.GridLayout>
