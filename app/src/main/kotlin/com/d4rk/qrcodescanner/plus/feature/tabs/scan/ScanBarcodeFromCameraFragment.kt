@@ -262,7 +262,7 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
                 if (showMessage) {
-                    showToast(R.string.fragment_scan_barcode_from_camera_barcode_saved)
+                    showToast(R.string.saved)
                 }
                 restartPreview()
             }

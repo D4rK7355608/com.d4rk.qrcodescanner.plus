@@ -15,6 +15,7 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import java.util.concurrent.TimeUnit
 class OtpActivity : BaseActivity() {
     private lateinit var binding: ActivityBarcodeOtpBinding
@@ -39,6 +40,7 @@ class OtpActivity : BaseActivity() {
         handleToolbarBackClicked()
         handleRefreshOtpClicked()
         showOtp()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     override fun onDestroy() {
         super.onDestroy()

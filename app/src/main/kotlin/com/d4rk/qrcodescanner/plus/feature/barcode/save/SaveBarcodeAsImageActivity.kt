@@ -20,6 +20,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class SaveBarcodeAsImageActivity : BaseActivity() {
     private lateinit var binding: ActivitySaveBarcodeAsImageBinding
     companion object {
@@ -45,6 +46,7 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
         initToolbar()
         initFormatSpinner()
         initSaveButton()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)

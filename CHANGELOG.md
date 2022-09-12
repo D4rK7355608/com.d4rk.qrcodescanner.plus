@@ -1,3 +1,22 @@
+# Version 2.0_r1:
+- Added monochrome icon (Android 13+);
+- Added language preferences (Android 13+);
+- Added new scroll bars;
+- Added Romanian language support;
+- Added Russian language support;
+- Added Japanese language support;
+- Added Indonesian language support;
+- Remastered all strings;
+- Fixed Firebase crash;
+- Fixed app start crash;
+- Fixed splash screen crash;
+- Removed language section from settings;
+- Removed duplicate strings;
+- Removed unused resources;
+- Major tweaks;
+- Minor UI tweaks;
+- Under the hood improvements.
+
 # Version 1.1_r4:
 - Under the hood improvements.
 

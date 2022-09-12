@@ -8,7 +8,7 @@
     android:paddingVertical="8dp"
     android:paddingHorizontal="@dimen/default_margin"
     style="@style/ClickableBackground">
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="@dimen/default_text_size_extra_small"
         tools:text="Select time"/>
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view_date_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

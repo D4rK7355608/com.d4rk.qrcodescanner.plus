@@ -28,13 +28,13 @@ class ConfirmBarcodeDialogFragment : DialogFragment() {
         val barcode = arguments?.getSerializable(BARCODE_KEY) as? Barcode ?: throw IllegalArgumentException("No barcode passed")
         val messageId = barcode.format.toStringId()
         val dialog = AlertDialog.Builder(requireActivity())
-            .setTitle(R.string.dialog_confirm_barcode_title)
+            .setTitle(R.string.confirm)
             .setMessage(messageId)
             .setCancelable(false)
-            .setPositiveButton(R.string.dialog_confirm_barcode_positive_button) { _, _ ->
+            .setPositiveButton(android.R.string.ok) { _, _ ->
                 listener?.onBarcodeConfirmed(barcode)
             }
-            .setNegativeButton(R.string.dialog_confirm_barcode_negative_button) { _, _ ->
+            .setNegativeButton(android.R.string.ok) { _, _ ->
                 listener?.onBarcodeDeclined()
             }
             .create()

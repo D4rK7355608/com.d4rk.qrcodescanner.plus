@@ -37,7 +37,7 @@ class ChooseSearchEngineDialogFragment : DialogFragment() {
                 val searchEngine = ITEMS[itemClicked]
                 listener?.onSearchEngineSelected(searchEngine)
             }
-            .setNegativeButton(R.string.activity_barcode_choose_search_engine_dialog_negative_button) { _, _ -> }
+            .setNegativeButton(android.R.string.ok) { _, _ -> }
             .create()
         dialog.setOnShowListener {
             dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(ContextCompat.getColor(requireContext(), R.color.colorGoogleRed))

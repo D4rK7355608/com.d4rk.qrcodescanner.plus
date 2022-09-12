@@ -9,12 +9,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.appcompat.widget.AppCompatEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|top"
-            android:hint="@string/fragment_create_data_matrix_hint"
+            android:hint="@string/text_without_special_characters"
             android:inputType="textMultiLine"/>
     </com.google.android.material.textfield.TextInputLayout>
 </FrameLayout>

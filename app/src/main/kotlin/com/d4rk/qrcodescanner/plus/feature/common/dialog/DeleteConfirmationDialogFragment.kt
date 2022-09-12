@@ -26,8 +26,8 @@ class DeleteConfirmationDialogFragment : DialogFragment() {
         val messageId = arguments?.getInt(MESSAGE_ID_KEY).orZero()
         val dialog = AlertDialog.Builder(requireActivity())
             .setMessage(messageId)
-            .setPositiveButton(R.string.dialog_delete_positive_button) { _, _ -> listener?.onDeleteConfirmed() }
-            .setNegativeButton(R.string.dialog_delete_negative_button, null)
+            .setPositiveButton(R.string.delete) { _, _ -> listener?.onDeleteConfirmed() }
+            .setNegativeButton(android.R.string.ok, null)
             .create()
         dialog.setOnShowListener {
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(requireContext(), R.color.colorGoogleRed))

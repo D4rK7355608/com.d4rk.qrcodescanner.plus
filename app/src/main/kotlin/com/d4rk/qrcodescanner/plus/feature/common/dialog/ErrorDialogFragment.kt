@@ -35,7 +35,7 @@ class ErrorDialogFragment : DialogFragment() {
             .setTitle(R.string.error_dialog_title)
             .setMessage(message)
             .setCancelable(false)
-            .setPositiveButton(R.string.error_dialog_positive_button_text) { _, _ -> listener?.onErrorDialogPositiveButtonClicked() }
+            .setPositiveButton(android.R.string.ok) { _, _ -> listener?.onErrorDialogPositiveButtonClicked() }
             .create()
         dialog.setOnShowListener {
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(requireContext(), R.color.colorAccent))

@@ -8,9 +8,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:background="@android:color/transparent"
         style="@style/AppBarLayoutStyle">
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            app:title="@string/activity_supported_formats_title"
+            app:title="@string/supported_formats"
             style="@style/ToolbarWithBackButtonStyle"/>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.recyclerview.widget.RecyclerView

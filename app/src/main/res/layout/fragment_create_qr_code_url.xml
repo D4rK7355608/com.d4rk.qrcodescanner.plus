@@ -7,7 +7,7 @@
     android:paddingHorizontal="@dimen/default_margin"
     android:paddingBottom="@dimen/default_margin"
     android:orientation="vertical">
-    <androidx.appcompat.widget.AppCompatEditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,13 +18,13 @@
         android:inputType="textUri"
         android:imeOptions="actionDone"
         android:backgroundTint="@color/colorAccent"/>
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin_big"
         android:text="@string/fragment_create_barcode_alternative"
-        style="@style/SettingsGroupTitleTextViewStyle"/>
-    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/GroupTitleTextViewStyle"/>
+    <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

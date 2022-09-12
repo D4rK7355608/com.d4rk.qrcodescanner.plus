@@ -8,13 +8,13 @@ plugins {
     id 'kotlin-kapt'
 }
 android {
-    compileSdk 32
-    def tagName = '1.1_r4'
+    compileSdk 33
+    def tagName = '2.0_r1'
     defaultConfig {
         applicationId "com.d4rk.qrcodescanner.plus"
         minSdk 26
-        targetSdk 32
-        versionCode 11
+        targetSdk 33
+        versionCode 17
         versionName tagName
         buildConfigField "String", "VERSION_NAME", "\"${tagName}\""
         archivesBaseName = "com.d4rk.qrcodescanner.plus-v${tagName}"
@@ -22,18 +22,13 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
+            multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            resValue "bool", "FIREBASE_CRASH_ENABLED", "true"
-            resValue "bool", "FIREBASE_ANALYTICS_DEACTIVATED", "false"
         }
         debug {
-            minifyEnabled true
-            shrinkResources true
+            multiDexEnabled true
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            resValue "bool", "FIREBASE_CRASH_ENABLED", "false"
-            resValue "bool", "FIREBASE_ANALYTICS_DEACTIVATED", "true"
         }
     }
     compileOptions {
@@ -49,27 +44,30 @@ android {
     }
 }
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:30.3.1')
-    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.12'
-    implementation 'com.google.firebase:firebase-analytics-ktx:21.1.0'
-    implementation 'com.google.firebase:firebase-perf:20.1.0'
-    implementation 'com.googlecode.ez-vcard:ez-vcard:0.11.3'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.13'
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.1.1'
+    implementation 'com.google.firebase:firebase-perf:20.1.1'
     implementation 'com.google.android.play:review-ktx:2.0.0'
+    implementation 'com.googlecode.ez-vcard:ez-vcard:0.11.3'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation "androidx.palette:palette-ktx:1.0.0"
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.gms:play-services-ads:21.2.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.core:core-splashscreen:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.preference:preference-ktx:1.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-process:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.room:room-runtime:2.4.3'
     implementation 'androidx.room:room-rxjava2:2.4.3'
-    implementation "android.arch.paging:runtime:1.0.1"
-    implementation "android.arch.paging:rxjava2:1.0.1"
-    implementation 'com.github.KieronQuinn:MonetCompat:0.4.1'
+    implementation 'android.arch.paging:runtime:1.0.1'
+    implementation 'android.arch.paging:rxjava2:1.0.1'
     implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
     implementation 'com.github.florent37:singledateandtimepicker:2.2.8'
     implementation 'com.airbnb.android:lottie:5.2.0'
@@ -77,9 +75,10 @@ dependencies {
     implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0'
     implementation 'com.isseiaoki:simplecropview:1.1.8'
     implementation 'commons-codec:commons-codec:1.15'
-    implementation 'dev.turingcomplete:kotlin-onetimepassword:2.3.0'
+    implementation 'dev.turingcomplete:kotlin-onetimepassword:2.4.0'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.0'
+    implementation 'me.zhanghai.android.fastscroll:library:1.1.8'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
     testImplementation 'junit:junit:4.13.2'
     kapt 'androidx.room:room-compiler:2.4.3'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

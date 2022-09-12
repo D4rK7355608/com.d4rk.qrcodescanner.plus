@@ -6,7 +6,7 @@
     android:paddingTop="8dp"
     android:paddingHorizontal="@dimen/default_margin"
     android:paddingBottom="@dimen/default_margin">
-    <androidx.appcompat.widget.AppCompatEditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

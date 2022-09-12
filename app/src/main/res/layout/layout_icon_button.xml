@@ -21,7 +21,7 @@
             android:layout_gravity="center_vertical"
             tools:src="@drawable/ic_copy"/>
     </FrameLayout>
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

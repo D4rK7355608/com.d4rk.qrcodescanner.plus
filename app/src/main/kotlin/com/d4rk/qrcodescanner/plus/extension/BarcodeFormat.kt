@@ -13,10 +13,10 @@ fun BarcodeFormat.toStringId(): Int {
         BarcodeFormat.EAN_13 -> R.string.barcode_format_ean_13
         BarcodeFormat.ITF -> R.string.barcode_format_itf_14
         BarcodeFormat.PDF_417 -> R.string.barcode_format_pdf_417
-        BarcodeFormat.QR_CODE -> R.string.barcode_format_qr_code
+        BarcodeFormat.QR_CODE -> R.string.qr_code
         BarcodeFormat.UPC_A -> R.string.barcode_format_upc_a
         BarcodeFormat.UPC_E -> R.string.barcode_format_upc_e
-        else -> R.string.barcode_format_qr_code
+        else -> R.string.qr_code
     }
 }
 fun BarcodeFormat.toImageId(): Int {

@@ -10,6 +10,7 @@ import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.feature.common.view.SettingsRadioButton
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class ChooseSearchEngineActivity : BaseActivity() {
     private lateinit var binding: ActivityChooseSearchEngineBinding
     companion object {
@@ -29,6 +30,7 @@ class ChooseSearchEngineActivity : BaseActivity() {
         initToolbar()
         showInitialValue()
         handleSettingsChanged()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)

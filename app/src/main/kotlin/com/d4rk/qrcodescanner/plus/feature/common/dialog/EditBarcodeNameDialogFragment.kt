@@ -30,11 +30,11 @@ class EditBarcodeNameDialogFragment : DialogFragment() {
         val listener = requireActivity() as? Listener
         val name = arguments?.getString(NAME_KEY).orEmpty()
         val view = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_edit_barcode_name, null, false)
-        val dialog = AlertDialog.Builder(requireActivity()).setTitle(R.string.dialog_edit_barcode_name_title).setView(view).setPositiveButton(R.string.dialog_confirm_barcode_positive_button) { _, _ ->
+        val dialog = AlertDialog.Builder(requireActivity()).setTitle(R.string.dialog_edit_barcode_name_title).setView(view).setPositiveButton(android.R.string.ok) { _, _ ->
                 val newName = binding.editTextBarcodeName.text.toString()
                 listener?.onNameConfirmed(newName)
             }
-            .setNegativeButton(R.string.dialog_confirm_barcode_negative_button, null).create()
+            .setNegativeButton(android.R.string.ok, null).create()
         dialog.setOnShowListener {
             initNameEditText(binding.editTextBarcodeName, name)
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(requireContext(), R.color.colorAccent))

@@ -18,7 +18,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
-        <item name="android:scrollIndicators">none</item>
     </style>
     <style name="SwitchTheme" parent="Widget.Material3.CompoundButton.Switch">
         <item name="track">@drawable/switch_track</item>
@@ -51,13 +50,8 @@
     <style name="SecondaryTextViewStyle">
         <item name="android:textSize">@dimen/default_text_size_very_small</item>
     </style>
-    <style name="SettingsGroupTitleTextViewStyle">
-        <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:textSize">@dimen/default_text_size_small2</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-    <style name="CreateBarcodeGroupTitleTextViewStyle">
-        <item name="android:textColor">@color/colorAccent</item>
+    <style name="GroupTitleTextViewStyle">
+        <item name="android:textColor">?attr/colorSecondary</item>
         <item name="android:textSize">@dimen/default_text_size_small2</item>
         <item name="android:textStyle">bold</item>
     </style>

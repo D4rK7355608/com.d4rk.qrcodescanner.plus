@@ -12,11 +12,13 @@ import com.d4rk.qrcodescanner.plus.feature.tabs.create.barcode.CreateBarcodeAllA
 import com.d4rk.qrcodescanner.plus.feature.tabs.create.qr.CreateQrCodeAllActivity
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.google.zxing.BarcodeFormat
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class CreateBarcodeFragment : Fragment() {
     private lateinit var _binding: FragmentCreateBarcodeBinding
     private val binding get() = _binding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentCreateBarcodeBinding.inflate(inflater, container, false)
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,12 +10,12 @@
         android:id="@+id/app_bar_layout"
         android:background="@android:color/transparent"
         style="@style/AppBarLayoutStyle">
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            app:title="@string/fragment_create_barcode_title"
+            app:title="@string/create"
             style="@style/ActionBarTheme"/>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.core.widget.NestedScrollView
+    <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
         <LinearLayout
@@ -22,14 +23,21 @@
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
             android:orientation="vertical">
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/create_ad_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-5294151573817700/5823012328"/>
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:layout_marginBottom="12dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
-                android:text="@string/fragment_create_barcode_qr_code"
-                style="@style/CreateBarcodeGroupTitleTextViewStyle"/>
+                android:text="@string/qr_code"
+                style="@style/GroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
                 android:id="@+id/button_clipboard"
                 android:layout_width="match_parent"
@@ -43,7 +51,7 @@
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_text"
                 app:iconBackground="@color/colorAccent"
-                app:text="@string/fragment_create_barcode_qr_code_text"/>
+                app:text="@string/text"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
                 android:id="@+id/button_url"
                 android:layout_width="match_parent"
@@ -69,7 +77,7 @@
                 android:id="@+id/button_contact_vcard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:icon="@drawable/ic_contact"
+                app:icon="@drawable/ic_contact_white"
                 app:iconBackground="@color/colorAccent"
                 app:text="@string/barcode_schema_v_card"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
@@ -81,14 +89,14 @@
                 app:text="@string/fragment_create_barcode_qr_code_show_all"
                 app:isDelimiterVisible="false"
                 app:isArrowVisible="true"/>
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_big"
                 android:layout_marginBottom="12dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
                 android:text="@string/fragment_create_barcode"
-                style="@style/CreateBarcodeGroupTitleTextViewStyle"/>
+                style="@style/GroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
                 android:id="@+id/button_create_barcode"
                 android:layout_width="match_parent"
@@ -99,5 +107,5 @@
                 app:isDelimiterVisible="false"
                 app:isArrowVisible="true"/>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

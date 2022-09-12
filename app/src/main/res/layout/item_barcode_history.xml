@@ -23,7 +23,7 @@
             android:layout_gravity="center_vertical"
             tools:src="@drawable/ic_copy"/>
     </FrameLayout>
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         android:layout_marginStart="@dimen/default_margin"
         tools:text="01.09.1993 12:00"
         style="@style/SecondaryTextViewStyle"/>
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
         android:includeFontPadding="false"
         android:ellipsize="end"
         style="@style/DefaultTextViewStyle"/>
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view_format"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

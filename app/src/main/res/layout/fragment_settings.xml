@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
@@ -10,29 +11,36 @@
         style="@style/AppBarLayoutStyle">
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            app:title="@string/fragment_settings_title"
+            app:title="@string/settings"
             style="@style/ActionBarTheme"/>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.core.widget.NestedScrollView
+    <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/settings_ad_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-5294151573817700/3399835449"/>
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
                 android:text="@string/fragment_settings_appearance_settings"
-                style="@style/SettingsGroupTitleTextViewStyle"/>
+                style="@style/GroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_choose_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_theme"
+                app:text="@string/theme"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_inverse_barcode_colors_in_dark_theme"
@@ -40,21 +48,14 @@
                 android:layout_height="wrap_content"
                 app:text="@string/fragment_settings_inverse_barcode_colors_in_dark_theme"
                 app:hint="@string/fragment_settings_inverse_barcode_colors_in_dark_theme_hint"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
-                android:id="@+id/button_language"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/language"
-                app:isSwitchVisible="false"/>
-            <View style="@style/DelimiterStyle"/>
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_very_big"
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
                 android:text="@string/fragment_settings_scanner_settings"
-                style="@style/SettingsGroupTitleTextViewStyle"/>
+                style="@style/GroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_open_links_automatically"
                 android:layout_width="match_parent"
@@ -77,7 +78,7 @@
                 android:id="@+id/button_flashlight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_flash"
+                app:text="@string/flash"
                 app:hint="@string/fragment_settings_flash_hint"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_vibrate"
@@ -101,23 +102,23 @@
                 android:id="@+id/button_choose_camera"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_camera"
+                app:text="@string/camera"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_select_supported_formats"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_supported_formats"
+                app:text="@string/supported_formats"
                 app:isSwitchVisible="false"/>
             <View style="@style/DelimiterStyle"/>
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_very_big"
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
-                android:text="@string/fragment_settings_history_settings"
-                style="@style/SettingsGroupTitleTextViewStyle"/>
+                android:text="@string/history"
+                style="@style/GroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_save_scanned_barcodes"
                 android:layout_width="match_parent"
@@ -138,34 +139,34 @@
                 android:id="@+id/button_clear_history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_clear_history"
+                app:text="@string/clear_history"
                 app:isDelimiterVisible="false"
                 app:isSwitchVisible="false"/>
             <View style="@style/DelimiterStyle"/>
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_very_big"
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
                 android:text="@string/fragment_settings_advanced_settings"
-                style="@style/SettingsGroupTitleTextViewStyle"/>
+                style="@style/GroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_choose_search_engine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_choose_search_engines"
+                app:text="@string/search_engines"
                 app:hint="@string/fragment_settings_choose_search_engines_hint"
                 app:isSwitchVisible="false"/>
             <View style="@style/DelimiterStyle"/>
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_very_big"
                 android:layout_marginBottom="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
                 android:text="@string/fragment_more_tittle"
-                style="@style/SettingsGroupTitleTextViewStyle"/>
+                style="@style/GroupTitleTextViewStyle"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_privacy_policy"
                 android:layout_width="match_parent"
@@ -195,7 +196,7 @@
                 android:id="@+id/button_check_updates"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_check_updates"
+                app:text="@string/check_for_updates"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_feedback"
@@ -226,7 +227,7 @@
                 android:id="@+id/button_permissions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:text="@string/fragment_settings_permissions"
+                app:text="@string/permissions"
                 app:isSwitchVisible="false"/>
             <com.d4rk.qrcodescanner.plus.feature.common.view.SettingsButton
                 android:id="@+id/button_more"
@@ -235,5 +236,5 @@
                 app:text="@string/fragment_settings_about"
                 app:isSwitchVisible="false"/>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

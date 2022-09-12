@@ -8,6 +8,7 @@ import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.create.CreateBarcodeActivity
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.google.zxing.BarcodeFormat
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class CreateQrCodeAllActivity : BaseActivity() {
     companion object {
         fun start(context: Context) {
@@ -23,6 +24,7 @@ class CreateQrCodeAllActivity : BaseActivity() {
         supportEdgeToEdge()
         handleToolbarBackClicked()
         handleButtonsClicked()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)

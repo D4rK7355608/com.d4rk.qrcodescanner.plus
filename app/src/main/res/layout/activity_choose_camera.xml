@@ -8,12 +8,12 @@
     <com.google.android.material.appbar.AppBarLayout
         android:background="@android:color/transparent"
         style="@style/AppBarLayoutStyle">
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            app:title="@string/activity_choose_camera_title"
+            app:title="@string/camera"
             style="@style/ToolbarWithBackButtonStyle"/>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.core.widget.NestedScrollView
+    <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
         <LinearLayout
@@ -38,5 +38,5 @@
                 app:text="@string/activity_choose_camera_front"
                 app:isDelimiterVisible="false"/>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

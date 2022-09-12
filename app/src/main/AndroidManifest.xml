@@ -7,10 +7,9 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
@@ -18,19 +17,18 @@
         </intent>
     </queries>
     <application
-        android:allowBackup="true"
-        android:appCategory="image"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="true"
-        android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
-        android:isGame="false"
+        android:name=".ads.Ads"
         android:label="@string/app_name"
+        android:description="@string/app_description"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
         android:logo="@drawable/ic_launcher_foreground"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:resizeableActivity="true"
+        android:appCategory="image"
         android:theme="@style/AppTheme"
-        tools:targetApi="s">
+        android:localeConfig="@xml/locales_config"
+        tools:targetApi="33">
         <activity
             android:name=".feature.tabs.settings.feedback.FeedbackActivity"
             android:label="@string/feedback"
@@ -65,14 +63,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".feature.tabs.settings.about.AboutActivity"/>
         </activity>
-        <activity
-            android:name=".feature.tabs.settings.language.LanguageActivity"
-            android:label="@string/language"
-            android:theme="@style/AppThemeActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".feature.tabs.settings.language.LanguageActivity"/>
-        </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.d4rk.qrcodescanner.fileprovider"
@@ -98,12 +88,12 @@
             android:exported="true"
             android:screenOrientation="fullSensor"
             tools:ignore="AppLinkUrlError">
-            <intent-filter android:label="@string/intent_filter_scan_image">
+            <intent-filter android:label="@string/scan_image">
                 <action android:name="android.intent.action.SEND"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="image/*"/>
             </intent-filter>
-            <intent-filter android:label="@string/intent_filter_scan_image">
+            <intent-filter android:label="@string/scan_image">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="image/*"/>
@@ -115,12 +105,12 @@
             android:exported="true"
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateVisible">
-            <intent-filter android:label="@string/intent_filter_create_qr_code_text">
+            <intent-filter android:label="@string/create_qr_code">
                 <action android:name="android.intent.action.SEND"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>
-            <intent-filter android:label="@string/intent_filter_create_qr_code_text">
+            <intent-filter android:label="@string/create_qr_code">
                 <action android:name="android.intent.action.SEND"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/x-vcard"/>
@@ -184,5 +174,8 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5294151573817700~6790204555"/>
     </application>
 </manifest>

@@ -19,7 +19,6 @@ import com.d4rk.qrcodescanner.plus.feature.tabs.settings.camera.ChooseCameraActi
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.formats.SupportedFormatsActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.about.AboutActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.feedback.FeedbackActivity
-import com.d4rk.qrcodescanner.plus.feature.tabs.settings.language.LanguageActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.permissions.AllPermissionsActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.search.ChooseSearchEngineActivity
 import com.d4rk.qrcodescanner.plus.feature.tabs.settings.theme.ChooseThemeActivity
@@ -28,12 +27,14 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
     private lateinit var _binding: FragmentSettingsBinding
     private val binding get() = _binding
     private val disposable = CompositeDisposable()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
         binding.buttonCheckUpdates.setOnClickListener {
             val uri = Uri.parse("market://details?id=" + requireContext().packageName)
             val intent = Intent(Intent.ACTION_VIEW, uri).apply {
@@ -53,10 +54,6 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
         }
         binding.buttonFeedback.setOnClickListener {
             val intent = Intent(activity, FeedbackActivity::class.java)
-            startActivity(intent)
-        }
-        binding.buttonLanguage.setOnClickListener {
-            val intent = Intent(activity, LanguageActivity::class.java)
             startActivity(intent)
         }
         binding.buttonPrivacyPolicy.setOnClickListener {
@@ -117,7 +114,7 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.d4rk.lowbrightness"))
                 startActivity(intent)
             }
-            alertDialog.setNegativeButton(R.string.cool, null)
+            alertDialog.setNegativeButton(android.R.string.cancel, null)
             alertDialog.show()
         }
         binding.buttonPermissions.setOnClickListener {
@@ -133,7 +130,7 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
             val alertDialog = AlertDialog.Builder(requireActivity())
             alertDialog.setTitle(R.string.fragment_settings_changelog)
             alertDialog.setMessage(R.string.changelog)
-            alertDialog.setPositiveButton("Cool!") { dialog: DialogInterface, _: Int -> dialog.dismiss() }
+            alertDialog.setPositiveButton(android.R.string.cancel) { dialog: DialogInterface, _: Int -> dialog.dismiss() }
             alertDialog.show()
         }
         binding.buttonSelectSupportedFormats.setOnClickListener {

@@ -9,12 +9,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.appcompat.widget.AppCompatEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|top"
-            android:hint="@string/fragment_create_upc_e_hint"
+            android:hint="@string/seven_digits"
             android:inputType="number"
             android:lines="1"
             android:maxLines="1"

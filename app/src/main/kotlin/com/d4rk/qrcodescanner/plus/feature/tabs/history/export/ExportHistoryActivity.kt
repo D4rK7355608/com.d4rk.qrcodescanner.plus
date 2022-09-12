@@ -21,6 +21,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class ExportHistoryActivity : BaseActivity() {
     private lateinit var binding: ActivityExportHistoryBinding
     private val disposable = CompositeDisposable()
@@ -41,6 +42,7 @@ class ExportHistoryActivity : BaseActivity() {
         initExportTypeSpinner()
         initFileNameEditText()
         initExportButton()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -111,7 +113,7 @@ class ExportHistoryActivity : BaseActivity() {
         binding.scrollView.isVisible = isLoading.not()
     }
     private fun showHistoryExported() {
-        Toast.makeText(this, R.string.activity_export_history_exported, Toast.LENGTH_LONG).show()
+        Toast.makeText(this, R.string.saved_to_downloads, Toast.LENGTH_LONG).show()
         finish()
     }
 }

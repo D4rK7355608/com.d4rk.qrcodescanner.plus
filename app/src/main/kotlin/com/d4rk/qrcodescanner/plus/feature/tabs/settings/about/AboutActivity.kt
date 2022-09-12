@@ -44,7 +44,6 @@ class AboutActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.itemSettingsMoreAboutLibraries.setOnClickListener {
-            OssLicensesMenuActivity.setActivityTitle(getString(R.string.libraries))
             val intent = Intent(this, OssLicensesMenuActivity::class.java)
             startActivity(intent)
         }

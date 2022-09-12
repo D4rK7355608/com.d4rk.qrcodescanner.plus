@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/default_margin"
     style="@style/ClickableBackground">
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toStartOf="@id/switch_button"
         style="@style/DefaultTextViewStyle"
         tools:text="Textffffffffffffffffffffffffffffffffffffffffffffffffffffff"/>
-    <androidx.appcompat.widget.AppCompatTextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text_view_hint"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

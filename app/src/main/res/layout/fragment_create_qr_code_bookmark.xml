@@ -10,14 +10,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <androidx.appcompat.widget.AppCompatEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/fragment_create_qr_code_bookmark_title_hint"
+            android:hint="@string/title"
             android:imeOptions="actionNext"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp">
-        <androidx.appcompat.widget.AppCompatEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_url"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -8,25 +8,25 @@
     <com.google.android.material.appbar.AppBarLayout
         android:background="@android:color/transparent"
         style="@style/AppBarLayoutStyle">
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            app:title="@string/activity_save_barcode_as_image_title"
+            app:title="@string/save"
             style="@style/ToolbarWithBackButtonStyle"/>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.core.widget.NestedScrollView
+    <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin_big"
-                android:text="@string/activity_save_barcode_as_image_save_as_hint"
-                android:textColor="@color/colorAccent"
+                android:text="@string/save_as"
+                android:textColor="?attr/colorSecondary"
                 android:textSize="@dimen/default_text_size_extra_small"/>
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinner_save_as"
@@ -40,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_very_big"
                 android:layout_marginHorizontal="@dimen/default_margin_big"
-                android:text="@string/activity_save_barcode_as_image_file_name_save"/>
+                android:text="@string/save"/>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
     <ProgressBar
         android:id="@+id/progress_bar_loading"
         android:layout_width="wrap_content"

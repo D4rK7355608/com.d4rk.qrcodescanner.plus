@@ -40,7 +40,7 @@ fun BarcodeSchema.toStringId(): Int? {
         BarcodeSchema.WIFI -> R.string.barcode_schema_wifi
         BarcodeSchema.YOUTUBE -> R.string.barcode_schema_youtube
         BarcodeSchema.BOARDINGPASS -> R.string.barcode_schema_boardingpass
-        BarcodeSchema.OTHER -> R.string.barcode_schema_other
+        BarcodeSchema.OTHER -> R.string.text
         else -> null
     }
 }

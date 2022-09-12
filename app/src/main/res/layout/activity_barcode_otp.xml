@@ -9,12 +9,12 @@
         android:background="@android:color/transparent"
         android:id="@+id/app_bar_layout"
         style="@style/AppBarLayoutStyle">
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             app:title="@string/activity_barcode_otp_title"
             style="@style/ToolbarWithBackButtonStyle"/>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.core.widget.NestedScrollView
+    <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
         <LinearLayout
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/default_margin"
             android:orientation="vertical">
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
                 android:textSize="@dimen/default_text_size_very_large"
                 app:autoSizeTextType="uniform"
                 style="@style/DefaultTextViewStyle"/>
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_counter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 android:layout_marginTop="@dimen/default_margin"
                 android:visibility="gone"
                 android:text="@string/activity_barcode_otp_refresh_otp"/>
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_timer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,5 +54,5 @@
                 android:visibility="gone"
                 style="@style/DefaultTextViewStyle"/>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -59,6 +59,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
     private lateinit var binding: ActivityCreateBarcodeBinding
     companion object {
@@ -115,6 +116,7 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
         showToolbarTitle()
         showToolbarMenu()
         showFragment()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

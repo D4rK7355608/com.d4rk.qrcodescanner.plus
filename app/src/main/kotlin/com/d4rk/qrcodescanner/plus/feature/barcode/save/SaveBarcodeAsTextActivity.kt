@@ -19,6 +19,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class SaveBarcodeAsTextActivity : BaseActivity() {
     private lateinit var binding: ActivitySaveBarcodeAsTextBinding
     companion object {
@@ -44,6 +45,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
         initToolbar()
         initFormatSpinner()
         initSaveButton()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -98,7 +100,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
         binding.scrollView.isVisible = isLoading.not()
     }
     private fun showBarcodeSaved() {
-        Toast.makeText(this, R.string.activity_save_barcode_as_text_file_name_saved, Toast.LENGTH_LONG).show()
+        Toast.makeText(this, R.string.saved_to_downloads, Toast.LENGTH_LONG).show()
         finish()
     }
 }

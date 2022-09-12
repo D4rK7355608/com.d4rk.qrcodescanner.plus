@@ -9,6 +9,7 @@ import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.usecase.Settings
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class ChooseThemeActivity : BaseActivity() {
     private lateinit var binding: ActivityChooseThemeBinding
     companion object {
@@ -26,6 +27,7 @@ class ChooseThemeActivity : BaseActivity() {
         setContentView(binding.root)
         supportEdgeToEdge()
         initToolbar()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     override fun onResume() {
         super.onResume()

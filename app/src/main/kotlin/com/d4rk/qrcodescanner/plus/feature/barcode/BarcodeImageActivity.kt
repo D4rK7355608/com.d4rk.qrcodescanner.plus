@@ -12,6 +12,7 @@ import com.d4rk.qrcodescanner.plus.extension.toStringId
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.model.Barcode
+import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import java.text.SimpleDateFormat
 import java.util.Locale
 class BarcodeImageActivity : BaseActivity() {
@@ -39,6 +40,7 @@ class BarcodeImageActivity : BaseActivity() {
         handleToolbarMenuItemClicked()
         showMenu()
         showBarcode()
+        FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
