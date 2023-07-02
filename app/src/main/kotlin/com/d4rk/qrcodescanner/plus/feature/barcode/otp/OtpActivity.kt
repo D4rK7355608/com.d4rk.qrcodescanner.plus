@@ -53,6 +53,7 @@ class OtpActivity : BaseActivity() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
     private fun parseOtp() {
+        @Suppress("DEPRECATION")
         otp = intent?.getSerializableExtra(OTP_KEY) as OtpAuth
     }
     private fun handleToolbarBackClicked() {
@@ -74,12 +75,12 @@ class OtpActivity : BaseActivity() {
             OtpAuth.HOTP_TYPE -> showHotp()
             OtpAuth.TOTP_TYPE -> showTotp()
         }
-        binding.textViewPassword.text = otpGenerator.generateOTP(otp) ?: getString(R.string.activity_barcode_otp_unable_to_generate_otp)
+        binding.textViewPassword.text = otpGenerator.generateOTP(otp) ?: getString(R.string.unable_to_generate_password)
     }
     private fun showHotp() {
         binding.buttonRefresh.isVisible = true
         binding.textViewCounter.isVisible = true
-        binding.textViewCounter.text = getString(R.string.activity_barcode_otp_counter, otp.counter.orZero().toString())
+        binding.textViewCounter.text = getString(R.string.counter, otp.counter.orZero().toString())
     }
     private fun showTotp() {
         binding.textViewTimer.isVisible = true
@@ -95,7 +96,7 @@ class OtpActivity : BaseActivity() {
     private fun showTime(secondsLeft: Long) {
         val minutes = secondsLeft / 60
         val seconds = secondsLeft % 60
-        binding.textViewTimer.text = getString(R.string.activity_barcode_otp_timer, minutes.toTime(), seconds.toTime())
+        binding.textViewTimer.text = getString(R.string.timer_left, minutes.toTime(), seconds.toTime())
     }
     private fun Long.toTime(): String {
         return if (this >= 10) {

@@ -24,22 +24,22 @@ fun BarcodeSchema.toImageId(): Int? {
 }
 fun BarcodeSchema.toStringId(): Int? {
     return when (this) {
-        BarcodeSchema.BOOKMARK -> R.string.barcode_schema_bookmark
-        BarcodeSchema.CRYPTOCURRENCY -> R.string.barcode_schema_cryptocurrency
-        BarcodeSchema.EMAIL -> R.string.barcode_schema_email
-        BarcodeSchema.GEO -> R.string.barcode_schema_geo
-        BarcodeSchema.APP -> R.string.barcode_schema_google_play
-        BarcodeSchema.MMS -> R.string.barcode_schema_mms
-        BarcodeSchema.MECARD -> R.string.barcode_schema_me_card
-        BarcodeSchema.PHONE -> R.string.barcode_schema_phone
-        BarcodeSchema.OTP_AUTH -> R.string.barcode_schema_otp
-        BarcodeSchema.SMS -> R.string.barcode_schema_sms
-        BarcodeSchema.URL -> R.string.barcode_schema_url
-        BarcodeSchema.VEVENT -> R.string.barcode_schema_v_event
-        BarcodeSchema.VCARD -> R.string.barcode_schema_v_card
-        BarcodeSchema.WIFI -> R.string.barcode_schema_wifi
-        BarcodeSchema.YOUTUBE -> R.string.barcode_schema_youtube
-        BarcodeSchema.BOARDINGPASS -> R.string.barcode_schema_boardingpass
+        BarcodeSchema.BOOKMARK -> R.string.bookmark
+        BarcodeSchema.CRYPTOCURRENCY -> R.string.bitcoin
+        BarcodeSchema.EMAIL -> R.string.email
+        BarcodeSchema.GEO -> R.string.location
+        BarcodeSchema.APP -> R.string.app
+        BarcodeSchema.MMS -> R.string.mms
+        BarcodeSchema.MECARD -> R.string.contact_me_card
+        BarcodeSchema.PHONE -> R.string.phone
+        BarcodeSchema.OTP_AUTH -> R.string.otp
+        BarcodeSchema.SMS -> R.string.sms
+        BarcodeSchema.URL -> R.string.url
+        BarcodeSchema.VEVENT -> R.string.event
+        BarcodeSchema.VCARD -> R.string.contact_v_card
+        BarcodeSchema.WIFI -> R.string.wifi
+        BarcodeSchema.YOUTUBE -> R.string.youtube_url
+        BarcodeSchema.BOARDINGPASS -> R.string.barcode_schema_boarding_pass
         BarcodeSchema.OTHER -> R.string.text
         else -> null
     }

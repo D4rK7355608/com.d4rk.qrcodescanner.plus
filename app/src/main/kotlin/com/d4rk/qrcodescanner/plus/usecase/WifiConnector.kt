@@ -11,7 +11,7 @@ import com.d4rk.qrcodescanner.plus.extension.wifiManager
 import io.reactivex.Completable
 import io.reactivex.schedulers.Schedulers
 object WifiConnector {    
-    private val hexRegex = """^[0-9a-f]+$""".toRegex(RegexOption.IGNORE_CASE)
+    private val hexRegex = """^[\da-f]+$""".toRegex(RegexOption.IGNORE_CASE)
     fun connect(
             context: Context,
             authType: String,

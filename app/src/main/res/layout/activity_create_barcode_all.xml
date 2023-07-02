@@ -1,20 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:id="@+id/root_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar_layout"
-        android:background="@android:color/transparent"
-        style="@style/AppBarLayoutStyle">
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            app:title="@string/create_barcode"
-            style="@style/ToolbarWithBackButtonStyle"/>
-    </com.google.android.material.appbar.AppBarLayout>
     <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
@@ -29,29 +20,29 @@
                 android:layout_marginTop="@dimen/default_margin"
                 android:layout_marginBottom="12dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
-                android:text="@string/fragment_create_barcode_list_2d"
+                android:text="@string/barcodes_2d"
                 style="@style/GroupTitleTextViewStyle"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_data_matrix"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_data_matrix"
-                app:iconBackground="@color/colorGoogleGreen"
-                app:text="@string/barcode_format_data_matrix"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/data_matrix"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_aztec"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_aztec"
-                app:iconBackground="@color/colorGoogleYellow"
-                app:text="@string/barcode_format_aztec"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/aztec"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_pdf_417"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_pdf417"
-                app:iconBackground="@color/colorGoogleRed"
-                app:text="@string/barcode_format_pdf_417"
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/pdf_417"
                 app:isDelimiterVisible="false"/>
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
@@ -59,72 +50,87 @@
                 android:layout_marginTop="@dimen/default_margin_big"
                 android:layout_marginBottom="12dp"
                 android:layout_marginHorizontal="@dimen/default_margin"
-                android:text="@string/fragment_create_barcode_list_1d"
+                android:text="@string/barcodes_1d"
                 style="@style/GroupTitleTextViewStyle"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_ean_13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_ean_13"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/ean_13"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_ean_8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_ean_8"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/ean_8"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_upc_e"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_upc_e"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/upc_e"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_upc_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_upc_a"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/upc_a"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_code_128"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_code_128"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/code_128"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_code_93"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_code_93"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/code_93"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_code_39"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_code_39"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/code_39"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_codabar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_codabar"/>
-            <com.d4rk.qrcodescanner.plus.feature.common.view.IconButtonWithDelimiter
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/codabar"/>
+            <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_itf_14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
-                app:iconBackground="@color/colorAccent"
-                app:text="@string/barcode_format_itf_14"
+                app:iconBackground="?attr/colorPrimary"
+                app:text="@string/itf"
                 app:isDelimiterVisible="false"/>
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Outlined"
+                android:id="@+id/card_view_ad"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/default_margin_big"
+                android:layout_marginHorizontal="@dimen/default_margin"
+                app:layout_constraintTop_toBottomOf="@id/card_view_about">
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/ad_view"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    ads:adSize="FULL_BANNER"
+                    ads:adUnitId="ca-app-pub-5294151573817700/5823012328"/>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

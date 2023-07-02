@@ -4,88 +4,69 @@
 ║║║║╩╣╚╣═╣║║║║║╩╣
 ╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-D4rK QR & Bar Code Scanner Plus is an open-source scanner app for every Android device. ✌🙂It uses the ZXing scanning library and is compatible with latest Material-You design on Android 12+ devices with changeable themes in settings for new and old devices. 📱
+Scan and Generate QR/Bar Codes with Ease! 🌐
 
-QR & Bar Code Scanner Plus app is also QR code generator in your pocket. Using QR generator is extremely easy to use, simply enter the data you wish on QR code and click to generate QR codes. After generating your code you can export it as SVG or PNG file type. 🖼️
+Introducing D4rK QR & Bar Code Scanner Plus, the reliable and user-friendly app that streamlines QR code scanning and generation on Android devices. Powered by the trusted ZXing scanning library, our app offers a secure and seamless experience. 🔐
 
-QR and bar codes are everywhere! Install QR & Bar Code Scanner Plus app to scan every code you want. QR & Bar Code Scanner Plus app is the only free scanner app you will ever need. 📷 Turn on the flashlight for scanning in the dark or use pinch to zoom to scan QRs far away. 📸
+Unlock the power of QR codes with our all-in-one app! In addition to scanning, QR & Bar Code Scanner Plus doubles as a convenient QR code generator. Creating your own QR codes is a breeze. Simply enter your desired data and let the app do the rest. Once generated, you can export your codes as SVG or PNG files, ensuring compatibility across various platforms. 🖼️
 
-Also D4rK QR & Bar Code Scanner Plus scan all common barcode formats: QR, Data Matrix, Aztec, UPC, EAN and many more. It can use flashlight to scan in the dark, zoom to read barcodes from far distances and links, connect to Wi-Fi, view geolocations, add calendar events, find product information, etc.
+Embrace QR and bar codes with QR & Bar Code Scanner Plus. The ultimate free scanner app that covers all your needs, whether in low-light or distant scenarios. Use the flashlight for dark environments and zoom in to scan faraway codes. Effortlessly capture every code with our in-app camera. 📸
 
-Designed with security as a top priority, the best QR utility on the market offers a simple interface with abundant functionality This functionality for improved usability requires access to certain permissions in your device. 🛡️
+Furthermore, D4rK QR & Bar Code Scanner Plus supports a wide range of barcode formats, including QR, Data Matrix, Aztec, UPC, EAN, and more. Discover hidden details, such as Wi-Fi connections, geolocations, calendar events, and product information, with just a scan. 🛡️
 
-In case if anyone have curiosity about permissions check on settings to see for what is needed specific permissions. ⚙️
+Our app is designed to be simple and easy to use, while also being fast and lightweight. Plus, it's free and open-source software!
 
-You can customize in app experience, like preferred camera (back or front), search engine, history settings or preferred theme using app settings. ⚙️
-
-⚠ Opening Issues⚠
-
+⚠ Opening Issues!
 Bugs can be reported here: https://github.com/D4rK7355608/com.d4rk.qrcodescanner.plus/issues
 
-• Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk. For support, informations and requests, please contact d4rk7355608@gmail.com.
-
-Create an scanner/camera/qr code/bar code/general bug. 🐞
-
-GitHub: https://github.com/D4rK7355608/com.d4rk.qrcodescanner.plus
-
-🖤 D4rK QR & Bar Code Scanner Plus is 100% Free, Open Source, inspired by QrAndBarcodeScanner by wewewe718 and scan everything it claims to! 🖤
+Create a scanner/camera/qr code/bar code/general bug. 🐞
 
 🛠️ Features!
+⭐️ Scan QR/Bar codes.
+⭐️ Generate QR/Bar codes.
 ⭐️ Fast scanning.
-⭐️ Build in QR/Bar code generator.
+⭐️ Multiple search engines.
+⭐️ Barcodes and 2D codes.
 ⭐️ Save codes in history.
 ⭐️ Adaptive themes + Material-You.
 ⭐️ Simple and easy to use.
 ⭐️ Fast and lightweight.
 ⭐️ Free Open source & secure.
 
-The app can make QR Codes for:
-• Website links (URLs);
-• Wi-Fi hotspot access information;
-• Geo locations;
-• Contact data (MeCard, vCard);
-• Calendar events;
-• Phones;
-• Email;
-• SMS.
+👨‍💻 More about me!
+● Music:
+⇨ YouTube Music: https://music.youtube.com/channel/UCb2zXzO03OM7U9xeIsqqEQw
+⇨ Spotify: https://open.spotify.com/artist/5Q58DBSe2tpBb3qqq9WVfo
+⇨ Deezer: https://www.deezer.com/us/artist/408659
+⇨ SoundCloud: https://soundcloud.com/d4rk7355608
+⇨ BandLab: https://www.bandlab.com/d4rk7355608
 
-Barcodes and 2D codes:
-• Data Matrix;
-• Aztec;
-• PDF417;
-• EAN-13, EAN-8;
-• UPC-E, UPC-A;
-• Code 39, Code 93 and Code 128;
-• Codabar;
-• ITF.
+● Graphics:
+⇨ DeviantArt: https://www.deviantart.com/d4rk7355608
 
-Also the app can support the next search engines:
-• Bing;
-• DuckDuckGo;
-• Google;
-• Qwant;
-• StartPage;
-• Yahoo;
-• Yandex.
+● Social:
+⇨ GameJolt: https://gamejolt.com/@D4rK7355608
+⇨ Twitter: https://twitter.com/D4rK7355608
+⇨ Skype: d4rk7355608
+⇨ Steam Profile: https://steamcommunity.com/id/d4rk7355608
+⇨ Steam Trade Link: https://steamcommunity.com/tradeoffer/new/?partner=892981294&token=pxsUtrm3
 
-Check app trailer here: https://youtu.be/CgX31Oy2etM
+● Developer stuff:
+⇨ GitHub: https://github.com/D4rK7355608
+⇨ Google Play Store: https://play.google.com/store/apps/dev?id=5390214922640123642
+⇨ Google Developers: https://g.dev/D4rK7355608
 
-👨‍💻 More about me:
-● Google Developers - https://developers.google.com/profile/u/D4rK7355608
-● XDA - https://forum.xda-developers.com/m/d4rk7355608.10095012/
-● YouTube - https://www.youtube.com/c/D4rK7355608
-● DeviantArt - https://www.deviantart.com/d4rk7355608
-● GameJolt - https://gamejolt.com/@D4rK_S-A-D
-● Twitter - https://twitter.com/D4rK7355608/
-● GitHub - https://github.com/D4rK7355608
+🛑 Disclaimer!
+• Only use the GitHub Issues section if you discover issues with the code itself. Do not mistake the Issues page as a help desk. For support, information and requests, please contact d4rk7355608@gmail.com.
+• QR Codes are not recommended for use with confidential/secret information, as they can be easily decoded by anyone with a smartphone.
+• D4rK QR & Bar Code Scanner Plus uses the ZXing library, which is a popular and open-source library for decoding QR codes. It is available under the Apache License 2.0.
 
-❤ Thanks wewewe718 for QrAndBarcodeScanner: https://github.com/wewewe718/QrAndBarcodeScanner
+💬 Feedback!
+We are constantly updating and improving QR & Bar Code Scanner Plus to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
-Disclaimers:
-• QR Codes ARE NOT recommended for use with confidential/secret information.
-• D4rK QR & Bar Code Scanner Plus™ uses ZXing library. Apache License 2.0.
+Thank you for choosing QR & Bar Code Scanner Plus. We hope you enjoy using our app as much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app! ❤
 
-Feedback:
-If you have any suggested features or improvement, please leave a comment. In case something is not working correctly please let me know. When posting low rating please describe what is wrong to give the possibility to fix that issue.
-
-Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app.
+╔╦╦══╦══╦═╦╗
+║╔╣║║╠╗╔╣═╣║
+║║║╔╗║║║║═╬╣
+╚╝╚╝╚╝╚╝╚═╩╝

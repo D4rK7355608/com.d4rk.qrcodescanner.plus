@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -14,9 +13,8 @@
         android:gravity="start|top"
         android:lines="1"
         android:maxLines="1"
-        android:hint="@string/barcode_schema_phone"
+        android:hint="@string/phone"
         android:imeOptions="actionDone"
-        android:backgroundTint="@color/colorAccent"
         android:inputType="phone"
         android:digits="+0123456789"/>
 </LinearLayout>

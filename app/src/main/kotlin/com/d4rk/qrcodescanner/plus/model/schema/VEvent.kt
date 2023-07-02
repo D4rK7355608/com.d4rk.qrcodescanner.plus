@@ -34,12 +34,12 @@ data class VEvent(
         private const val SUMMARY_PREFIX = "SUMMARY:"
         private val DATE_PARSERS by unsafeLazy {
             listOf(
-                SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'"),
-                SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss"),
-                SimpleDateFormat("yyyyMMdd'T'HHmmss'Z'"),
-                SimpleDateFormat("yyyyMMdd'T'HHmmss"),
-                SimpleDateFormat("yyyy-MM-dd"),
-                SimpleDateFormat("yyyyMMdd")
+                SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US),
+                SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US),
+                SimpleDateFormat("yyyyMMdd'T'HHmmss'Z'", Locale.US),
+                SimpleDateFormat("yyyyMMdd'T'HHmmss", Locale.US),
+                SimpleDateFormat("yyyy-MM-dd", Locale.US),
+                SimpleDateFormat("yyyyMMdd", Locale.US)
             )
         }
         private val BARCODE_TEXT_DATE_FORMATTER by unsafeLazy {

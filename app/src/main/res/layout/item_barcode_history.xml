@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/default_margin"
         android:padding="@dimen/icon_button_icon_padding"
-        android:background="@drawable/background_circle">
+        android:background="@drawable/bg_circle">
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image_view_schema"
             android:layout_width="@dimen/icon_button_icon_size"
@@ -75,5 +74,5 @@
         app:layout_constraintTop_toBottomOf="@id/text_view_format"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/colorAccent"/>
+        android:background="?attr/colorPrimary"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

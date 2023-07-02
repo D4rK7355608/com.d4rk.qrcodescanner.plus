@@ -24,7 +24,6 @@ class BoardingPass(
     private val blob: String? = null,
 ) : Schema {
     companion object {
-        private const val TAG = "QRandBAR"
         private val DATE_FORMATTER by unsafeLazy { SimpleDateFormat("d MMMM", Locale.ENGLISH) }
         fun parse(text: String): BoardingPass? {
             if (text.startsWithIgnoreCase("M1").not()) {

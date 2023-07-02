@@ -24,20 +24,22 @@ object PermissionsHelper {
         }
     }
     fun areAllPermissionsGranted(context: Context, permissions: Array<out String>): Boolean {
+        var allGranted = true
         permissions.forEach { permission ->
             if (isPermissionGranted(context, permission).not()) {
-                return false
+                allGranted = false
             }
         }
-        return true
+        return allGranted
     }
     fun areAllPermissionsGranted(grantResults: IntArray): Boolean {
+        var allGranted = true
         grantResults.forEach { result ->
             if (result != PackageManager.PERMISSION_GRANTED) {
-                return false
+                allGranted = false
             }
         }
-        return true
+        return allGranted
     }
     private fun isPermissionGranted(context: Context, permission: String): Boolean {
         return ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED

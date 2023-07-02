@@ -26,6 +26,7 @@ class BarcodeImageActivity : BaseActivity() {
     }
     private lateinit var binding: ActivityBarcodeImageBinding
     private val dateFormatter = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.ENGLISH)
+    @Suppress("DEPRECATION")
     private val barcode by unsafeLazy {
         intent?.getSerializableExtra(BARCODE_KEY) as? Barcode ?: throw IllegalArgumentException("No barcode passed")
     }

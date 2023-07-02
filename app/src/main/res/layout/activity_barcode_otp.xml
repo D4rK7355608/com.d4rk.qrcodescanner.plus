@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,7 +10,7 @@
         style="@style/AppBarLayoutStyle">
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
-            app:title="@string/activity_barcode_otp_title"
+            app:title="@string/otp"
             style="@style/ToolbarWithBackButtonStyle"/>
     </com.google.android.material.appbar.AppBarLayout>
     <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
@@ -39,12 +38,14 @@
                 android:visibility="gone"
                 style="@style/DefaultTextViewStyle"/>
             <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.ElevatedButton"
                 android:id="@+id/button_refresh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:visibility="gone"
-                android:text="@string/activity_barcode_otp_refresh_otp"/>
+                android:text="@string/refresh"
+                android:tooltipText="@string/tooltip_generate_new_secret"/>
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/text_view_timer"
                 android:layout_width="match_parent"

@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:id="@+id/root_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.google.android.material.appbar.AppBarLayout
-        android:background="@android:color/transparent"
-        style="@style/AppBarLayoutStyle">
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            app:title="@string/export_history"
-            style="@style/ToolbarWithBackButtonStyle"/>
-    </com.google.android.material.appbar.AppBarLayout>
     <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
@@ -25,7 +15,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginHorizontal="@dimen/default_margin_big"
-                android:text="@string/activity_export_history_as_hint"
+                android:text="@string/export_as"
                 android:textColor="?attr/colorSecondary"
                 android:textSize="@dimen/default_text_size_extra_small"/>
             <androidx.appcompat.widget.AppCompatSpinner
@@ -46,19 +36,21 @@
                     android:gravity="start|top"
                     android:lines="1"
                     android:maxLines="1"
-                    android:hint="@string/activity_export_history_file_name_hint"
+                    android:hint="@string/hint_file_name"
                     android:inputType="text"
                     android:imeOptions="actionNext"
                     android:text="@string/activity_export_history_file_name_default"
                     android:autofillHints="Add whatever u want"/>
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.ElevatedButton"
                 android:id="@+id/button_export"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin_big"
                 android:layout_marginHorizontal="@dimen/default_margin_big"
-                android:text="@string/activity_export_history_export"/>
+                android:text="@string/export"
+                android:tooltipText="@string/tooltip_export"/>
         </LinearLayout>
     </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
     <ProgressBar

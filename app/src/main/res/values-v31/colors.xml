@@ -1,14 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">@android:color/system_accent1_300</color>
     <color name="colorGoogleGreen">@android:color/system_accent1_300</color>
-    <color name="colorGoogleRed">@android:color/system_accent1_300</color>
-    <color name="colorGoogleYellow">@android:color/system_accent1_300</color>
-    <color name="colorAndroidGreen">@android:color/system_accent1_300</color>
-    <color name="colorFirebaseOrange">@android:color/system_accent1_300</color>
-    <color name="colorBackground">@android:color/system_neutral1_50</color>
-    <color name="colorDialogBackground">@android:color/system_neutral2_50</color>
-    <color name="colorOverflowMenuBackground">@android:color/system_neutral2_50</color>
     <color name="colorShortcutBackground">@android:color/system_accent1_100</color>
     <color name="colorShortcutForeground">@android:color/system_neutral2_700</color>
 </resources>
