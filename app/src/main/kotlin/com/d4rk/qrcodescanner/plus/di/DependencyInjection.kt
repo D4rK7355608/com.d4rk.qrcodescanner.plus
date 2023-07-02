@@ -29,7 +29,5 @@ val contactHelper get() = ContactHelper
 val permissionsHelper get() = PermissionsHelper
 val rotationHelper get() = RotationHelper
 val scannerCameraHelper get() = ScannerCameraHelper
-val Fragment.barcodeParser get() = BarcodeParser
 val Fragment.barcodeDatabase get() = BarcodeDatabase.getInstance(requireContext())
 val Fragment.settings get() = Settings.getInstance(requireContext())
-val Fragment.permissionsHelper get() = PermissionsHelper

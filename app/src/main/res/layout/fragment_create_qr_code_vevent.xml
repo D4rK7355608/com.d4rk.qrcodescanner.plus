@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,7 +19,6 @@
             android:maxLines="1"
             android:hint="@string/title"
             android:imeOptions="actionNext"
-            android:backgroundTint="@color/colorAccent"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -35,9 +33,8 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/fragment_create_qr_code_event_organizer_hint"
+            android:hint="@string/organizer"
             android:imeOptions="actionNext"
-            android:backgroundTint="@color/colorAccent"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
@@ -52,23 +49,22 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/fragment_create_qr_code_event_summary_hint"
+            android:hint="@string/summary"
             android:imeOptions="actionDone"
-            android:backgroundTint="@color/colorAccent"
             android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <com.d4rk.qrcodescanner.plus.feature.common.view.DateTimePickerButton
+    <com.d4rk.qrcodescanner.plus.ui.view.DateTimePickerButton
         android:id="@+id/button_date_time_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:paddingHorizontal="4dp"
-        app:hint="@string/fragment_create_qr_code_event_start_date_hint"/>
-    <com.d4rk.qrcodescanner.plus.feature.common.view.DateTimePickerButton
+        app:hint="@string/start_date"/>
+    <com.d4rk.qrcodescanner.plus.ui.view.DateTimePickerButton
         android:id="@+id/button_date_time_end"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:paddingHorizontal="4dp"
-        app:hint="@string/fragment_create_qr_code_event_end_date_hint"/>
+        app:hint="@string/end_date"/>
 </LinearLayout>

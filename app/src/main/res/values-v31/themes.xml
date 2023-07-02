@@ -1,22 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppThemeActionBar" parent="Theme.Material3.DynamicColors.DayNight">
-        <item name="android:colorBackground">@color/colorBackground</item>
-        <item name="android:dialogCornerRadius">24dp</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:windowLightNavigationBar">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/colorBackground</item>
-        <item name="android:splashScreenTheme">@style/Theme.App.Starting</item>
-        <item name="actionBarStyle">@style/ActionBarTheme</item>
-        <item name="alertDialogTheme">@style/DialogTheme</item>
-        <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item>
-        <item name="switchStyle">@style/SwitchTheme</item>
-    </style>
-    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/colorBackground</item>
+    <style name="SplashScreenTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">?attr/colorSurface</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
-        <item name="android:windowSplashScreenIconBackgroundColor">@color/colorBackground</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">?attr/colorSurface</item>
     </style>
 </resources>

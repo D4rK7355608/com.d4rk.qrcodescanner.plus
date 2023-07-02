@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppThemeActionBar" parent="Theme.Material3.DynamicColors.DayNight">
-        <item name="android:colorBackground">@color/colorBackground</item>
-        <item name="android:dialogCornerRadius">24dp</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/colorBackground</item>
-        <item name="actionBarStyle">@style/ActionBarTheme</item>
-        <item name="alertDialogTheme">@style/DialogTheme</item>
-        <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item>
-        <item name="switchStyle">@style/SwitchTheme</item>
-    </style>
-    <style name="DialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPrimary">@color/colorAccent</item>
-        <item name="android:colorBackground">@color/colorDialogBackground</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:colorBackground">?attr/colorSurface</item>
+        <item name="actionBarStyle">@style/actionBarStyle</item>
         <item name="android:dialogCornerRadius">24dp</item>
+        <item name="dialogCornerRadius">24dp</item>
+        <item name="switchPreferenceCompatStyle">@style/switchPreferenceCompatStyle</item>
+        <item name="actionOverflowMenuStyle">@style/actionOverflowMenuStyle</item>
+        <item name="android:alertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog.Centered</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog.Centered</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog.Centered</item>
+        <item name="panelMenuListTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog.Centered</item>
+        <item name="android:fontFamily">@font/font_poppins</item>
     </style>
 </resources>

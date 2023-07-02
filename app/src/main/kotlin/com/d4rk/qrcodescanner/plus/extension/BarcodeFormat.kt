@@ -3,19 +3,19 @@ import com.d4rk.qrcodescanner.plus.R
 import com.google.zxing.BarcodeFormat
 fun BarcodeFormat.toStringId(): Int {
     return when (this) {
-        BarcodeFormat.AZTEC -> R.string.barcode_format_aztec
-        BarcodeFormat.CODABAR -> R.string.barcode_format_codabar
-        BarcodeFormat.CODE_39 -> R.string.barcode_format_code_39
-        BarcodeFormat.CODE_93 -> R.string.barcode_format_code_93
-        BarcodeFormat.CODE_128 -> R.string.barcode_format_code_128
-        BarcodeFormat.DATA_MATRIX -> R.string.barcode_format_data_matrix
-        BarcodeFormat.EAN_8 -> R.string.barcode_format_ean_8
-        BarcodeFormat.EAN_13 -> R.string.barcode_format_ean_13
-        BarcodeFormat.ITF -> R.string.barcode_format_itf_14
-        BarcodeFormat.PDF_417 -> R.string.barcode_format_pdf_417
+        BarcodeFormat.AZTEC -> R.string.aztec
+        BarcodeFormat.CODABAR -> R.string.codabar
+        BarcodeFormat.CODE_39 -> R.string.code_39
+        BarcodeFormat.CODE_93 -> R.string.code_93
+        BarcodeFormat.CODE_128 -> R.string.code_128
+        BarcodeFormat.DATA_MATRIX -> R.string.data_matrix
+        BarcodeFormat.EAN_8 -> R.string.ean_8
+        BarcodeFormat.EAN_13 -> R.string.ean_13
+        BarcodeFormat.ITF -> R.string.itf
+        BarcodeFormat.PDF_417 -> R.string.pdf_417
         BarcodeFormat.QR_CODE -> R.string.qr_code
-        BarcodeFormat.UPC_A -> R.string.barcode_format_upc_a
-        BarcodeFormat.UPC_E -> R.string.barcode_format_upc_e
+        BarcodeFormat.UPC_A -> R.string.upc_a
+        BarcodeFormat.UPC_E -> R.string.upc_e
         else -> R.string.qr_code
     }
 }
@@ -26,13 +26,5 @@ fun BarcodeFormat.toImageId(): Int {
         BarcodeFormat.AZTEC -> R.drawable.ic_aztec
         BarcodeFormat.PDF_417 -> R.drawable.ic_pdf417
         else -> R.drawable.ic_barcode
-    }
-}
-fun BarcodeFormat.toColorId(): Int {
-    return when (this) {
-        BarcodeFormat.QR_CODE, BarcodeFormat.DATA_MATRIX -> R.color.colorAccent
-        BarcodeFormat.AZTEC, BarcodeFormat.PDF_417 -> R.color.colorAccent
-        BarcodeFormat.MAXICODE -> R.color.colorAccent
-        else -> R.color.colorGoogleGreen
     }
 }

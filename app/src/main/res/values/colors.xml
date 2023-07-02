@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">?attr/colorPrimary</color>
     <color name="colorAccent">#4285F4</color>
     <color name="colorGoogleGreen">#0F9D58</color>
-    <color name="colorGoogleRed">#DB4437</color>
-    <color name="colorGoogleYellow">#F4B400</color>
-    <color name="colorAndroidGreen">#3DDC84</color>
-    <color name="colorFirebaseOrange">#F57C00</color>
-    <color name="colorBackground">#FDFBFE</color>
-    <color name="colorDialogBackground">#FDFBFE</color>
-    <color name="colorOverflowMenuBackground">#EBF1F8</color>
     <color name="colorShortcutBackground">#C1E8FF</color>
     <color name="colorShortcutForeground">#40484D</color>
     <color name="colorLauncherBackground">#FFFFFF</color>

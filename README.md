@@ -4,112 +4,53 @@
 
 ![Works with Android](https://img.shields.io/badge/Made%20for-Android-lime?style=for-the-badge&logo=android)
 ![GitHub Downloads](https://img.shields.io/github/downloads/D4rK7355608/com.d4rk.qrcodescanner.plus/total?color=green&style=for-the-badge&logo=github)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/D4rK7355608/com.d4rk.qrcodescanner.plus/Android%20CI/master?style=for-the-badge&logo=github)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/D4rK7355608/com.d4rk.qrcodescanner.plus/android.yml?style=for-the-badge)
 ![GitHub Issues](https://img.shields.io/github/issues/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
 ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
 ![GitHub License](https://img.shields.io/github/license/D4rK7355608/com.d4rk.qrcodescanner.plus?style=for-the-badge&logo=github)
 
 ## 📷 QR & Bar Code Scanner Plus 📷
 
-- ╔╦╦╦═╦╗╔═╦═╦══╦═╗
-- ║║║║╩╣╚╣═╣║║║║║╩╣
-- ╚══╩═╩═╩═╩═╩╩╩╩═╝
+╔╦╦╦═╦╗╔═╦═╦══╦═╗ \
+║║║║╩╣╚╣═╣║║║║║╩╣ \
+╚══╩═╩═╩═╩═╩╩╩╩═╝
 
-## D4rK QR & Bar Code Scanner Plus is a FOSS scanner app for every Android. 📷
-
-## Check the trailer [here](https://youtu.be/CgX31Oy2etM)!
+## The perfect QR code scanner for anyone who wants a fast and versatile app. 📷
 
 [![YouTube Trailer](https://yt-embed.herokuapp.com/embed?v=CgX31Oy2etM)](https://youtu.be/CgX31Oy2etM)
 
-It uses the [ZXing](https://github.com/zxing/zxing) scanning library and is compatible with latest Material-You design on Android 12+ devices with changeable themes in settings for new and old devices. 📱
+Scan and Generate QR/Bar Codes with Ease! 🌐
 
-QR & Bar Code Scanner Plus app is also QR code generator in your pocket. Using QR generator is extremely easy to use, simply enter the data you wish on QR code and click to generate QR codes. After generating your code you can export it as SVG or PNG file type. 🖼️
+Introducing D4rK QR & Bar Code Scanner Plus, the reliable and user-friendly app that streamlines QR code scanning and generation on Android devices. Powered by the trusted ZXing scanning library, our app offers a secure and seamless experience. 🔐
 
-QR and bar codes are everywhere! Install QR & Bar Code Scanner Plus app to scan every code you want. QR & Bar Code Scanner Plus app is the only free scanner app you will ever need. 📷 Turn on the flashlight for scanning in the dark or use pinch to zoom to scan QRs far away. 📸
+Unlock the power of QR codes with our all-in-one app! In addition to scanning, QR & Bar Code Scanner Plus doubles as a convenient QR code generator. Creating your own QR codes is a breeze. Simply enter your desired data and let the app do the rest. Once generated, you can export your codes as SVG or PNG files, ensuring compatibility across various platforms. 🖼️
 
-Also D4rK QR & Bar Code Scanner Plus scan all common barcode formats: QR, Data Matrix, Aztec, UPC, EAN and many more. It can use flashlight to scan in the dark, zoom to read barcodes from far distances and links, connect to Wi-Fi, view geolocations, add calendar events, find product information, etc.
+Embrace QR and bar codes with QR & Bar Code Scanner Plus. The ultimate free scanner app that covers all your needs, whether in low-light or distant scenarios. Use the flashlight for dark environments and zoom in to scan faraway codes. Effortlessly capture every code with our in-app camera. 📸
 
-Designed with security as a top priority, the best QR utility on the market offers a simple interface with abundant functionality This functionality for improved usability requires access to certain permissions in your device. 🛡️
+Furthermore, D4rK QR & Bar Code Scanner Plus supports a wide range of barcode formats, including QR, Data Matrix, Aztec, UPC, EAN, and more. Discover hidden details, such as Wi-Fi connections, geolocations, calendar events, and product information, with just a scan. 🛡️
 
-In case if anyone have curiosity about permissions check on settings to see for what is needed specific permissions. ⚙️
-
-You can customize in app experience, like preferred camera (back or front), search engine, history settings or preferred theme using app settings. ⚙️
-
-## ⚠ Opening Issues ⚠
-
-Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.qrcodescanner.plus/issues).
-
-> Only use the GitHub Issues section if you discovered issues with the code itself. Do not mistake the Issues page as a help desk.
-> For support, informations and requests, please contact <d4rk7355608@gmail.com>.
+## ⚠ Opening Issues!
+Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.netprobe/issues).
 
 - Create an scanner/camera/qr code/bar code/general bug. 🐞
 
-__🖤 D4rK QR & Bar Code Scanner Plus is 100% Free, Open Source, inspired by QrAndBarcodeScanner by wewewe718 and scan everything it claims to! 🖤__
-
-<details>
-
-### Read:
-
-The app can read the following barcode formats:
-* [AZTEC](https://en.wikipedia.org/wiki/Aztec_Code)
-* [CODABAR](https://en.wikipedia.org/wiki/Codabar)
-* [CODE-39](https://en.wikipedia.org/wiki/Code_39)
-* [CODE-128](https://en.wikipedia.org/wiki/Code_128)
-* [DATA MATRIX](https://en.wikipedia.org/wiki/Data_Matrix)
-* [EAN-8](https://en.wikipedia.org/wiki/EAN-8)
-* [EAN-13]( https://en.wikipedia.org/wiki/International_Article_Number)
-* [ITF](https://en.wikipedia.org/wiki/Interleaved_2_of_5)
-* [PDF417](https://en.wikipedia.org/wiki/PDF417)
-* [QR CODE](https://en.wikipedia.org/wiki/QR_code)
-* [RSS 14](https://en.wikipedia.org/wiki/GS1_DataBar)
-* [RSS EXPANDED](https://en.wikipedia.org/wiki/GS1_DataBar)
-* [UPC-A](https://en.wikipedia.org/wiki/Universal_Product_Code)
-* [UPC-E](https://en.wikipedia.org/wiki/Universal_Product_Code#UPC-E)
-* [UPC-EAN EXTENSION](https://en.wikipedia.org/wiki/Universal_Product_Code#EAN-13)
-
-### Create:
-
-The app can create the following barcode formats:
-* [AZTEC](https://en.wikipedia.org/wiki/Aztec_Code)
-* [CODABAR](https://en.wikipedia.org/wiki/Codabar)
-* [CODE 39](https://en.wikipedia.org/wiki/Code_39)
-* [CODE 128](https://en.wikipedia.org/wiki/Code_128)
-* [DATA MATRIX](https://en.wikipedia.org/wiki/Data_Matrix)
-* [EAN-8](https://en.wikipedia.org/wiki/EAN-8)
-* [EAN-13](https://en.wikipedia.org/wiki/International_Article_Number)
-* [ITF](https://en.wikipedia.org/wiki/Interleaved_2_of_5)
-* [PDF417](https://en.wikipedia.org/wiki/PDF417)
-* [QR CODE](https://en.wikipedia.org/wiki/QR_code)
-* [UPC-A](https://en.wikipedia.org/wiki/Universal_Product_Code)
-* [UPC-E](https://en.wikipedia.org/wiki/Universal_Product_Code#UPC-E)
-
-### Search engines:
-
-Also the app can support the next search engines:
-* [Bing](https://www.bing.com/)
-* [DuckDuckGo](https://duckduckgo.com/)
-* [Google](https://www.google.com/)
-* [Qwant](https://www.qwant.com/)
-* [StartPage](https://www.startpage.com/)
-* [Yahoo](https://search.yahoo.com/)
-* [Yandex](https://yandex.com/)
-
-</details>
-
 ## 🛠️ Features!
-- ⭐️ Fast scanning.
-- ⭐️ Build in QR/Bar code generator.
-- ⭐️ Save codes in history.
-- ⭐️ Adaptive themes + Material-You.
-- ⭐️ Simple and easy to use.
-- ⭐️ Fast and lightweight.
-- ⭐️ Free Open source & secure.
+⭐️ Scan QR/Bar codes. \
+⭐️ Generate QR/Bar codes. \
+⭐️ Fast scanning. \
+⭐️ Multiple search engines. \
+⭐️ Barcodes and 2D codes. \
+⭐️ Save codes in history. \
+⭐️ Adaptive themes + Material-You. \
+⭐️ Simple and easy to use. \
+⭐️ Fast and lightweight. \
+⭐️ Free Open source & secure.
 
-## 📝 Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner/master/CHANGELOG.md)!
+## 📝 Changelog [here](https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner.plus/master/CHANGELOG.md)!
 
 ## 🖼️ App preview:
 
-<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_main.png"  width="400">
+<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_scan.png"  width="400">
 
 <details>
   <summary>Special Thanks</summary>
@@ -119,13 +60,14 @@ Also the app can support the next search engines:
 </details>
 
 ## 🛑 Disclaimer!
-- D4rK QR & Bar Code Scanner Plus is ready for scanning any code you want. Is also made to fit your phone design!
-- Some music from our audios belong to their respective owners and principal voice is from Lidia Melinte.
+- Only use the GitHub Issues section if you discover issues with the code itself. Do not mistake the Issues page as a help desk. For support, information and requests, please contact d4rk7355608@gmail.com.
+- QR Codes are not recommended for use with confidential/secret information, as they can be easily decoded by anyone with a smartphone.
+- D4rK QR & Bar Code Scanner Plus uses the ZXing library, which is a popular and open-source library for decoding QR codes. It is available under the Apache License 2.0.
 
 ## 💬 Feedback!
-If you have any suggested features or improvement, please leave a comment. In case something is not working correctly please let me know. When posting low rating please describe what is wrong to give the possibility to fix that issue.
+We are constantly updating and improving Net Probe to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
-Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app.
+Thank you for choosing Net Probe. We hope you enjoy using our app as much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app! ❤
 
 ## 👨🏻‍💻 &nbsp;More About Me:
 <a href="mailto:d4rk7355608@gmail.com"><img src="https://img.shields.io/badge/d4rk7355608@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white"/></a>

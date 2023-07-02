@@ -19,7 +19,7 @@ data class OtpAuth(
         private const val SECRET_KEY = "secret"
         private const val ISSUER_KEY = "issuer"
         private const val ALGORITHM_KEY = "algorithm"
-        private const val DIGITS_KEY = "digits"
+        private const val DIGITS_KEY = "hint_digits"
         private const val COUNTER_KEY = "counter"
         private const val PERIOD_KEY = "period"
         fun parse(text: String): OtpAuth? {

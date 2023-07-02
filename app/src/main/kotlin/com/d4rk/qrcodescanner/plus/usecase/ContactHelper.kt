@@ -121,11 +121,11 @@ object ContactHelper {
             null
         }
     }
-    @SuppressLint("Range")
     private fun Cursor.getIntOrNull(columnName: String): Int? {
-        return try {
-            getInt(getColumnIndex(columnName))
-        } catch (ex: Exception) {
+        val columnIndex = getColumnIndex(columnName)
+        return if (columnIndex >= 0) {
+            getInt(columnIndex)
+        } else {
             null
         }
     }

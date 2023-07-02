@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.provider.CalendarContract
 import android.provider.ContactsContract
 import android.provider.Settings
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.print.PrintHelper
@@ -33,15 +32,16 @@ import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.feature.barcode.otp.OtpActivity
 import com.d4rk.qrcodescanner.plus.feature.barcode.save.SaveBarcodeAsImageActivity
 import com.d4rk.qrcodescanner.plus.feature.barcode.save.SaveBarcodeAsTextActivity
-import com.d4rk.qrcodescanner.plus.feature.common.dialog.ChooseSearchEngineDialogFragment
-import com.d4rk.qrcodescanner.plus.feature.common.dialog.DeleteConfirmationDialogFragment
-import com.d4rk.qrcodescanner.plus.feature.common.dialog.EditBarcodeNameDialogFragment
+import com.d4rk.qrcodescanner.plus.ui.dialogs.ChooseSearchEngineDialogFragment
+import com.d4rk.qrcodescanner.plus.ui.dialogs.DeleteConfirmationDialogFragment
+import com.d4rk.qrcodescanner.plus.ui.dialogs.EditBarcodeNameDialogFragment
 import com.d4rk.qrcodescanner.plus.model.Barcode
 import com.d4rk.qrcodescanner.plus.model.ParsedBarcode
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.d4rk.qrcodescanner.plus.model.schema.OtpAuth
 import com.d4rk.qrcodescanner.plus.usecase.save
+import com.google.android.material.snackbar.Snackbar
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -65,6 +65,7 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
     private val disposable = CompositeDisposable()
     private val dateFormatter = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.ENGLISH)
     private val originalBarcode by unsafeLazy {
+        @Suppress("DEPRECATION")
         intent?.getSerializableExtra(BARCODE_KEY) as? Barcode ?: throw IllegalArgumentException("No barcode passed")
     }
     private val isCreated by unsafeLazy {
@@ -395,7 +396,7 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
                     barcode.phase2Method.orEmpty()).observeOn(AndroidSchedulers.mainThread()).subscribe(
                 {
                     showConnectToWifiButtonEnabled(true)
-                    showToast(R.string.activity_barcode_connecting_to_wifi)
+                    snackBar(R.string.connecting)
                 },
                 { error ->
                     showConnectToWifiButtonEnabled(true)
@@ -409,11 +410,11 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
     }
     private fun copyNetworkNameToClipboard() {
         copyToClipboard(barcode.networkName.orEmpty())
-        showToast(R.string.activity_barcode_copied)
+        snackBar(R.string.snack_copied_to_clipboard)
     }
     private fun copyNetworkPasswordToClipboard() {
         copyToClipboard(barcode.networkPassword.orEmpty())
-        showToast(R.string.activity_barcode_copied)
+        snackBar(R.string.snack_copied_to_clipboard)
     }
     private fun openApp() {
         val intent = packageManager?.getLaunchIntentForPackage(barcode.appPackage.orEmpty())
@@ -456,7 +457,7 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
     }
     private fun copyBarcodeTextToClipboard() {
         copyToClipboard(barcode.text)
-        showToast(R.string.activity_barcode_copied)
+        snackBar(R.string.snack_copied_to_clipboard)
     }
     private fun searchBarcodeTextOnInternet() {
         when (val searchEngine = settings.searchEngine) {
@@ -646,21 +647,21 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
         binding.buttonSaveBookmark.isVisible = barcode.schema == BarcodeSchema.BOOKMARK
     }
     private fun showButtonText() {
-        binding.buttonCallPhone1.text = getString(R.string.activity_barcode_call_phone, barcode.phone)
-        binding.buttonCallPhone2.text = getString(R.string.activity_barcode_call_phone, barcode.secondaryPhone)
-        binding.buttonCallPhone3.text = getString(R.string.activity_barcode_call_phone, barcode.tertiaryPhone)
-        binding.buttonSendSmsOrMms1.text = getString(R.string.activity_barcode_send_sms, barcode.phone)
-        binding.buttonSendSmsOrMms2.text = getString(R.string.activity_barcode_send_sms, barcode.secondaryPhone)
-        binding.buttonSendSmsOrMms3.text = getString(R.string.activity_barcode_send_sms, barcode.tertiaryPhone)
-        binding.buttonSendEmail1.text = getString(R.string.activity_barcode_send_email, barcode.email)
-        binding.buttonSendEmail2.text = getString(R.string.activity_barcode_send_email, barcode.secondaryEmail)
-        binding.buttonSendEmail3.text = getString(R.string.activity_barcode_send_email, barcode.tertiaryEmail)
+        binding.buttonCallPhone1.text = getString(R.string.call, barcode.phone)
+        binding.buttonCallPhone2.text = getString(R.string.call, barcode.secondaryPhone)
+        binding.buttonCallPhone3.text = getString(R.string.call, barcode.tertiaryPhone)
+        binding.buttonSendSmsOrMms1.text = getString(R.string.send_sms_mms_to, barcode.phone)
+        binding.buttonSendSmsOrMms2.text = getString(R.string.send_sms_mms_to, barcode.secondaryPhone)
+        binding.buttonSendSmsOrMms3.text = getString(R.string.send_sms_mms_to, barcode.tertiaryPhone)
+        binding.buttonSendEmail1.text = getString(R.string.email_to, barcode.email)
+        binding.buttonSendEmail2.text = getString(R.string.email_to, barcode.secondaryEmail)
+        binding.buttonSendEmail3.text = getString(R.string.email_to, barcode.tertiaryEmail)
     }
     private fun showConnectToWifiButtonEnabled(isEnabled: Boolean) {
         binding.buttonConnectToWifi.isEnabled = isEnabled
     }
     private fun showDeleteBarcodeConfirmationDialog() {
-        val dialog = DeleteConfirmationDialogFragment.newInstance(R.string.dialog_delete_barcode_message)
+        val dialog = DeleteConfirmationDialogFragment.newInstance(R.string.dialog_delete)
         dialog.show(supportFragmentManager, "")
     }
     private fun showEditBarcodeNameDialog() {
@@ -686,7 +687,7 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         } else {
-            showToast(R.string.activity_barcode_no_app)
+            snackBar(R.string.snack_no_app_found)
         }
     }
     private fun isAppInstalled(appPackage: String?): Boolean {
@@ -696,8 +697,8 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
         val clipData = ClipData.newPlainText("", text)
         clipboardManager.setPrimaryClip(clipData)
     }
-    private fun showToast(stringId: Int) {
-        Toast.makeText(this, stringId, Toast.LENGTH_SHORT).show()
+    private fun snackBar(stringId: Int) {
+        Snackbar.make(binding.root, stringId, Snackbar.LENGTH_LONG).show()
     }
     private fun increaseBrightnessToMax() {
         setBrightness(1.0f)

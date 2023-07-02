@@ -102,7 +102,7 @@ data class MeCard(
             firstName.isNullOrBlank() && lastName.isNullOrBlank() -> null
             firstName.isNullOrBlank() -> lastName
             lastName.isNullOrBlank() -> firstName
-            else -> "${firstName.orEmpty()}$NAME_SEPARATOR${lastName.orEmpty()}"
+            else -> "${firstName}$NAME_SEPARATOR${lastName}"
         }
         return StringBuilder()
             .append(SCHEMA_PREFIX)

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -9,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginHorizontal="@dimen/default_margin_big"
-        android:text="@string/fragment_create_qr_code_otp_type_hint"/>
+        android:text="@string/type"/>
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spinner_opt_types"
         android:layout_width="match_parent"
@@ -21,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:layout_marginHorizontal="@dimen/default_margin_big"
-        android:text="@string/fragment_create_qr_code_otp_algorithm_hint"/>
+        android:text="@string/algorithm"/>
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/spinner_algorithms"
         android:layout_width="match_parent"
@@ -40,10 +39,9 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/fragment_create_qr_code_otp_issuer_hint"
+            android:hint="@string/hint_issuer"
             android:inputType="text"
-            android:imeOptions="actionNext"
-            android:backgroundTint="@color/colorAccent"/>
+            android:imeOptions="actionNext"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -57,7 +55,7 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/fragment_create_qr_code_otp_account_hint"
+            android:hint="@string/hint_account"
             android:inputType="text"
             android:imeOptions="actionNext"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -73,7 +71,7 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/digits"
+            android:hint="@string/hint_digits"
             android:inputType="numberDecimal"
             android:digits="0123456789"
             android:imeOptions="actionNext"/>
@@ -90,7 +88,7 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/fragment_create_qr_code_otp_period_hint"
+            android:hint="@string/hint_period"
             android:inputType="numberDecimal"
             android:digits="0123456789"
             android:imeOptions="actionNext"/>
@@ -108,7 +106,7 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/fragment_create_qr_code_otp_counter_hint"
+            android:hint="@string/hint_counter"
             android:inputType="numberDecimal"
             android:digits="0123456789"
             android:imeOptions="actionNext"/>
@@ -123,15 +121,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|top"
-            android:hint="@string/fragment_create_qr_code_otp_secret_hint"
+            android:hint="@string/hint_secret"
             android:imeOptions="actionDone"/>
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.button.MaterialButton
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:id="@+id/button_generate_random_secret"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="@dimen/default_margin"
         android:layout_marginHorizontal="@dimen/default_margin"
-        android:text="@string/fragment_create_qr_code_otp_generate_random_secret"/>
+        android:text="@string/random_secret"/>
 </LinearLayout>

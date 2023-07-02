@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -17,9 +16,8 @@
             android:gravity="start|top"
             android:lines="1"
             android:maxLines="1"
-            android:hint="@string/barcode_schema_phone"
+            android:hint="@string/phone"
             android:imeOptions="actionNext"
-            android:backgroundTint="@color/colorAccent"
             android:inputType="phone"
             android:digits="+0123456789"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -32,9 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="start|top"
-            android:hint="@string/fragment_create_qr_code_message_hint"
+            android:hint="@string/hint_message"
             android:inputType="text"
-            android:backgroundTint="@color/colorAccent"
             android:imeOptions="actionDone"/>
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>

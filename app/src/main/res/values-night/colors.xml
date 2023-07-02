@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">#8AB4F8</color>
-    <color name="colorBackground">#1C1B1F</color>
-    <color name="colorDialogBackground">#414758</color>
-    <color name="colorOverflowMenuBackground">#40484D</color>
     <color name="colorShortcutBackground">#2E3133</color>
     <color name="colorShortcutForeground">#C1E8FF</color>
     <color name="colorLauncherBackground">#2D2D2D</color>

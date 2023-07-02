@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.core.view.isVisible
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivitySaveBarcodeAsTextBinding
@@ -15,6 +14,7 @@ import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.model.Barcode
+import com.google.android.material.snackbar.Snackbar
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -33,6 +33,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
             context.startActivity(intent)
         }
     }
+    @Suppress("DEPRECATION")
     private val barcode by unsafeLazy {
         intent?.getSerializableExtra(BARCODE_KEY) as? Barcode ?: throw IllegalArgumentException("No barcode passed")
     }
@@ -42,7 +43,6 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
         binding = ActivitySaveBarcodeAsTextBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportEdgeToEdge()
-        initToolbar()
         initFormatSpinner()
         initSaveButton()
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()
@@ -59,11 +59,6 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
-    }
-    private fun initToolbar() {
-        binding.toolbar.setNavigationOnClickListener {
-            finish()
-        }
     }
     private fun initFormatSpinner() {
         binding.spinnerSaveAs.adapter = ArrayAdapter.createFromResource(this, R.array.activity_save_barcode_as_text_formats, R.layout.item_spinner).apply {
@@ -100,7 +95,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
         binding.scrollView.isVisible = isLoading.not()
     }
     private fun showBarcodeSaved() {
-        Toast.makeText(this, R.string.saved_to_downloads, Toast.LENGTH_LONG).show()
+        Snackbar.make(binding.root, R.string.snack_saved_to_downloads, Snackbar.LENGTH_LONG).show()
         finish()
     }
 }

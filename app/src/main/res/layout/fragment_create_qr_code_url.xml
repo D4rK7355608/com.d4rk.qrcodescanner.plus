@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -14,20 +13,19 @@
         android:gravity="start|top"
         android:lines="1"
         android:maxLines="1"
-        android:hint="@string/barcode_schema_url"
+        android:hint="@string/url"
         android:inputType="textUri"
-        android:imeOptions="actionDone"
-        android:backgroundTint="@color/colorAccent"/>
+        android:imeOptions="actionDone"/>
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin_big"
-        android:text="@string/fragment_create_barcode_alternative"
+        android:text="@string/alternatively"
         style="@style/GroupTitleTextViewStyle"/>
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/fragment_create_qr_code_url_alternative"
+        android:text="@string/summary_alternatively_url"
         style="@style/CreateBarcodeFragmentAlternativeTextViewStyle"/>
 </LinearLayout>

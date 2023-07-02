@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name" translatable="false">QR &amp; Barcode Scanner Plus</string>
+    <string name="data_matrix" translatable="false">Data Matrix</string>
+    <string name="aztec" translatable="false">Aztec</string>
+    <string name="pdf_417" translatable="false">PDF417</string>
+    <string name="ean_13" translatable="false">EAN-13</string>
+    <string name="ean_8" translatable="false">EAN-8</string>
+    <string name="upc_e" translatable="false">UPC-E</string>
+    <string name="upc_a" translatable="false">UPC-A</string>
+    <string name="code_128" translatable="false">Code 128</string>
+    <string name="code_93" translatable="false">Code 93</string>
+    <string name="code_39" translatable="false">Code 39</string>
+    <string name="codabar" translatable="false">Codabar</string>
+    <string name="itf" translatable="false">ITF</string>
+    <string name="google_dev" translatable="false">Google Dev</string>
+    <string name="twitter" translatable="false">Twitter</string>
+    <string name="youtube" translatable="false">YouTube</string>
+    <string name="github" translatable="false">GitHub</string>
+    <string name="xda" translatable="false">XDA</string>
+    <string name="bulgarian" translatable="false">Български</string>
+    <string name="english" translatable="false">English</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="hungarian" translatable="false">Magyar</string>
+    <string name="german" translatable="false">Deutsch</string>
+    <string name="hindi" translatable="false">हिन्दी</string>
+    <string name="indonesian" translatable="false">Bahasa Indonesia</string>
+    <string name="italian" translatable="false">Italiano</string>
+    <string name="japanese" translatable="false">日本語</string>
+    <string name="polish" translatable="false">Polski</string>
+    <string name="romanian" translatable="false">Română</string>
+    <string name="russian" translatable="false">Русский</string>
+    <string name="spanish" translatable="false">Español</string>
+    <string name="turkish" translatable="false">Türkçe</string>
+    <string name="ukrainian" translatable="false">Українська</string>
+    <string name="activity_export_history_file_name_default" translatable="false">db</string>
+    <string name="activity_choose_search_engine_bing" translatable="false">Bing</string>
+    <string name="activity_choose_search_engine_startpage" translatable="false">StartPage</string>
+    <string name="activity_choose_search_engine_duck_duck_go" translatable="false">DuckDuckGo</string>
+    <string name="activity_choose_search_engine_google" translatable="false">Google</string>
+    <string name="activity_choose_search_engine_qwant" translatable="false">Qwant</string>
+    <string name="activity_choose_search_engine_yahoo" translatable="false">Yahoo</string>
+    <string name="activity_choose_search_engine_yandex" translatable="false">Yandex</string>
+    <string name="arch" translatable="false">Arch:</string>
+    <string name="summary_preference_settings_license" translatable="false">General Public License-3.0</string>
+    <string name="feedback_for" translatable="false">Feedback for </string>
+    <string name="dear_developer" translatable="false">Dear developer, </string>
+    <string name="send_email_using" translatable="false">Send mail using:</string>
+    <string name="changelog_title" translatable="false">Changelog - Version %1s</string>
+    <string name="changes" translatable="false">\n
+        • Added a new startup screen for new users.\n\n
+        • Added a new GDPR message to comply with Google Play policy.\n\n
+        • Added a new help center, with more comprehensive documentation and support options.\n\n
+        • Added language support for Bulgarian, French, German, Hindi, Italian, Polish, Spanish, Swedish, Turkish and Ukrainian.\n\n
+        • Added snack bars instead of toasts for all notifications.\n\n
+        • Added tooltips to help users understand what is happening in the app.\n\n
+        • Added an exit dialog to confirm the user\'s intention to leave the app.\n\n
+        • Added in-app updates to allow users to easily update the app without going through the Google Play Store.\n\n
+        • Added the ability to disable Firebase Analytics and Crashlytics from the app settings.\n\n
+        • Added the ability to change the style of the navigation bar labels from the app settings.\n\n
+        • Added the ability to change the startup screen from the app settings.\n\n
+        • Added the ability to access notification settings from the app settings.\n\n
+        • Added update notifications to inform users of new content and features.\n\n
+        • Added welcome back notifications to greet returning users.\n\n
+        • Reworked, improved and refreshed the user interface.\n\n
+        • Reworked and improved animations.\n\n
+        • Reworked language system, making it more accurate and user-friendly.\n\n
+        • Fixed various bugs and improved readability, consistency, app performance, and responsiveness by optimizing and styling the outdated code.\n\n
+        • Made various project structure enhancements for better readability and maintainability.\n\n
+        • Made various under-the-hood improvements for a better overall app experience.
+    </string>
+</resources>

@@ -50,20 +50,22 @@ fun String.startsWithIgnoreCase(prefix: String): Boolean {
     return startsWith(prefix, true)
 }
 fun String.startsWithAnyIgnoreCase(prefixes: List<String>): Boolean {
+    var startsWith = false
     prefixes.forEach { prefix ->
         if (startsWith(prefix, true)) {
-            return true
+            startsWith = true
         }
     }
-    return false
+    return startsWith
 }
 fun String.equalsAnyIgnoreCase(others: List<String>): Boolean {
+    var equals = false
     others.forEach { other ->
         if (equals(other, true)) {
-            return true
+            equals = true
         }
     }
-    return false
+    return equals
 }
 fun String.endsWithIgnoreCase(prefix: String): Boolean {
     return endsWith(prefix, true)

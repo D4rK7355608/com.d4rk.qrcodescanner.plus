@@ -36,4 +36,72 @@
         <item>PNG</item>
         <item>SVG</item>
     </string-array>
+    <string-array name="preference_theme_entries">
+        <item>@string/follow_system</item>
+        <item>@string/light_mode</item>
+        <item>@string/dark_mode</item>
+        <item>@string/auto_battery_mode</item>
+    </string-array>
+    <string-array name="preference_theme_values">
+        <item>MODE_NIGHT_FOLLOW_SYSTEM</item>
+        <item>MODE_NIGHT_NO</item>
+        <item>MODE_NIGHT_YES</item>
+        <item>MODE_NIGHT_AUTO_BATTERY</item>
+    </string-array>
+    <string-array name="preference_bottom_navigation_bar_labels_entries">
+        <item>@string/labeled</item>
+        <item>@string/selected</item>
+        <item>@string/unlabeled</item>
+    </string-array>
+    <string-array name="preference_bottom_navigation_bar_labels_values">
+        <item>labeled</item>
+        <item>selected</item>
+        <item>unlabeled</item>
+    </string-array>
+    <string-array name="preference_default_tab_entries">
+        <item>@string/scan</item>
+        <item>@string/create</item>
+        <item>@string/history</item>
+        <item>@string/about</item>
+    </string-array>
+    <string-array name="preference_default_tab_values">
+        <item>scan</item>
+        <item>create</item>
+        <item>history</item>
+        <item>about</item>
+    </string-array>
+    <string-array name="preference_language_entries">
+        <item>@string/bulgarian</item>
+        <item>@string/english</item>
+        <item>@string/french</item>
+        <item>@string/german</item>
+        <item>@string/hindi</item>
+        <item>@string/hungarian</item>
+        <item>@string/indonesian</item>
+        <item>@string/italian</item>
+        <item>@string/japanese</item>
+        <item>@string/polish</item>
+        <item>@string/romanian</item>
+        <item>@string/russian</item>
+        <item>@string/spanish</item>
+        <item>@string/turkish</item>
+        <item>@string/ukrainian</item>
+    </string-array>
+    <string-array name="preference_language_values">
+        <item>bg</item>
+        <item>en</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>hi</item>
+        <item>hu</item>
+        <item>in</item>
+        <item>it</item>
+        <item>ja</item>
+        <item>pl</item>
+        <item>ro</item>
+        <item>ru</item>
+        <item>es</item>
+        <item>tr</item>
+        <item>uk</item>
+    </string-array>
 </resources>
