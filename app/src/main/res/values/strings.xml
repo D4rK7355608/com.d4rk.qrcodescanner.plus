@@ -153,10 +153,8 @@
     <string name="open_in_other_app">Open in other app</string>
     <string name="show_password">Show password</string>
     <string name="share_as_text">Share as text</string>
-    <string name="save_as_text">Save as text</string>
     <string name="search_on_the_web">Search on the web</string>
     <string name="share_as_image">Share as image</string>
-    <string name="save_as_image">Save as image</string>
     <string name="print">Print</string>
     <string name="connecting">Connecting…</string>
     <string name="increase_brightness">Increase brightness</string>

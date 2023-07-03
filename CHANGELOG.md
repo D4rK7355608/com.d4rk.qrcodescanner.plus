@@ -1,3 +1,6 @@
+# Version 3.0_r2:
+- Made minor under-the-hood improvements for a better overall app experience.
+
 # Version 3.0_r1:
 - Added a new startup screen for new users.
 - Added a new GDPR message to comply with Google Play policy.

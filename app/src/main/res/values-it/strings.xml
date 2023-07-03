@@ -154,10 +154,8 @@
     <string name="open_in_other_app">Apri in un\'altra app</string>
     <string name="show_password">Mostra password</string>
     <string name="share_as_text">Condividi come testo</string>
-    <string name="save_as_text">Salva come testo</string>
     <string name="search_on_the_web">Cerca sul web</string>
     <string name="share_as_image">Condividi come immagine</string>
-    <string name="save_as_image">Salva come immagine</string>
     <string name="print">Stampa</string>
     <string name="connecting">Connessione in corso…</string>
     <string name="increase_brightness">Aumenta luminosità</string>

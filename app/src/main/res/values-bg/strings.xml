@@ -154,10 +154,8 @@
     <string name="open_in_other_app">Отвори в друго приложение</string>
     <string name="show_password">Показване на парола</string>
     <string name="share_as_text">Споделяне като текст</string>
-    <string name="save_as_text">Запазване като текст</string>
     <string name="search_on_the_web">Търсене в интернет</string>
     <string name="share_as_image">Споделяне като изображение</string>
-    <string name="save_as_image">Запазване като изображение</string>
     <string name="print">Принтиране</string>
     <string name="connecting">Свързване…</string>
     <string name="increase_brightness">Увеличаване на яркостта</string>

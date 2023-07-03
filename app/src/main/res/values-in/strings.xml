@@ -154,10 +154,8 @@
     <string name="open_in_other_app">Buka di aplikasi lain</string>
     <string name="show_password">Tampilkan kata sandi</string>
     <string name="share_as_text">Bagikan sebagai teks</string>
-    <string name="save_as_text">Simpan sebagai teks</string>
     <string name="search_on_the_web">Cari di web</string>
     <string name="share_as_image">Bagikan sebagai gambar</string>
-    <string name="save_as_image">Simpan sebagai gambar</string>
     <string name="print">Cetak</string>
     <string name="connecting">Menghubungkan…</string>
     <string name="increase_brightness">Tingkatkan kecerahan</string>

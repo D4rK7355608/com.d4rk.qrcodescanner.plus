@@ -153,10 +153,8 @@
     <string name="open_in_other_app">Öppna i annan app</string>
     <string name="show_password">Visa lösenord</string>
     <string name="share_as_text">Dela som text</string>
-    <string name="save_as_text">Spara som text</string>
     <string name="search_on_the_web">Sök på webben</string>
     <string name="share_as_image">Dela som bild</string>
-    <string name="save_as_image">Spara som bild</string>
     <string name="print">Skriv ut</string>
     <string name="connecting">Ansluter…</string>
     <string name="increase_brightness">Öka ljusstyrkan</string>

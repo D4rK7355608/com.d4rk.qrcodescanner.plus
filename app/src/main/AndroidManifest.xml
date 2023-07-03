@@ -60,11 +60,8 @@
         <activity
             android:name=".ui.settings.help.HelpActivity"
             android:label="@string/help"
-            android:exported="false">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.settings.help.HelpActivity"/>
-        </activity>
+            android:exported="false"
+            android:parentActivityName=".ui.settings.help.HelpActivity"/>
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:exported="false"

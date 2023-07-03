@@ -34,7 +34,7 @@
         android:tooltipText="@string/tooltip_export"
         app:layout_constraintBottom_toTopOf="@id/card_view_ad"
         app:layout_constraintEnd_toEndOf="parent"
-        android:importantForAccessibility="no" />
+        android:importantForAccessibility="no"/>
     <com.google.android.material.card.MaterialCardView
         style="@style/Widget.Material3.CardView.Outlined"
         android:id="@+id/card_view_ad"
