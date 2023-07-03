@@ -17,8 +17,6 @@
 
 ## The perfect QR code scanner for anyone who wants a fast and versatile app. 📷
 
-[![YouTube Trailer](https://yt-embed.herokuapp.com/embed?v=CgX31Oy2etM)](https://youtu.be/CgX31Oy2etM)
-
 Scan and Generate QR/Bar Codes with Ease! 🌐
 
 Introducing D4rK QR & Bar Code Scanner Plus, the reliable and user-friendly app that streamlines QR code scanning and generation on Android devices. Powered by the trusted ZXing scanning library, our app offers a secure and seamless experience. 🔐
@@ -28,6 +26,8 @@ Unlock the power of QR codes with our all-in-one app! In addition to scanning, Q
 Embrace QR and bar codes with QR & Bar Code Scanner Plus. The ultimate free scanner app that covers all your needs, whether in low-light or distant scenarios. Use the flashlight for dark environments and zoom in to scan faraway codes. Effortlessly capture every code with our in-app camera. 📸
 
 Furthermore, D4rK QR & Bar Code Scanner Plus supports a wide range of barcode formats, including QR, Data Matrix, Aztec, UPC, EAN, and more. Discover hidden details, such as Wi-Fi connections, geolocations, calendar events, and product information, with just a scan. 🛡️
+
+[<img src="https://img.youtube.com/vi/CgX31Oy2etM/maxresdefault.jpg" alt="Watch the trailer">](https://youtu.be/CgX31Oy2etM)
 
 ## ⚠ Opening Issues!
 Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.netprobe/issues).

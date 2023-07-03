@@ -153,10 +153,8 @@
     <string name="open_in_other_app">In anderer App öffnen</string>
     <string name="show_password">Kennwort anzeigen</string>
     <string name="share_as_text">Als Text teilen</string>
-    <string name="save_as_text">Als Text speichern</string>
     <string name="search_on_the_web">Im Web suchen</string>
     <string name="share_as_image">Als Bild teilen</string>
-    <string name="save_as_image">Als Bild speichern</string>
     <string name="print">Drucken</string>
     <string name="connecting">Verbinden…</string>
     <string name="increase_brightness">Helligkeit erhöhen</string>

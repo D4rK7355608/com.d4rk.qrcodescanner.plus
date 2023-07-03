@@ -154,10 +154,8 @@
     <string name="open_in_other_app">Deschide în altă aplicație</string>
     <string name="show_password">Afișează parolă</string>
     <string name="share_as_text">Partajează ca text</string>
-    <string name="save_as_text">Salvează ca text</string>
     <string name="search_on_the_web">Caută pe web</string>
     <string name="share_as_image">Partajează ca imagine</string>
-    <string name="save_as_image">Salvează ca imagine</string>
     <string name="print">Imprimează</string>
     <string name="connecting">Conectând…</string>
     <string name="increase_brightness">Mărește luminozitatea</string>

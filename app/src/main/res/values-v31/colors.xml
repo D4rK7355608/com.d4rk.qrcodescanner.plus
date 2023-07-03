@@ -1,6 +1,5 @@
 <resources>
     <color name="colorAccent">@android:color/system_accent1_300</color>
-    <color name="colorGoogleGreen">@android:color/system_accent1_300</color>
     <color name="colorShortcutBackground">@android:color/system_accent1_100</color>
     <color name="colorShortcutForeground">@android:color/system_neutral2_700</color>
 </resources>

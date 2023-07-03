@@ -154,10 +154,8 @@
     <string name="open_in_other_app">Diğer uygulamada aç</string>
     <string name="show_password">Şifreyi göster</string>
     <string name="share_as_text">Metin olarak paylaş</string>
-    <string name="save_as_text">Metin olarak kaydet</string>
     <string name="search_on_the_web">İnternet\'te ara</string>
     <string name="share_as_image">Resim olarak paylaş</string>
-    <string name="save_as_image">Resim olarak kaydet</string>
     <string name="print">Yazdır</string>
     <string name="connecting">Bağlanılıyor…</string>
     <string name="increase_brightness">Parlaklığı artır</string>

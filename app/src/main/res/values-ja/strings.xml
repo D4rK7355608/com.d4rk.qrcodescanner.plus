@@ -153,10 +153,8 @@
     <string name="open_in_other_app">他のアプリで開く</string>
     <string name="show_password">パスワードを表示</string>
     <string name="share_as_text">テキストとして共有</string>
-    <string name="save_as_text">テキストとして保存</string>
     <string name="search_on_the_web">Web で検索</string>
     <string name="share_as_image">画像として共有</string>
-    <string name="save_as_image">画像として保存</string>
     <string name="print">印刷</string>
     <string name="connecting">接続中…</string>
     <string name="increase_brightness">明るさを上げる</string>

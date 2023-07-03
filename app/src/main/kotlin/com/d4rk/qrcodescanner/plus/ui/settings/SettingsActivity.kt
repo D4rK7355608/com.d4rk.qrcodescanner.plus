@@ -144,7 +144,7 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
                     putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID)
                     putExtra(Intent.EXTRA_SUBJECT, R.string.share_subject)
                 }
-                startActivity(Intent.createChooser(sharingIntent, getString(R.string.share)))
+                startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_using)))
                 true
             }
             val ossPreference = findPreference<Preference>(getString(R.string.key_open_source_licenses))

@@ -153,10 +153,8 @@
     <string name="open_in_other_app">Otwórz w innej aplikacji</string>
     <string name="show_password">Pokaż hasło</string>
     <string name="share_as_text">Udostępnij jako tekst</string>
-    <string name="save_as_text">Zapisz jako tekst</string>
     <string name="search_on_the_web">Szukaj w internecie</string>
     <string name="share_as_image">Udostępnij jako obraz</string>
-    <string name="save_as_image">Zapisz jako obraz</string>
     <string name="print">Drukuj</string>
     <string name="connecting">Łączenie…</string>
     <string name="increase_brightness">Zwiększ jasność</string>
