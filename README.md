@@ -50,7 +50,7 @@ Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.netprobe/iss
 
 ## 🖼️ App preview:
 
-<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot_scan.png"  width="400">
+<img src="/app/src/main/play/listings/en-US/graphics/phone-screenshots/1-screenshot-scan.png"  width="400">
 
 <details>
   <summary>Special Thanks</summary>
