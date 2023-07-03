@@ -87,7 +87,7 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
     implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0'
     implementation 'com.isseiaoki:simplecropview:1.1.8'
-    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'commons-codec:commons-codec:1.16.0'
     implementation 'dev.turingcomplete:kotlin-onetimepassword:2.4.0'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
     implementation 'me.zhanghai.android.fastscroll:library:1.2.0'
