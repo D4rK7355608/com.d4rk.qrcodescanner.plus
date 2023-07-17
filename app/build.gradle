@@ -83,7 +83,7 @@ dependencies {
     implementation 'android.arch.paging:rxjava2:1.0.1'
     implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
     implementation 'com.github.florent37:singledateandtimepicker:2.2.8'
-    implementation 'com.airbnb.android:lottie:6.0.1'
+    implementation 'com.airbnb.android:lottie:6.1.0'
     implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
     implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0'
     implementation 'com.isseiaoki:simplecropview:1.1.8'
