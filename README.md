@@ -30,7 +30,7 @@ Furthermore, D4rK QR & Bar Code Scanner Plus supports a wide range of barcode fo
 [<img src="https://img.youtube.com/vi/CgX31Oy2etM/maxresdefault.jpg" alt="Watch the trailer">](https://youtu.be/CgX31Oy2etM)
 
 ## ⚠ Opening Issues!
-Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.netprobe/issues).
+Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.qrcodescanner.plus/issues).
 
 - Create an scanner/camera/qr code/bar code/general bug. 🐞
 
@@ -65,9 +65,9 @@ Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.netprobe/iss
 - D4rK QR & Bar Code Scanner Plus uses the ZXing library, which is a popular and open-source library for decoding QR codes. It is available under the Apache License 2.0.
 
 ## 💬 Feedback!
-We are constantly updating and improving Net Probe to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
+We are constantly updating and improving QR & Bar Code Scanner Plus to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
-Thank you for choosing Net Probe. We hope you enjoy using our app as much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app! ❤
+Thank you for choosing QR & Bar Code Scanner Plus. We hope you enjoy using our app as much as we enjoyed creating it for you! Rate us 5 stars ⭐⭐⭐⭐⭐ if you are happy with the app! ❤
 
 ## 👨🏻‍💻 &nbsp;More About Me:
 <a href="mailto:d4rk7355608@gmail.com"><img src="https://img.shields.io/badge/d4rk7355608@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white"/></a>
