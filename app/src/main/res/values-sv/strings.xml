@@ -100,7 +100,12 @@
     <string name="more">Mer</string>
     <string name="share">Dela</string>
     <string name="more_apps">Fler appar…</string>
-    <string name="support_me">Stöd mig</string>
+    <string name="support_the_developer">Stöd utvecklaren</string>
+    <string name="support_us">Stöd oss</string>
+    <string name="paid_support">Betalt stöd</string>
+    <string name="non_paid_support">Icke-betalt stöd</string>
+    <string name="web_ad">Webbad</string>
+    <string name="watch_ad">Titta på annons</string>
     <string name="info">Info</string>
     <string name="device_info">Enhetsinfo</string>
     <string name="app_build">Appversion: Släpp\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
@@ -175,6 +180,7 @@
     <string name="vibrate_permission">Vibration [VIBRATE]</string>
     <string name="access_network_state">Åtkomst till nätverksstatus [ACCESS_NETWORK_STATE]</string>
     <string name="access_notification_policy">Åtkomst till aviseringars inställningar [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">Fakturering [BILLING]</string>
     <string name="camera_permission">Kamera [CAMERA]</string>
     <string name="check_license">Kontrollera licens [CHECK_LICENSE]</string>
     <string name="foreground_service">Förgrundstjänst [FOREGROUND_SERVICE]</string>
@@ -212,7 +218,7 @@
     <string name="summary_preference_settings_do_not_save_duplicates">Undvik dupliceringar i historiken.</string>
     <string name="summary_preference_settings_firebase">Det här gör att vi kan samla information om appens prestanda och felloggar.</string>
     <string name="summary_preference_settings_search_engines">Välj en sökmotor för webbsökningar.</string>
-    <string name="summary_preference_settings_support_me">Klicka här om du vill stödja mig utan att betala pengar. Bara lite tid för att titta på en annons.</string>
+    <string name="summary_preference_settings_support_developer">Donera och stöd vår apputveckling. Du kan även stödja oss gratis genom att besöka vår webbplats eller titta på en videoannons.</string>
     <string name="summary_preference_permissions_ad_id">Tillåter appen att hämta och använda reklamidentifieraren associerad med användarens enhet, för att tillhandahålla anpassade annonser, mäta annonseffektivitet och visa annonser på Android 13 eller senare enheter.</string>
     <string name="summary_preference_permissions_change_wifi_state">Tillåter appen att ansluta till Wi-Fi-nätverk genom att skanna QR-koder.</string>
     <string name="summary_preference_permissions_internet">Tillåter appen att upprätta en internetanslutning för att skicka felrapporter eller kontrollera uppdateringar.</string>
@@ -220,6 +226,7 @@
     <string name="summary_preference_permissions_vibrate">Tillåter appen att vibrera när en QR-kod skannas.</string>
     <string name="summary_preference_permissions_access_network_state">Tillåter appen att kontrollera nätverksanslutning och hämta information om Wi-Fi, inklusive aktiveringsstatus och anslutna Wi-Fi-enhetsnamn.</string>
     <string name="summary_preference_permissions_access_notification_policy">Tillåter appen att få åtkomst till och ändra enhetens meddelandepolicy, kontrollera hur och när meddelanden visas för användaren och tillhandahålla anpassade funktioner för hantering av meddelanden.</string>
+    <string name="summary_preference_permissions_billing">Tillåter appen att använda Google Play Billing Library för att hantera in-app-köp och donationer.</string>
     <string name="summary_preference_permissions_camera">Tillåter appen att skanna QR-koder och streckkoder från kameran.</string>
     <string name="summary_preference_permissions_check_license">Tillåter appen att verifiera sin överensstämmelse med licensavtalet och verkställa licensvillkor för att skydda immateriell egendom.</string>
     <string name="summary_preference_permissions_foreground_service">Tillåter appen att skapa och använda tjänster som körs i förgrunden och ger dem företräde framför andra bakgrundsprocesser samt förbättrar prestanda och tillförlitlighet.</string>
@@ -230,6 +237,7 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">Läs och godkänn våra användarvillkor och integritetspolicy för att fortsätta.</string>
     <string name="summary_require_restart">För att ändringarna ska träda i kraft, starta om appen!</string>
     <string name="summary_close">Är du säker på att du vill avsluta?</string>
+    <string name="summary_donations">Oavsett hur mycket du donerar, kommer du att hjälpa oss hålla vår app igång och förbättra våra funktioner. Vi uppskattar din generositet och vänlighet!</string>
     <string name="summary_delete_history">Radera historiken?</string>
     <string name="summary_alternatively_url">- Öppna din webbläsarapp\n- Ladda en webbplats\n- Klicka på "Dela" i menyn\n- Välj den här appen.</string>
     <string name="summary_alternatively_contact">- Öppna din kontaktsapp\n- Öppna en befintlig kontakt eller skapa en ny\n- Klicka på "Dela" i menyn\n- Välj den här appen.</string>
@@ -241,6 +249,7 @@
     <string name="snack_saved_to_gallery">Sparat i Galleri</string>
     <string name="snack_no_app_found">Ingen app hittades för denna åtgärd</string>
     <string name="snack_feedback">Tack för att du betygsätter oss! ❤️</string>
+    <string name="snack_support">Vill du stödja vår app? ❤️</string>
     <string name="tooltip_agree">Acceptera villkor och bestämmelser.</string>
     <string name="tooltip_export">Exportera din historik.</string>
     <string name="tooltip_open_me">Öppna mig 🌐</string>

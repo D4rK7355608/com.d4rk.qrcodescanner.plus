@@ -100,7 +100,12 @@
     <string name="more">Mehr</string>
     <string name="share">Teilen</string>
     <string name="more_apps">Weitere Apps…</string>
-    <string name="support_me">Unterstütze mich</string>
+    <string name="support_the_developer">Unterstütze den Entwickler</string>
+    <string name="support_us">Unterstütze uns</string>
+    <string name="paid_support">Bezahlte Unterstützung</string>
+    <string name="non_paid_support">Unbezahlte Unterstützung</string>
+    <string name="web_ad">Web-Anzeige</string>
+    <string name="watch_ad">Anzeige ansehen</string>
     <string name="info">Info</string>
     <string name="device_info">Geräteinfo</string>
     <string name="app_build">App-Version: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
@@ -175,6 +180,7 @@
     <string name="vibrate_permission">Vibration [VIBRATE]</string>
     <string name="access_network_state">Netzwerkstatus abrufen [ACCESS_NETWORK_STATE]</string>
     <string name="access_notification_policy">Benachrichtigungsrichtlinie abrufen [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">Abrechnung [BILLING]</string>
     <string name="camera_permission">Kamera [CAMERA]</string>
     <string name="check_license">Lizenz überprüfen [CHECK_LICENSE]</string>
     <string name="foreground_service">Vordergrunddienst [FOREGROUND_SERVICE]</string>
@@ -212,7 +218,7 @@
     <string name="summary_preference_settings_do_not_save_duplicates">Duplikate in der Historie vermeiden.</string>
     <string name="summary_preference_settings_firebase">Hiermit können wir Informationen zur Leistung der App und zu Absturzprotokollen sammeln.</string>
     <string name="summary_preference_settings_search_engines">Suchmaschine für Websuchen auswählen.</string>
-    <string name="summary_preference_settings_support_me">Klicken Sie hier, wenn Sie mich unterstützen möchten, ohne Geld zu bezahlen. Nehmen Sie sich einfach etwas Zeit, um eine Anzeige anzusehen.</string>
+    <string name="summary_preference_settings_support_developer">Unterstütze unsere App-Entwicklung durch Spenden. Du kannst uns auch kostenlos unterstützen, indem du unsere Website besuchst oder ein Werbevideo ansiehst.</string>
     <string name="summary_preference_permissions_ad_id">Ermöglicht der App, die mit dem Gerät des Benutzers verknüpfte Werbe-ID abzurufen und zu verwenden, um personalisierte Werbung bereitzustellen, die Wirksamkeit von Werbung zu messen und auf Geräten mit Android 13 oder höher Anzeigen anzuzeigen.</string>
     <string name="summary_preference_permissions_change_wifi_state">Ermöglicht der App, sich über das Scannen von QR-Codes mit WLAN-Netzwerken zu verbinden.</string>
     <string name="summary_preference_permissions_internet">Ermöglicht der App, eine Internetverbindung herzustellen, um Fehlerberichte zu senden oder nach Updates zu suchen.</string>
@@ -220,6 +226,7 @@
     <string name="summary_preference_permissions_vibrate">Ermöglicht der App, bei Scan eines QR-Codes zu vibrieren.</string>
     <string name="summary_preference_permissions_access_network_state">Ermöglicht der App, die Netzwerkverbindung zu überprüfen und Informationen zum WLAN abzurufen, einschließlich des Aktivierungsstatus und der Namen der verbundenen WLAN-Geräte.</string>
     <string name="summary_preference_permissions_access_notification_policy">Ermöglicht der App, auf die Benachrichtigungsrichtlinie des Geräts zuzugreifen und diese zu ändern, um zu steuern, wie und wann Benachrichtigungen für den Benutzer angezeigt werden, und benutzerdefinierte Funktionen für die Benachrichtigungsverwaltung bereitzustellen.</string>
+    <string name="summary_preference_permissions_billing">Ermöglicht der App die Verwendung der Google Play Billing Library zur Abwicklung von In-App-Käufen und Spenden.</string>
     <string name="summary_preference_permissions_camera">Ermöglicht der App, QR-Codes und Barcodes von der Kamera zu scannen.</string>
     <string name="summary_preference_permissions_check_license">Ermöglicht der App, die Einhaltung der Lizenzvereinbarung zu überprüfen und Lizenzbedingungen durchzusetzen, um geistiges Eigentum zu schützen.</string>
     <string name="summary_preference_permissions_foreground_service">Ermöglicht der App, Dienste zu erstellen und zu verwenden, die im Vordergrund ausgeführt werden und Priorität vor anderen Hintergrundprozessen haben, um die Leistung und Zuverlässigkeit zu verbessern.</string>
@@ -230,6 +237,7 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">Lesen Sie unsere Nutzungsbedingungen und Datenschutzrichtlinien und stimmen Sie ihnen zu, um fortzufahren.</string>
     <string name="summary_require_restart">Um wirksam zu werden, starten Sie bitte die App neu!</string>
     <string name="summary_close">Sind Sie sicher, dass Sie beenden möchten?</string>
+    <string name="summary_donations">Unabhängig von der Höhe Ihrer Spende helfen Sie uns, unsere App am Laufen zu halten und unsere Funktionen zu verbessern. Wir schätzen Ihre Großzügigkeit und Freundlichkeit!</string>
     <string name="summary_delete_history">Verlauf löschen?</string>
     <string name="summary_alternatively_url">- Öffnen Sie Ihre Browser-App\n- Laden Sie eine Website\n- Klicken Sie auf "Teilen" im Menü\n- Wählen Sie diese App aus.</string>
     <string name="summary_alternatively_contact">- Öffnen Sie Ihre Kontakte-App\n- Öffnen Sie einen vorhandenen Kontakt oder erstellen Sie einen neuen\n- Klicken Sie auf "Teilen" im Menü\n- Wählen Sie diese App aus</string>
@@ -241,6 +249,7 @@
     <string name="snack_saved_to_gallery">In der Galerie gespeichert</string>
     <string name="snack_no_app_found">Keine App für diese Aktion gefunden</string>
     <string name="snack_feedback">Vielen Dank für Ihre Bewertung! ❤️</string>
+    <string name="snack_support">Möchten Sie unsere App unterstützen? ❤️</string>
     <string name="tooltip_agree">Nehmen Sie die Nutzungsbedingungen an.</string>
     <string name="tooltip_export">Exportieren Sie Ihren Verlauf.</string>
     <string name="tooltip_open_me">Öffnen Sie mich 🌐</string>

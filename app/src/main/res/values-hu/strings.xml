@@ -100,7 +100,12 @@
     <string name="more">Továbbiak</string>
     <string name="share">Megosztás</string>
     <string name="more_apps">További alkalmazások…</string>
-    <string name="support_me">Támogass engem</string>
+    <string name="support_the_developer">Támogasd a fejlesztőt</string>
+    <string name="support_us">Támogatás</string>
+    <string name="paid_support">Fizetett támogatás</string>
+    <string name="non_paid_support">Díjmentes támogatás</string>
+    <string name="web_ad">Web hirdetés</string>
+    <string name="watch_ad">Hirdetés megnézése</string>
     <string name="info">Információ</string>
     <string name="device_info">Eszközinformáció</string>
     <string name="app_build">Alkalmazás verziója: Kiadás\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
@@ -175,6 +180,7 @@
     <string name="vibrate_permission">Rezgés [VIBRATE]</string>
     <string name="access_network_state">Hálózati állapot hozzáférés [ACCESS_NETWORK_STATE]</string>
     <string name="access_notification_policy">Értesítési szabályzat hozzáférés [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">Számlázás [BILLING]</string>
     <string name="camera_permission">Kamera [CAMERA]</string>
     <string name="check_license">Licenc ellenőrzése [CHECK_LICENSE]</string>
     <string name="foreground_service">Előtérszolgáltatás [FOREGROUND_SERVICE]</string>
@@ -212,7 +218,7 @@
     <string name="summary_preference_settings_do_not_save_duplicates">Kettőzött elemek elkerülése a történetben.</string>
     <string name="summary_preference_settings_firebase">Lehetővé teszi az alkalmazás teljesítményével és összeomlási naplóival kapcsolatos információk gyűjtését.</string>
     <string name="summary_preference_settings_search_engines">Válasszon keresőmotort a webes keresésekhez.</string>
-    <string name="summary_preference_settings_support_me">Kattintson ide, ha támogatni szeretne fizetés nélkül. Csak néhány pillanat azért, hogy megnézze a hirdetést.</string>
+    <string name="summary_preference_settings_support_developer">Támogasd az alkalmazás fejlesztését adományozással. Ingyenesen is támogathatod minket weboldalunk látogatásával vagy egy videó hirdetés megtekintésével.</string>
     <string name="summary_preference_permissions_ad_id">Lehetővé teszi az alkalmazás számára a felhasználó eszközéhez társított reklámazonosító lekérését és használatát, személyre szabott hirdetések biztosítására, a hirdetések hatékonyságának mérésére és a 13-as vagy újabb verziójú Android eszközökön történő hirdetések megjelenítésére.</string>
     <string name="summary_preference_permissions_change_wifi_state">Lehetővé teszi az alkalmazás számára, hogy QR-kódok beolvasásával csatlakozzon Wi-Fi-hálózatokhoz.</string>
     <string name="summary_preference_permissions_internet">Lehetővé teszi az alkalmazás számára az internetkapcsolat létesítését hibajelentések küldéséhez vagy frissítések ellenőrzéséhez.</string>
@@ -220,6 +226,7 @@
     <string name="summary_preference_permissions_vibrate">Engedélyezi az alkalmazás számára, hogy rezgessen, amikor QR-kódot olvasnak be.</string>
     <string name="summary_preference_permissions_access_network_state">Engedélyezi az alkalmazás számára a hálózati kapcsolat ellenőrzését és a Wi-Fi-hálózat információinak lekérését, ideértve az engedélyezett állapotot és a csatlakoztatott Wi-Fi-készülék nevét.</string>
     <string name="summary_preference_permissions_access_notification_policy">Engedélyezi az alkalmazás számára a készülék értesítési irányelveinek elérését és módosítását, a felhasználó számára történő testreszabott értesítéskezelési funkciók biztosítását és az értesítések megjelenítésének és időzítésének irányítását.</string>
+    <string name="summary_preference_permissions_billing">Engedélyezi az alkalmazás számára a Google Play Billing könyvtár használatát a vásárlások és adományok kezeléséhez.</string>
     <string name="summary_preference_permissions_camera">Engedélyezi az alkalmazás számára a QR-kódok és vonalkódok beolvasását a kamera segítségével.</string>
     <string name="summary_preference_permissions_check_license">Engedélyezi az alkalmazás számára, hogy ellenőrizze a licencszerződés betartását és az intellektuális tulajdon védelme érdekében a licencfeltételek érvényesítését.</string>
     <string name="summary_preference_permissions_foreground_service">Engedélyezi az alkalmazás számára a háttérben futó folyamatoknál prioritást élvező szolgáltatások létrehozását és használatát, ezzel javítva a teljesítményt és a megbízhatóságot.</string>
@@ -230,6 +237,7 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">Az Általános Szerződési Feltételek és Adatvédelmi Szabályzatunk elolvasása és elfogadása szükséges a folytatáshoz.</string>
     <string name="summary_require_restart">Az érvényesítés érdekében indítsa újra az alkalmazást!</string>
     <string name="summary_close">Biztosan kilép?</string>
+    <string name="summary_donations">Nem számít, hogy mennyit adományozol, segítesz fenntartani az alkalmazásunkat és fejleszteni a funkcióinkat. Nagyrabecsüljük a nagylelkűséged és a kedvességed!</string>
     <string name="summary_delete_history">Törölje a előzményeket?</string>
     <string name="summary_alternatively_url">- Nyissa meg a böngészőalkalmazást\n- Töltse be a webhelyet\n- Kattintson az „Ossza meg” lehetőségre a menüben\n- Válassza ki ezt az alkalmazást.</string>
     <string name="summary_alternatively_contact">- Nyissa meg a kapcsolatai alkalmazást\n- Nyisson meg egy meglévő kapcsolatot, vagy hozzon létre egy újat\n- Kattintson az „Ossza meg” lehetőségre a menüben\n- Válassza ki ezt az alkalmazást.</string>
@@ -241,6 +249,7 @@
     <string name="snack_saved_to_gallery">Elmentve a Galériába</string>
     <string name="snack_no_app_found">Nincs alkalmazás ehhez a művelethez</string>
     <string name="snack_feedback">Köszönjük az értékelést! ❤️</string>
+    <string name="snack_support">Szeretnéd támogatni az alkalmazásunkat? ❤️</string>
     <string name="tooltip_agree">Elfogadom a feltételeket és az adatvédelmi szabályzatot.</string>
     <string name="tooltip_export">Előzmények exportálása.</string>
     <string name="tooltip_open_me">Nyiss meg 🌐</string>

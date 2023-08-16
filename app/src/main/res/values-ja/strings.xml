@@ -100,7 +100,12 @@
     <string name="more">その他</string>
     <string name="share">共有</string>
     <string name="more_apps">他のアプリ…</string>
-    <string name="support_me">サポートする</string>
+    <string name="support_the_developer">開発者のサポート</string>
+    <string name="support_us">サポートする</string>
+    <string name="paid_support">有料サポート</string>
+    <string name="non_paid_support">無料サポート</string>
+    <string name="web_ad">ウェブ広告</string>
+    <string name="watch_ad">広告を視聴</string>
     <string name="info">情報</string>
     <string name="device_info">デバイス情報</string>
     <string name="app_build">アプリビルド：リリース\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
@@ -175,6 +180,7 @@
     <string name="vibrate_permission">バイブレーション [VIBRATE]</string>
     <string name="access_network_state">ネットワーク状態にアクセス [ACCESS_NETWORK_STATE]</string>
     <string name="access_notification_policy">通知ポリシーにアクセス [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">課金 [BILLING]</string>
     <string name="camera_permission">カメラ [CAMERA]</string>
     <string name="check_license">ライセンスをチェック [CHECK_LICENSE]</string>
     <string name="foreground_service">フォアグラウンドサービス [FOREGROUND_SERVICE]</string>
@@ -212,7 +218,7 @@
     <string name="summary_preference_settings_do_not_save_duplicates">履歴に重複を保存しません</string>
     <string name="summary_preference_settings_firebase">アプリのパフォーマンスとクラッシュログに関する情報を収集できます</string>
     <string name="summary_preference_settings_search_engines">Web検索に使用する検索エンジンを選択します</string>
-    <string name="summary_preference_settings_support_me">お金を払わずに私をサポートしたい場合は、ここをクリックしてください。広告を表示するだけで十分です。</string>
+    <string name="summary_preference_settings_support_developer">アプリの開発を寄付でサポートしてください。ウェブサイトの訪問やビデオ広告の視聴によって無償でサポートすることもできます。</string>
     <string name="summary_preference_permissions_ad_id">ユーザーの端末に関連付けられた広告識別子（IDFA）を取得して使用します。これにより、パーソナライズされた広告を表示したり、広告の効果を測定したり、Android 13以降を搭載した端末で広告を表示したりできます。</string>
     <string name="summary_preference_permissions_change_wifi_state">QRコードをスキャンしてWi-Fiネットワークに接続できるようにします</string>
     <string name="summary_preference_permissions_internet">エラーレポートを送信したり、更新をチェックしたりするために、インターネット接続を確立できるようにします</string>
@@ -220,6 +226,7 @@
     <string name="summary_preference_permissions_vibrate">QRコードをスキャンしたときに端末を振動できるようにします</string>
     <string name="summary_preference_permissions_access_network_state">ネットワーク接続の可用性とWi-Fiに関する情報（有効な状態と接続されているWi-Fiデバイス名など）を取得できるようにします</string>
     <string name="summary_preference_permissions_access_notification_policy">端末の通知ポリシーにアクセスして変更できるようにします。これにより、通知の表示方法と表示タイミングを制御し、カスタム通知管理機能を提供できます。</string>
+    <string name="summary_preference_permissions_billing">アプリ内の購入や寄付を処理するために Google Play Billing Library を使用する許可です。</string>
     <string name="summary_preference_permissions_camera">QRコードとバーコードをカメラからスキャンできるようにします</string>
     <string name="summary_preference_permissions_check_license">ライセンス契約に準拠していることを検証し、知的財産を保護するためにライセンス条件を適用できるようにします</string>
     <string name="summary_preference_permissions_foreground_service">端末で常に動作するサービスを作成および使用できるようにします。これにより、他のバックグラウンドプロセスよりも優先され、パフォーマンスと信頼性が向上します。</string>
@@ -230,6 +237,7 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">続行するには、利用規約とプライバシーポリシーを読み、同意してください</string>
     <string name="summary_require_restart">有効にするには、アプリを再起動してください！</string>
     <string name="summary_close">終了してもよろしいですか？</string>
+    <string name="summary_donations">寄付の額に関わらず、私たちのアプリの運営や機能の改善にご協力いただければ幸いです。ご好意に感謝申し上げます！</string>
     <string name="summary_delete_history">履歴を削除しますか？</string>
     <string name="summary_alternatively_url">- ブラウザアプリを開く\n- ウェブサイトを開く\n- メニューから「共有」をクリック\n- このアプリを選択してください。</string>
     <string name="summary_alternatively_contact">- 連絡先アプリを開く\n- 既存の連絡先を開くか、新しい連絡先を作成\n- メニューから「共有」をクリック\n- このアプリを選択してください。</string>
@@ -241,6 +249,7 @@
     <string name="snack_saved_to_gallery">ギャラリーに保存されました</string>
     <string name="snack_no_app_found">この操作に適したアプリが見つかりません</string>
     <string name="snack_feedback">評価ありがとうございます！ ❤️</string>
+    <string name="snack_support">アプリをサポートしていただけますか？ ❤️</string>
     <string name="tooltip_agree">利用規約に同意します。</string>
     <string name="tooltip_export">履歴をエクスポートします。</string>
     <string name="tooltip_open_me">開きます 🌐</string>

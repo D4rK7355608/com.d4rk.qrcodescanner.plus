@@ -47,23 +47,7 @@
     <string name="send_email_using" translatable="false">Send mail using:</string>
     <string name="changelog_title" translatable="false">Changelog - Version %1s</string>
     <string name="changes" translatable="false">\n
-        • Added a new startup screen for new users.\n\n
-        • Added a new GDPR message to comply with Google Play policy.\n\n
-        • Added a new help center, with more comprehensive documentation and support options.\n\n
-        • Added language support for Bulgarian, French, German, Hindi, Italian, Polish, Spanish, Swedish, Turkish and Ukrainian.\n\n
-        • Added snack bars instead of toasts for all notifications.\n\n
-        • Added tooltips to help users understand what is happening in the app.\n\n
-        • Added an exit dialog to confirm the user\'s intention to leave the app.\n\n
-        • Added in-app updates to allow users to easily update the app without going through the Google Play Store.\n\n
-        • Added the ability to disable Firebase Analytics and Crashlytics from the app settings.\n\n
-        • Added the ability to change the style of the navigation bar labels from the app settings.\n\n
-        • Added the ability to change the startup screen from the app settings.\n\n
-        • Added the ability to access notification settings from the app settings.\n\n
-        • Added update notifications to inform users of new content and features.\n\n
-        • Added welcome back notifications to greet returning users.\n\n
-        • Reworked, improved and refreshed the user interface.\n\n
-        • Reworked and improved animations.\n\n
-        • Reworked language system, making it more accurate and user-friendly.\n\n
+        • Added a new support page to show appreciation and gratitude to the developer.\n\n
         • Fixed various bugs and improved readability, consistency, app performance, and responsiveness by optimizing and styling the outdated code.\n\n
         • Made various project structure enhancements for better readability and maintainability.\n\n
         • Made various under-the-hood improvements for a better overall app experience.

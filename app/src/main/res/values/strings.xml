@@ -100,7 +100,12 @@
     <string name="more">More</string>
     <string name="share">Share</string>
     <string name="more_apps">More apps…</string>
-    <string name="support_me">Support me</string>
+    <string name="support_the_developer">Support the developer</string>
+    <string name="support_us">Support Us</string>
+    <string name="paid_support">Paid Support</string>
+    <string name="non_paid_support">Non-Paid Support</string>
+    <string name="web_ad">Web Ad</string>
+    <string name="watch_ad">Watch Ad</string>
     <string name="info">Info</string>
     <string name="device_info">Device Info</string>
     <string name="app_build">App Build: Release\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
@@ -175,6 +180,7 @@
     <string name="vibrate_permission">Vibrate [VIBRATE]</string>
     <string name="access_network_state">Access network state [ACCESS_NETWORK_STATE]</string>
     <string name="access_notification_policy">Access notification policy [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">Billing [BILLING]</string>
     <string name="camera_permission">Camera [CAMERA]</string>
     <string name="check_license">Check license [CHECK_LICENSE]</string>
     <string name="foreground_service">Foreground service [FOREGROUND_SERVICE]</string>
@@ -212,7 +218,7 @@
     <string name="summary_preference_settings_do_not_save_duplicates">Avoid duplicates in history.</string>
     <string name="summary_preference_settings_firebase">This let us collect information about app performance and crash logs.</string>
     <string name="summary_preference_settings_search_engines">Choose a search engine for web searches.</string>
-    <string name="summary_preference_settings_support_me">Click here if you want to support me without paying money. Just some time for viewing an ad.</string>
+    <string name="summary_preference_settings_support_developer">Donate and support our app development. You can also support us for free by visiting our website or watching a video ad.</string>
     <string name="summary_preference_permissions_ad_id">Allows the app to retrieve and use the advertising identifier associated with the user\'s device, providing personalized ads, measuring ad effectiveness, and showing ads on Android 13 or later devices.</string>
     <string name="summary_preference_permissions_change_wifi_state">Allows the app to connect to Wi-Fi networks by scanning QR codes.</string>
     <string name="summary_preference_permissions_internet">Allows the app to establish an internet connection to send error reports or check for updates.</string>
@@ -220,6 +226,7 @@
     <string name="summary_preference_permissions_vibrate">Allows the app to vibrate when a QR code is scanned.</string>
     <string name="summary_preference_permissions_access_network_state">Allows the app to check network connectivity and retrieve information about Wi-Fi, including enabled status and connected Wi-Fi device names.</string>
     <string name="summary_preference_permissions_access_notification_policy">Allows the app to access and modify the device\'s notification policy, controlling how and when notifications are displayed to the user and providing custom notification management features.</string>
+    <string name="summary_preference_permissions_billing">Allows the app to use the Google Play Billing Library to handle in-app purchases and donations.</string>
     <string name="summary_preference_permissions_camera">Allows the app to scan QR codes and barcodes from the camera.</string>
     <string name="summary_preference_permissions_check_license">Allows the app to verify its compliance with the license agreement and enforce licensing terms to protect intellectual property.</string>
     <string name="summary_preference_permissions_foreground_service">Allows the app to create and use services that run in the foreground, giving them priority over other background processes and improving performance and reliability.</string>
@@ -230,6 +237,7 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">Read and agree to our Terms of Service and Privacy Policy to continue.</string>
     <string name="summary_require_restart">To take effect please restart the app!</string>
     <string name="summary_close">Are you sure you want to exit?</string>
+    <string name="summary_donations">No matter how much you donate, you will help us keep our app running and improve our features. We appreciate your generosity and kindness!</string>
     <string name="summary_delete_history">Delete history?</string>
     <string name="summary_alternatively_url">- Open your browser app\n- Load a website\n- Click \"Share\" from the menu\n- Select this app.</string>
     <string name="summary_alternatively_contact">- Open your contacts app\n- Open an existing contact or create a new one\n- Click \"Share\" from the menu\n- Select this app</string>
@@ -241,6 +249,7 @@
     <string name="snack_saved_to_gallery">Saved to Gallery</string>
     <string name="snack_no_app_found">No app found for this action</string>
     <string name="snack_feedback">Thanks for rating us! ❤️</string>
+    <string name="snack_support">Would you like to support our app? ❤️</string>
     <string name="tooltip_agree">Accept the terms and conditions.</string>
     <string name="tooltip_export">Export your history.</string>
     <string name="tooltip_open_me">Open me 🌐</string>

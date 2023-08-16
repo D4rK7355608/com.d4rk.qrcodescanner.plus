@@ -40,6 +40,10 @@
             app:summary="@string/summary_preference_permissions_access_notification_policy"
             app:iconSpaceReserved="false"/>
         <androidx.preference.Preference
+            app:title="@string/billing"
+            app:summary="@string/summary_preference_permissions_billing"
+            app:iconSpaceReserved="false"/>
+        <androidx.preference.Preference
             app:title="@string/camera_permission"
             app:summary="@string/summary_preference_permissions_camera"
             app:useSimpleSummaryProvider="true"

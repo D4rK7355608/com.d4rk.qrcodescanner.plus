@@ -1,7 +1,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -32,22 +31,7 @@
         android:layout_margin="24dp"
         android:src="@drawable/ic_import_export"
         android:tooltipText="@string/tooltip_export"
-        app:layout_constraintBottom_toTopOf="@id/card_view_ad"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:importantForAccessibility="no"/>
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.Material3.CardView.Outlined"
-        android:id="@+id/card_view_ad"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_margin="@dimen/default_margin_big"
-        android:layout_marginHorizontal="@dimen/default_margin"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/ad_view"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            ads:adSize="FULL_BANNER"
-            ads:adUnitId="ca-app-pub-5294151573817700/5823012328"/>
-    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

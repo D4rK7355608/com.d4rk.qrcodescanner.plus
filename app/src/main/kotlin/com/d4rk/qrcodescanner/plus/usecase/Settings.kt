@@ -1,17 +1,12 @@
 package com.d4rk.qrcodescanner.plus.usecase
 import android.content.Context
-import android.content.res.Configuration
 import android.graphics.Color
-import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.google.zxing.BarcodeFormat
 class Settings(private val context: Context) {
     companion object {
-        const val THEME_SYSTEM = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
-        const val THEME_LIGHT = AppCompatDelegate.MODE_NIGHT_NO
-        const val THEME_DARK = AppCompatDelegate.MODE_NIGHT_YES
         private const val SHARED_PREFERENCES_NAME = "SHARED_PREFERENCES_NAME"
         private var INSTANCE: Settings? = null
         fun getInstance(context: Context): Settings {
@@ -19,27 +14,22 @@ class Settings(private val context: Context) {
         }
     }
     private enum class Key {
-        THEME, INVERSE_BARCODE_COLORS, OPEN_LINKS_AUTOMATICALLY, COPY_TO_CLIPBOARD, SIMPLE_AUTO_FOCUS, FLASHLIGHT, VIBRATE, CONTINUOUS_SCANNING, CONFIRM_SCANS_MANUALLY, IS_BACK_CAMERA, SAVE_SCANNED_BARCODES_TO_HISTORY, SAVE_CREATED_BARCODES_TO_HISTORY, DO_NOT_SAVE_DUPLICATES, SEARCH_ENGINE,
+        INVERSE_BARCODE_COLORS, OPEN_LINKS_AUTOMATICALLY, COPY_TO_CLIPBOARD, SIMPLE_AUTO_FOCUS, FLASHLIGHT, VIBRATE, CONTINUOUS_SCANNING, CONFIRM_SCANS_MANUALLY, IS_BACK_CAMERA, SAVE_SCANNED_BARCODES_TO_HISTORY, SAVE_CREATED_BARCODES_TO_HISTORY, DO_NOT_SAVE_DUPLICATES, SEARCH_ENGINE,
     }
     private val sharedPreferences by unsafeLazy {
         context.getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
     }
-    var theme: Int
-        get() = get(Key.THEME, THEME_SYSTEM)
-        set(value) {
-            set(Key.THEME, value)
-            applyTheme(value)
-        }
-    val isDarkTheme: Boolean get() = theme == THEME_DARK || (theme == THEME_SYSTEM && isSystemDarkModeEnabled())
     var areBarcodeColorsInversed: Boolean get() = get(Key.INVERSE_BARCODE_COLORS, false)
         set(value) = set(Key.INVERSE_BARCODE_COLORS, value)
-    val barcodeContentColor: Int get() = when  {
-            isDarkTheme && areBarcodeColorsInversed -> Color.WHITE
+    val barcodeContentColor: Int
+        get() = when {
+            AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES && areBarcodeColorsInversed -> Color.WHITE
             else -> Color.BLACK
         }
+
     val barcodeBackgroundColor: Int
         get() = when {
-            isDarkTheme && areBarcodeColorsInversed.not() -> Color.WHITE
+            AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES && areBarcodeColorsInversed.not() -> Color.WHITE
             else -> Color.TRANSPARENT
         }
     var openLinksAutomatically: Boolean get() = get(Key.OPEN_LINKS_AUTOMATICALLY, false)
@@ -72,15 +62,6 @@ class Settings(private val context: Context) {
     fun setFormatSelected(format: BarcodeFormat, isSelected: Boolean) {
         sharedPreferences.edit().putBoolean(format.name, isSelected).apply()
     }
-    fun reapplyTheme() {
-        applyTheme(theme)
-    }
-    private fun get(key: Key, default: Int): Int {
-        return sharedPreferences.getInt(key.name, default)
-    }
-    private fun set(key: Key, value: Int) {
-        return sharedPreferences.edit().putInt(key.name, value).apply()
-    }
     private fun get(key: Key, default: Boolean = false): Boolean {
         return sharedPreferences.getBoolean(key.name, default)
     }
@@ -93,23 +74,5 @@ class Settings(private val context: Context) {
     }
     private fun set(key: Key, value: SearchEngine) {
         sharedPreferences.edit().putString(key.name, value.name).apply()
-    }
-    private fun applyTheme(theme: Int) {
-        when (theme) {
-            AppCompatDelegate.MODE_NIGHT_NO, AppCompatDelegate.MODE_NIGHT_YES -> {
-                AppCompatDelegate.setDefaultNightMode(theme)
-            }
-            else -> {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-                }
-            }
-        }
-    }
-    private fun isSystemDarkModeEnabled(): Boolean {
-        val mode = context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)
-        return mode == Configuration.UI_MODE_NIGHT_YES
     }
 }

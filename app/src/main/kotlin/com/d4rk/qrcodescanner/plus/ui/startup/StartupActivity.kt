@@ -1,7 +1,6 @@
 package com.d4rk.qrcodescanner.plus.ui.startup
 import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -40,15 +39,7 @@ class StartupActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS, Manifest.permission.READ_MEDIA_IMAGES), 1)
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            val isReadPhoneStateGranted = checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
-            if (!isReadPhoneStateGranted) {
-                requestPermissions(arrayOf(Manifest.permission.READ_PHONE_STATE), 1)
-                return
-            }
-        } else {
-            requestPermissions(arrayOf(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE,), 1)
+            requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
         }
     }
     private fun loadForm() {

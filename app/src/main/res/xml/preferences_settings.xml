@@ -242,11 +242,11 @@
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_support"
-            app:title="@string/support_me"
-            app:summary="@string/summary_preference_settings_support_me">
+            app:title="@string/support_the_developer"
+            app:summary="@string/summary_preference_settings_support_developer">
             <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://bit.ly/3p8bpjj"/>
+                android:targetPackage="com.d4rk.qrcodescanner.plus"
+                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.support.SupportActivity"/>
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory

@@ -17,7 +17,7 @@ import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.appopen.AppOpenAd
 import java.util.Date
 private const val AD_UNIT_ID = "ca-app-pub-5294151573817700/8044468099"
-class AppOpenAdManager : MultiDexApplication(), Application.ActivityLifecycleCallbacks, LifecycleObserver {
+class ApplicationOpenAdManager : MultiDexApplication(), Application.ActivityLifecycleCallbacks, LifecycleObserver {
   private lateinit var appOpenAdManager: AppOpenAdManager
   private var currentActivity: Activity? = null
   override fun onCreate() {

@@ -9,8 +9,6 @@ import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
 import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.ui.dialogs.DeleteConfirmationDialogFragment
 import com.d4rk.qrcodescanner.plus.ui.history.export.ExportHistoryActivity
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -21,8 +19,6 @@ class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.List
     private val disposable = CompositeDisposable()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding =  FragmentBarcodeHistoryBinding.inflate(inflater, container, false)
-        MobileAds.initialize(requireContext())
-        binding.adView.loadAd(AdRequest.Builder().build())
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

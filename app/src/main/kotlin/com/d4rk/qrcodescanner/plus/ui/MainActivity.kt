@@ -1,6 +1,8 @@
 package com.d4rk.qrcodescanner.plus.ui
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -15,10 +17,15 @@ import androidx.preference.PreferenceManager
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivityMainBinding
 import com.d4rk.qrcodescanner.plus.notifications.AppUpdateNotificationsManager
+import com.d4rk.qrcodescanner.plus.notifications.AppUsageNotificationsManager
 import com.d4rk.qrcodescanner.plus.ui.settings.SettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.support.SupportActivity
 import com.d4rk.qrcodescanner.plus.ui.startup.StartupActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.ActivityResult
@@ -31,17 +38,22 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appUpdateManager: AppUpdateManager
     private val requestUpdateCode = 1
     private lateinit var appUpdateNotificationsManager: AppUpdateNotificationsManager
+    private val handler = Handler(Looper.getMainLooper())
+    private val snackbarInterval: Long = 60L * 24 * 60 * 60 * 1000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        MobileAds.initialize(this)
+        binding.adView.loadAd(AdRequest.Builder().build())
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateNotificationsManager = AppUpdateNotificationsManager(this)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         applyAppSettings()
+        handler.postDelayed(::showSnackbar, snackbarInterval)
     }
     private fun applyAppSettings() {
         val themeValues = resources.getStringArray(R.array.preference_theme_values)
@@ -84,6 +96,15 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history, R.id.navigation_about))
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
+    private fun showSnackbar() {
+        Snackbar.make(binding.root, getString(R.string.snack_support), Snackbar.LENGTH_LONG)
+            .setAction(getString(android.R.string.ok)) {
+                val intent = Intent(this, SupportActivity::class.java)
+                startActivity(intent)
+            }
+            .show()
+        handler.postDelayed(::showSnackbar, snackbarInterval)
+    }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
@@ -118,8 +139,10 @@ class MainActivity : AppCompatActivity() {
         } else {
             FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(true)
             FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
-
         }
+        val appUsageNotificationsManager = AppUsageNotificationsManager(this)
+        appUsageNotificationsManager.checkAndSendAppUsageNotification()
+        appUpdateNotificationsManager.checkAndSendUpdateNotification()
         appUpdateManager.appUpdateInfo.addOnSuccessListener { appUpdateInfo ->
             if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
                 @Suppress("DEPRECATION")
@@ -137,7 +160,6 @@ class MainActivity : AppCompatActivity() {
     }
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        @Suppress("DEPRECATION")
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == requestUpdateCode) {
             when (resultCode) {

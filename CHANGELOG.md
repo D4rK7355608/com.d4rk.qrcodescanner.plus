@@ -1,5 +1,8 @@
-# Version 3.0_r2:
-- Made minor under-the-hood improvements for a better overall app experience.
+# Version 3.1_r1:
+- Added a new support page to show appreciation and gratitude to the developer.
+- Fixed various bugs and improved readability, consistency, app performance, and responsiveness by optimizing and styling the outdated code.
+- Made various project structure enhancements for better readability and maintainability.
+- Made various under-the-hood improvements for a better overall app experience.
 
 # Version 3.0_r1:
 - Added a new startup screen for new users.

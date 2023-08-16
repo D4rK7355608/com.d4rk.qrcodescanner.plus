@@ -2,6 +2,7 @@ package com.d4rk.qrcodescanner.plus.feature.barcode
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivityBarcodeImageBinding
@@ -90,7 +91,7 @@ class BarcodeImageActivity : BaseActivity() {
             binding.imageViewBarcode.setImageBitmap(bitmap)
             binding.imageViewBarcode.setBackgroundColor(settings.barcodeBackgroundColor)
             binding.layoutBarcodeImageBackground.setBackgroundColor(settings.barcodeBackgroundColor)
-            if (settings.isDarkTheme.not() || settings.areBarcodeColorsInversed) {
+            if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO || settings.areBarcodeColorsInversed) {
                 binding.layoutBarcodeImageBackground.setPadding(0, 0, 0, 0)
             }
         } catch (ex: Exception) {

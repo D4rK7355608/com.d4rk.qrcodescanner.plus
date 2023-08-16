@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.provider.CalendarContract
 import android.provider.ContactsContract
 import android.provider.Settings
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.print.PrintHelper
@@ -41,6 +42,8 @@ import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.d4rk.qrcodescanner.plus.model.schema.OtpAuth
 import com.d4rk.qrcodescanner.plus.usecase.save
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.google.android.material.snackbar.Snackbar
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -91,6 +94,8 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
         showBarcode()
         showOrHideButtons()
         showButtonText()
+        MobileAds.initialize(this)
+        binding.adView.loadAd(AdRequest.Builder().build())
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
     override fun onDeleteConfirmed() {
@@ -556,7 +561,7 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
             binding.imageViewBarcode.setImageBitmap(bitmap)
             binding.imageViewBarcode.setBackgroundColor(settings.barcodeBackgroundColor)
             binding.layoutBarcodeImageBackground.setBackgroundColor(settings.barcodeBackgroundColor)
-            if (settings.isDarkTheme.not() || settings.areBarcodeColorsInversed) {
+            if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO || settings.areBarcodeColorsInversed) {
                 binding.layoutBarcodeImageBackground.setPadding(0, 0, 0, 0)
             }
         } catch (ex: Exception) {

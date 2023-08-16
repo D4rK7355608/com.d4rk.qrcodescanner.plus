@@ -101,7 +101,12 @@
     <string name="more">Mai mult</string>
     <string name="share">Partajează</string>
     <string name="more_apps">Mai multe aplicații…</string>
-    <string name="support_me">Suportă-mă</string>
+    <string name="support_the_developer">Susține dezvoltatorul</string>
+    <string name="support_us">Susține-ne</string>
+    <string name="paid_support">Suport Plătit</string>
+    <string name="non_paid_support">Suport Necalificat</string>
+    <string name="web_ad">Reclamă Web</string>
+    <string name="watch_ad">Vizualizează Reclamă</string>
     <string name="info">Informații</string>
     <string name="device_info">Informații despre dispozitiv</string>
     <string name="app_build">Versiunea aplicației: Versiune de lansare\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
@@ -176,6 +181,7 @@
     <string name="vibrate_permission">Vibrează [VIBRATE]</string>
     <string name="access_network_state">Accesează starea rețelei [ACCESS_NETWORK_STATE]</string>
     <string name="access_notification_policy">Accesează politica de notificare [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">Facturare [BILLING]</string>
     <string name="camera_permission">Cameră [CAMERA]</string>
     <string name="check_license">Verifică licența [CHECK_LICENSE]</string>
     <string name="foreground_service">Serviciu în prim plan [FOREGROUND_SERVICE]</string>
@@ -213,7 +219,7 @@
     <string name="summary_preference_settings_do_not_save_duplicates">Evită duplicatele în istoric.</string>
     <string name="summary_preference_settings_firebase">Acest lucru ne permite să colectăm informații despre performanța aplicației și jurnalele de erori.</string>
     <string name="summary_preference_settings_search_engines">Alegeți un motor de căutare pentru căutările pe web.</string>
-    <string name="summary_preference_settings_support_me">Faceți clic aici dacă doriți să mă susțineți fără să plătiți bani. Doar ceva timp pentru vizualizarea unui anunț.</string>
+    <string name="summary_preference_settings_support_developer">Donează și susține dezvoltarea aplicației noastre. De asemenea, ne puteți susține gratuit vizitând site-ul nostru web sau vizionând un anunț video.</string>
     <string name="summary_preference_permissions_ad_id">Permite aplicației să preia și să utilizeze identificatorul de publicitate asociat dispozitivului utilizatorului, oferind anunțuri personalizate, măsurând eficacitatea anunțurilor și afișând anunțuri pe dispozitivele Android 13 sau mai noi.</string>
     <string name="summary_preference_permissions_change_wifi_state">Permite aplicației să se conecteze la rețele Wi-Fi prin scanarea codurilor QR.</string>
     <string name="summary_preference_permissions_internet">Permite aplicației să stabilească o conexiune la internet pentru a trimite rapoarte de erori sau a verifica actualizările.</string>
@@ -221,6 +227,7 @@
     <string name="summary_preference_permissions_vibrate">Permite aplicației să vibreze atunci când este scanat un cod QR.</string>
     <string name="summary_preference_permissions_access_network_state">Permite aplicației să verifice conectivitatea la rețea și să preia informații despre Wi-Fi, inclusiv starea activată și numele dispozitivelor Wi-Fi conectate.</string>
     <string name="summary_preference_permissions_access_notification_policy">Permite aplicației să acceseze și să modifice politica de notificare a dispozitivului, controlând modul și momentul în care notificările sunt afișate utilizatorului și oferind funcții personalizate de gestionare a notificărilor.</string>
+    <string name="summary_preference_permissions_billing">Permite aplicației să utilizeze Biblioteca Google Play Billing pentru a gestiona achizițiile în aplicație și donațiile.</string>
     <string name="summary_preference_permissions_camera">Permite aplicației să scaneze coduri QR și coduri de bare de la camera foto.</string>
     <string name="summary_preference_permissions_check_license">Permite aplicației să verifice conformitatea cu acordul de licență și să impună termenii de licențiere pentru a proteja proprietatea intelectuală.</string>
     <string name="summary_preference_permissions_foreground_service">Permite aplicației să creeze și să utilizeze servicii care rulează în prim-plan, oferindu-le prioritate față de alte procese în fundal și îmbunătățind performanța și fiabilitatea.</string>
@@ -231,6 +238,7 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">Citiți și acceptați Termenii și condițiile noastre de utilizare și Politica de confidențialitate pentru a continua.</string>
     <string name="summary_require_restart">Pentru a avea efect, vă rugăm să reporniți aplicația!</string>
     <string name="summary_close">Sunteți sigur că doriți să închideți?</string>
+    <string name="summary_donations">Indiferent cât de mult donezi, ne vei ajuta să menținem funcționarea aplicației noastre și să îmbunătățim funcționalitățile noastre. Apreciem generozitatea și amabilitatea ta!</string>
     <string name="summary_delete_history">Ștergeți istoricul?</string>
     <string name="summary_alternatively_url">- Deschideți aplicația dvs. de browser\n- Încărcați un site web\n- Faceți clic pe \"Partajează\" din meniu\n- Selectați această aplicație.</string>
     <string name="summary_alternatively_contact">- Deschideți aplicația dvs. de contacte\n- Deschideți un contact existent sau creați unul nou\n- Faceți clic pe \"Partajează\" din meniu\n- Selectați această aplicație</string>
@@ -242,6 +250,7 @@
     <string name="snack_saved_to_gallery">Salvat în Galerie</string>
     <string name="snack_no_app_found">Nu s-a găsit nicio aplicație pentru această acțiune</string>
     <string name="snack_feedback">Mulțumim pentru evaluarea noastră! ❤️</string>
+    <string name="snack_support">Dorești să susții aplicația noastră? ❤️</string>
     <string name="tooltip_agree">Acceptați termenii și condițiile.</string>
     <string name="tooltip_export">Exportați istoricul dvs.</string>
     <string name="tooltip_open_me">Deschide-mă 🌐</string>

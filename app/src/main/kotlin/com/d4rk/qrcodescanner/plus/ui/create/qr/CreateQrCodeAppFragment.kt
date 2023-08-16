@@ -65,7 +65,6 @@ class CreateQrCodeAppFragment : BaseCreateBarcodeFragment() {
         val mainIntent = Intent(Intent.ACTION_MAIN).apply {
             addCategory(Intent.CATEGORY_LAUNCHER)
         }
-        @Suppress("DEPRECATION")
         return requireContext().packageManager.queryIntentActivities(mainIntent, 0).filter { it.activityInfo?.packageName != null }
     }
     private fun showLoading(isLoading: Boolean) {

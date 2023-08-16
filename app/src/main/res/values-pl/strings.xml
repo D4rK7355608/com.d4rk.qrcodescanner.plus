@@ -100,7 +100,12 @@
     <string name="more">Więcej</string>
     <string name="share">Udostępnij</string>
     <string name="more_apps">Więcej aplikacji…</string>
-    <string name="support_me">Wesprzyj mnie</string>
+    <string name="support_the_developer">Wsparcie dla dewelopera</string>
+    <string name="support_us">Wspieraj nas</string>
+    <string name="paid_support">Wsparcie płatne</string>
+    <string name="non_paid_support">Wsparcie nieodpłatne</string>
+    <string name="web_ad">Reklama internetowa</string>
+    <string name="watch_ad">Obejrzyj reklamę</string>
     <string name="info">Informacje</string>
     <string name="device_info">Informacje o urządzeniu</string>
     <string name="app_build">Budowa aplikacji: Wydanie\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
@@ -175,6 +180,7 @@
     <string name="vibrate_permission">Wibracja [VIBRATE]</string>
     <string name="access_network_state">Dostęp do stanu sieci [ACCESS_NETWORK_STATE]</string>
     <string name="access_notification_policy">Dostęp do polityki powiadomień [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="billing">Płatności [BILLING]</string>
     <string name="camera_permission">Kamera [CAMERA]</string>
     <string name="check_license">Sprawdzanie licencji [CHECK_LICENSE]</string>
     <string name="foreground_service">Usługa w tle [FOREGROUND_SERVICE]</string>
@@ -212,7 +218,7 @@
     <string name="summary_preference_settings_do_not_save_duplicates">Unikaj duplikatów w historii.</string>
     <string name="summary_preference_settings_firebase">Pozwala na zbieranie informacji o wydajności aplikacji i dziennikach błędów.</string>
     <string name="summary_preference_settings_search_engines">Wybierz silnik wyszukiwania dla wyszukiwania w sieci.</string>
-    <string name="summary_preference_settings_support_me">Kliknij tutaj, jeśli chcesz wesprzeć mnie bez płacenia. Poświęć trochę czasu na obejrzenie reklamy.</string>
+    <string name="summary_preference_settings_support_developer">Wspomóż rozwój naszej aplikacji. Możesz nas również wesprzeć za darmo, odwiedzając naszą stronę internetową lub oglądając reklamy wideo.</string>
     <string name="summary_preference_permissions_ad_id">Umożliwia aplikacji pobieranie i korzystanie z identyfikatora reklamowego powiązanego z urządzeniem użytkownika, dostarczanie spersonalizowanych reklam, mierzenie skuteczności reklam i wyświetlanie reklam na urządzeniach z systemem Android 13 lub nowszym.</string>
     <string name="summary_preference_permissions_change_wifi_state">Umożliwia aplikacji łączenie się z sieciami Wi-Fi poprzez skanowanie kodów QR.</string>
     <string name="summary_preference_permissions_internet">Umożliwia aplikacji nawiązanie połączenia internetowego w celu wysyłania raportów o błędach lub sprawdzania aktualizacji.</string>
@@ -220,6 +226,7 @@
     <string name="summary_preference_permissions_vibrate">Umożliwia aplikacji wibrację podczas skanowania kodu QR.</string>
     <string name="summary_preference_permissions_access_network_state">Umożliwia aplikacji sprawdzanie połączenia z siecią i pobieranie informacji o sieci Wi-Fi, w tym o jej statusie i podłączonych urządzeniach Wi-Fi.</string>
     <string name="summary_preference_permissions_access_notification_policy">Umożliwia aplikacji dostęp i modyfikację polityki powiadomień urządzenia, kontrolowanie sposobu i czasu wyświetlania powiadomień użytkownikowi oraz dostarczanie funkcji niestandardowego zarządzania powiadomieniami.</string>
+    <string name="summary_preference_permissions_billing">Pozwala aplikacji korzystać z biblioteki Google Play Billing do obsługi zakupów w aplikacji i darowizn.</string>
     <string name="summary_preference_permissions_camera">Umożliwia aplikacji skanowanie kodów QR i kodów kreskowych za pomocą aparatu.</string>
     <string name="summary_preference_permissions_check_license">Umożliwia aplikacji sprawdzenie zgodności z umową licencyjną i egzekwowanie warunków licencjonowania w celu ochrony praw własności intelektualnej.</string>
     <string name="summary_preference_permissions_foreground_service">Umożliwia aplikacji tworzenie i korzystanie z usług działających w trybie pierwszego planu, dając im pierwszeństwo przed innymi procesami w tle, co poprawia wydajność i niezawodność.</string>
@@ -230,6 +237,7 @@
     <string name="summary_browse_terms_of_service_and_privacy_policy">Zapoznaj się i zaakceptuj nasze Warunki korzystania i Politykę prywatności, aby kontynuować.</string>
     <string name="summary_require_restart">Aby wprowadzić zmiany, zrestartuj aplikację!</string>
     <string name="summary_close">Czy na pewno chcesz wyjść?</string>
+    <string name="summary_donations">Nie ma znaczenia, ile darowizny przekażesz, pomożesz nam utrzymać działanie naszej aplikacji i ulepszyć nasze funkcje. Doceniamy twoją hojność i życzliwość!</string>
     <string name="summary_delete_history">Usunąć historię?</string>
     <string name="summary_alternatively_url">- Otwórz aplikację przeglądarki\n- Załaduj stronę internetową\n- Kliknij przycisk „Udostępnij” w menu\n- Wybierz tę aplikację.</string>
     <string name="summary_alternatively_contact">- Otwórz aplikację Kontakty\n- Otwórz istniejący kontakt lub utwórz nowy\n- Kliknij przycisk „Udostępnij” w menu\n- Wybierz tę aplikację.</string>
@@ -241,6 +249,7 @@
     <string name="snack_saved_to_gallery">Zapisano w galerii</string>
     <string name="snack_no_app_found">Nie znaleziono aplikacji dla tej akcji</string>
     <string name="snack_feedback">Dziękujemy za ocenę! ❤️</string>
+    <string name="snack_support">Czy chciałbyś wesprzeć naszą aplikację? ❤️</string>
     <string name="tooltip_agree">Zaakceptuj warunki i zasady.</string>
     <string name="tooltip_export">Eksportuj historię.</string>
     <string name="tooltip_open_me">Otwórz mnie 🌐</string>

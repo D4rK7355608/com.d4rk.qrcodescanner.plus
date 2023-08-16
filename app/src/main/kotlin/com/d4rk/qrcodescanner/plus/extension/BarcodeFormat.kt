@@ -21,7 +21,7 @@ fun BarcodeFormat.toStringId(): Int {
 }
 fun BarcodeFormat.toImageId(): Int {
     return when (this) {
-        BarcodeFormat.QR_CODE -> R.drawable.ic_qr_code
+        BarcodeFormat.QR_CODE -> R.drawable.ic_qr_code_white
         BarcodeFormat.DATA_MATRIX -> R.drawable.ic_data_matrix
         BarcodeFormat.AZTEC -> R.drawable.ic_aztec
         BarcodeFormat.PDF_417 -> R.drawable.ic_pdf417

@@ -1,34 +1,36 @@
 package com.d4rk.qrcodescanner.plus.ui.scan.file
 import android.Manifest
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Parcelable
+import android.os.ext.SdkExtensions
 import android.provider.MediaStore
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent.ACTION_UP
+import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivityScanBarcodeFromFileBinding
-import com.d4rk.qrcodescanner.plus.di.settings
+import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
+import com.d4rk.qrcodescanner.plus.di.barcodeImageScanner
 import com.d4rk.qrcodescanner.plus.di.barcodeParser
 import com.d4rk.qrcodescanner.plus.di.permissionsHelper
-import com.d4rk.qrcodescanner.plus.di.barcodeImageScanner
-import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
+import com.d4rk.qrcodescanner.plus.di.settings
 import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.feature.barcode.BarcodeActivity
 import com.d4rk.qrcodescanner.plus.model.Barcode
 import com.d4rk.qrcodescanner.plus.usecase.save
+import com.google.android.material.snackbar.Snackbar
 import com.google.zxing.Result
-import com.isseiaoki.simplecropview.CropImageView
+import com.jakewharton.rxbinding2.view.touches
+import com.mayank.simplecropview.CropImageView
+import com.mayank.simplecropview.callback.LoadCallback
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -36,9 +38,9 @@ import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 class ScanBarcodeFromFileActivity : BaseActivity() {
     private lateinit var binding: ActivityScanBarcodeFromFileBinding
+    private lateinit var pickMediaLauncher: ActivityResultLauncher<Intent>
     companion object {
         private const val CHOOSE_FILE_REQUEST_CODE = 12
-        private const val CHOOSE_FILE_AGAIN_REQUEST_CODE = 13
         private const val PERMISSIONS_REQUEST_CODE = 14
         private val PERMISSIONS = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
         fun start(context: Context) {
@@ -46,7 +48,6 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
             context.startActivity(intent)
         }
     }
-    private var imageUri: Uri? = null
     private var lastScanResult: Result? = null
     private val disposable = CompositeDisposable()
     private val scanDisposable = CompositeDisposable()
@@ -54,35 +55,10 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBarcodeFromFileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        selectImage()
         supportEdgeToEdge()
         handleImageCropAreaChanged()
         handleScanButtonClicked()
-        if (showImageFromIntent().not()) {
-            startChooseImageActivity(savedInstanceState)
-        }
-        if (showImageFromIntent().not()) {
-            startChooseImageActivity(savedInstanceState)
-        }
-    }
-    @Deprecated("Deprecated in Java")
-    @Suppress("DEPRECATION")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if ((requestCode == CHOOSE_FILE_REQUEST_CODE || requestCode == CHOOSE_FILE_AGAIN_REQUEST_CODE) && resultCode == RESULT_OK) {
-            data?.data?.apply(::showImage)
-            return
-        }
-        if (requestCode == CHOOSE_FILE_REQUEST_CODE) {
-            finish()
-        }
-    }
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == PERMISSIONS_REQUEST_CODE && permissionsHelper.areAllPermissionsGranted(grantResults)) {
-            imageUri?.apply(::showImage)
-        } else {
-            finish()
-        }
     }
     override fun onDestroy() {
         super.onDestroy()
@@ -92,53 +68,46 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
-    private fun showImageFromIntent(): Boolean {
-        var uri: Uri? = null
-        if (intent?.action == Intent.ACTION_SEND && intent.type.orEmpty().startsWith("image/")) {
-            @Suppress("DEPRECATION")
-            uri = intent.getParcelableExtra<Parcelable>(Intent.EXTRA_STREAM) as? Uri
+    private fun showErrorOrRequestPermissions(error: Throwable) {
+        when (error) {
+            is SecurityException -> permissionsHelper.requestPermissions(this, PERMISSIONS, PERMISSIONS_REQUEST_CODE)
+            else -> showError(error)
         }
-        if (intent?.action == Intent.ACTION_VIEW && intent.type.orEmpty().startsWith("image/")) {
-            uri = intent.data
-        }
-        if (uri == null) {
-            return false
-        }
-        showImage(uri)
-        return true
     }
-    private fun startChooseImageActivity(savedInstanceState: Bundle?) {
-        startChooseImageActivity(CHOOSE_FILE_REQUEST_CODE, savedInstanceState)
-    }
-    private fun startChooseImageActivity(requestCode: Int, savedInstanceState: Bundle?) {
-        if (savedInstanceState != null) {
-            return
-        }
-        val intent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        } else {
-            Intent(Intent.ACTION_PICK).setType("image/*")
-        }
-        if (intent.resolveActivity(packageManager) != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                val pickImageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-                    if (result.resultCode == RESULT_OK) {
-                        result.data?.let {
-                            result.data?.data?.apply(::showImage)
-                        }
-                    } else {
-                        finish()
+    private fun selectImage() {
+        pickMediaLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode != Activity.RESULT_OK) {
+                    Snackbar.make(binding.root, "Failed to retrieve media.", Snackbar.LENGTH_SHORT).show()
+                } else {
+                    val uri = it.data?.data
+                    if (uri != null) {
+                        binding.cropImageView.load(uri)
+                            .execute(object : LoadCallback {
+                                override fun onSuccess() {
+                                    scanCroppedImage()
+                                    binding.cropImageView.invalidate()
+                                }
+                                override fun onError(e: Throwable) {
+                                    showErrorOrRequestPermissions(e)
+                                }
+                            })
                     }
                 }
-                pickImageLauncher.launch(intent)
-            } else {
-                @Suppress("DEPRECATION")
-                startActivityForResult(intent, requestCode)
             }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && SdkExtensions.getExtensionVersion(Build.VERSION_CODES.R) >= 2) {
+            pickMediaLauncher.launch(
+                Intent(MediaStore.ACTION_PICK_IMAGES)
+                    .apply {
+                        type = "image/*"
+                    }
+            )
+        } else {
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            @Suppress("DEPRECATION")
+            startActivityForResult(intent, CHOOSE_FILE_REQUEST_CODE)
         }
-    }
-    private fun startChooseImageActivityAgain() {
-        startChooseImageActivity(CHOOSE_FILE_AGAIN_REQUEST_CODE, null)
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_scan_barcode_from_image, menu)
@@ -155,7 +124,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
                 true
             }
             R.id.item_change_image -> {
-                startChooseImageActivityAgain()
+                selectImage()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -166,45 +135,23 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
             .filter { it.action == ACTION_UP }
             .debounce(400, TimeUnit.MILLISECONDS)
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe { scanCroppedImage() }
+            .subscribe(
+                { scanCroppedImage() },
+                { error -> showError(error) }
+            )
             .addTo(disposable)
     }
     private fun handleScanButtonClicked() {
         binding.buttonScan.setOnClickListener {
-            saveScanResult()
-        }
-    }
-    private fun showImage(imageUri: Uri) {
-        this.imageUri = imageUri
-        val takeFlags: Int = Intent.FLAG_GRANT_READ_URI_PERMISSION
-        applicationContext.contentResolver.takePersistableUriPermission(imageUri, takeFlags)
-        binding.cropImageView
-            .load(imageUri)
-            .executeAsCompletable()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { scanCroppedImage() },
-                ::showErrorOrRequestPermissions
-            )
-            .addTo(disposable)
-    }
-    private fun showErrorOrRequestPermissions(error: Throwable) {
-        when (error) {
-            is SecurityException -> permissionsHelper.requestPermissions(this, PERMISSIONS, PERMISSIONS_REQUEST_CODE)
-            else -> showError(error)
+            if (lastScanResult != null) {
+                saveScanResult()
+            }
         }
     }
     private fun scanCroppedImage() {
-        showLoading(true)
-        showScanButtonEnabled(false)
         scanDisposable.clear()
         lastScanResult = null
-        binding.cropImageView
-            .cropAsSingle()
-            .subscribeOn(Schedulers.io())
-            .subscribe(::scanCroppedImage, ::showError)
-            .addTo(scanDisposable)
+        scanCroppedImage(binding.cropImageView.croppedBitmap)
     }
     private fun scanCroppedImage(image: Bitmap) {
         barcodeImageScanner
@@ -213,10 +160,8 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
             .subscribe(
                 { scanResult ->
                     lastScanResult = scanResult
-                    showScanButtonEnabled(true)
-                    showLoading(false)
                 },
-                { showLoading(false) }
+                { error -> showError(error) }
             )
             .addTo(scanDisposable)
     }
@@ -226,7 +171,6 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
             navigateToBarcodeScreen(barcode)
             return
         }
-        showLoading(true)
         barcodeDatabase.save(barcode, settings.doNotSaveDuplicates)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -235,18 +179,10 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
                     navigateToBarcodeScreen(barcode.copy(id = id))
                 },
                 { error ->
-                    showLoading(false)
                     showError(error)
                 }
             )
             .addTo(disposable)
-    }
-    private fun showLoading(isLoading: Boolean) {
-        binding.progressBarLoading.isVisible = isLoading
-        binding.buttonScan.isInvisible = isLoading
-    }
-    private fun showScanButtonEnabled(isEnabled: Boolean) {
-        binding.buttonScan.isEnabled = isEnabled
     }
     private fun navigateToBarcodeScreen(barcode: Barcode) {
         BarcodeActivity.start(this, barcode)

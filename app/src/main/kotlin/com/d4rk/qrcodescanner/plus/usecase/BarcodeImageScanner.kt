@@ -32,7 +32,7 @@ object BarcodeImageScanner {
         if (size > bitmapBuffer?.size.orZero()) {
             bitmapBuffer = IntArray(size)
         }
-        image.getPixels(bitmapBuffer, 0, width, 0, 0, width, height)
+        bitmapBuffer?.let { image.getPixels(it, 0, width, 0, 0, width, height) }
         val source = RGBLuminanceSource(width, height, bitmapBuffer)
         val bitmap = BinaryBitmap(HybridBinarizer(source))
         val reader = MultiFormatReader()
