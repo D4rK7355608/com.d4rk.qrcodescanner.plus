@@ -4,19 +4,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.paging.PagedList
-import androidx.paging.RxPagedListBuilder
+import androidx.lifecycle.lifecycleScope
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.cachedIn
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.d4rk.qrcodescanner.plus.databinding.FragmentBarcodeHistoryListBinding
 import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
 import com.d4rk.qrcodescanner.plus.extension.orZero
-import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.feature.barcode.BarcodeActivity
 import com.d4rk.qrcodescanner.plus.model.Barcode
-import io.reactivex.BackpressureStrategy
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
+
 class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
     private lateinit var _binding: FragmentBarcodeHistoryListBinding
     private val binding get() = _binding
@@ -64,18 +65,25 @@ class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
             adapter = scanHistoryAdapter
         }
     }
+
     private fun loadHistory() {
-        val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(PAGE_SIZE)
-            .build()
-        val dataSource = when (arguments?.getInt(TYPE_KEY).orZero()) {
-            TYPE_ALL -> barcodeDatabase.getAll()
-            TYPE_FAVORITES -> barcodeDatabase.getFavorites()
+        val pagingSourceFactory = when (arguments?.getInt(TYPE_KEY).orZero()) {
+            TYPE_ALL -> { -> barcodeDatabase.getAll() }
+            TYPE_FAVORITES -> { -> barcodeDatabase.getFavorites() }
             else -> return
         }
-        RxPagedListBuilder(dataSource, config)
-            .buildFlowable(BackpressureStrategy.LATEST)
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(scanHistoryAdapter::submitList, ::showError)
-            .addTo(disposable)
+
+        val pager = Pager(
+            config = PagingConfig(pageSize = PAGE_SIZE),
+            pagingSourceFactory = pagingSourceFactory
+        )
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            pager.flow
+                .cachedIn(viewLifecycleOwner.lifecycleScope)
+                .collectLatest { pagingData ->
+                    scanHistoryAdapter.submitData(pagingData) // FIXME: Unresolved reference: submitData
+                }
+        }
     }
 }

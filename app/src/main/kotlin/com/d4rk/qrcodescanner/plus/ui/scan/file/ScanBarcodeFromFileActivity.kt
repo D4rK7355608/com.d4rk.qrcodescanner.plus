@@ -13,6 +13,7 @@ import android.view.MenuItem
 import android.view.MotionEvent.ACTION_UP
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivityScanBarcodeFromFileBinding
 import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
@@ -36,7 +37,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
-class ScanBarcodeFromFileActivity : BaseActivity() {
+class ScanBarcodeFromFileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityScanBarcodeFromFileBinding
     private lateinit var pickMediaLauncher: ActivityResultLauncher<Intent>
     companion object {
@@ -55,26 +56,6 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBarcodeFromFileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        selectImage()
-        supportEdgeToEdge()
-        handleImageCropAreaChanged()
-        handleScanButtonClicked()
-    }
-    override fun onDestroy() {
-        super.onDestroy()
-        scanDisposable.clear()
-        disposable.clear()
-    }
-    private fun supportEdgeToEdge() {
-        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
-    }
-    private fun showErrorOrRequestPermissions(error: Throwable) {
-        when (error) {
-            is SecurityException -> permissionsHelper.requestPermissions(this, PERMISSIONS, PERMISSIONS_REQUEST_CODE)
-            else -> showError(error)
-        }
-    }
-    private fun selectImage() {
         pickMediaLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
                 if (it.resultCode != Activity.RESULT_OK) {
@@ -95,6 +76,26 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
                     }
                 }
             }
+        selectImage()
+        supportEdgeToEdge()
+        handleImageCropAreaChanged()
+        handleScanButtonClicked()
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        scanDisposable.clear()
+        disposable.clear()
+    }
+    private fun supportEdgeToEdge() {
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
+    }
+    private fun showErrorOrRequestPermissions(error: Throwable) {
+        when (error) {
+            is SecurityException -> permissionsHelper.requestPermissions(this, PERMISSIONS, PERMISSIONS_REQUEST_CODE)
+            else -> showError(error)
+        }
+    }
+    private fun selectImage() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && SdkExtensions.getExtensionVersion(Build.VERSION_CODES.R) >= 2) {
             pickMediaLauncher.launch(
                 Intent(MediaStore.ACTION_PICK_IMAGES)

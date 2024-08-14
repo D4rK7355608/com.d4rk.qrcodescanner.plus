@@ -1,5 +1,3 @@
-@file:Suppress("UnstableApiUsage")
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -8,6 +6,9 @@ pluginManagement {
         jcenter()
         maven(url = "https://jitpack.io")
         mavenCentral()
+        maven {
+            setUrl("https://jitpack.io")
+        }
     }
     resolutionStrategy {
         eachPlugin {
@@ -17,7 +18,8 @@ pluginManagement {
         }
     }
 }
-dependencyResolutionManagement {
+
+@Suppress("UnstableApiUsage") dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -25,7 +27,11 @@ dependencyResolutionManagement {
         jcenter()
         maven(url = "https://jitpack.io")
         mavenCentral()
+        maven {
+            setUrl("https://jitpack.io")
+        }
     }
 }
+
 rootProject.name = "QR & Bar Code Scanner Plus"
 include(":app")

@@ -1,6 +1,7 @@
 package com.d4rk.qrcodescanner.plus.usecase
 import android.content.Context
 import androidx.paging.DataSource
+import androidx.paging.PagingSource
 import androidx.room.TypeConverter
 import androidx.room.Room
 import androidx.room.Query
@@ -56,9 +57,9 @@ interface BarcodeDatabase {
         }
     }
     @Query("SELECT * FROM codes ORDER BY date DESC")
-    fun getAll(): DataSource.Factory<Int, Barcode>
+    fun getAll(): PagingSource<Int, Barcode>
     @Query("SELECT * FROM codes WHERE isFavorite = 1 ORDER BY date DESC")
-    fun getFavorites(): DataSource.Factory<Int, Barcode>
+    fun getFavorites(): PagingSource<Int, Barcode>
     @Query("SELECT date, format, text FROM codes ORDER BY date DESC")
     fun getAllForExport(): Single<List<ExportBarcode>>
     @Query("SELECT * FROM codes WHERE format = :format AND text = :text LIMIT 1")
