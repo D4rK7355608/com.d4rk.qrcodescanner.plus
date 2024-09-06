@@ -12,23 +12,24 @@ class QuickSettingsTileService : TileService() {
     @SuppressLint("StartActivityAndCollapseDeprecated")
     override fun onClick() {
         super.onClick()
-        val intent = Intent(applicationContext, MainActivity::class.java).apply {
+        val intent = Intent(applicationContext , MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP
         }
 
         val pendingIntentFlags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             PendingIntent.FLAG_IMMUTABLE
-        } else {
+        }
+        else {
             0
         }
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent, pendingIntentFlags)
+        val pendingIntent = PendingIntent.getActivity(this , 0 , intent , pendingIntentFlags)
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             startActivityAndCollapse(pendingIntent)
-        } else {
-            @Suppress("DEPRECATION")
-            startActivityAndCollapse(intent)
+        }
+        else {
+            @Suppress("DEPRECATION") startActivityAndCollapse(intent)
         }
     }
 }

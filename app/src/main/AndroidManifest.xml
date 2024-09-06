@@ -47,11 +47,10 @@
         android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeActionBar"
+        android:theme="@style/AppTheme"
         tools:targetApi="33">
         <activity
-            android:name=".ui.startup.StartupActivity"
-            android:theme="@style/AppTheme" />
+            android:name=".ui.startup.StartupActivity" />
         <activity
             android:name=".ui.MainActivity"
             android:configChanges="orientation|screenSize"
@@ -68,20 +67,50 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
+
         <activity
             android:name=".ui.settings.help.HelpActivity"
             android:exported="false"
             android:label="@string/help"
             android:parentActivityName=".ui.settings.help.HelpActivity" />
+
         <activity
             android:name=".ui.settings.SettingsActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/settings"
-            android:parentActivityName=".ui.settings.SettingsActivity">
+            android:parentActivityName=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.settings.display.DisplaySettingsActivity"
+            android:parentActivityName=".ui.settings.SettingsActivity" />
+
+        <activity
+            android:name=".ui.settings.display.theme.ThemeSettingsActivity"
+            android:parentActivityName=".ui.settings.display.DisplaySettingsActivity" />
+
+        <activity
+            android:name=".ui.settings.scanner.ScannerSettingsActivity"
+            android:parentActivityName=".ui.settings.SettingsActivity" />
+
+
+        <activity
+            android:name=".ui.settings.about.AboutSettingsActivity"
+            android:parentActivityName=".ui.settings.SettingsActivity" />
+
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+            android:theme="@style/AppThemeActionBar" />
+
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
+            android:theme="@style/AppThemeActionBar" />
+
+
+
         <activity
             android:name=".ui.scan.file.ScanBarcodeFromFileActivity"
             android:configChanges="orientation|screenSize"

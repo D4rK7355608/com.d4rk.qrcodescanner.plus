@@ -1,4 +1,5 @@
 package com.d4rk.qrcodescanner.plus.ui.create
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,38 +15,70 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.zxing.BarcodeFormat
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
+
 class CreateBarcodeFragment : Fragment() {
-    private lateinit var binding: FragmentCreateBarcodeBinding
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = FragmentCreateBarcodeBinding.inflate(inflater, container, false)
+    private lateinit var binding : FragmentCreateBarcodeBinding
+    override fun onCreateView(
+        inflater : LayoutInflater ,
+        container : ViewGroup? ,
+        savedInstanceState : Bundle?
+    ) : View {
+        binding = FragmentCreateBarcodeBinding.inflate(inflater , container , false)
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()
         MobileAds.initialize(requireContext())
         val adRequestBuilder = AdRequest.Builder().build()
         binding.adView.loadAd(adRequestBuilder)
         return binding.root
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+
+    override fun onViewCreated(view : View , savedInstanceState : Bundle?) {
+        super.onViewCreated(view , savedInstanceState)
         handleButtonsClicked()
     }
+
     private fun handleButtonsClicked() {
         binding.buttonClipboard.setOnClickListener {
-            CreateBarcodeActivity.start(requireActivity(), BarcodeFormat.QR_CODE, BarcodeSchema.OTHER, getClipboardContent())
+            CreateBarcodeActivity.start(
+                requireActivity() ,
+                BarcodeFormat.QR_CODE ,
+                BarcodeSchema.OTHER ,
+                getClipboardContent()
+            )
         }
         binding.buttonText.setOnClickListener {
-            CreateBarcodeActivity.start(requireActivity(), BarcodeFormat.QR_CODE, BarcodeSchema.OTHER)
+            CreateBarcodeActivity.start(
+                requireActivity() ,
+                BarcodeFormat.QR_CODE ,
+                BarcodeSchema.OTHER
+            )
         }
         binding.buttonUrl.setOnClickListener {
-            CreateBarcodeActivity.start(requireActivity(), BarcodeFormat.QR_CODE, BarcodeSchema.URL)
+            CreateBarcodeActivity.start(
+                requireActivity() ,
+                BarcodeFormat.QR_CODE ,
+                BarcodeSchema.URL
+            )
         }
         binding.buttonWifi.setOnClickListener {
-            CreateBarcodeActivity.start(requireActivity(), BarcodeFormat.QR_CODE, BarcodeSchema.WIFI)
+            CreateBarcodeActivity.start(
+                requireActivity() ,
+                BarcodeFormat.QR_CODE ,
+                BarcodeSchema.WIFI
+            )
         }
         binding.buttonLocation.setOnClickListener {
-            CreateBarcodeActivity.start(requireActivity(), BarcodeFormat.QR_CODE, BarcodeSchema.GEO)
+            CreateBarcodeActivity.start(
+                requireActivity() ,
+                BarcodeFormat.QR_CODE ,
+                BarcodeSchema.GEO
+            )
         }
         binding.buttonContactVcard.setOnClickListener {
-            CreateBarcodeActivity.start(requireActivity(), BarcodeFormat.QR_CODE, BarcodeSchema.VCARD)
+            CreateBarcodeActivity.start(
+                requireActivity() ,
+                BarcodeFormat.QR_CODE ,
+                BarcodeSchema.VCARD
+            )
         }
         binding.buttonShowAllQrCode.setOnClickListener {
             CreateQrCodeAllActivity.start(requireActivity())
@@ -54,7 +87,8 @@ class CreateBarcodeFragment : Fragment() {
             CreateBarcodeAllActivity.start(requireActivity())
         }
     }
-    private fun getClipboardContent(): String {
+
+    private fun getClipboardContent() : String {
         val clip = requireActivity().clipboardManager?.primaryClip ?: return ""
         return when (clip.itemCount.orZero()) {
             0 -> ""

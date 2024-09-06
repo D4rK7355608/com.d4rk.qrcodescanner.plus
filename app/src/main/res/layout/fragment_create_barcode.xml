@@ -1,108 +1,121 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <me.zhanghai.android.fastscroll.FastScrollNestedScrollView
         android:id="@+id/scroll_view"
         style="@style/ScrollStyle">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
             <com.google.android.material.textview.MaterialTextView
+                style="@style/GroupTitleTextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/default_margin"
                 android:layout_marginTop="@dimen/default_margin"
                 android:layout_marginBottom="12dp"
-                android:layout_marginHorizontal="@dimen/default_margin"
-                android:text="@string/qr_code"
-                style="@style/GroupTitleTextViewStyle"/>
+                android:text="@string/qr_code" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_clipboard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_copy"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/content_from_clipboard"/>
+                app:text="@string/content_from_clipboard" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_text"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/text"/>
+                app:text="@string/text" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_url"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_link"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/url"/>
+                app:text="@string/url" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_wifi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_wifi"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/wifi"/>
+                app:text="@string/wifi" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_location"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/location"/>
+                app:text="@string/location" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_contact_vcard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_contact_white"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/contact_v_card"/>
+                app:text="@string/contact_v_card" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_show_all_qr_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_qr_code_white"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/more_qr_codes"
+                app:isArrowVisible="true"
                 app:isDelimiterVisible="false"
-                app:isArrowVisible="true"/>
+                app:text="@string/more_qr_codes" />
+
             <com.google.android.material.textview.MaterialTextView
+                style="@style/GroupTitleTextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/default_margin"
                 android:layout_marginTop="@dimen/default_margin_big"
                 android:layout_marginBottom="12dp"
-                android:layout_marginHorizontal="@dimen/default_margin"
-                android:text="@string/barcode"
-                style="@style/GroupTitleTextViewStyle"/>
+                android:text="@string/barcode" />
+
             <com.d4rk.qrcodescanner.plus.ui.view.IconButtonWithDelimiter
                 android:id="@+id/button_create_barcode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/ic_barcode"
                 app:iconBackground="?attr/colorPrimary"
-                app:text="@string/all_barcodes_codes"
+                app:isArrowVisible="true"
                 app:isDelimiterVisible="false"
-                app:isArrowVisible="true"/>
+                app:text="@string/all_barcodes_codes" />
+
             <com.google.android.material.card.MaterialCardView
-                style="@style/Widget.Material3.CardView.Outlined"
                 android:id="@+id/card_view_ad"
-                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.CardView.Outlined"
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/default_margin_big"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin_big"
                 app:layout_constraintTop_toBottomOf="@id/card_view_about">
+
                 <com.google.android.gms.ads.AdView
                     android:id="@+id/ad_view"
-                    android:layout_height="wrap_content"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     ads:adSize="FULL_BANNER"
-                    ads:adUnitId="ca-app-pub-5294151573817700/5823012328"/>
+                    ads:adUnitId="ca-app-pub-5294151573817700/5823012328" />
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>

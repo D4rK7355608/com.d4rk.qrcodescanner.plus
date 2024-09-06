@@ -20,24 +20,24 @@ android {
         versionName = "4.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         resourceConfigurations += listOf(
-            "en",
-            "de",
-            "es",
-            "fr",
-            "hi",
-            "hu",
-            "in",
-            "it",
-            "ja",
-            "ro",
-            "ru",
-            "th",
-            "tr",
-            "sv",
-            "bg",
-            "pl",
-            "uk",
-            "pt-rBR",
+            "en" ,
+            "de" ,
+            "es" ,
+            "fr" ,
+            "hi" ,
+            "hu" ,
+            "in" ,
+            "it" ,
+            "ja" ,
+            "ro" ,
+            "ru" ,
+            "th" ,
+            "tr" ,
+            "sv" ,
+            "bg" ,
+            "pl" ,
+            "uk" ,
+            "pt-rBR" ,
         )
         vectorDrawables {
             useSupportLibrary = true
@@ -51,7 +51,7 @@ android {
             isShrinkResources = true
             isDebuggable = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt") , "proguard-rules.pro"
             )
         }
 
@@ -59,7 +59,7 @@ android {
             multiDexEnabled = true
             isDebuggable = true
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt") , "proguard-rules.pro"
             )
         }
     }
@@ -79,7 +79,6 @@ android {
         compose = true
     }
 
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -94,8 +93,6 @@ android {
 }
 
 dependencies {
-
-
     implementation("com.googlecode.ez-vcard:ez-vcard:0.12.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
@@ -103,18 +100,18 @@ dependencies {
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
-    implementation("com.github.florent37:singledateandtimepicker:2.2.8")
+    // implementation("com.github.florent37:singledateandtimepicker:2.2.8")
     implementation("com.airbnb.android:lottie:6.5.0")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0")
-    implementation("com.mayank:simplecropview:1.0.0")
+    // implementation("com.mayank:simplecropview:1.0.0")
     implementation("commons-codec:commons-codec:1.17.1")
     implementation("dev.turingcomplete:kotlin-onetimepassword:2.4.1")
     implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
     implementation("me.zhanghai.android.fastscroll:library:1.3.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
-    implementation("androidx.paging:paging-runtime:3.3.2")
-    implementation("androidx.room:room-rxjava2:2.4.3")
+    implementation("androidx.paging:paging-runtime-ktx:3.3.2")
+    implementation("androidx.room:room-rxjava2:2.6.1")
     implementation("androidx.room:room-paging:2.6.1")
 
     // Firebase
