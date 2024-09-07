@@ -224,10 +224,10 @@
             android:parentActivityName=".ui.history.export.ExportHistoryActivity" />
 
         <activity
-            android:name=".ui.settings.search.ChooseSearchEngineActivity"
+            android:name=".ui.settings.advanced.search.ChooseSearchEngineActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/search_engines"
-            android:parentActivityName=".ui.settings.search.ChooseSearchEngineActivity" />
+            android:parentActivityName=".ui.settings.advanced.search.ChooseSearchEngineActivity" />
         <activity
             android:name=".ui.settings.permissions.PermissionsActivity"
             android:configChanges="orientation|screenSize"

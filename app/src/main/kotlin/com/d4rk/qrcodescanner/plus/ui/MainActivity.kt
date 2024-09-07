@@ -90,7 +90,6 @@ class MainActivity : AppCompatActivity() {
             defaultTabValues[0] -> R.id.navigation_scan
             defaultTabValues[1] -> R.id.navigation_create
             defaultTabValues[2] -> R.id.navigation_history
-            defaultTabValues[3] -> R.id.navigation_about
             else -> R.id.navigation_scan
         }
         navController.graph.setStartDestination(startFragmentId)
@@ -109,7 +108,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_scan ,
                 R.id.navigation_create ,
                 R.id.navigation_history ,
-                R.id.navigation_about
             )
         )
         setupActionBarWithNavController(navController , appBarConfiguration)

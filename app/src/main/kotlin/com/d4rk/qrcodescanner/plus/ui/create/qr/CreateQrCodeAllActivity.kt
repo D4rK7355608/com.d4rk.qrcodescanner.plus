@@ -27,7 +27,6 @@ class CreateQrCodeAllActivity : BaseActivity() {
         binding = ActivityCreateQrCodeAllBinding.inflate(layoutInflater)
         setContentView(binding.root)
         MobileAds.initialize(this)
-        binding.adView.loadAd(AdRequest.Builder().build())
         supportEdgeToEdge()
         handleButtonsClicked()
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()

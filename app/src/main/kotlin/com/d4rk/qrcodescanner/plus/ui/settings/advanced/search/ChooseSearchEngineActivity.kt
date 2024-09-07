@@ -1,4 +1,4 @@
-package com.d4rk.qrcodescanner.plus.ui.settings.scanner.formats
+package com.d4rk.qrcodescanner.plus.ui.settings.advanced.search
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -10,7 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.d4rk.qrcodescanner.plus.ui.settings.display.theme.style.AppTheme
 
-class SupportedFormatsActivity : AppCompatActivity() {
+class ChooseSearchEngineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,7 +19,7 @@ class SupportedFormatsActivity : AppCompatActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize() , color = MaterialTheme.colorScheme.background
                 ) {
-                    SupportedFormatsScreen(activity = this@SupportedFormatsActivity)
+                    ChooseSearchEngineScreen(activity = this@ChooseSearchEngineActivity)
                 }
             }
         }

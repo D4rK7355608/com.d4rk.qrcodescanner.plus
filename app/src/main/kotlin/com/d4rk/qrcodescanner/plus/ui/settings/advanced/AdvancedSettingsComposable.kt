@@ -23,6 +23,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.ui.settings.advanced.search.ChooseSearchEngineActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.scanner.ScannerSettingsActivity
 import com.d4rk.qrcodescanner.plus.utils.IntentUtils
 import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceCategoryItem
 import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
@@ -52,6 +54,16 @@ fun AdvancedSettingsComposable(activity: AdvancedSettingsActivity) {
                 .fillMaxHeight()
                 .padding(paddingValues),
         ) {
+            item {
+                PreferenceCategoryItem(title = stringResource(R.string.search_engines))
+                PreferenceItem(title = stringResource(R.string.search_engines) ,
+                               summary = stringResource(R.string.summary_preference_settings_search_engines) ,
+                               onClick = {
+                                   IntentUtils.openActivity(
+                                       context , ChooseSearchEngineActivity::class.java
+                                   )
+                               })
+            }
             item {
                 PreferenceCategoryItem(title = stringResource(R.string.error_reporting))
                 PreferenceItem(title = stringResource(R.string.bug_report) ,

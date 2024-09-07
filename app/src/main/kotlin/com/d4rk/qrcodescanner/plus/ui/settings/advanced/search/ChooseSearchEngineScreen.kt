@@ -1,10 +1,11 @@
-package com.d4rk.qrcodescanner.plus.ui.settings.scanner.camera
+package com.d4rk.qrcodescanner.plus.ui.settings.advanced.search
 
 import android.content.Context
 import android.view.View
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -27,6 +28,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
+import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.d4rk.qrcodescanner.plus.utils.compose.components.RadioButtonPreferenceItem
 import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import kotlinx.coroutines.CoroutineScope
@@ -34,21 +36,24 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ChooseCameraScreen(activity : ChooseCameraActivity) {
-    val context: Context = LocalContext.current
+fun ChooseSearchEngineScreen(activity : ChooseSearchEngineActivity) {
+    val context : Context = LocalContext.current
+    val dataStore : DataStore = DataStore.getInstance(context)
+    val scope : CoroutineScope = rememberCoroutineScope()
+    val selectedSearchEngine : SearchEngine by dataStore.searchEngine.collectAsState(initial = SearchEngine.NONE)
     val view : View = LocalView.current
     val scrollBehavior : TopAppBarScrollBehavior =
             TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
-    val dataStore: DataStore = DataStore.getInstance(context)
-    val scope: CoroutineScope = rememberCoroutineScope()
-    val isBackCamera : Boolean by dataStore.isBackCamera.collectAsState(initial = true)
+
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
-        LargeTopAppBar(title = { Text(stringResource(R.string.camera)) } , navigationIcon = {
+        LargeTopAppBar(title = { Text(stringResource(R.string.search_engines)) } , navigationIcon = {
             IconButton(onClick = {
                 view.weakHapticFeedback()
                 activity.finish()
             }) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack , contentDescription = null)
+                Icon(
+                    Icons.AutoMirrored.Filled.ArrowBack , contentDescription = null
+                )
             }
         } , scrollBehavior = scrollBehavior)
     }) { paddingValues ->
@@ -57,25 +62,33 @@ fun ChooseCameraScreen(activity : ChooseCameraActivity) {
                     .fillMaxHeight()
                     .padding(paddingValues) ,
         ) {
-            item {
+            items(SearchEngine.entries) { searchEngine ->
+                val isChecked : Boolean = selectedSearchEngine == searchEngine
                 RadioButtonPreferenceItem(
-                    text = stringResource(R.string.back),
-                    isChecked = isBackCamera
-                ) { isChecked ->
-                    scope.launch {
-                        dataStore.saveIsBackCamera(isChecked)
-                    }
-                }
-
-                RadioButtonPreferenceItem(
-                    text = stringResource(R.string.front),
-                    isChecked = !isBackCamera
-                ) { isChecked ->
-                    scope.launch {
-                        dataStore.saveIsBackCamera(!isChecked)
+                    text = stringResource(id = searchEngine.stringResId()) , isChecked = isChecked
+                ) { newIsChecked ->
+                    if (newIsChecked) {
+                        scope.launch {
+                            dataStore.saveSearchEngine(searchEngine)
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+fun SearchEngine.stringResId() : Int {
+    return when (this.name) {
+        SearchEngine.NONE.name -> R.string.none
+        SearchEngine.ASK_EVERY_TIME.name -> R.string.ask_every_time
+        SearchEngine.STARTPAGE.name -> R.string.activity_choose_search_engine_startpage
+        SearchEngine.BING.name -> R.string.activity_choose_search_engine_bing
+        SearchEngine.DUCK_DUCK_GO.name -> R.string.activity_choose_search_engine_duck_duck_go
+        SearchEngine.GOOGLE.name -> R.string.activity_choose_search_engine_google
+        SearchEngine.QWANT.name -> R.string.activity_choose_search_engine_qwant
+        SearchEngine.YAHOO.name -> R.string.activity_choose_search_engine_yahoo
+        SearchEngine.YANDEX.name -> R.string.activity_choose_search_engine_yandex
+        else -> throw IllegalArgumentException("Unsupported SearchEngine: ${this.name}")
     }
 }

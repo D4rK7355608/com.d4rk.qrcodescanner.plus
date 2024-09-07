@@ -1,11 +1,14 @@
 package com.d4rk.qrcodescanner.plus.model
 
 enum class SearchEngine(val templateUrl : String) {
-    NONE("") , ASK_EVERY_TIME("") , BING("https://www.bing.com/search?q=") , DUCK_DUCK_GO("https://duckduckgo.com/?q=") , GOOGLE(
-        "https://www.google.com/search?q="
+    NONE(templateUrl = "") , ASK_EVERY_TIME(templateUrl = "") , BING(templateUrl = "https://www.bing.com/search?q=") , DUCK_DUCK_GO(
+        templateUrl = "https://duckduckgo.com/?q="
     ) ,
-    STARTPAGE("https://www.startpage.com/sp/search?query=") , QWANT("https://www.qwant.com/?q=") , YAHOO(
-        "https://search.yahoo.com/search?p="
+    GOOGLE(
+        templateUrl = "https://www.google.com/search?q="
     ) ,
-    YANDEX("https://www.yandex.ru/search/?text=") ,
+    STARTPAGE(templateUrl = "https://www.startpage.com/sp/search?query=") , QWANT(templateUrl = "https://www.qwant.com/?q=") , YAHOO(
+        templateUrl = "https://search.yahoo.com/search?p="
+    ) ,
+    YANDEX(templateUrl = "https://www.yandex.ru/search/?text=") ,
 }

@@ -148,7 +148,7 @@
             app:summary="@string/summary_preference_settings_search_engines"
             app:title="@string/search_engines">
             <intent
-                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.search.ChooseSearchEngineActivity"
+                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.advanced.search.ChooseSearchEngineActivity"
                 android:targetPackage="com.d4rk.qrcodescanner.plus" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
