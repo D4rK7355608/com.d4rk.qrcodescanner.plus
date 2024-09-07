@@ -94,6 +94,20 @@
         <activity
             android:name=".ui.settings.scanner.ScannerSettingsActivity"
             android:parentActivityName=".ui.settings.SettingsActivity" />
+        <activity
+            android:name=".ui.settings.scanner.camera.ChooseCameraActivity"
+            android:parentActivityName=".ui.settings.scanner.ScannerSettingsActivity" />
+        <activity
+            android:name=".ui.settings.scanner.formats.SupportedFormatsActivity"
+            android:parentActivityName=".ui.settings.scanner.ScannerSettingsActivity" />
+
+        <activity
+            android:name=".ui.settings.history.HistorySettingsActivity"
+            android:parentActivityName=".ui.settings.SettingsActivity" />
+
+        <activity
+            android:name=".ui.settings.advanced.AdvancedSettingsActivity"
+            android:parentActivityName=".ui.settings.SettingsActivity" />
 
 
         <activity
@@ -182,16 +196,7 @@
             android:configChanges="orientation|screenSize"
             android:label="@string/export_history"
             android:parentActivityName=".ui.history.export.ExportHistoryActivity" />
-        <activity
-            android:name=".ui.settings.scanner.camera.ChooseCameraActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/camera"
-            android:parentActivityName=".ui.settings.scanner.camera.ChooseCameraActivity" />
-        <activity
-            android:name=".ui.settings.scanner.formats.SupportedFormatsActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/supported_formats"
-            android:parentActivityName=".ui.settings.scanner.formats.SupportedFormatsActivity" />
+
         <activity
             android:name=".ui.settings.search.ChooseSearchEngineActivity"
             android:configChanges="orientation|screenSize"

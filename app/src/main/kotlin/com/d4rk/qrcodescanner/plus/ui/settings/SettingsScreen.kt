@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Palette
@@ -30,7 +31,9 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.ui.settings.about.AboutSettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.advanced.AdvancedSettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.settings.display.DisplaySettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.history.HistorySettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.settings.scanner.ScannerSettingsActivity
 import com.d4rk.qrcodescanner.plus.utils.IntentUtils
 import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
@@ -79,6 +82,16 @@ fun SettingsComposable(activity : SettingsActivity) {
                                })
             }
             item {
+                PreferenceItem(Icons.Outlined.History ,
+                               title = stringResource(R.string.history) ,
+                               summary = "Customize the history behavior of QR app" ,
+                               onClick = {
+                                   IntentUtils.openActivity(
+                                       context , HistorySettingsActivity::class.java
+                                   )
+                               })
+            }
+            item {
                 PreferenceItem(Icons.Outlined.Notifications ,
                                title = stringResource(R.string.notifications) ,
                                summary = stringResource(R.string.summary_preference_settings_notifications) ,
@@ -91,9 +104,9 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.advanced) ,
                                summary = stringResource(R.string.summary_preference_settings_advanced) ,
                                onClick = {
-                                   /*    IntentUtils.openActivity(
+                                       IntentUtils.openActivity(
                                            context, AdvancedSettingsActivity::class.java
-                                       )*/
+                                       )
                                })
             }
             item {
