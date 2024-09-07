@@ -11,13 +11,13 @@ import androidx.compose.ui.Modifier
 import com.d4rk.qrcodescanner.plus.ui.settings.display.theme.style.AppTheme
 
 class AboutSettingsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             AppTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize() , color = MaterialTheme.colorScheme.background
                 ) {
                     AboutSettingsComposable(activity = this@AboutSettingsActivity)
                 }

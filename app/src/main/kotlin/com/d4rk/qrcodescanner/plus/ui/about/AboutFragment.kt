@@ -28,9 +28,7 @@ class AboutFragment : Fragment() {
     private lateinit var binding : FragmentAboutBinding
     private val calendar : Calendar = Calendar.getInstance()
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         ViewModelProvider(this)[ViewModel::class.java]
         binding = FragmentAboutBinding.inflate(inflater , container , false)
@@ -54,17 +52,14 @@ class AboutFragment : Fragment() {
                     ClipData.newPlainText("Label" , binding.textViewAppVersion.text)
             clipboardManager.setPrimaryClip(clipData)
             if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2) Snackbar.make(
-                requireView() ,
-                R.string.snack_copied_to_clipboard ,
-                Snackbar.LENGTH_SHORT
+                requireView() , R.string.snack_copied_to_clipboard , Snackbar.LENGTH_SHORT
             ).show()
             true
         }
         binding.imageViewAppIcon.setOnClickListener {
             startActivity(
                 Intent(
-                    Intent.ACTION_VIEW ,
-                    Uri.parse("https://sites.google.com/view/d4rk7355608")
+                    Intent.ACTION_VIEW , Uri.parse("https://sites.google.com/view/d4rk7355608")
                 )
             )
         }
@@ -74,8 +69,7 @@ class AboutFragment : Fragment() {
         binding.chipYoutube.setOnClickListener {
             startActivity(
                 Intent(
-                    Intent.ACTION_VIEW ,
-                    Uri.parse("https://www.youtube.com/c/D4rK7355608")
+                    Intent.ACTION_VIEW , Uri.parse("https://www.youtube.com/c/D4rK7355608")
                 )
             )
         }

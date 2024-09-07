@@ -14,9 +14,7 @@ import com.d4rk.qrcodescanner.plus.ui.create.BaseCreateBarcodeFragment
 class CreateQrCodeVCardFragment : BaseCreateBarcodeFragment() {
     private lateinit var binding : FragmentCreateQrCodeVcardBinding
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateQrCodeVcardBinding.inflate(inflater , container , false)
         return binding.root

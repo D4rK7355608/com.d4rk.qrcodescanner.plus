@@ -38,23 +38,21 @@ import kotlinx.coroutines.flow.firstOrNull
 
 @Composable
 fun BottomBarStartupDialog(
-    dataStore: DataStore ,
-    onDismiss: () -> Unit ,
-    onStartupSelected: (String) -> Unit
+    dataStore : DataStore , onDismiss : () -> Unit , onStartupSelected : (String) -> Unit
 ) {
-    val defaultPage: MutableState<String> = remember { mutableStateOf(BottomBarRoutes.SCAN) }
-    val startupEntries: List<String> =
-        stringArrayResource(R.array.preference_startup_entries).toList()
-    val startupValues: List<String> =
-        stringArrayResource(R.array.preference_startup_values).toList()
-    val view: View = LocalView.current
-    AlertDialog(onDismissRequest = onDismiss, text = {
+    val defaultPage : MutableState<String> = remember { mutableStateOf(BottomBarRoutes.SCAN) }
+    val startupEntries : List<String> =
+            stringArrayResource(R.array.preference_startup_entries).toList()
+    val startupValues : List<String> =
+            stringArrayResource(R.array.preference_startup_values).toList()
+    val view : View = LocalView.current
+    AlertDialog(onDismissRequest = onDismiss , text = {
         BottomBarStartupDialogContent(
-            defaultPage, dataStore, startupEntries, startupValues
+            defaultPage , dataStore , startupEntries , startupValues
         )
-    }, icon = {
-        Icon(Icons.Outlined.Home, contentDescription = null)
-    }, confirmButton = {
+    } , icon = {
+        Icon(Icons.Outlined.Home , contentDescription = null)
+    } , confirmButton = {
         TextButton(onClick = {
             view.weakHapticFeedback()
             onStartupSelected(defaultPage.value)
@@ -62,7 +60,7 @@ fun BottomBarStartupDialog(
         }) {
             Text(stringResource(android.R.string.ok))
         }
-    }, dismissButton = {
+    } , dismissButton = {
         view.weakHapticFeedback()
         TextButton(onClick = onDismiss) {
             Text(stringResource(android.R.string.cancel))
@@ -72,12 +70,12 @@ fun BottomBarStartupDialog(
 
 @Composable
 fun BottomBarStartupDialogContent(
-    selectedPage: MutableState<String>,
-    dataStore: DataStore,
-    startupEntries: List<String>,
-    startupValues: List<String>
+    selectedPage : MutableState<String> ,
+    dataStore : DataStore ,
+    startupEntries : List<String> ,
+    startupValues : List<String>
 ) {
-    val view: View = LocalView.current
+    val view : View = LocalView.current
     LaunchedEffect(Unit) {
         selectedPage.value = dataStore.getStartupPage().firstOrNull() ?: BottomBarRoutes.SCAN
     }
@@ -85,24 +83,24 @@ fun BottomBarStartupDialogContent(
     Column {
         Text(stringResource(id = R.string.dialog_startup_subtitle))
         Box(
-            modifier = Modifier
-                .fillMaxWidth()
+            modifier = Modifier.fillMaxWidth()
         ) {
             LazyColumn {
                 items(startupEntries.size) { index ->
                     Row(
-                        Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
+                        Modifier.fillMaxWidth() ,
+                        verticalAlignment = Alignment.CenterVertically ,
                         horizontalArrangement = Arrangement.Start
                     ) {
-                        RadioButton(selected = selectedPage.value == startupValues[index],
+                        RadioButton(
+                            selected = selectedPage.value == startupValues[index] ,
                             onClick = {
                                 view.weakHapticFeedback()
                                 selectedPage.value = startupValues[index]
                             })
                         Text(
-                            modifier = Modifier.padding(start = 8.dp),
-                            text = startupEntries[index],
+                            modifier = Modifier.padding(start = 8.dp) ,
+                            text = startupEntries[index] ,
                             style = MaterialTheme.typography.bodyMedium.merge()
                         )
                     }
@@ -110,7 +108,7 @@ fun BottomBarStartupDialogContent(
             }
         }
         Spacer(modifier = Modifier.height(24.dp))
-        Icon(imageVector = Icons.Outlined.Info, contentDescription = null)
+        Icon(imageVector = Icons.Outlined.Info , contentDescription = null)
         Spacer(modifier = Modifier.height(12.dp))
         Text(stringResource(id = R.string.dialog_info_startup))
     }

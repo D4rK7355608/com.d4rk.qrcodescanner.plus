@@ -41,7 +41,7 @@ class SupportActivity : AppCompatActivity() {
         loadRewardedAd()
         binding.buttonWatchAd.setOnClickListener { showRewardedVideo() }
         billingClient = BillingClient.newBuilder(this).setListener { _ , _ ->
-                }.enablePendingPurchases().build()
+        }.enablePendingPurchases().build()
         billingClient.startConnection(object : BillingClientStateListener {
             override fun onBillingSetupFinished(billingResult : BillingResult) {
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {

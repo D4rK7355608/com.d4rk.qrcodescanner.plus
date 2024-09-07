@@ -25,16 +25,12 @@ object BarcodeImageSaver {
             close()
         }
         return FileProvider.getUriForFile(
-            context ,
-            "com.d4rk.qrcodescanner.fileprovider" ,
-            imageFile
+            context , "com.d4rk.qrcodescanner.fileprovider" , imageFile
         )
     }
 
     fun savePngImageToPublicDirectory(
-        context : Context ,
-        image : Bitmap ,
-        barcode : Barcode
+        context : Context , image : Bitmap , barcode : Barcode
     ) : Completable {
         return Completable.create { emitter ->
             try {
@@ -49,9 +45,7 @@ object BarcodeImageSaver {
     }
 
     fun saveSvgImageToPublicDirectory(
-        context : Context ,
-        image : String ,
-        barcode : Barcode
+        context : Context , image : String , barcode : Barcode
     ) : Completable {
         return Completable.create { emitter ->
             try {
@@ -66,10 +60,7 @@ object BarcodeImageSaver {
     }
 
     private fun saveToPublicDirectory(
-        context : Context ,
-        barcode : Barcode ,
-        mimeType : String ,
-        action : (OutputStream) -> Unit
+        context : Context , barcode : Barcode , mimeType : String , action : (OutputStream) -> Unit
     ) {
         val contentResolver = context.contentResolver ?: return
         val imageTitle = "${barcode.format}_${barcode.schema}_${barcode.date}"

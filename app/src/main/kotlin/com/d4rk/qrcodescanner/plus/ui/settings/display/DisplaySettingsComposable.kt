@@ -128,20 +128,18 @@ fun DisplaySettingsComposable(activity : DisplaySettingsActivity) {
             }
             item {
                 PreferenceCategoryItem(title = stringResource(R.string.navigation))
-                PreferenceItem(title = stringResource(R.string.startup_page),
-                               summary = stringResource(R.string.summary_preference_settings_startup_page),
+                PreferenceItem(title = stringResource(R.string.startup_page) ,
+                               summary = stringResource(R.string.summary_preference_settings_startup_page) ,
                                onClick = { showStartupDialog = true })
 
                 if (showStartupDialog) {
-                    BottomBarStartupDialog(
-                        dataStore = dataStore,
-                        onDismiss = { showStartupDialog = false },
-                        onStartupSelected = { selectedStartup ->
-                            scope.launch {
-                                dataStore.saveStartupPage(selectedStartup)
-                            }
-                        }
-                    )
+                    BottomBarStartupDialog(dataStore = dataStore ,
+                                           onDismiss = { showStartupDialog = false } ,
+                                           onStartupSelected = { selectedStartup ->
+                                               scope.launch {
+                                                   dataStore.saveStartupPage(selectedStartup)
+                                               }
+                                           })
                 }
             }
             item {

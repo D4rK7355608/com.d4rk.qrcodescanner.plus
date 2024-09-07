@@ -49,9 +49,7 @@ class ExportHistoryActivity : BaseActivity() {
     }
 
     override fun onRequestPermissionsResult(
-        requestCode : Int ,
-        permissions : Array<out String> ,
-        grantResults : IntArray
+        requestCode : Int , permissions : Array<out String> , grantResults : IntArray
     ) {
         super.onRequestPermissionsResult(requestCode , permissions , grantResults)
         if (permissionsHelper.areAllPermissionsGranted(grantResults)) {
@@ -101,18 +99,18 @@ class ExportHistoryActivity : BaseActivity() {
         }
         showLoading(true)
         barcodeDatabase.getAllForExport().flatMapCompletable { barcodes ->
-                    saveFunc(this , fileName , barcodes)
-                }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe({
-                                                                                                       showHistoryExported()
-                                                                                                   } ,
-                                                                                                   { error ->
-                                                                                                       showLoading(
-                                                                                                           false
-                                                                                                       )
-                                                                                                       showError(
-                                                                                                           error
-                                                                                                       )
-                                                                                                   })
+            saveFunc(this , fileName , barcodes)
+        }.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe({
+                                                                                               showHistoryExported()
+                                                                                           } ,
+                                                                                           { error ->
+                                                                                               showLoading(
+                                                                                                   false
+                                                                                               )
+                                                                                               showError(
+                                                                                                   error
+                                                                                               )
+                                                                                           })
                 .addTo(disposable)
     }
 

@@ -20,7 +20,10 @@ class SupportedFormatsActivity : AppCompatActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize() , color = MaterialTheme.colorScheme.background
                 ) {
-                    SupportedFormatsScreen(activity = this@SupportedFormatsActivity, settings = settings)
+                    SupportedFormatsScreen(
+                        activity = this@SupportedFormatsActivity ,
+                        settings = settings
+                    )
                 }
             }
         }

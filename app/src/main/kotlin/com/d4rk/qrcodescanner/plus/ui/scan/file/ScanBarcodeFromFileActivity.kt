@@ -58,9 +58,7 @@ class ScanBarcodeFromFileActivity : AppCompatActivity() {
                 registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
                     if (it.resultCode != Activity.RESULT_OK) {
                         Snackbar.make(
-                            binding.root ,
-                            "Failed to retrieve media." ,
-                            Snackbar.LENGTH_SHORT
+                            binding.root , "Failed to retrieve media." , Snackbar.LENGTH_SHORT
                         ).show()
                     }
                     else {
@@ -97,9 +95,7 @@ class ScanBarcodeFromFileActivity : AppCompatActivity() {
     private fun showErrorOrRequestPermissions(error : Throwable) {
         when (error) {
             is SecurityException -> permissionsHelper.requestPermissions(
-                this ,
-                PERMISSIONS ,
-                PERMISSIONS_REQUEST_CODE
+                this , PERMISSIONS , PERMISSIONS_REQUEST_CODE
             )
 
             else -> showError(error)
@@ -112,8 +108,8 @@ class ScanBarcodeFromFileActivity : AppCompatActivity() {
             ) >= 2
         ) {
             pickMediaLauncher.launch(Intent(MediaStore.ACTION_PICK_IMAGES).apply {
-                        type = "image/*"
-                    })
+                type = "image/*"
+            })
         }
         else {
             val intent = Intent(Intent.ACTION_PICK)

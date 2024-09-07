@@ -14,9 +14,7 @@ import com.d4rk.qrcodescanner.plus.model.schema.Schema
 class CreateCode128Fragment : com.d4rk.qrcodescanner.plus.ui.create.BaseCreateBarcodeFragment() {
     private lateinit var binding : FragmentCreateCode128Binding
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateCode128Binding.inflate(inflater , container , false)
         return binding.root

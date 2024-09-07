@@ -15,9 +15,7 @@ class SettingsRadioButton : FrameLayout {
     constructor(context : Context) : this(context , null)
     constructor(context : Context , attrs : AttributeSet?) : this(context , attrs , - 1)
     constructor(context : Context , attrs : AttributeSet? , defStyleAttr : Int) : super(
-        context ,
-        attrs ,
-        defStyleAttr
+        context , attrs , defStyleAttr
     ) {
         binding =
                 LayoutSettingsRadioButtonBinding.inflate(LayoutInflater.from(context) , this , true)

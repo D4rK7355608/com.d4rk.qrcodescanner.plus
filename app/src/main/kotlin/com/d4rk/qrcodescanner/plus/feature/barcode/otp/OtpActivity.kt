@@ -54,8 +54,7 @@ class OtpActivity : BaseActivity() {
 
     private fun enableSecurity() {
         window.setFlags(
-            WindowManager.LayoutParams.FLAG_SECURE ,
-            WindowManager.LayoutParams.FLAG_SECURE
+            WindowManager.LayoutParams.FLAG_SECURE , WindowManager.LayoutParams.FLAG_SECURE
         )
     }
 

@@ -49,8 +49,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="33">
-        <activity
-            android:name=".ui.startup.StartupActivity" />
+        <activity android:name=".ui.startup.StartupActivity" />
         <activity
             android:name=".ui.MainActivity"
             android:configChanges="orientation|screenSize"
@@ -108,7 +107,6 @@
         <activity
             android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
             android:theme="@style/AppThemeActionBar" />
-
 
 
         <activity

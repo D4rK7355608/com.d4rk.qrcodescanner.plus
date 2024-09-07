@@ -27,23 +27,23 @@ object WifiConnector {
         phase2Method : String
     ) : Completable {
         return Completable.create { emitter ->
-                    try {
-                        tryToConnect(
-                            context ,
-                            authType ,
-                            name ,
-                            password ,
-                            isHidden ,
-                            anonymousIdentity ,
-                            identity ,
-                            eapMethod.toEapMethod() ,
-                            phase2Method.toPhase2Method()
-                        )
-                        emitter.onComplete()
-                    } catch (ex : Exception) {
-                        emitter.onError(ex)
-                    }
-                }.subscribeOn(Schedulers.newThread())
+            try {
+                tryToConnect(
+                    context ,
+                    authType ,
+                    name ,
+                    password ,
+                    isHidden ,
+                    anonymousIdentity ,
+                    identity ,
+                    eapMethod.toEapMethod() ,
+                    phase2Method.toPhase2Method()
+                )
+                emitter.onComplete()
+            } catch (ex : Exception) {
+                emitter.onError(ex)
+            }
+        }.subscribeOn(Schedulers.newThread())
     }
 
     private fun tryToConnect(
@@ -99,24 +99,12 @@ object WifiConnector {
             "" , "NOPASS" -> connectToOpenNetworkNewApi(context , name)
             "WPA" , "WPA2" -> connectToWpa2NetworkNewApi(context , name , password)
             "WPA2-EAP" -> connectToWpa2EapNetworkNewApi(
-                context ,
-                name ,
-                password ,
-                anonymousIdentity ,
-                identity ,
-                eapMethod ,
-                phase2Method
+                context , name , password , anonymousIdentity , identity , eapMethod , phase2Method
             )
 
             "WPA3" -> connectToWpa3NetworkNewApi(context , name , password)
             "WPA3-EAP" -> connectToWpa3EapNetworkNewApi(
-                context ,
-                name ,
-                password ,
-                anonymousIdentity ,
-                identity ,
-                eapMethod ,
-                phase2Method
+                context , name , password , anonymousIdentity , identity , eapMethod , phase2Method
             )
         }
     }
@@ -259,10 +247,7 @@ object WifiConnector {
     }
 
     private fun connectToWpaNetworkOldApi(
-        context : Context ,
-        name : String ,
-        password : String ,
-        isHidden : Boolean
+        context : Context , name : String , password : String , isHidden : Boolean
     ) {
         val wifiConfiguration = WifiConfiguration().apply {
             SSID = name.quote()
@@ -318,10 +303,7 @@ object WifiConnector {
     }
 
     private fun connectToWepNetworkOldApi(
-        context : Context ,
-        name : String ,
-        password : String ,
-        isHidden : Boolean
+        context : Context , name : String , password : String , isHidden : Boolean
     ) {
         val wifiConfiguration = WifiConfiguration().apply {
             SSID = name.quote()

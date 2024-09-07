@@ -19,9 +19,7 @@ import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class CreateBarcodeFragment : Fragment() {
     private lateinit var binding : FragmentCreateBarcodeBinding
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateBarcodeBinding.inflate(inflater , container , false)
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()
@@ -47,37 +45,27 @@ class CreateBarcodeFragment : Fragment() {
         }
         binding.buttonText.setOnClickListener {
             CreateBarcodeActivity.start(
-                requireActivity() ,
-                BarcodeFormat.QR_CODE ,
-                BarcodeSchema.OTHER
+                requireActivity() , BarcodeFormat.QR_CODE , BarcodeSchema.OTHER
             )
         }
         binding.buttonUrl.setOnClickListener {
             CreateBarcodeActivity.start(
-                requireActivity() ,
-                BarcodeFormat.QR_CODE ,
-                BarcodeSchema.URL
+                requireActivity() , BarcodeFormat.QR_CODE , BarcodeSchema.URL
             )
         }
         binding.buttonWifi.setOnClickListener {
             CreateBarcodeActivity.start(
-                requireActivity() ,
-                BarcodeFormat.QR_CODE ,
-                BarcodeSchema.WIFI
+                requireActivity() , BarcodeFormat.QR_CODE , BarcodeSchema.WIFI
             )
         }
         binding.buttonLocation.setOnClickListener {
             CreateBarcodeActivity.start(
-                requireActivity() ,
-                BarcodeFormat.QR_CODE ,
-                BarcodeSchema.GEO
+                requireActivity() , BarcodeFormat.QR_CODE , BarcodeSchema.GEO
             )
         }
         binding.buttonContactVcard.setOnClickListener {
             CreateBarcodeActivity.start(
-                requireActivity() ,
-                BarcodeFormat.QR_CODE ,
-                BarcodeSchema.VCARD
+                requireActivity() , BarcodeFormat.QR_CODE , BarcodeSchema.VCARD
             )
         }
         binding.buttonShowAllQrCode.setOnClickListener {

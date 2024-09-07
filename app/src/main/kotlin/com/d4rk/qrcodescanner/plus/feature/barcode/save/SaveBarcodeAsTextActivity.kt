@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.core.view.isVisible
 import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.data.model.Barcode
 import com.d4rk.qrcodescanner.plus.databinding.ActivitySaveBarcodeAsTextBinding
 import com.d4rk.qrcodescanner.plus.di.barcodeSaver
 import com.d4rk.qrcodescanner.plus.di.permissionsHelper
@@ -14,7 +15,6 @@ import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
-import com.d4rk.qrcodescanner.plus.data.model.Barcode
 import com.google.android.material.snackbar.Snackbar
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -54,9 +54,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     }
 
     override fun onRequestPermissionsResult(
-        requestCode : Int ,
-        permissions : Array<out String> ,
-        grantResults : IntArray
+        requestCode : Int , permissions : Array<out String> , grantResults : IntArray
     ) {
         super.onRequestPermissionsResult(requestCode , permissions , grantResults)
         if (permissionsHelper.areAllPermissionsGranted(grantResults)) {
@@ -75,9 +73,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
 
     private fun initFormatSpinner() {
         binding.spinnerSaveAs.adapter = ArrayAdapter.createFromResource(
-            this ,
-            R.array.activity_save_barcode_as_text_formats ,
-            R.layout.item_spinner
+            this , R.array.activity_save_barcode_as_text_formats , R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
         }

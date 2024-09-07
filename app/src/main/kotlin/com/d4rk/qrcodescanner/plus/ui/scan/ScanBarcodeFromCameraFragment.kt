@@ -62,9 +62,7 @@ class ScanBarcodeFromCameraFragment : Fragment() , ConfirmBarcodeDialogFragment.
     private lateinit var codeScanner : CodeScanner
     private var lastResult : Barcode? = null
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentScanBarcodeFromCameraBinding.inflate(inflater , container , false)
         return binding.root
@@ -92,9 +90,7 @@ class ScanBarcodeFromCameraFragment : Fragment() , ConfirmBarcodeDialogFragment.
 
     @Deprecated("Deprecated in Java")
     override fun onRequestPermissionsResult(
-        requestCode : Int ,
-        permissions : Array<out String> ,
-        grantResults : IntArray
+        requestCode : Int , permissions : Array<out String> , grantResults : IntArray
     ) {
         if (requestCode == PERMISSION_REQUEST_CODE && areAllPermissionsGranted(grantResults)) {
             initZoomSeekBar()
@@ -175,9 +171,7 @@ class ScanBarcodeFromCameraFragment : Fragment() , ConfirmBarcodeDialogFragment.
             override fun onStartTrackingTouch(seekBar : SeekBar?) {}
             override fun onStopTrackingTouch(seekBar : SeekBar?) {}
             override fun onProgressChanged(
-                seekBar : SeekBar? ,
-                progress : Int ,
-                fromUser : Boolean
+                seekBar : SeekBar? , progress : Int , fromUser : Boolean
             ) {
                 if (fromUser) {
                     codeScanner.zoom = progress
@@ -271,15 +265,19 @@ class ScanBarcodeFromCameraFragment : Fragment() , ConfirmBarcodeDialogFragment.
 
     private fun saveScannedBarcode(barcode : Barcode) {
         barcodeDatabase.save(barcode , settings.doNotSaveDuplicates).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(
-                    { id ->
-                        lastResult = barcode
-                        when (settings.continuousScanning) {
-                            true -> restartPreviewWithDelay(true)
-                            else -> navigateToBarcodeScreen(barcode.copy(id = id))
-                        }
-                    } , ::showError
-                ).addTo(disposable)
+                .observeOn(AndroidSchedulers.mainThread()).subscribe({ id ->
+                                                                         lastResult = barcode
+                                                                         when (settings.continuousScanning) {
+                                                                             true -> restartPreviewWithDelay(
+                                                                                 true
+                                                                             )
+
+                                                                             else -> navigateToBarcodeScreen(
+                                                                                 barcode.copy(id = id)
+                                                                             )
+                                                                         }
+                                                                     } , ::showError)
+                .addTo(disposable)
     }
 
     private fun restartPreviewWithDelay(showMessage : Boolean) {
@@ -305,9 +303,7 @@ class ScanBarcodeFromCameraFragment : Fragment() , ConfirmBarcodeDialogFragment.
 
     private fun requestPermissions() {
         permissionsHelper.requestNotGrantedPermissions(
-            requireActivity() as AppCompatActivity ,
-            PERMISSIONS ,
-            PERMISSION_REQUEST_CODE
+            requireActivity() as AppCompatActivity , PERMISSIONS , PERMISSION_REQUEST_CODE
         )
     }
 

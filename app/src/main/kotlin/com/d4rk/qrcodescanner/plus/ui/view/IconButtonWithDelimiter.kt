@@ -17,14 +17,10 @@ class IconButtonWithDelimiter : FrameLayout {
     constructor(context : Context) : this(context , null)
     constructor(context : Context , attrs : AttributeSet?) : this(context , attrs , - 1)
     constructor(context : Context , attrs : AttributeSet? , defStyleAttr : Int) : super(
-        context ,
-        attrs ,
-        defStyleAttr
+        context , attrs , defStyleAttr
     ) {
         binding = LayoutIconButtonWithDelimiterBinding.inflate(
-            LayoutInflater.from(context) ,
-            this ,
-            true
+            LayoutInflater.from(context) , this , true
         )
         context.obtainStyledAttributes(attrs , R.styleable.IconButtonWithDelimiter).apply {
             showIcon(this)

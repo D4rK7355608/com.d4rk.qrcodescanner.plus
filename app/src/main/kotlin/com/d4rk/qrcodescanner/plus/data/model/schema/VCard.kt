@@ -7,12 +7,12 @@ import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.d4rk.qrcodescanner.plus.model.schema.Schema
 import ezvcard.Ezvcard
 import ezvcard.VCardVersion
+import ezvcard.property.Email
+import ezvcard.property.Nickname
 import ezvcard.property.Organization
 import ezvcard.property.StructuredName
-import ezvcard.property.Nickname
-import ezvcard.property.Title
 import ezvcard.property.Telephone
-import ezvcard.property.Email
+import ezvcard.property.Title
 import ezvcard.property.Url
 
 data class VCard(

@@ -8,9 +8,7 @@ import androidx.core.content.ContextCompat
 
 object PermissionsHelper {
     fun requestPermissions(
-        activity : AppCompatActivity ,
-        permissions : Array<out String> ,
-        requestCode : Int
+        activity : AppCompatActivity , permissions : Array<out String> , requestCode : Int
     ) {
         if (areAllPermissionsGranted(activity , permissions)) {
             activity.onRequestPermissionsResult(requestCode ,
@@ -20,23 +18,17 @@ object PermissionsHelper {
         }
         val notGrantedPermissions = permissions.filterNot { isPermissionGranted(activity , it) }
         ActivityCompat.requestPermissions(
-            activity ,
-            notGrantedPermissions.toTypedArray() ,
-            requestCode
+            activity , notGrantedPermissions.toTypedArray() , requestCode
         )
     }
 
     fun requestNotGrantedPermissions(
-        activity : AppCompatActivity ,
-        permissions : Array<out String> ,
-        requestCode : Int
+        activity : AppCompatActivity , permissions : Array<out String> , requestCode : Int
     ) {
         val notGrantedPermissions = permissions.filterNot { isPermissionGranted(activity , it) }
         if (notGrantedPermissions.isNotEmpty()) {
             ActivityCompat.requestPermissions(
-                activity ,
-                notGrantedPermissions.toTypedArray() ,
-                requestCode
+                activity , notGrantedPermissions.toTypedArray() , requestCode
             )
         }
     }
@@ -63,8 +55,7 @@ object PermissionsHelper {
 
     private fun isPermissionGranted(context : Context , permission : String) : Boolean {
         return ContextCompat.checkSelfPermission(
-            context ,
-            permission
+            context , permission
         ) == PackageManager.PERMISSION_GRANTED
     }
 }

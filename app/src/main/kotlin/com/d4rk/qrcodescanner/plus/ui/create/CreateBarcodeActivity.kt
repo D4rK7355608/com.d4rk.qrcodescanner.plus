@@ -356,8 +356,9 @@ class CreateBarcodeActivity : BaseActivity() , AppAdapter.Listener {
         }
         barcodeDatabase.save(barcode , settings.doNotSaveDuplicates).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe({ id ->
-                                                                         navigateToBarcodeScreen(barcode.copy(id = id) ,
-                                                                                                 finish
+                                                                         navigateToBarcodeScreen(
+                                                                             barcode.copy(id = id) ,
+                                                                             finish
                                                                          )
                                                                      } , ::showError)
                 .addTo(disposable)

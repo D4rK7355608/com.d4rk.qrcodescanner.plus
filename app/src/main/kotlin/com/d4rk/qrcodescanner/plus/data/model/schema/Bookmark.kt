@@ -22,15 +22,15 @@ data class Bookmark(
             var title : String? = null
             var url : String? = null
             text.removePrefixIgnoreCase(SCHEMA_PREFIX).split(SEPARATOR).forEach { part ->
-                        if (part.startsWithIgnoreCase(TITLE_PREFIX)) {
-                            title = part.removePrefixIgnoreCase(TITLE_PREFIX)
-                            return@forEach
-                        }
-                        if (part.startsWithIgnoreCase(URL_PREFIX)) {
-                            url = part.removePrefixIgnoreCase(URL_PREFIX)
-                            return@forEach
-                        }
-                    }
+                if (part.startsWithIgnoreCase(TITLE_PREFIX)) {
+                    title = part.removePrefixIgnoreCase(TITLE_PREFIX)
+                    return@forEach
+                }
+                if (part.startsWithIgnoreCase(URL_PREFIX)) {
+                    url = part.removePrefixIgnoreCase(URL_PREFIX)
+                    return@forEach
+                }
+            }
             return Bookmark(title , url)
         }
     }

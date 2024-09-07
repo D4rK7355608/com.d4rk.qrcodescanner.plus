@@ -27,11 +27,7 @@ class Cryptocurrency(
         private const val ADDRESS_SEPARATOR = "?"
         private const val PARAMETERS_SEPARATOR = "&"
         private val PREFIXES = listOf(
-            BITCOIN_PREFIX ,
-            BITCOIN_CASH_PREFIX ,
-            ETHEREUM_PREFIX ,
-            LITECOIN_PREFIX ,
-            DASH_PREFIX
+            BITCOIN_PREFIX , BITCOIN_CASH_PREFIX , ETHEREUM_PREFIX , LITECOIN_PREFIX , DASH_PREFIX
         )
 
         fun parse(text : String) : Cryptocurrency? {
@@ -69,11 +65,7 @@ class Cryptocurrency(
     override val schema = BarcodeSchema.CRYPTOCURRENCY
     override fun toFormattedText() : String {
         return listOf(
-            cryptocurrency ,
-            address ,
-            label ,
-            amount ,
-            message
+            cryptocurrency , address , label , amount , message
         ).joinToStringNotNullOrBlankWithLineSeparator()
     }
 

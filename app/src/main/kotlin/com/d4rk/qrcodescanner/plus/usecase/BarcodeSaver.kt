@@ -6,11 +6,11 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import androidx.annotation.RequiresApi
+import com.d4rk.qrcodescanner.plus.data.model.Barcode
+import com.d4rk.qrcodescanner.plus.data.model.ExportBarcode
 import com.d4rk.qrcodescanner.plus.extension.endsWithIgnoreCase
 import com.d4rk.qrcodescanner.plus.extension.formatOrNull
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
-import com.d4rk.qrcodescanner.plus.data.model.Barcode
-import com.d4rk.qrcodescanner.plus.data.model.ExportBarcode
 import com.google.zxing.BarcodeFormat
 import io.reactivex.Completable
 import org.json.JSONArray
@@ -56,9 +56,7 @@ object BarcodeSaver {
     }
 
     fun saveBarcodeHistoryAsJson(
-        context : Context ,
-        fileName : String ,
-        barcodes : List<ExportBarcode>
+        context : Context , fileName : String , barcodes : List<ExportBarcode>
     ) : Completable {
         return Completable.create { emitter ->
             try {
@@ -71,9 +69,7 @@ object BarcodeSaver {
     }
 
     fun saveBarcodeHistoryAsCsv(
-        context : Context ,
-        fileName : String ,
-        barcodes : List<ExportBarcode>
+        context : Context , fileName : String , barcodes : List<ExportBarcode>
     ) : Completable {
         return Completable.create { emitter ->
             try {
@@ -86,9 +82,7 @@ object BarcodeSaver {
     }
 
     private fun trySaveBarcodeHistoryAsJson(
-        context : Context ,
-        fileName : String ,
-        barcodes : List<ExportBarcode>
+        context : Context , fileName : String , barcodes : List<ExportBarcode>
     ) {
         val jsons = barcodes.map(::convertToJson)
         val result = JSONArray(jsons)
@@ -115,9 +109,7 @@ object BarcodeSaver {
     }
 
     private fun trySaveBarcodeHistoryCsv(
-        context : Context ,
-        fileName : String ,
-        barcodes : List<ExportBarcode>
+        context : Context , fileName : String , barcodes : List<ExportBarcode>
     ) {
         val result = StringBuilder().append("Date,Format,Text\n")
         barcodes.forEach { barcode ->
@@ -150,10 +142,7 @@ object BarcodeSaver {
     }
 
     private fun saveToDownloads(
-        context : Context ,
-        fileName : String ,
-        content : String ,
-        mimeType : String
+        context : Context , fileName : String , content : String , mimeType : String
     ) {
         openFileOutputStream(context , fileName , mimeType).apply {
             write(content.toByteArray())
@@ -163,9 +152,7 @@ object BarcodeSaver {
     }
 
     private fun openFileOutputStream(
-        context : Context ,
-        fileName : String ,
-        mimeType : String
+        context : Context , fileName : String , mimeType : String
     ) : OutputStream {
         return if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
             openFileOutputStreamOldSdk(fileName)
@@ -186,9 +173,7 @@ object BarcodeSaver {
 
     @RequiresApi(Build.VERSION_CODES.Q)
     private fun openFileOutputStreamNewSdk(
-        context : Context ,
-        fileName : String ,
-        mimeType : String
+        context : Context , fileName : String , mimeType : String
     ) : OutputStream {
         val resolver = context.contentResolver
         val values = ContentValues().apply {

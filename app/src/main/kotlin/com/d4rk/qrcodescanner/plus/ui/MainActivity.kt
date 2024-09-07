@@ -69,8 +69,7 @@ class MainActivity : AppCompatActivity() {
                 resources.getStringArray(R.array.preference_bottom_navigation_bar_labels_values)
         val labelDefaultValue = getString(R.string.default_value_bottom_navigation_bar_labels)
         when (sharedPreferences.getString(
-            getString(R.string.key_theme) ,
-            getString(R.string.default_value_theme)
+            getString(R.string.key_theme) , getString(R.string.default_value_theme)
         )) {
             themeValues[0] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
             themeValues[1] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -78,8 +77,7 @@ class MainActivity : AppCompatActivity() {
             themeValues[3] -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
         }
         val languageCode = sharedPreferences.getString(
-            getString(R.string.key_language) ,
-            getString(R.string.default_value_language)
+            getString(R.string.key_language) , getString(R.string.default_value_language)
         )
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode))
 
@@ -99,8 +97,7 @@ class MainActivity : AppCompatActivity() {
         navController.navigate(startFragmentId)
         binding.navView.setupWithNavController(navController)
         binding.navView.labelVisibilityMode = when (sharedPreferences.getString(
-            bottomNavigationBarLabelsKey ,
-            labelDefaultValue
+            bottomNavigationBarLabelsKey , labelDefaultValue
         )) {
             bottomNavigationBarLabelsValues[0] -> NavigationBarView.LABEL_VISIBILITY_LABELED
             bottomNavigationBarLabelsValues[1] -> NavigationBarView.LABEL_VISIBILITY_SELECTED
@@ -174,10 +171,7 @@ class MainActivity : AppCompatActivity() {
                 )
             ) {
                 @Suppress("DEPRECATION") appUpdateManager.startUpdateFlowForResult(
-                    appUpdateInfo ,
-                    AppUpdateType.FLEXIBLE ,
-                    this ,
-                    requestUpdateCode
+                    appUpdateInfo , AppUpdateType.FLEXIBLE , this , requestUpdateCode
                 )
             }
         }

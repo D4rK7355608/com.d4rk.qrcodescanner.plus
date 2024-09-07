@@ -28,10 +28,7 @@ object OTPGenerator {
     }
 
     private fun generateTOTP(
-        secret : ByteArray ,
-        period : Long ,
-        digits : Int ,
-        algorithm : HmacAlgorithm
+        secret : ByteArray , period : Long , digits : Int , algorithm : HmacAlgorithm
     ) {
         val config = TimeBasedOneTimePasswordConfig(
             timeStep = period ,
@@ -43,10 +40,7 @@ object OTPGenerator {
     }
 
     private fun generateHOTP(
-        secret : ByteArray ,
-        counter : Long ,
-        digits : Int ,
-        algorithm : HmacAlgorithm
+        secret : ByteArray , counter : Long , digits : Int , algorithm : HmacAlgorithm
     ) : String {
         val config = HmacOneTimePasswordConfig(
             codeDigits = digits , hmacAlgorithm = algorithm

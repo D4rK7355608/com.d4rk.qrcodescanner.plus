@@ -48,9 +48,7 @@ class BarcodeHistoryListFragment : Fragment() , BarcodeHistoryAdapter.Listener {
     private val disposable = CompositeDisposable()
     private val scanHistoryAdapter = BarcodeHistoryAdapter(this)
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         _binding = FragmentBarcodeHistoryListBinding.inflate(inflater , container , false)
         return binding.root
@@ -91,8 +89,8 @@ class BarcodeHistoryListFragment : Fragment() , BarcodeHistoryAdapter.Listener {
 
         viewLifecycleOwner.lifecycleScope.launch {
             pager.flow.cachedIn(viewLifecycleOwner.lifecycleScope).collectLatest { pagingData ->
-                        scanHistoryAdapter.submitData(pagingData) // FIXME: Unresolved reference: submitData
-                    }
+                scanHistoryAdapter.submitData(pagingData) // FIXME: Unresolved reference: submitData
+            }
         }
     }
 }

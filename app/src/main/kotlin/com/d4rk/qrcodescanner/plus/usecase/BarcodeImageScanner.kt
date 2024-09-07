@@ -15,8 +15,8 @@ object BarcodeImageScanner {
     private var bitmapBuffer : IntArray? = null
     fun parse(image : Bitmap) : Single<Result> {
         return Single.create { emitter ->
-                    parse(image , emitter)
-                }.subscribeOn(Schedulers.newThread())
+            parse(image , emitter)
+        }.subscribeOn(Schedulers.newThread())
     }
 
     private fun parse(image : Bitmap , emitter : SingleEmitter<Result>) {

@@ -24,12 +24,7 @@ object BarcodeImageGenerator {
             try {
                 emitter.onSuccess(
                     generateBitmap(
-                        barcode ,
-                        width ,
-                        height ,
-                        margin ,
-                        codeColor ,
-                        backgroundColor
+                        barcode , width , height , margin , codeColor , backgroundColor
                     )
                 )
             } catch (ex : Exception) {
@@ -57,17 +52,13 @@ object BarcodeImageGenerator {
             return createBitmap(matrix , codeColor , backgroundColor)
         } catch (ex : Exception) {
             throw Exception(
-                "Unable to generate barcode image, ${barcode.format}, ${barcode.text}" ,
-                ex
+                "Unable to generate barcode image, ${barcode.format}, ${barcode.text}" , ex
             )
         }
     }
 
     fun generateSvgAsync(
-        barcode : Barcode ,
-        width : Int ,
-        height : Int ,
-        margin : Int = 0
+        barcode : Barcode , width : Int , height : Int , margin : Int = 0
     ) : Single<String> {
         return Single.create { emitter ->
             try {
@@ -79,10 +70,7 @@ object BarcodeImageGenerator {
     }
 
     private fun generateSvg(
-        barcode : Barcode ,
-        width : Int ,
-        height : Int ,
-        margin : Int = 0
+        barcode : Barcode , width : Int , height : Int , margin : Int = 0
     ) : String {
         val matrix = writer.encode(
             barcode.text ,
@@ -95,8 +83,7 @@ object BarcodeImageGenerator {
     }
 
     private fun createHints(
-        errorCorrectionLevel : String? ,
-        margin : Int
+        errorCorrectionLevel : String? , margin : Int
     ) : Map<EncodeHintType , Any> {
         val hints = mapOf(
             EncodeHintType.CHARACTER_SET to "utf-8" , EncodeHintType.MARGIN to margin
@@ -130,9 +117,7 @@ object BarcodeImageGenerator {
     }
 
     private fun createBitmap(
-        matrix : BitMatrix ,
-        codeColor : Int ,
-        backgroundColor : Int
+        matrix : BitMatrix , codeColor : Int , backgroundColor : Int
     ) : Bitmap {
         val width = matrix.width
         val height = matrix.height

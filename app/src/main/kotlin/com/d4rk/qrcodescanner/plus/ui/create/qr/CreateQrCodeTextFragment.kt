@@ -28,9 +28,7 @@ class CreateQrCodeTextFragment : BaseCreateBarcodeFragment() {
     }
 
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateQrCodeTextBinding.inflate(inflater , container , false)
         return binding.root

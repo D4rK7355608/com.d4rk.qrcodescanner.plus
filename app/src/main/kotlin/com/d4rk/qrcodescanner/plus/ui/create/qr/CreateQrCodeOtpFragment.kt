@@ -24,9 +24,7 @@ class CreateQrCodeOtpFragment : BaseCreateBarcodeFragment() {
     private lateinit var binding : FragmentCreateQrCodeOtpBinding
     private val randomGenerator = RandomSecretGenerator()
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateQrCodeOtpBinding.inflate(inflater , container , false)
         return binding.root
@@ -68,10 +66,7 @@ class CreateQrCodeOtpFragment : BaseCreateBarcodeFragment() {
         binding.spinnerOptTypes.onItemSelectedListener =
                 object : AdapterView.OnItemSelectedListener {
                     override fun onItemSelected(
-                        parent : AdapterView<*>? ,
-                        view : View? ,
-                        position : Int ,
-                        id : Long
+                        parent : AdapterView<*>? , view : View? , position : Int , id : Long
                     ) {
                         binding.textInputLayoutCounter.isVisible = position == 0
                     }

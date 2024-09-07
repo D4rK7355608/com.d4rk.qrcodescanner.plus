@@ -44,26 +44,24 @@ class HelpActivity : AppCompatActivity() {
                 reviewManager.requestReviewFlow().addOnSuccessListener { reviewInfo ->
                     reviewManager.launchReviewFlow(requireActivity() , reviewInfo)
                 }.addOnFailureListener {
-                            val uri =
-                                    Uri.parse("https://play.google.com/store/apps/details?id=${requireContext().packageName}&showAllReviews=true")
-                            val intent = Intent(Intent.ACTION_VIEW , uri)
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                            try {
-                                startActivity(intent)
-                            } catch (e : ActivityNotFoundException) {
-                                Snackbar.make(
-                                    requireView() ,
-                                    R.string.snack_unable_to_open_google_play_store ,
-                                    Snackbar.LENGTH_SHORT
-                                ).show()
-                            }
-                        }.also {
-                            Snackbar.make(
-                                requireView() ,
-                                R.string.snack_feedback ,
-                                Snackbar.LENGTH_SHORT
-                            ).show()
-                        }
+                    val uri =
+                            Uri.parse("https://play.google.com/store/apps/details?id=${requireContext().packageName}&showAllReviews=true")
+                    val intent = Intent(Intent.ACTION_VIEW , uri)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    try {
+                        startActivity(intent)
+                    } catch (e : ActivityNotFoundException) {
+                        Snackbar.make(
+                            requireView() ,
+                            R.string.snack_unable_to_open_google_play_store ,
+                            Snackbar.LENGTH_SHORT
+                        ).show()
+                    }
+                }.also {
+                    Snackbar.make(
+                        requireView() , R.string.snack_feedback , Snackbar.LENGTH_SHORT
+                    ).show()
+                }
                 true
             }
         }
@@ -87,8 +85,7 @@ class HelpActivity : AppCompatActivity() {
                 emailIntent.putExtra(Intent.EXTRA_TEXT , getString(R.string.dear_developer))
                 startActivity(
                     Intent.createChooser(
-                        emailIntent ,
-                        getString(R.string.send_email_using)
+                        emailIntent , getString(R.string.send_email_using)
                     )
                 )
                 true

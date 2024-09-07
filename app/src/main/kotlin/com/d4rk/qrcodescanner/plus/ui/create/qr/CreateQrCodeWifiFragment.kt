@@ -19,9 +19,7 @@ import com.d4rk.qrcodescanner.plus.ui.create.BaseCreateBarcodeFragment
 class CreateQrCodeWifiFragment : BaseCreateBarcodeFragment() {
     private lateinit var binding : FragmentCreateQrCodeWifiBinding
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateQrCodeWifiBinding.inflate(inflater , container , false)
         return binding.root
@@ -60,10 +58,7 @@ class CreateQrCodeWifiFragment : BaseCreateBarcodeFragment() {
         binding.spinnerEncryption.onItemSelectedListener =
                 object : AdapterView.OnItemSelectedListener {
                     override fun onItemSelected(
-                        parent : AdapterView<*>? ,
-                        view : View? ,
-                        position : Int ,
-                        id : Long
+                        parent : AdapterView<*>? , view : View? , position : Int , id : Long
                     ) {
                         binding.textInputLayoutPassword.isVisible = position != 2
                     }

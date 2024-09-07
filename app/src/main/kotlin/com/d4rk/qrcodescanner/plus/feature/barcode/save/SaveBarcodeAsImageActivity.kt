@@ -55,9 +55,7 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
     }
 
     override fun onRequestPermissionsResult(
-        requestCode : Int ,
-        permissions : Array<out String> ,
-        grantResults : IntArray
+        requestCode : Int , permissions : Array<out String> , grantResults : IntArray
     ) {
         super.onRequestPermissionsResult(requestCode , permissions , grantResults)
         if (permissionsHelper.areAllPermissionsGranted(grantResults)) {
@@ -76,9 +74,7 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
 
     private fun initFormatSpinner() {
         binding.spinnerSaveAs.adapter = ArrayAdapter.createFromResource(
-            this ,
-            R.array.activity_save_barcode_as_image_formats ,
-            R.layout.item_spinner
+            this , R.array.activity_save_barcode_as_image_formats , R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
         }
@@ -100,21 +96,17 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
                 barcodeImageGenerator.generateBitmapAsync(barcode , 640 , 640 , 2)
                         .flatMapCompletable {
                             barcodeImageSaver.savePngImageToPublicDirectory(
-                                this ,
-                                it ,
-                                barcode
+                                this , it , barcode
                             )
                         }
             }
 
             1 -> {
                 barcodeImageGenerator.generateSvgAsync(barcode , 640 , 640 , 2).flatMapCompletable {
-                            barcodeImageSaver.saveSvgImageToPublicDirectory(
-                                this ,
-                                it ,
-                                barcode
-                            )
-                        }
+                    barcodeImageSaver.saveSvgImageToPublicDirectory(
+                        this , it , barcode
+                    )
+                }
             }
 
             else -> return

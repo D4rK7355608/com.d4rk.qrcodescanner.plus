@@ -49,9 +49,7 @@ object ContactHelper {
     }
 
     private fun buildContactPhoneDetails(
-        contentResolver : ContentResolver ,
-        lookupKey : String ,
-        contact : Contact
+        contentResolver : ContentResolver , lookupKey : String , contact : Contact
     ) {
         val contactWhere =
                 ContactsContract.Data.LOOKUP_KEY + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?"
@@ -85,9 +83,7 @@ object ContactHelper {
     }
 
     private fun buildEmailDetails(
-        contentResolver : ContentResolver ,
-        lookupKey : String ,
-        contact : Contact
+        contentResolver : ContentResolver , lookupKey : String , contact : Contact
     ) {
         val emailWhere =
                 ContactsContract.Data.LOOKUP_KEY + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?"
@@ -105,15 +101,12 @@ object ContactHelper {
     }
 
     private fun buildAddressDetails(
-        contentResolver : ContentResolver ,
-        lookupKey : String ,
-        contact : Contact
+        contentResolver : ContentResolver , lookupKey : String , contact : Contact
     ) {
         val addressWhere =
                 ContactsContract.Data.LOOKUP_KEY + " = ? AND " + ContactsContract.Data.MIMETYPE + " = ?"
         val addressWhereParams = arrayOf(
-            lookupKey ,
-            ContactsContract.CommonDataKinds.StructuredPostal.CONTENT_ITEM_TYPE
+            lookupKey , ContactsContract.CommonDataKinds.StructuredPostal.CONTENT_ITEM_TYPE
         )
         val cursor = contentResolver.query(
             ContactsContract.Data.CONTENT_URI , null , addressWhere , addressWhereParams , null

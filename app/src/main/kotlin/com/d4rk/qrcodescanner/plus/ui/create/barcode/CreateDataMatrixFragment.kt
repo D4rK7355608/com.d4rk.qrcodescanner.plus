@@ -15,9 +15,7 @@ import com.d4rk.qrcodescanner.plus.ui.create.BaseCreateBarcodeFragment
 class CreateDataMatrixFragment : BaseCreateBarcodeFragment() {
     private lateinit var binding : FragmentCreateDataMatrixBinding
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateDataMatrixBinding.inflate(inflater , container , false)
         return binding.root

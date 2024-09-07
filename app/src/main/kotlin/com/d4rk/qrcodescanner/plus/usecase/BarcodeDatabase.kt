@@ -52,16 +52,14 @@ interface BarcodeDatabase {
         private var INSTANCE : BarcodeDatabase? = null
         fun getInstance(context : Context) : BarcodeDatabase {
             return INSTANCE ?: Room.databaseBuilder(
-                        context.applicationContext ,
-                        BarcodeDatabaseFactory::class.java ,
-                        "db"
-                    ).addMigrations(object : Migration(1 , 2) {
-                        override fun migrate(database : SupportSQLiteDatabase) {
-                            database.execSQL("ALTER TABLE codes ADD COLUMN name TEXT")
-                        }
-                    }).build().getBarcodeDatabase().apply {
-                        INSTANCE = this
-                    }
+                context.applicationContext , BarcodeDatabaseFactory::class.java , "db"
+            ).addMigrations(object : Migration(1 , 2) {
+                override fun migrate(database : SupportSQLiteDatabase) {
+                    database.execSQL("ALTER TABLE codes ADD COLUMN name TEXT")
+                }
+            }).build().getBarcodeDatabase().apply {
+                INSTANCE = this
+            }
         }
     }
 
@@ -98,11 +96,11 @@ fun BarcodeDatabase.save(barcode : Barcode , doNotSaveDuplicates : Boolean) : Si
 
 fun BarcodeDatabase.saveIfNotPresent(barcode : Barcode) : Single<Long> {
     return find(barcode.format.name , barcode.text).flatMap { found ->
-                if (found.isEmpty()) {
-                    save(barcode)
-                }
-                else {
-                    Single.just(found[0].id)
-                }
-            }
+        if (found.isEmpty()) {
+            save(barcode)
+        }
+        else {
+            Single.just(found[0].id)
+        }
+    }
 }

@@ -38,8 +38,8 @@ class Wifi(
             val keysAndValuesSubstring =
                     WIFI_REGEX.matchEntire(text)?.groupValues?.get(1) ?: return null
             val keysAndValues = PAIR_REGEX.findAll(keysAndValuesSubstring).map { pair ->
-                        "${pair.groupValues[1].uppercase(Locale.US)}:" to pair.groupValues[2]
-                    }.toMap()
+                "${pair.groupValues[1].uppercase(Locale.US)}:" to pair.groupValues[2]
+            }.toMap()
             return Wifi(
                 keysAndValues[ENCRYPTION_PREFIX]?.unescape() ,
                 keysAndValues[NAME_PREFIX]?.unescape() ,

@@ -14,9 +14,7 @@ import com.d4rk.qrcodescanner.plus.ui.create.BaseCreateBarcodeFragment
 class CreateQrCodeMeCardFragment : BaseCreateBarcodeFragment() {
     private lateinit var binding : FragmentCreateQrCodeMecardBinding
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateQrCodeMecardBinding.inflate(inflater , container , false)
         return binding.root

@@ -20,9 +20,7 @@ class BarcodeHistoryFragment : Fragment() , DeleteConfirmationDialogFragment.Lis
     private val binding get() = _binding
     private val disposable = CompositeDisposable()
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         _binding = FragmentBarcodeHistoryBinding.inflate(inflater , container , false)
         return binding.root

@@ -31,11 +31,11 @@ fun ChooseSearchEngineScreen(settings : Settings) {
             RadioButtonPreferenceItem(text = stringResource(id = searchEngine.stringResId()) ,
                                       isChecked = isChecked ,
                                       onCheckedChange = { newIsChecked ->
-                                    if (newIsChecked) {
-                                        selectedSearchEngine.value = searchEngine
-                                        settings.searchEngine = searchEngine
-                                    }
-                                })
+                                          if (newIsChecked) {
+                                              selectedSearchEngine.value = searchEngine
+                                              settings.searchEngine = searchEngine
+                                          }
+                                      })
         }
     }
 }

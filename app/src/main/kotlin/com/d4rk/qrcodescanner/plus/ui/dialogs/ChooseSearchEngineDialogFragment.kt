@@ -37,9 +37,9 @@ class ChooseSearchEngineDialogFragment : DialogFragment() {
         )
         val dialog =
                 MaterialAlertDialogBuilder(requireActivity()).setItems(items) { _ , itemClicked ->
-                            val searchEngine = ITEMS[itemClicked]
-                            listener?.onSearchEngineSelected(searchEngine)
-                        }.setNegativeButton(android.R.string.ok) { _ , _ -> }.create()
+                    val searchEngine = ITEMS[itemClicked]
+                    listener?.onSearchEngineSelected(searchEngine)
+                }.setNegativeButton(android.R.string.ok) { _ , _ -> }.create()
         return dialog
     }
 }

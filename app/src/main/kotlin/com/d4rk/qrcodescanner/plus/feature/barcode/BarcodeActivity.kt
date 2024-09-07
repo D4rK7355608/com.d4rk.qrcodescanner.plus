@@ -19,28 +19,28 @@ import com.d4rk.qrcodescanner.plus.data.model.Barcode
 import com.d4rk.qrcodescanner.plus.data.model.ParsedBarcode
 import com.d4rk.qrcodescanner.plus.data.model.schema.OtpAuth
 import com.d4rk.qrcodescanner.plus.databinding.ActivityBarcodeBinding
-import com.d4rk.qrcodescanner.plus.di.barcodeImageSaver
 import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
 import com.d4rk.qrcodescanner.plus.di.barcodeImageGenerator
+import com.d4rk.qrcodescanner.plus.di.barcodeImageSaver
 import com.d4rk.qrcodescanner.plus.di.settings
 import com.d4rk.qrcodescanner.plus.di.wifiConnector
-import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
+import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
+import com.d4rk.qrcodescanner.plus.extension.currentLocale
 import com.d4rk.qrcodescanner.plus.extension.orFalse
 import com.d4rk.qrcodescanner.plus.extension.showError
-import com.d4rk.qrcodescanner.plus.extension.toPhoneType
-import com.d4rk.qrcodescanner.plus.extension.toEmailType
-import com.d4rk.qrcodescanner.plus.extension.currentLocale
-import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
-import com.d4rk.qrcodescanner.plus.extension.toStringId
 import com.d4rk.qrcodescanner.plus.extension.toCountryEmoji
+import com.d4rk.qrcodescanner.plus.extension.toEmailType
+import com.d4rk.qrcodescanner.plus.extension.toPhoneType
+import com.d4rk.qrcodescanner.plus.extension.toStringId
+import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.feature.barcode.otp.OtpActivity
 import com.d4rk.qrcodescanner.plus.feature.barcode.save.SaveBarcodeAsImageActivity
 import com.d4rk.qrcodescanner.plus.feature.barcode.save.SaveBarcodeAsTextActivity
+import com.d4rk.qrcodescanner.plus.model.SearchEngine
+import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.d4rk.qrcodescanner.plus.ui.dialogs.ChooseSearchEngineDialogFragment
 import com.d4rk.qrcodescanner.plus.ui.dialogs.DeleteConfirmationDialogFragment
-import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
-import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.d4rk.qrcodescanner.plus.ui.dialogs.EditBarcodeNameDialogFragment
 import com.d4rk.qrcodescanner.plus.usecase.save
 import com.google.android.gms.ads.AdRequest
@@ -369,16 +369,14 @@ class BarcodeActivity : BaseActivity() , DeleteConfirmationDialogFragment.Listen
                 barcode.phoneType.orEmpty().toPhoneType()
             )
             putExtra(
-                ContactsContract.Intents.Insert.SECONDARY_PHONE ,
-                barcode.secondaryPhone.orEmpty()
+                ContactsContract.Intents.Insert.SECONDARY_PHONE , barcode.secondaryPhone.orEmpty()
             )
             putExtra(
                 ContactsContract.Intents.Insert.SECONDARY_PHONE_TYPE ,
                 barcode.secondaryPhoneType.orEmpty().toPhoneType()
             )
             putExtra(
-                ContactsContract.Intents.Insert.TERTIARY_PHONE ,
-                barcode.tertiaryPhone.orEmpty()
+                ContactsContract.Intents.Insert.TERTIARY_PHONE , barcode.tertiaryPhone.orEmpty()
             )
             putExtra(
                 ContactsContract.Intents.Insert.TERTIARY_PHONE_TYPE ,
@@ -390,16 +388,14 @@ class BarcodeActivity : BaseActivity() , DeleteConfirmationDialogFragment.Listen
                 barcode.emailType.orEmpty().toEmailType()
             )
             putExtra(
-                ContactsContract.Intents.Insert.SECONDARY_EMAIL ,
-                barcode.secondaryEmail.orEmpty()
+                ContactsContract.Intents.Insert.SECONDARY_EMAIL , barcode.secondaryEmail.orEmpty()
             )
             putExtra(
                 ContactsContract.Intents.Insert.SECONDARY_EMAIL_TYPE ,
                 barcode.secondaryEmailType.orEmpty().toEmailType()
             )
             putExtra(
-                ContactsContract.Intents.Insert.TERTIARY_EMAIL ,
-                barcode.tertiaryEmail.orEmpty()
+                ContactsContract.Intents.Insert.TERTIARY_EMAIL , barcode.tertiaryEmail.orEmpty()
             )
             putExtra(
                 ContactsContract.Intents.Insert.TERTIARY_EMAIL_TYPE ,

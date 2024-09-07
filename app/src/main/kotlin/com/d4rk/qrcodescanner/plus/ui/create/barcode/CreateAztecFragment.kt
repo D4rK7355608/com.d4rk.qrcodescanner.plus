@@ -13,9 +13,7 @@ import com.d4rk.qrcodescanner.plus.ui.create.BaseCreateBarcodeFragment
 class CreateAztecFragment : BaseCreateBarcodeFragment() {
     private lateinit var binding : FragmentCreateAztecBinding
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateAztecBinding.inflate(inflater , container , false)
         return binding.root

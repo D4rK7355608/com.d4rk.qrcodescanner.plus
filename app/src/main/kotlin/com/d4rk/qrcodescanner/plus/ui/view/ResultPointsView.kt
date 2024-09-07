@@ -20,9 +20,7 @@ class ResultPointsView : View {
         style = Paint.Style.STROKE
         color = Color.BLUE
         strokeWidth = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP ,
-            8f ,
-            Resources.getSystem().displayMetrics
+            TypedValue.COMPLEX_UNIT_DIP , 8f , Resources.getSystem().displayMetrics
         )
         strokeCap = Paint.Cap.ROUND
     }
@@ -32,17 +30,11 @@ class ResultPointsView : View {
     constructor(context : Context?) : this(context , null)
     constructor(context : Context? , attrs : AttributeSet?) : this(context , attrs , 0)
     constructor(context : Context? , attrs : AttributeSet? , defStyleAttr : Int) : this(
-        context ,
-        attrs ,
-        defStyleAttr ,
-        0
+        context , attrs , defStyleAttr , 0
     )
 
     constructor(
-        context : Context? ,
-        attrs : AttributeSet? ,
-        defStyleAttr : Int ,
-        defStyleRes : Int
+        context : Context? , attrs : AttributeSet? , defStyleAttr : Int , defStyleRes : Int
     ) : super(context , attrs , defStyleAttr , defStyleRes) {
         context?.obtainStyledAttributes(attrs , R.styleable.ResultPointsView)?.apply {
             pointsPaint.color = getColor(

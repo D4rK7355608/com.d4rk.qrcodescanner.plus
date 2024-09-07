@@ -63,9 +63,9 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.display) ,
                                summary = stringResource(R.string.summary_preference_settings_display) ,
                                onClick = {
-                                         IntentUtils.openActivity(
-                                             context, DisplaySettingsActivity::class.java
-                                         )
+                                   IntentUtils.openActivity(
+                                       context , DisplaySettingsActivity::class.java
+                                   )
                                })
             }
             item {
@@ -73,9 +73,9 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.scanner) ,
                                summary = "Turn on or off scanner features" ,
                                onClick = {
-                                    IntentUtils.openActivity(
-                                        context, ScannerSettingsActivity::class.java
-                                    )
+                                   IntentUtils.openActivity(
+                                       context , ScannerSettingsActivity::class.java
+                                   )
                                })
             }
             item {
@@ -111,9 +111,9 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.about) ,
                                summary = stringResource(R.string.summary_preference_settings_about) ,
                                onClick = {
-                                      IntentUtils.openActivity(
-                                          context, AboutSettingsActivity::class.java
-                                      )
+                                   IntentUtils.openActivity(
+                                       context , AboutSettingsActivity::class.java
+                                   )
                                })
             }
         }

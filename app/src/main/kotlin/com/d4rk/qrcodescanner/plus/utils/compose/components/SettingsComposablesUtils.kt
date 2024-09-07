@@ -305,15 +305,13 @@ fun CheckBoxPreferenceItem(
     onCheckedChange : (Boolean) -> Unit
 ) {
     val view : View = LocalView.current
-    Row(
-        modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(16.dp))
-                .clickable {
-                    view.weakHapticFeedback()
-                    onCheckedChange(! checked)
-                } , verticalAlignment = Alignment.CenterVertically
-    ) {
+    Row(modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .clickable {
+                view.weakHapticFeedback()
+                onCheckedChange(! checked)
+            } , verticalAlignment = Alignment.CenterVertically) {
         icon?.let {
             Spacer(modifier = Modifier.width(16.dp))
             Icon(it , contentDescription = null)
@@ -329,11 +327,9 @@ fun CheckBoxPreferenceItem(
                 Text(text = it , style = MaterialTheme.typography.bodyMedium)
             }
         }
-        Checkbox(
-            checked = checked , onCheckedChange = { isChecked ->
-                view.weakHapticFeedback()
-                onCheckedChange(isChecked)
-            } , modifier = Modifier.padding(start = 16.dp)
-        )
+        Checkbox(checked = checked , onCheckedChange = { isChecked ->
+            view.weakHapticFeedback()
+            onCheckedChange(isChecked)
+        } , modifier = Modifier.padding(start = 16.dp))
     }
 }

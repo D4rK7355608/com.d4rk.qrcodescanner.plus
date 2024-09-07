@@ -22,9 +22,7 @@ class DateTimePickerButton : FrameLayout {
     constructor(context : Context) : this(context , null)
     constructor(context : Context , attrs : AttributeSet?) : this(context , attrs , - 1)
     constructor(context : Context , attrs : AttributeSet? , defStyleAttr : Int) : super(
-        context ,
-        attrs ,
-        defStyleAttr
+        context , attrs , defStyleAttr
     ) {
         context.obtainStyledAttributes(attrs , R.styleable.DateTimePickerButton).apply {
             showHint(this)

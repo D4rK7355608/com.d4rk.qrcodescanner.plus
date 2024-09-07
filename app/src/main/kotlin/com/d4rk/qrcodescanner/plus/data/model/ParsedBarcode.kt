@@ -3,13 +3,13 @@ package com.d4rk.qrcodescanner.plus.data.model
 import com.d4rk.qrcodescanner.plus.data.model.schema.App
 import com.d4rk.qrcodescanner.plus.data.model.schema.Bookmark
 import com.d4rk.qrcodescanner.plus.data.model.schema.Email
-import com.d4rk.qrcodescanner.plus.data.model.schema.Sms
-import com.d4rk.qrcodescanner.plus.data.model.schema.VEvent
 import com.d4rk.qrcodescanner.plus.data.model.schema.MeCard
-import com.d4rk.qrcodescanner.plus.data.model.schema.Phone
-import com.d4rk.qrcodescanner.plus.data.model.schema.VCard
-import com.d4rk.qrcodescanner.plus.data.model.schema.Wifi
 import com.d4rk.qrcodescanner.plus.data.model.schema.NZCovidTracer
+import com.d4rk.qrcodescanner.plus.data.model.schema.Phone
+import com.d4rk.qrcodescanner.plus.data.model.schema.Sms
+import com.d4rk.qrcodescanner.plus.data.model.schema.VCard
+import com.d4rk.qrcodescanner.plus.data.model.schema.VEvent
+import com.d4rk.qrcodescanner.plus.data.model.schema.Wifi
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.google.zxing.BarcodeFormat
 

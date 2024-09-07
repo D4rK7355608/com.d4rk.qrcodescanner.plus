@@ -17,9 +17,7 @@ class CreateQrCodeLocationFragment : BaseCreateBarcodeFragment() {
     override val latitude : Double? get() = binding.editTextLatitude.textString.toDoubleOrNull()
     override val longitude : Double? get() = binding.editTextLongitude.textString.toDoubleOrNull()
     override fun onCreateView(
-        inflater : LayoutInflater ,
-        container : ViewGroup? ,
-        savedInstanceState : Bundle?
+        inflater : LayoutInflater , container : ViewGroup? , savedInstanceState : Bundle?
     ) : View {
         binding = FragmentCreateQrCodeLocationBinding.inflate(inflater , container , false)
         return binding.root

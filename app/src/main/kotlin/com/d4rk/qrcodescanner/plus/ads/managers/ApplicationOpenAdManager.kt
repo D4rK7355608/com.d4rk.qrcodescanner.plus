@@ -65,22 +65,21 @@ class ApplicationOpenAdManager : MultiDexApplication() , Application.ActivityLif
             }
             isLoadingAd = true
             val request = AdRequest.Builder().build()
-            AppOpenAd.load(
-                context ,
-                AD_UNIT_ID ,
-                request ,
-                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT ,
-                object : AppOpenAd.AppOpenAdLoadCallback() {
-                    override fun onAdLoaded(ad : AppOpenAd) {
-                        appOpenAd = ad
-                        isLoadingAd = false
-                        loadTime = Date().time
-                    }
+            AppOpenAd.load(context ,
+                           AD_UNIT_ID ,
+                           request ,
+                           AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT ,
+                           object : AppOpenAd.AppOpenAdLoadCallback() {
+                               override fun onAdLoaded(ad : AppOpenAd) {
+                                   appOpenAd = ad
+                                   isLoadingAd = false
+                                   loadTime = Date().time
+                               }
 
-                    override fun onAdFailedToLoad(loadAdError : LoadAdError) {
-                        isLoadingAd = false
-                    }
-                })
+                               override fun onAdFailedToLoad(loadAdError : LoadAdError) {
+                                   isLoadingAd = false
+                               }
+                           })
         }
 
         @Suppress("SameParameterValue")
@@ -103,8 +102,7 @@ class ApplicationOpenAdManager : MultiDexApplication() , Application.ActivityLif
         }
 
         fun showAdIfAvailable(
-            activity : Activity ,
-            onShowAdCompleteListener : OnShowAdCompleteListener
+            activity : Activity , onShowAdCompleteListener : OnShowAdCompleteListener
         ) {
             if (isShowingAd) {
                 return
