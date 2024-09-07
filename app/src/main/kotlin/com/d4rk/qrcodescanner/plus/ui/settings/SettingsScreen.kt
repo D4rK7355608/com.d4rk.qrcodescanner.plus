@@ -34,6 +34,7 @@ import com.d4rk.qrcodescanner.plus.ui.settings.about.AboutSettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.settings.advanced.AdvancedSettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.settings.display.DisplaySettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.settings.history.HistorySettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.privacy.PrivacySettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.settings.scanner.ScannerSettingsActivity
 import com.d4rk.qrcodescanner.plus.utils.IntentUtils
 import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
@@ -114,9 +115,9 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.security_and_privacy) ,
                                summary = stringResource(R.string.summary_preference_settings_privacy_and_security) ,
                                onClick = {
-                                   /*   IntentUtils.openActivity(
+                                      IntentUtils.openActivity(
                                           context, PrivacySettingsActivity::class.java
-                                      )*/
+                                      )
                                })
             }
             item {

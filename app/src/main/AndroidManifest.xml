@@ -109,6 +109,32 @@
             android:name=".ui.settings.advanced.AdvancedSettingsActivity"
             android:parentActivityName=".ui.settings.SettingsActivity" />
 
+        <activity
+            android:name=".ui.settings.privacy.PrivacySettingsActivity"
+            android:parentActivityName=".ui.settings.SettingsActivity" />
+
+        <activity
+            android:name=".ui.settings.privacy.permissions.PermissionsSettingsActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.settings.privacy.PrivacySettingsActivity"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.settings.privacy.usage.UsageAndDiagnosticsActivity"
+            android:parentActivityName=".ui.settings.privacy.PrivacySettingsActivity" />
+
+        <activity
+            android:name=".ui.settings.privacy.ads.AdsSettingsActivity"
+            android:parentActivityName=".ui.settings.privacy.PrivacySettingsActivity" />
+
+
 
         <activity
             android:name=".ui.settings.about.AboutSettingsActivity"
