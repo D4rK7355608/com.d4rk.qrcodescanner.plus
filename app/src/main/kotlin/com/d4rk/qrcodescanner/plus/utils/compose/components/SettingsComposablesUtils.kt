@@ -15,9 +15,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Card
+import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
@@ -48,13 +50,18 @@ fun SwitchCardComposable(
     title : String , switchState : State<Boolean> , onSwitchToggled : (Boolean) -> Unit
 ) {
     val view : View = LocalView.current
-    Card(modifier = Modifier.fillMaxWidth().padding(24.dp).clip(RoundedCornerShape(28.dp))
+    Card(modifier = Modifier
+            .fillMaxWidth()
+            .padding(24.dp)
+            .clip(RoundedCornerShape(28.dp))
             .clickable {
                 view.weakHapticFeedback()
                 onSwitchToggled(! switchState.value)
             }) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(16.dp) ,
+            modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(16.dp) ,
             horizontalArrangement = Arrangement.SpaceBetween ,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -117,7 +124,9 @@ fun PreferenceItem(
 ) {
     val view : View = LocalView.current
     Row(
-        modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp))
+        modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(16.dp))
                 .clickable(enabled = enabled , onClick = {
                     view.weakHapticFeedback()
                     onClick()
@@ -171,7 +180,10 @@ fun SwitchPreferenceItem(
 ) {
     val view : View = LocalView.current
     Row(
-        modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).clickable(onClick = {
+        modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(16.dp))
+                .clickable(onClick = {
                     view.weakHapticFeedback()
                     onCheckedChange(! checked)
                 }) , verticalAlignment = Alignment.CenterVertically
@@ -182,19 +194,19 @@ fun SwitchPreferenceItem(
             Spacer(modifier = Modifier.width(16.dp))
         }
         Column(
-            modifier = Modifier.padding(16.dp).weight(1f)
+            modifier = Modifier
+                    .padding(16.dp)
+                    .weight(1f)
         ) {
             Text(text = title , style = MaterialTheme.typography.titleLarge)
             summary?.let {
                 Text(text = it , style = MaterialTheme.typography.bodyMedium)
             }
         }
-        Switch(
-            checked = checked , onCheckedChange = { isChecked ->
-                view.weakHapticFeedback()
-                onCheckedChange(isChecked)
-            } , modifier = Modifier.padding(16.dp)
-        )
+        Switch(checked = checked , onCheckedChange = { isChecked ->
+            view.weakHapticFeedback()
+            onCheckedChange(isChecked)
+        } , modifier = Modifier.padding(16.dp))
     }
 }
 
@@ -225,7 +237,10 @@ fun SwitchPreferenceItemWithDivider(
 ) {
     val view : View = LocalView.current
     Row(
-        modifier = Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).clickable(onClick = {
+        modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(16.dp))
+                .clickable(onClick = {
                     view.weakHapticFeedback()
                     onClick()
                 }) , verticalAlignment = Alignment.CenterVertically
@@ -236,14 +251,18 @@ fun SwitchPreferenceItemWithDivider(
             Spacer(modifier = Modifier.width(16.dp))
         }
         Column(
-            modifier = Modifier.padding(16.dp).weight(1f)
+            modifier = Modifier
+                    .padding(16.dp)
+                    .weight(1f)
         ) {
             Text(text = title , style = MaterialTheme.typography.titleLarge)
             Text(text = summary , style = MaterialTheme.typography.bodyMedium)
         }
 
         VerticalDivider(
-            modifier = Modifier.height(32.dp).align(Alignment.CenterVertically) ,
+            modifier = Modifier
+                    .height(32.dp)
+                    .align(Alignment.CenterVertically) ,
             color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f) ,
             thickness = 1.dp
         )
@@ -252,5 +271,69 @@ fun SwitchPreferenceItemWithDivider(
             onCheckedChange(isChecked)
             onSwitchClick(isChecked)
         } , modifier = Modifier.padding(16.dp))
+    }
+}
+
+@Composable
+fun RadioButtonPreferenceItem(
+    text : String ,
+    isChecked : Boolean ,
+    onCheckedChange : (Boolean) -> Unit ,
+) {
+    Row(modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(16.dp))
+            .clickable { onCheckedChange(! isChecked) } ,
+        verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            text = text ,
+            style = MaterialTheme.typography.titleLarge ,
+            modifier = Modifier
+                    .weight(1f)
+                    .padding(end = 16.dp , start = 16.dp)
+        )
+        RadioButton(selected = isChecked , onClick = { onCheckedChange(! isChecked) })
+    }
+}
+
+@Composable
+fun CheckBoxPreferenceItem(
+    icon : ImageVector? = null ,
+    title : String ,
+    summary : String? = null ,
+    checked : Boolean ,
+    onCheckedChange : (Boolean) -> Unit
+) {
+    val view : View = LocalView.current
+    Row(
+        modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(16.dp))
+                .clickable {
+                    view.weakHapticFeedback()
+                    onCheckedChange(! checked)
+                } , verticalAlignment = Alignment.CenterVertically
+    ) {
+        icon?.let {
+            Spacer(modifier = Modifier.width(16.dp))
+            Icon(it , contentDescription = null)
+            Spacer(modifier = Modifier.width(16.dp))
+        }
+        Column(
+            modifier = Modifier
+                    .padding(16.dp)
+                    .weight(1f)
+        ) {
+            Text(text = title , style = MaterialTheme.typography.titleLarge)
+            summary?.let {
+                Text(text = it , style = MaterialTheme.typography.bodyMedium)
+            }
+        }
+        Checkbox(
+            checked = checked , onCheckedChange = { isChecked ->
+                view.weakHapticFeedback()
+                onCheckedChange(isChecked)
+            } , modifier = Modifier.padding(start = 16.dp)
+        )
     }
 }

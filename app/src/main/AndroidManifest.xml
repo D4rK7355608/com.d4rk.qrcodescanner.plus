@@ -185,15 +185,15 @@
             android:label="@string/export_history"
             android:parentActivityName=".ui.history.export.ExportHistoryActivity" />
         <activity
-            android:name=".ui.settings.camera.ChooseCameraActivity"
+            android:name=".ui.settings.scanner.camera.ChooseCameraActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/camera"
-            android:parentActivityName=".ui.settings.camera.ChooseCameraActivity" />
+            android:parentActivityName=".ui.settings.scanner.camera.ChooseCameraActivity" />
         <activity
-            android:name=".ui.settings.formats.SupportedFormatsActivity"
+            android:name=".ui.settings.scanner.formats.SupportedFormatsActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/supported_formats"
-            android:parentActivityName=".ui.settings.formats.SupportedFormatsActivity" />
+            android:parentActivityName=".ui.settings.scanner.formats.SupportedFormatsActivity" />
         <activity
             android:name=".ui.settings.search.ChooseSearchEngineActivity"
             android:configChanges="orientation|screenSize"

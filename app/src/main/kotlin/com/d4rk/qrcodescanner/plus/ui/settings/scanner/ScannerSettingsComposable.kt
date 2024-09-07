@@ -26,8 +26,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import com.d4rk.qrcodescanner.plus.R
-import com.d4rk.qrcodescanner.plus.ui.settings.camera.ChooseCameraActivity
-import com.d4rk.qrcodescanner.plus.ui.settings.formats.SupportedFormatsActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.scanner.camera.ChooseCameraActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.scanner.formats.SupportedFormatsActivity
 import com.d4rk.qrcodescanner.plus.usecase.Settings
 import com.d4rk.qrcodescanner.plus.utils.IntentUtils
 import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
@@ -57,7 +57,7 @@ fun ScannerSettingsComposable(activity : ScannerSettingsActivity) {
             remember { mutableStateOf(value = settings.confirmScansManually) }
 
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
-        LargeTopAppBar(title = { Text(stringResource(R.string.display)) } , navigationIcon = {
+        LargeTopAppBar(title = { Text(stringResource(R.string.scanner)) } , navigationIcon = {
             IconButton(onClick = {
                 view.weakHapticFeedback()
                 activity.finish()

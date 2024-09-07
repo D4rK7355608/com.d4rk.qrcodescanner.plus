@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.d4rk.qrcodescanner.plus.usecase.Settings
-import com.d4rk.qrcodescanner.plus.utils.compose.components.SettingsRadioButton
+import com.d4rk.qrcodescanner.plus.utils.compose.components.RadioButtonPreferenceItem
 
 @Composable
 fun ChooseSearchEngineScreen(settings : Settings) {
@@ -28,9 +28,9 @@ fun ChooseSearchEngineScreen(settings : Settings) {
     ) {
         items(SearchEngine.entries) { searchEngine ->
             val isChecked : Boolean = selectedSearchEngine.value == searchEngine
-            SettingsRadioButton(text = stringResource(id = searchEngine.stringResId()) ,
-                                isChecked = isChecked ,
-                                onCheckedChange = { newIsChecked ->
+            RadioButtonPreferenceItem(text = stringResource(id = searchEngine.stringResId()) ,
+                                      isChecked = isChecked ,
+                                      onCheckedChange = { newIsChecked ->
                                     if (newIsChecked) {
                                         selectedSearchEngine.value = searchEngine
                                         settings.searchEngine = searchEngine

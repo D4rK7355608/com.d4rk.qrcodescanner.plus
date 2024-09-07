@@ -91,14 +91,14 @@
             app:icon="@drawable/ic_camera_switch"
             app:title="@string/camera">
             <intent
-                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.camera.ChooseCameraActivity"
+                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.scanner.camera.ChooseCameraActivity"
                 android:targetPackage="com.d4rk.qrcodescanner.plus" />
         </androidx.preference.Preference>
         <androidx.preference.Preference
             app:icon="@drawable/ic_camera"
             app:title="@string/supported_formats">
             <intent
-                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.formats.SupportedFormatsActivity"
+                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.scanner.formats.SupportedFormatsActivity"
                 android:targetPackage="com.d4rk.qrcodescanner.plus" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
