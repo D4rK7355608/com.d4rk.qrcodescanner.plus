@@ -35,7 +35,7 @@
     </queries>
 
     <application
-        android:name=".ads.managers.ApplicationOpenAdManager"
+        android:name=".data.core.AppCoreManager"
         android:appCategory="image"
         android:description="@string/app_description"
         android:enableOnBackInvokedCallback="true"
@@ -51,7 +51,7 @@
         tools:targetApi="33">
         <activity android:name=".ui.startup.StartupActivity" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:theme="@style/SplashScreenTheme">
@@ -77,7 +77,7 @@
             android:name=".ui.settings.SettingsActivity"
             android:exported="true"
             android:label="@string/settings"
-            android:parentActivityName=".ui.MainActivity">
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
             </intent-filter>

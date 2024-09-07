@@ -199,6 +199,13 @@
     <string name="export">Export</string>
     <string name="music">Music</string>
     <string name="app_version">Version %1s</string>
+    <string name="updates">Updates</string>
+    <string name="snack_app_updated">The app has been successfully updated</string>
+    <string name="snack_update_failed">The update process encountered an issue</string>
+    <string name="try_again">Try again</string>
+    <string name="snack_network_error">Network error occurred while checking for updates</string>
+    <string name="snack_general_error">An error occurred while checking for updates</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="made_in">Made with ❤ in Romania!</string>
     <string name="learn_more">Learn more</string>
     <string name="theme">Theme</string>

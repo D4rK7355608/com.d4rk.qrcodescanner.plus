@@ -5,7 +5,7 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.os.Build
 import android.service.quicksettings.TileService
-import com.d4rk.qrcodescanner.plus.ui.MainActivity
+import com.d4rk.qrcodescanner.plus.MainActivity
 
 class QuickSettingsTileService : TileService() {
 

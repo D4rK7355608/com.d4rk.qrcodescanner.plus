@@ -7,7 +7,7 @@ import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.d4rk.qrcodescanner.plus.databinding.ActivityStartupBinding
-import com.d4rk.qrcodescanner.plus.ui.MainActivity
+import com.d4rk.qrcodescanner.plus.MainActivity
 import com.google.android.ump.ConsentForm
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.ConsentRequestParameters

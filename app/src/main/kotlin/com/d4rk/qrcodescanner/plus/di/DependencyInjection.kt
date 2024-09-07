@@ -13,7 +13,6 @@ import com.d4rk.qrcodescanner.plus.usecase.ContactHelper
 import com.d4rk.qrcodescanner.plus.usecase.OTPGenerator
 import com.d4rk.qrcodescanner.plus.usecase.PermissionsHelper
 import com.d4rk.qrcodescanner.plus.usecase.RotationHelper
-import com.d4rk.qrcodescanner.plus.usecase.ScannerCameraHelper
 import com.d4rk.qrcodescanner.plus.usecase.Settings
 import com.d4rk.qrcodescanner.plus.usecase.WifiConnector
 
@@ -30,6 +29,5 @@ val AppCompatActivity.settings get() = Settings.getInstance(this)
 val contactHelper get() = ContactHelper
 val permissionsHelper get() = PermissionsHelper
 val rotationHelper get() = RotationHelper
-val scannerCameraHelper get() = ScannerCameraHelper
 val Fragment.barcodeDatabase get() = BarcodeDatabase.getInstance(requireContext())
 val Fragment.settings get() = Settings.getInstance(requireContext())

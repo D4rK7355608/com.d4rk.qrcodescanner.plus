@@ -23,7 +23,6 @@ import com.d4rk.qrcodescanner.plus.databinding.FragmentScanBarcodeFromCameraBind
 import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
 import com.d4rk.qrcodescanner.plus.di.barcodeParser
 import com.d4rk.qrcodescanner.plus.di.permissionsHelper
-import com.d4rk.qrcodescanner.plus.di.scannerCameraHelper
 import com.d4rk.qrcodescanner.plus.di.settings
 import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.extension.equalTo
@@ -146,11 +145,11 @@ class ScanBarcodeFromCameraFragment : Fragment() , ConfirmBarcodeDialogFragment.
     }
 
     private fun initZoomSeekBar() {
-        scannerCameraHelper.getCameraParameters(settings.isBackCamera)?.apply {
+     /*   scannerCameraHelper.getCameraParameters(settings.isBackCamera)?.apply {
             this@ScanBarcodeFromCameraFragment.maxZoom = maxZoom
             binding.seekBarZoom.max = maxZoom
             binding.seekBarZoom.progress = zoom
-        }
+        }*/
     }
 
     private fun initFlashButton() {
