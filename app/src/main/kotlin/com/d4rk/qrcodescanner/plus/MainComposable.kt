@@ -217,12 +217,10 @@ fun MainComposable() {
                 composable(BottomNavigationScreen.Scan.route) {
                     Box(modifier = Modifier.padding(innerPadding)) {
                         ScanScreen(
-                            settings = settings, // FIXME: Unresolved reference: settings
                             barcodeParser = barcodeParser,
-                            barcodeDatabase = barcodeDatabase, // FIXME: Unresolved reference: barcodeDatabase
+                            barcodeDatabase = barcodeDatabase,
                             navigateToBarcodeScreen = { /* TODO: */ },
                             handleScannedData = { _, _, _ -> /* TODO: */ },
-                            // ... [other parameters for ScanScreen]
                         )
                     }
                 }
