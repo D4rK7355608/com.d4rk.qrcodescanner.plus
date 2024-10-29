@@ -95,8 +95,8 @@ android {
 dependencies {
     implementation("com.googlecode.ez-vcard:ez-vcard:0.12.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
+    implementation(libs.androidx.navigation.ui.ktx)
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
