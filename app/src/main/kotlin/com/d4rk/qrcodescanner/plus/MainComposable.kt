@@ -54,10 +54,10 @@ import com.d4rk.qrcodescanner.plus.constants.ui.bottombar.BottomBarRoutes
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
 import com.d4rk.qrcodescanner.plus.data.model.navigation.NavigationDrawerItem
 import com.d4rk.qrcodescanner.plus.di.barcodeParser
-import com.d4rk.qrcodescanner.plus.ui.scan.ScanScreen
-import com.d4rk.qrcodescanner.plus.ui.settings.SettingsActivity
-import com.d4rk.qrcodescanner.plus.ui.settings.help.HelpActivity
-import com.d4rk.qrcodescanner.plus.ui.settings.support.SupportActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.scan.ScanScreen
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.SettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.help.HelpActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.support.SupportActivity
 import com.d4rk.qrcodescanner.plus.usecase.BarcodeDatabase
 import com.d4rk.qrcodescanner.plus.usecase.Settings
 import com.d4rk.qrcodescanner.plus.utils.IntentUtils

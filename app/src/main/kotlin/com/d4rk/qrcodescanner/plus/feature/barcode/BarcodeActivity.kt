@@ -13,6 +13,7 @@ import android.provider.Settings
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import androidx.print.PrintHelper
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.model.Barcode
@@ -39,17 +40,16 @@ import com.d4rk.qrcodescanner.plus.feature.barcode.save.SaveBarcodeAsImageActivi
 import com.d4rk.qrcodescanner.plus.feature.barcode.save.SaveBarcodeAsTextActivity
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
-import com.d4rk.qrcodescanner.plus.ui.dialogs.ChooseSearchEngineDialogFragment
-import com.d4rk.qrcodescanner.plus.ui.dialogs.DeleteConfirmationDialogFragment
-import com.d4rk.qrcodescanner.plus.ui.dialogs.EditBarcodeNameDialogFragment
+import com.d4rk.qrcodescanner.plus.ui.components.dialogs.ChooseSearchEngineDialogFragment
+import com.d4rk.qrcodescanner.plus.ui.components.dialogs.DeleteConfirmationDialogFragment
+import com.d4rk.qrcodescanner.plus.ui.components.dialogs.EditBarcodeNameDialogFragment
 import com.d4rk.qrcodescanner.plus.usecase.save
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.snackbar.Snackbar
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -69,7 +69,6 @@ class BarcodeActivity : BaseActivity() , DeleteConfirmationDialogFragment.Listen
     }
 
     private lateinit var binding : ActivityBarcodeBinding
-    private val disposable = CompositeDisposable()
     private val dateFormatter = SimpleDateFormat("dd.MM.yyyy HH:mm" , Locale.ENGLISH)
     private val originalBarcode by unsafeLazy {
         @Suppress("DEPRECATION") intent?.getSerializableExtra(BARCODE_KEY) as? Barcode
@@ -113,11 +112,6 @@ class BarcodeActivity : BaseActivity() , DeleteConfirmationDialogFragment.Listen
 
     override fun onSearchEngineSelected(searchEngine : SearchEngine) {
         performWebSearchUsingSearchEngine(searchEngine)
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        disposable.clear()
     }
 
     private fun supportEdgeToEdge() {
@@ -291,57 +285,67 @@ class BarcodeActivity : BaseActivity() , DeleteConfirmationDialogFragment.Listen
     }
 
     private fun toggleIsFavorite() {
-        val newBarcode = originalBarcode.copy(isFavorite = barcode.isFavorite.not())
-        barcodeDatabase.save(newBarcode).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                                                                         barcode.isFavorite =
-                                                                                 newBarcode.isFavorite
-                                                                         showBarcodeIsFavorite(
-                                                                             newBarcode.isFavorite
-                                                                         )
-                                                                     } , {
-
-                                                                     }).addTo(disposable)
+        lifecycleScope.launch {
+            try {
+                val newBarcode = originalBarcode.copy(isFavorite = !barcode.isFavorite)
+                withContext(Dispatchers.IO) {
+                    barcodeDatabase.save(newBarcode)
+                }
+                barcode.isFavorite = newBarcode.isFavorite
+                showBarcodeIsFavorite(newBarcode.isFavorite)
+            } catch (e: Exception) {
+                // Handle error (e.g., show a snackbar or log)
+            }
+        }
     }
 
-    private fun updateBarcodeName(name : String) {
-        if (name.isBlank()) {
-            return
+
+    private fun updateBarcodeName(name: String) {
+        if (name.isBlank()) return
+        lifecycleScope.launch {
+            try {
+                val newBarcode = originalBarcode.copy(id = barcode.id, name = name)
+                withContext(Dispatchers.IO) {
+                    barcodeDatabase.save(newBarcode)
+                }
+                barcode.name = name
+                showBarcodeName(name)
+            } catch (e: Exception) {
+                showError(e)
+            }
         }
-        val newBarcode = originalBarcode.copy(
-            id = barcode.id , name = name
-        )
-        barcodeDatabase.save(newBarcode).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                                                                         barcode.name = name
-                                                                         showBarcodeName(name)
-                                                                     } , ::showError)
-                .addTo(disposable)
     }
 
     private fun saveBarcode() {
-        binding.toolbar.menu?.findItem(R.id.item_save)?.isVisible = false
-        barcodeDatabase.save(originalBarcode , settings.doNotSaveDuplicates)
-                .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ id ->
-                               barcode.id = id
-                               binding.buttonEditName.isVisible = true
-                               binding.toolbar.menu?.findItem(R.id.item_delete)?.isVisible = true
-                           } , { error ->
-                               binding.toolbar.menu?.findItem(R.id.item_save)?.isVisible = true
-                               showError(error)
-                           }).addTo(disposable)
+        lifecycleScope.launch {
+            binding.toolbar.menu?.findItem(R.id.item_save)?.isVisible = false
+            try {
+                val id = withContext(Dispatchers.IO) {
+                    barcodeDatabase.save(originalBarcode, settings.doNotSaveDuplicates)
+                }
+                barcode.id = id
+                binding.buttonEditName.isVisible = true
+                binding.toolbar.menu?.findItem(R.id.item_delete)?.isVisible = true
+            } catch (error: Exception) {
+                binding.toolbar.menu?.findItem(R.id.item_save)?.isVisible = true
+                showError(error)
+            }
+        }
     }
 
     private fun deleteBarcode() {
-        showLoading(true)
-        barcodeDatabase.delete(barcode.id).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                                                                         finish()
-                                                                     } , { error ->
-                                                                         showLoading(false)
-                                                                         showError(error)
-                                                                     }).addTo(disposable)
+        lifecycleScope.launch {
+            showLoading(true)
+            try {
+                withContext(Dispatchers.IO) {
+                    barcodeDatabase.delete(barcode.id)
+                }
+                finish()
+            } catch (error: Exception) {
+                showLoading(false)
+                showError(error)
+            }
+        }
     }
 
     private fun addToCalendar() {
@@ -435,29 +439,32 @@ class BarcodeActivity : BaseActivity() , DeleteConfirmationDialogFragment.Listen
     }
 
     private fun connectToWifi() {
-        showConnectToWifiButtonEnabled(false)
-        wifiConnector.connect(
-            this ,
-            barcode.networkAuthType.orEmpty() ,
-            barcode.networkName.orEmpty() ,
-            barcode.networkPassword.orEmpty() ,
-            barcode.isHidden.orFalse() ,
-            barcode.anonymousIdentity.orEmpty() ,
-            barcode.identity.orEmpty() ,
-            barcode.eapMethod.orEmpty() ,
-            barcode.phase2Method.orEmpty()
-        ).observeOn(AndroidSchedulers.mainThread()).subscribe({
-                                                                  showConnectToWifiButtonEnabled(
-                                                                      true
-                                                                  )
-                                                                  snackBar(R.string.connecting)
-                                                              } , { error ->
-                                                                  showConnectToWifiButtonEnabled(
-                                                                      true
-                                                                  )
-                                                                  showError(error)
-                                                              }).addTo(disposable)
+        lifecycleScope.launch {
+            showConnectToWifiButtonEnabled(false)
+            try {
+                withContext(Dispatchers.IO) {
+                    // Assuming wifiConnector.connect(...) is now a suspend function
+                    wifiConnector.connect(
+                        context = this@BarcodeActivity ,
+                        barcode.networkAuthType.orEmpty() ,
+                        barcode.networkName.orEmpty() ,
+                        barcode.networkPassword.orEmpty() ,
+                        barcode.isHidden.orFalse() ,
+                        barcode.anonymousIdentity.orEmpty() ,
+                        barcode.identity.orEmpty() ,
+                        barcode.eapMethod.orEmpty() ,
+                        barcode.phase2Method.orEmpty()
+                    )
+                }
+                showConnectToWifiButtonEnabled(true)
+                snackBar(R.string.connecting)
+            } catch (error: Exception) {
+                showConnectToWifiButtonEnabled(true)
+                showError(error)
+            }
+        }
     }
+
 
     private fun openWifiSettings() {
         val intent = Intent(Settings.ACTION_WIFI_SETTINGS)

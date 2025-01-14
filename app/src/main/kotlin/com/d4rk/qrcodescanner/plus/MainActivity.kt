@@ -17,8 +17,8 @@ import com.d4rk.qrcodescanner.plus.data.core.AppCoreManager
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
 import com.d4rk.qrcodescanner.plus.notifications.managers.AppUpdateNotificationsManager
 import com.d4rk.qrcodescanner.plus.notifications.managers.AppUsageNotificationsManager
-import com.d4rk.qrcodescanner.plus.ui.settings.display.theme.style.AppTheme
-import com.d4rk.qrcodescanner.plus.ui.startup.StartupActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.display.theme.style.AppTheme
+import com.d4rk.qrcodescanner.plus.ui.screens.startup.StartupActivity
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar

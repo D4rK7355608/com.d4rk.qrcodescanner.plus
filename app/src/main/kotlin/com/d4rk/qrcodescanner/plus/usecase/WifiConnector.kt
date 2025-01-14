@@ -10,40 +10,32 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import com.d4rk.qrcodescanner.plus.extension.toCaps
 import com.d4rk.qrcodescanner.plus.extension.wifiManager
-import io.reactivex.Completable
-import io.reactivex.schedulers.Schedulers
 
 object WifiConnector {
     private val hexRegex = """^[\da-f]+$""".toRegex(RegexOption.IGNORE_CASE)
     fun connect(
-        context : Context ,
-        authType : String ,
-        name : String ,
-        password : String ,
-        isHidden : Boolean ,
-        anonymousIdentity : String ,
-        identity : String ,
-        eapMethod : String ,
-        phase2Method : String
-    ) : Completable {
-        return Completable.create { emitter ->
-            try {
-                tryToConnect(
-                    context ,
-                    authType ,
-                    name ,
-                    password ,
-                    isHidden ,
-                    anonymousIdentity ,
-                    identity ,
-                    eapMethod.toEapMethod() ,
-                    phase2Method.toPhase2Method()
-                )
-                emitter.onComplete()
-            } catch (ex : Exception) {
-                emitter.onError(ex)
-            }
-        }.subscribeOn(Schedulers.newThread())
+        context: Context,
+        authType: String,
+        name: String,
+        password: String,
+        isHidden: Boolean,
+        anonymousIdentity: String,
+        identity: String,
+        eapMethod: String,
+        phase2Method: String
+    ) {
+        // Directly call the connection logic; any exception will be thrown to the caller.
+        tryToConnect(
+            context,
+            authType,
+            name,
+            password,
+            isHidden,
+            anonymousIdentity,
+            identity,
+            eapMethod.toEapMethod(),
+            phase2Method.toPhase2Method()
+        )
     }
 
     private fun tryToConnect(

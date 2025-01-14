@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.model.Barcode
 import com.d4rk.qrcodescanner.plus.databinding.ActivitySaveBarcodeAsTextBinding
@@ -16,10 +17,9 @@ import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.google.android.material.snackbar.Snackbar
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 
 class SaveBarcodeAsTextActivity : BaseActivity() {
@@ -42,7 +42,6 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
         intent?.getSerializableExtra(BARCODE_KEY) as? Barcode
             ?: throw IllegalArgumentException("No barcode passed")
     }
-    private val disposable = CompositeDisposable()
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySaveBarcodeAsTextBinding.inflate(layoutInflater)
@@ -62,10 +61,6 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        disposable.clear()
-    }
 
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true , applyBottom = true)
@@ -90,19 +85,38 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     }
 
     private fun saveBarcode() {
-        val saveFunc = when (binding.spinnerSaveAs.selectedItemPosition) {
-            0 -> barcodeSaver::saveBarcodeAsCsv
-            1 -> barcodeSaver::saveBarcodeAsJson
-            else -> return
+        lifecycleScope.launch {
+            showLoading(true)
+            try {
+                val saveFunc = when (binding.spinnerSaveAs.selectedItemPosition) {
+                    0 -> { ctx: Context, bc: Barcode ->
+                        lifecycleScope.launch {
+                            barcodeSaver.saveBarcodeAsCsv(ctx, bc)
+                        }
+                    }
+                    1 -> { ctx: Context, bc: Barcode ->
+                        lifecycleScope.launch {
+                            barcodeSaver.saveBarcodeAsJson(ctx, bc)
+                        }
+                    }
+                    else -> {
+                        showLoading(false)
+                        return@launch
+                    }
+                }
+
+                // Offload the saving to IO dispatcher
+                withContext(Dispatchers.IO) {
+                    saveFunc(this@SaveBarcodeAsTextActivity, barcode)
+                }
+
+                // Back on main thread after saving successfully
+                showBarcodeSaved()
+            } catch (error: Exception) {
+                showLoading(false)
+                showError(error)
+            }
         }
-        showLoading(true)
-        saveFunc(this , barcode).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe({
-                                                                         showBarcodeSaved()
-                                                                     } , { error ->
-                                                                         showLoading(false)
-                                                                         showError(error)
-                                                                     }).addTo(disposable)
     }
 
     private fun showLoading(isLoading : Boolean) {

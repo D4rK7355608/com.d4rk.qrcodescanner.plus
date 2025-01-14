@@ -1,0 +1,135 @@
+package com.d4rk.qrcodescanner.plus.ui.screens.settings
+
+import android.content.Context
+import android.view.View
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.Notifications
+import androidx.compose.material.icons.outlined.Palette
+import androidx.compose.material.icons.outlined.QrCodeScanner
+import androidx.compose.material.icons.outlined.SafetyCheck
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.LargeTopAppBar
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.TopAppBarScrollBehavior
+import androidx.compose.material3.rememberTopAppBarState
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.res.stringResource
+import com.d4rk.qrcodescanner.plus.R
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.about.AboutSettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.advanced.AdvancedSettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.display.DisplaySettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.history.HistorySettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.privacy.PrivacySettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.screens.settings.scanner.ScannerSettingsActivity
+import com.d4rk.qrcodescanner.plus.utils.IntentUtils
+import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
+import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SettingsComposable(activity : SettingsActivity) {
+    val context : Context = LocalContext.current
+    val view : View = LocalView.current
+    val scrollBehavior : TopAppBarScrollBehavior =
+            TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
+    Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
+        LargeTopAppBar(title = { Text(stringResource(R.string.settings)) } , navigationIcon = {
+            IconButton(onClick = {
+                view.weakHapticFeedback()
+                activity.finish()
+            }) {
+                Icon(Icons.AutoMirrored.Filled.ArrowBack , contentDescription = null)
+            }
+        } , scrollBehavior = scrollBehavior)
+    }) { paddingValues ->
+        LazyColumn(
+            modifier = Modifier
+                    .fillMaxHeight()
+                    .padding(paddingValues) ,
+        ) {
+            item {
+                PreferenceItem(Icons.Outlined.Palette ,
+                               title = stringResource(R.string.display) ,
+                               summary = stringResource(R.string.summary_preference_settings_display) ,
+                               onClick = {
+                                   IntentUtils.openActivity(
+                                       context , DisplaySettingsActivity::class.java
+                                   )
+                               })
+            }
+            item {
+                PreferenceItem(Icons.Outlined.QrCodeScanner ,
+                               title = stringResource(R.string.scanner) ,
+                               summary = "Turn on or off scanner features" ,
+                               onClick = {
+                                   IntentUtils.openActivity(
+                                       context , ScannerSettingsActivity::class.java
+                                   )
+                               })
+            }
+            item {
+                PreferenceItem(Icons.Outlined.History ,
+                               title = stringResource(R.string.history) ,
+                               summary = "Customize the history behavior of QR app" ,
+                               onClick = {
+                                   IntentUtils.openActivity(
+                                       context , HistorySettingsActivity::class.java
+                                   )
+                               })
+            }
+            item {
+                PreferenceItem(Icons.Outlined.Notifications ,
+                               title = stringResource(R.string.notifications) ,
+                               summary = stringResource(R.string.summary_preference_settings_notifications) ,
+                               onClick = {
+                                   IntentUtils.openAppNotificationSettings(context)
+                               })
+            }
+            item {
+                PreferenceItem(Icons.Outlined.Build ,
+                               title = stringResource(R.string.advanced) ,
+                               summary = stringResource(R.string.summary_preference_settings_advanced) ,
+                               onClick = {
+                                       IntentUtils.openActivity(
+                                           context, AdvancedSettingsActivity::class.java
+                                       )
+                               })
+            }
+            item {
+                PreferenceItem(Icons.Outlined.SafetyCheck ,
+                               title = stringResource(R.string.security_and_privacy) ,
+                               summary = stringResource(R.string.summary_preference_settings_privacy_and_security) ,
+                               onClick = {
+                                      IntentUtils.openActivity(
+                                          context, PrivacySettingsActivity::class.java
+                                      )
+                               })
+            }
+            item {
+                PreferenceItem(Icons.Outlined.Info ,
+                               title = stringResource(R.string.about) ,
+                               summary = stringResource(R.string.summary_preference_settings_about) ,
+                               onClick = {
+                                   IntentUtils.openActivity(
+                                       context , AboutSettingsActivity::class.java
+                                   )
+                               })
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.model.Barcode
 import com.d4rk.qrcodescanner.plus.databinding.ActivitySaveBarcodeAsImageBinding
@@ -17,10 +18,9 @@ import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.google.android.material.snackbar.Snackbar
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 
 class SaveBarcodeAsImageActivity : BaseActivity() {
@@ -43,7 +43,6 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
         intent?.getSerializableExtra(BARCODE_KEY) as? Barcode
             ?: throw IllegalArgumentException("No barcode passed")
     }
-    private val disposable = CompositeDisposable()
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySaveBarcodeAsImageBinding.inflate(layoutInflater)
@@ -65,7 +64,6 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        disposable.clear()
     }
 
     private fun supportEdgeToEdge() {
@@ -91,32 +89,39 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
     }
 
     private fun saveBarcode() {
-        val saveFunc = when (binding.spinnerSaveAs.selectedItemPosition) {
-            0 -> {
-                barcodeImageGenerator.generateBitmapAsync(barcode , 640 , 640 , 2)
-                        .flatMapCompletable {
-                            barcodeImageSaver.savePngImageToPublicDirectory(
-                                this , it , barcode
-                            )
+        lifecycleScope.launch {
+            showLoading(true)
+            try {
+                when (binding.spinnerSaveAs.selectedItemPosition) {
+                    0 -> {
+                        // Generate bitmap and save as PNG
+                        val bitmap = withContext(Dispatchers.IO) {
+                            barcodeImageGenerator.generateBitmap(barcode, 640, 640, 2)
                         }
-            }
-
-            1 -> {
-                barcodeImageGenerator.generateSvgAsync(barcode , 640 , 640 , 2).flatMapCompletable {
-                    barcodeImageSaver.saveSvgImageToPublicDirectory(
-                        this , it , barcode
-                    )
+                        withContext(Dispatchers.IO) {
+                            barcodeImageSaver.savePngImageToPublicDirectory(this@SaveBarcodeAsImageActivity, bitmap, barcode)
+                        }
+                    }
+                    1 -> {
+                        // Generate SVG and save
+                        val svg = withContext(Dispatchers.IO) {
+                            barcodeImageGenerator.generateSvg(barcode, 640, 640, 2)
+                        }
+                        withContext(Dispatchers.IO) {
+                            barcodeImageSaver.saveSvgImageToPublicDirectory(this@SaveBarcodeAsImageActivity, svg, barcode)
+                        }
+                    }
+                    else -> {
+                        showLoading(false)
+                        return@launch
+                    }
                 }
+                showBarcodeSaved()
+            } catch (error: Exception) {
+                showLoading(false)
+                showError(error)
             }
-
-            else -> return
         }
-        showLoading(true)
-        saveFunc.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ showBarcodeSaved() } , { error ->
-                    showLoading(false)
-                    showError(error)
-                }).addTo(disposable)
     }
 
     private fun showLoading(isLoading : Boolean) {

@@ -16,7 +16,7 @@
         android:shortcutShortLabel="@string/scan_image">
         <intent
             android:action=".SCAN_FROM_FILE"
-            android:targetClass="com.d4rk.qrcodescanner.plus.ui.scan.file.ScanBarcodeFromFileActivity"
+            android:targetClass="com.d4rk.qrcodescanner.plus.ui.screens.scan.file.ScanBarcodeFromFileActivity"
             android:targetPackage="com.d4rk.qrcodescanner.plus" />
     </shortcut>
     <shortcut

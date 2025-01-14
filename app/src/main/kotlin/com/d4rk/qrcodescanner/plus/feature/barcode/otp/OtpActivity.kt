@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.model.schema.OtpAuth
 import com.d4rk.qrcodescanner.plus.databinding.ActivityBarcodeOtpBinding
@@ -12,12 +13,10 @@ import com.d4rk.qrcodescanner.plus.di.otpGenerator
 import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.extension.orZero
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
-import java.util.concurrent.TimeUnit
 
 class OtpActivity : BaseActivity() {
     private lateinit var binding : ActivityBarcodeOtpBinding
@@ -32,7 +31,6 @@ class OtpActivity : BaseActivity() {
         }
     }
 
-    private val disposable = CompositeDisposable()
     private lateinit var otp : OtpAuth
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +45,6 @@ class OtpActivity : BaseActivity() {
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        disposable.clear()
-    }
-
     private fun enableSecurity() {
         window.setFlags(
             WindowManager.LayoutParams.FLAG_SECURE , WindowManager.LayoutParams.FLAG_SECURE
@@ -63,7 +56,8 @@ class OtpActivity : BaseActivity() {
     }
 
     private fun parseOtp() {
-        @Suppress("DEPRECATION") otp = intent?.getSerializableExtra(OTP_KEY) as OtpAuth
+        @Suppress("DEPRECATION")
+        otp = intent?.getSerializableExtra(OTP_KEY) as OtpAuth
     }
 
     private fun handleToolbarBackClicked() {
@@ -107,12 +101,18 @@ class OtpActivity : BaseActivity() {
         val period = otp.period ?: 30
         val currentTimeInSeconds = System.currentTimeMillis() / 1000
         val secondsPassed = currentTimeInSeconds % period
-        val secondsLeft = period - secondsPassed
-        Observable.interval(1 , TimeUnit.SECONDS).map { it + 1 }.take(secondsLeft)
-                .map { secondsLeft - it }.startWith(secondsLeft)
-                .observeOn(AndroidSchedulers.mainThread()).doOnComplete { showOtp() }
-                .subscribe(::showTime).addTo(disposable)
+        var secondsLeft = period - secondsPassed
+
+        lifecycleScope.launch(Dispatchers.Main) {
+            while (secondsLeft > 0) {
+                showTime(secondsLeft)
+                delay(1000)  // Wait for 1 second
+                secondsLeft--
+            }
+            showOtp()  // Refresh OTP when timer completes
+        }
     }
+
 
     private fun showTime(secondsLeft : Long) {
         val minutes = secondsLeft / 60
