@@ -95,24 +95,14 @@ android {
 
 dependencies {
     // App Core
-    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:0.0.18") {
+    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:0.0.53") {
         isTransitive = true
     }
 
     // Google
     implementation(dependencyNotation = libs.ez.vcard)
     implementation(dependencyNotation = libs.core)
-    implementation(dependencyNotation = libs.play.services.ads)
-    implementation(dependencyNotation = libs.billing)
-    implementation(dependencyNotation = libs.app.update.ktx)
-    implementation(dependencyNotation = libs.review.ktx)
     implementation(dependencyNotation = libs.play.services.code.scanner)
-
-    // Firebase
-    implementation(dependencyNotation = platform(libs.firebase.bom))
-    implementation(dependencyNotation = libs.firebase.analytics.ktx)
-    implementation(dependencyNotation = libs.firebase.crashlytics.ktx)
-    implementation(dependencyNotation = libs.firebase.perf)
 
     // KSP
     ksp(dependencyNotation = libs.androidx.room.compiler)
