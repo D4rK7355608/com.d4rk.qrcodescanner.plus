@@ -36,10 +36,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.SwitchCardComposable
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
-import com.d4rk.qrcodescanner.plus.utils.compose.components.SwitchCardComposable
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -64,7 +63,6 @@ fun ThemeSettingsComposable(activity : ThemeSettingsActivity) {
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.dark_theme)) } , navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(
@@ -100,7 +98,6 @@ fun ThemeSettingsComposable(activity : ThemeSettingsActivity) {
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 RadioButton(selected = (text == themeMode) , onClick = {
-                                    view.weakHapticFeedback()
                                     scope.launch(Dispatchers.IO) {
                                         dataStore.saveThemeMode(text)
                                         dataStore.themeModeState.value = text

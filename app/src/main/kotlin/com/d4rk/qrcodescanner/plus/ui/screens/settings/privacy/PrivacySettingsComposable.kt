@@ -22,14 +22,13 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceCategoryItem
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceItem
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.privacy.ads.AdsSettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.privacy.permissions.PermissionsSettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.privacy.usage.UsageAndDiagnosticsActivity
-import com.d4rk.qrcodescanner.plus.utils.IntentUtils
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceCategoryItem
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,7 +42,6 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
             title = { Text(stringResource(R.string.security_and_privacy)) },
             navigationIcon = {
                 IconButton(onClick = {
-                    view.weakHapticFeedback()
                     activity.finish()
                 }) {
                     Icon(
@@ -64,7 +62,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.privacy_policy),
                     summary = stringResource(id = R.string.summary_preference_settings_privacy_policy),
                     onClick = {
-                        IntentUtils.openUrl(
+                        IntentsHelper.openUrl(
                             context,
                             url = "https://sites.google.com/view/d4rk7355608/more/apps/privacy-policy"
                         )
@@ -72,7 +70,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.terms_of_service) ,
                                summary = stringResource(id = R.string.summary_preference_settings_terms_of_service) ,
                                onClick = {
-                        IntentUtils.openUrl(
+                                   IntentsHelper.openUrl(
                             context,
                             url = "https://sites.google.com/view/d4rk7355608/more/apps/terms-of-service"
                         )
@@ -80,7 +78,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.code_of_conduct),
                     summary = stringResource(id = R.string.summary_preference_settings_code_of_conduct),
                     onClick = {
-                        IntentUtils.openUrl(
+                        IntentsHelper.openUrl(
                             context,
                             url = "https://sites.google.com/view/d4rk7355608/more/code-of-conduct"
                         )
@@ -88,21 +86,21 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.permissions),
                     summary = stringResource(id = R.string.summary_preference_settings_permissions),
                     onClick = {
-                        IntentUtils.openActivity(
+                        IntentsHelper.openActivity(
                             context, PermissionsSettingsActivity::class.java
                         )
                     })
                 PreferenceItem(title = stringResource(R.string.ads),
                     summary = stringResource(id = R.string.summary_preference_settings_ads),
                     onClick = {
-                        IntentUtils.openActivity(
+                        IntentsHelper.openActivity(
                             context, AdsSettingsActivity::class.java
                         )
                     })
                 PreferenceItem(title = stringResource(R.string.usage_and_diagnostics),
                     summary = stringResource(id = R.string.summary_preference_settings_usage_and_diagnostics),
                     onClick = {
-                        IntentUtils.openActivity(
+                        IntentsHelper.openActivity(
                             context, UsageAndDiagnosticsActivity::class.java
                         )
                     })
@@ -112,7 +110,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.legal_notices),
                     summary = stringResource(id = R.string.summary_preference_settings_legal_notices),
                     onClick = {
-                        IntentUtils.openUrl(
+                        IntentsHelper.openUrl(
                             context,
                             url = "https://sites.google.com/view/d4rk7355608/more/apps/legal-notices"
                         )
@@ -120,7 +118,7 @@ fun PrivacySettingsComposable(activity: PrivacySettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.license),
                     summary = stringResource(R.string.summary_preference_settings_license),
                     onClick = {
-                        IntentUtils.openUrl(
+                        IntentsHelper.openUrl(
                             context, url = "https://www.gnu.org/licenses/gpl-3.0"
                         )
                     })

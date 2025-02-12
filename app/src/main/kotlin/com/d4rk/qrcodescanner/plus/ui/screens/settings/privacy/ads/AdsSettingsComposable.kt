@@ -38,12 +38,11 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceItem
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.SwitchCardComposable
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
-import com.d4rk.qrcodescanner.plus.utils.IntentUtils
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.compose.components.SwitchCardComposable
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
@@ -64,7 +63,6 @@ fun AdsSettingsComposable(activity: AdsSettingsActivity) {
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection), topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.ads)) }, navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(
@@ -137,10 +135,9 @@ fun AdsSettingsComposable(activity: AdsSettingsActivity) {
                             )
                         }
                         ClickableText(text = annotatedString, onClick = { offset ->
-                            view.weakHapticFeedback()
                             annotatedString.getStringAnnotations(tag = "URL", offset, offset)
                                 .firstOrNull()?.let { annotation ->
-                                    IntentUtils.openUrl(context , annotation.item)
+                                        IntentsHelper.openUrl(context , annotation.item)
                                 }
                         })
                     }

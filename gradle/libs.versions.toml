@@ -2,6 +2,9 @@
 agp = "8.8.0"
 billing = "7.1.1"
 aboutlibraries = "11.3.0"
+codeScanner = "2.3.2"
+core = "3.5.1"
+ezVcard = "0.12.1"
 firebaseBom = "33.7.0"
 appUpdateKtx = "2.1.0"
 playServicesCodeScanner = "16.1.0"
@@ -18,6 +21,9 @@ billing = { module = "com.android.billingclient:billing", version.ref = "billing
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
+code-scanner = { module = "com.github.yuriy-budiyev:code-scanner", version.ref = "codeScanner" }
+core = { module = "com.google.zxing:core", version.ref = "core" }
+ez-vcard = { module = "com.googlecode.ez-vcard:ez-vcard", version.ref = "ezVcard" }
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }

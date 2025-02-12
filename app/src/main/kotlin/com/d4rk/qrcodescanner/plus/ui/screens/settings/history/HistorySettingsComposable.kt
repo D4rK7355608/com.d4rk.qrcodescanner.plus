@@ -25,11 +25,10 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceItem
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.SwitchPreferenceItem
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.compose.components.SwitchPreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -55,7 +54,6 @@ fun HistorySettingsComposable(activity : HistorySettingsActivity) {
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.history)) } , navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack , contentDescription = null)
@@ -108,7 +106,6 @@ fun HistorySettingsComposable(activity : HistorySettingsActivity) {
                 PreferenceItem(
                     title = stringResource(R.string.clear_history)
                 ) {
-                    view.weakHapticFeedback()
                     // TODO: Add action
                 }
             }

@@ -29,8 +29,6 @@ import androidx.compose.ui.res.stringResource
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
-import com.d4rk.qrcodescanner.plus.utils.compose.components.RadioButtonPreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -48,7 +46,6 @@ fun ChooseSearchEngineScreen(activity : ChooseSearchEngineActivity) {
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.search_engines)) } , navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(
@@ -64,7 +61,7 @@ fun ChooseSearchEngineScreen(activity : ChooseSearchEngineActivity) {
         ) {
             items(SearchEngine.entries) { searchEngine ->
                 val isChecked : Boolean = selectedSearchEngine == searchEngine
-                RadioButtonPreferenceItem(
+                /*RadioButtonPreferenceItem(
                     text = stringResource(id = searchEngine.stringResId()) , isChecked = isChecked
                 ) { newIsChecked ->
                     if (newIsChecked) {
@@ -72,7 +69,7 @@ fun ChooseSearchEngineScreen(activity : ChooseSearchEngineActivity) {
                             dataStore.saveSearchEngine(searchEngine)
                         }
                     }
-                }
+                }*/
             }
         }
     }

@@ -20,10 +20,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceCategoryItem
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceItem
 import com.d4rk.qrcodescanner.plus.R
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceCategoryItem
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -34,7 +33,6 @@ fun PermissionsSettingsComposable(activity: PermissionsSettingsActivity) {
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection), topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.permissions)) }, navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(

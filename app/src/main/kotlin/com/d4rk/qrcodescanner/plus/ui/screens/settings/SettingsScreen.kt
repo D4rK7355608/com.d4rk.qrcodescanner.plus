@@ -29,6 +29,8 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceItem
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.about.AboutSettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.advanced.AdvancedSettingsActivity
@@ -36,10 +38,6 @@ import com.d4rk.qrcodescanner.plus.ui.screens.settings.display.DisplaySettingsAc
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.history.HistorySettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.privacy.PrivacySettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.scanner.ScannerSettingsActivity
-import com.d4rk.qrcodescanner.plus.utils.IntentUtils
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsComposable(activity : SettingsActivity) {
@@ -50,7 +48,6 @@ fun SettingsComposable(activity : SettingsActivity) {
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.settings)) } , navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack , contentDescription = null)
@@ -67,8 +64,8 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.display) ,
                                summary = stringResource(R.string.summary_preference_settings_display) ,
                                onClick = {
-                                   IntentUtils.openActivity(
-                                       context , DisplaySettingsActivity::class.java
+                                   IntentsHelper.openActivity(
+                                       context = context , activityClass = DisplaySettingsActivity::class.java
                                    )
                                })
             }
@@ -77,7 +74,7 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.scanner) ,
                                summary = "Turn on or off scanner features" ,
                                onClick = {
-                                   IntentUtils.openActivity(
+                                   IntentsHelper.openActivity(
                                        context , ScannerSettingsActivity::class.java
                                    )
                                })
@@ -87,7 +84,7 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.history) ,
                                summary = "Customize the history behavior of QR app" ,
                                onClick = {
-                                   IntentUtils.openActivity(
+                                   IntentsHelper.openActivity(
                                        context , HistorySettingsActivity::class.java
                                    )
                                })
@@ -97,7 +94,7 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.notifications) ,
                                summary = stringResource(R.string.summary_preference_settings_notifications) ,
                                onClick = {
-                                   IntentUtils.openAppNotificationSettings(context)
+                                   IntentsHelper.openAppNotificationSettings(context)
                                })
             }
             item {
@@ -105,7 +102,7 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.advanced) ,
                                summary = stringResource(R.string.summary_preference_settings_advanced) ,
                                onClick = {
-                                       IntentUtils.openActivity(
+                                   IntentsHelper.openActivity(
                                            context, AdvancedSettingsActivity::class.java
                                        )
                                })
@@ -115,7 +112,7 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.security_and_privacy) ,
                                summary = stringResource(R.string.summary_preference_settings_privacy_and_security) ,
                                onClick = {
-                                      IntentUtils.openActivity(
+                                   IntentsHelper.openActivity(
                                           context, PrivacySettingsActivity::class.java
                                       )
                                })
@@ -125,7 +122,7 @@ fun SettingsComposable(activity : SettingsActivity) {
                                title = stringResource(R.string.about) ,
                                summary = stringResource(R.string.summary_preference_settings_about) ,
                                onClick = {
-                                   IntentUtils.openActivity(
+                                   IntentsHelper.openActivity(
                                        context , AboutSettingsActivity::class.java
                                    )
                                })

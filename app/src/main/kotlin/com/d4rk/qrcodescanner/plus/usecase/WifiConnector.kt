@@ -8,8 +8,8 @@ import android.net.wifi.WifiEnterpriseConfig
 import android.net.wifi.WifiNetworkSuggestion
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.d4rk.qrcodescanner.plus.extension.toCaps
-import com.d4rk.qrcodescanner.plus.extension.wifiManager
+import com.d4rk.qrcodescanner.plus.utils.extensions.toCaps
+import com.d4rk.qrcodescanner.plus.utils.extensions.wifiManager
 
 object WifiConnector {
     private val hexRegex = """^[\da-f]+$""".toRegex(RegexOption.IGNORE_CASE)

@@ -1,8 +1,8 @@
 package com.d4rk.qrcodescanner.plus.data.model.schema
 
-import com.d4rk.qrcodescanner.plus.extension.joinToStringNotNullOrBlankWithLineSeparator
-import com.d4rk.qrcodescanner.plus.extension.startsWithIgnoreCase
-import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
+import com.d4rk.qrcodescanner.plus.utils.extensions.joinToStringNotNullOrBlankWithLineSeparator
+import com.d4rk.qrcodescanner.plus.utils.extensions.startsWithIgnoreCase
+import com.d4rk.qrcodescanner.plus.utils.extensions.unsafeLazy
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.d4rk.qrcodescanner.plus.model.schema.Schema
 import java.text.SimpleDateFormat

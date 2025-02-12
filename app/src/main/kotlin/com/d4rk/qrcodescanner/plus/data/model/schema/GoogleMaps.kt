@@ -1,6 +1,6 @@
 package com.d4rk.qrcodescanner.plus.data.model.schema
 
-import com.d4rk.qrcodescanner.plus.extension.startsWithAnyIgnoreCase
+import com.d4rk.qrcodescanner.plus.utils.extensions.startsWithAnyIgnoreCase
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.d4rk.qrcodescanner.plus.model.schema.Schema
 

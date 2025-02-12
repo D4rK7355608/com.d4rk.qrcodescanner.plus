@@ -1,7 +1,7 @@
 package com.d4rk.qrcodescanner.plus.data.model.schema
 
 import android.net.Uri
-import com.d4rk.qrcodescanner.plus.extension.appendQueryParameterIfNotNullOrBlank
+import com.d4rk.qrcodescanner.plus.utils.extensions.appendQueryParameterIfNotNullOrBlank
 import com.d4rk.qrcodescanner.plus.model.schema.BarcodeSchema
 import com.d4rk.qrcodescanner.plus.model.schema.Schema
 import java.io.Serializable

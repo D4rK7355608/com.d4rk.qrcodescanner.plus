@@ -32,7 +32,6 @@
         </item>
         <item name="panelMenuListTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog.Centered
         </item>
-        <item name="android:fontFamily">@font/font_poppins</item>
     </style>
 
     <style name="actionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
@@ -44,12 +43,9 @@
     </style>
 
     <style name="switchPreferenceCompatStyle" parent="@style/Preference.SwitchPreferenceCompat.Material">
-        <item name="widgetLayout">@layout/preference_switch_widget_layout</item>
     </style>
 
     <style name="FontTheme" parent="TextAppearance.AppCompat">
-        <item name="fontFamily">@font/font_poppins</item>
-        <item name="android:fontFamily">@font/font_poppins</item>
     </style>
 
     <style name="ScrollStyle">
@@ -96,11 +92,9 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="liftOnScroll">false</item>
-        <item name="liftOnScrollTargetViewId">@id/scroll_view</item>
     </style>
 
     <style name="AppBarLayoutStyle" parent="BaseAppBarLayoutStyle">
         <item name="liftOnScroll">false</item>
-        <item name="liftOnScrollTargetViewId">@id/scroll_view</item>
     </style>
 </resources>

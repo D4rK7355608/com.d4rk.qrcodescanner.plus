@@ -2,8 +2,8 @@ package com.d4rk.qrcodescanner.plus.di
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.d4rk.qrcodescanner.plus.App
-import com.d4rk.qrcodescanner.plus.usecase.BarcodeDatabase
+import com.d4rk.qrcodescanner.plus.data.core.AppCoreManager
+import com.d4rk.qrcodescanner.plus.data.database.BarcodeDatabase
 import com.d4rk.qrcodescanner.plus.usecase.BarcodeImageGenerator
 import com.d4rk.qrcodescanner.plus.usecase.BarcodeImageSaver
 import com.d4rk.qrcodescanner.plus.usecase.BarcodeImageScanner
@@ -16,7 +16,7 @@ import com.d4rk.qrcodescanner.plus.usecase.RotationHelper
 import com.d4rk.qrcodescanner.plus.usecase.Settings
 import com.d4rk.qrcodescanner.plus.usecase.WifiConnector
 
-val App.settings get() = Settings.getInstance(applicationContext)
+val AppCoreManager.settings get() = Settings.getInstance(applicationContext)
 val barcodeParser get() = BarcodeParser
 val barcodeImageScanner get() = BarcodeImageScanner
 val barcodeImageGenerator get() = BarcodeImageGenerator

@@ -3,7 +3,7 @@ package com.d4rk.qrcodescanner.plus.usecase
 import android.content.Context
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatDelegate
-import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
+import com.d4rk.qrcodescanner.plus.utils.extensions.unsafeLazy
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.google.zxing.BarcodeFormat
 

@@ -23,6 +23,10 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -49,17 +53,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="33">
-        <activity android:name=".ui.screens.startup.StartupActivity" />
+
         <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
+            android:name=".ui.screens.startup.StartupActivity"
+            android:noHistory="true"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.screens.main.MainActivity"
             android:exported="true"
-            android:theme="@style/SplashScreenTheme">
+            android:launchMode="singleTask"
+            android:theme="@style/SplashScreenTheme"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
-                <action android:name="com.google.zxing.client.android.SCAN" />
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <meta-data
@@ -68,28 +78,122 @@
         </activity>
 
         <activity
-            android:name=".ui.settings.help.HelpActivity"
-            android:exported="false"
-            android:label="@string/help"
-            android:parentActivityName=".ui.settings.help.HelpActivity" />
+            android:name=".ui.screens.support.SupportActivity"
+            android:parentActivityName=".ui.screens.main.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".ui.settings.SettingsActivity"
+            android:name=".ui.screens.lessons.LessonActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="lesson"
+                    android:pathPrefix="/"
+                    android:scheme="com.d4rk.androidtutorials" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.screens.settings.SettingsActivity"
             android:exported="true"
             android:label="@string/settings"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".ui.screens.main.MainActivity"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".ui.settings.display.DisplaySettingsActivity"
-            android:parentActivityName=".ui.settings.SettingsActivity" />
+            android:name=".ui.screens.settings.display.DisplaySettingsActivity"
+            android:parentActivityName=".ui.screens.settings.SettingsActivity"
+            android:windowSoftInputMode="adjustResize" />
 
         <activity
-            android:name=".ui.settings.display.theme.ThemeSettingsActivity"
-            android:parentActivityName=".ui.settings.display.DisplaySettingsActivity" />
+            android:name=".ui.screens.settings.display.theme.ThemeSettingsActivity"
+            android:parentActivityName=".ui.screens.settings.display.DisplaySettingsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.screens.settings.advanced.AdvancedSettingsActivity"
+            android:parentActivityName=".ui.screens.settings.SettingsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.screens.settings.privacy.PrivacySettingsActivity"
+            android:parentActivityName=".ui.screens.settings.SettingsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.screens.settings.privacy.permissions.PermissionsSettingsActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.screens.settings.privacy.usage.UsageAndDiagnosticsActivity"
+            android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.screens.settings.privacy.ads.AdsSettingsActivity"
+            android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.screens.settings.about.AboutSettingsActivity"
+            android:parentActivityName=".ui.screens.settings.SettingsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.screens.help.HelpActivity"
+            android:parentActivityName=".ui.screens.main.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <activity
             android:name=".ui.settings.scanner.ScannerSettingsActivity"
@@ -105,48 +209,7 @@
             android:name=".ui.settings.history.HistorySettingsActivity"
             android:parentActivityName=".ui.settings.SettingsActivity" />
 
-        <activity
-            android:name=".ui.settings.advanced.AdvancedSettingsActivity"
-            android:parentActivityName=".ui.settings.SettingsActivity" />
 
-        <activity
-            android:name=".ui.settings.privacy.PrivacySettingsActivity"
-            android:parentActivityName=".ui.settings.SettingsActivity" />
-
-        <activity
-            android:name=".ui.settings.privacy.permissions.PermissionsSettingsActivity"
-            android:exported="true"
-            android:parentActivityName=".ui.settings.privacy.PrivacySettingsActivity"
-            android:permission="android.permission.START_VIEW_PERMISSION_USAGE">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
-                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".ui.settings.privacy.usage.UsageAndDiagnosticsActivity"
-            android:parentActivityName=".ui.settings.privacy.PrivacySettingsActivity" />
-
-        <activity
-            android:name=".ui.settings.privacy.ads.AdsSettingsActivity"
-            android:parentActivityName=".ui.settings.privacy.PrivacySettingsActivity" />
-
-
-
-        <activity
-            android:name=".ui.settings.about.AboutSettingsActivity"
-            android:parentActivityName=".ui.settings.SettingsActivity" />
-
-        <activity
-            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
-            android:theme="@style/AppThemeActionBar" />
-
-        <activity
-            android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
-            android:theme="@style/AppThemeActionBar" />
 
 
         <activity
@@ -168,7 +231,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.create.CreateBarcodeActivity"
+            android:name=".ui.screens.create.CreateBarcodeActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true"
             android:theme="@style/AppTheme"
@@ -185,10 +248,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.create.qr.CreateQrCodeAllActivity"
+            android:name=".ui.screens.create.qr.CreateQrCodeAllActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/create_qr_code"
-            android:parentActivityName=".ui.create.qr.CreateQrCodeAllActivity" />
+            android:label="@string/create_qr_code" />
         <activity
             android:name=".ui.screens.create.barcode.CreateBarcodeAllActivity"
             android:configChanges="orientation|screenSize"

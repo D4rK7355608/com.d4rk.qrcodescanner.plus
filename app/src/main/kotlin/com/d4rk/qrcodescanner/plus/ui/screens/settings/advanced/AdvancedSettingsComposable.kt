@@ -22,43 +22,41 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceCategoryItem
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceItem
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.advanced.search.ChooseSearchEngineActivity
-import com.d4rk.qrcodescanner.plus.utils.IntentUtils
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceCategoryItem
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AdvancedSettingsComposable(activity: AdvancedSettingsActivity) {
-    val context: Context = LocalContext.current
-    val view: View = LocalView.current
-    val scrollBehavior: TopAppBarScrollBehavior =
-        TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
-    Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection), topBar = {
-        LargeTopAppBar(title = { Text(stringResource(R.string.advanced)) }, navigationIcon = {
+fun AdvancedSettingsComposable(activity : AdvancedSettingsActivity) {
+    val context : Context = LocalContext.current
+    val view : View = LocalView.current
+    val scrollBehavior : TopAppBarScrollBehavior =
+            TopAppBarDefaults.enterAlwaysScrollBehavior(rememberTopAppBarState())
+    Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
+        LargeTopAppBar(title = { Text(stringResource(R.string.advanced)) } , navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(
-                    Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null
+                    Icons.AutoMirrored.Filled.ArrowBack , contentDescription = null
                 )
             }
-        }, scrollBehavior = scrollBehavior)
+        } , scrollBehavior = scrollBehavior)
     }) { paddingValues ->
         LazyColumn(
             modifier = Modifier
-                .fillMaxHeight()
-                .padding(paddingValues),
+                    .fillMaxHeight()
+                    .padding(paddingValues) ,
         ) {
             item {
                 PreferenceCategoryItem(title = stringResource(R.string.search_engines))
                 PreferenceItem(title = stringResource(R.string.search_engines) ,
                                summary = stringResource(R.string.summary_preference_settings_search_engines) ,
                                onClick = {
-                                   IntentUtils.openActivity(
+                                   IntentsHelper.openActivity(
                                        context , ChooseSearchEngineActivity::class.java
                                    )
                                })
@@ -68,11 +66,11 @@ fun AdvancedSettingsComposable(activity: AdvancedSettingsActivity) {
                 PreferenceItem(title = stringResource(R.string.bug_report) ,
                                summary = stringResource(R.string.summary_preference_settings_bug_report) ,
                                onClick = {
-                        IntentUtils.openUrl(
-                            context,
-                            url = "https://github.com/D4rK7355608/${context.packageName}/issues/new"
-                        )
-                    })
+                                   IntentsHelper.openUrl(
+                                       context = context ,
+                                       url = "https://github.com/D4rK7355608/${context.packageName}/issues/new"
+                                   )
+                               })
             }
         }
     }

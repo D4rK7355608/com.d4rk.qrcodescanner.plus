@@ -31,9 +31,8 @@ import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.d4rk.qrcodescanner.plus.R
-import com.d4rk.qrcodescanner.plus.constants.ui.bottombar.BottomBarRoutes
+import com.d4rk.qrcodescanner.plus.utils.constants.ui.bottombar.BottomBarRoutes
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import kotlinx.coroutines.flow.firstOrNull
 
 @Composable
@@ -54,14 +53,12 @@ fun BottomBarStartupDialog(
         Icon(Icons.Outlined.Home , contentDescription = null)
     } , confirmButton = {
         TextButton(onClick = {
-            view.weakHapticFeedback()
             onStartupSelected(defaultPage.value)
             onDismiss()
         }) {
             Text(stringResource(android.R.string.ok))
         }
     } , dismissButton = {
-        view.weakHapticFeedback()
         TextButton(onClick = onDismiss) {
             Text(stringResource(android.R.string.cancel))
         }
@@ -95,7 +92,6 @@ fun BottomBarStartupDialogContent(
                         RadioButton(
                             selected = selectedPage.value == startupValues[index] ,
                             onClick = {
-                                view.weakHapticFeedback()
                                 selectedPage.value = startupValues[index]
                             })
                         Text(

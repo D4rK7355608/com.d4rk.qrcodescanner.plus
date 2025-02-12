@@ -100,12 +100,13 @@ dependencies {
     }
 
     // Google
+    implementation(dependencyNotation = libs.ez.vcard)
+    implementation(dependencyNotation = libs.core)
     implementation(dependencyNotation = libs.play.services.ads)
     implementation(dependencyNotation = libs.billing)
     implementation(dependencyNotation = libs.app.update.ktx)
     implementation(dependencyNotation = libs.review.ktx)
     implementation(dependencyNotation = libs.play.services.code.scanner)
-    implementation("com.android.volley:volley:1.2.1")
 
     // Firebase
     implementation(dependencyNotation = platform(libs.firebase.bom))
@@ -117,28 +118,20 @@ dependencies {
     ksp(dependencyNotation = libs.androidx.room.compiler)
     implementation(dependencyNotation = libs.androidx.room.ktx)
     implementation(dependencyNotation = libs.androidx.room.runtime)
+    implementation("androidx.room:room-paging:2.6.1") //  TODO: Delete? Maybe!?
 
-
-    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
-
+    // QR Code Scanner
+    implementation(dependencyNotation = libs.code.scanner)
 
     // trash that should be removed
-
-    implementation("com.googlecode.ez-vcard:ez-vcard:0.12.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.3")
-    implementation("androidx.gridlayout:gridlayout:1.0.0")
-    implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
+    //implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    // implementation("com.mayank:simplecropview:1.0.0")
     // implementation("com.github.florent37:singledateandtimepicker:2.2.8")
+    implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("com.airbnb.android:lottie:6.5.0")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
-    // implementation("com.mayank:simplecropview:1.0.0")
     implementation("commons-codec:commons-codec:1.17.1")
     implementation("dev.turingcomplete:kotlin-onetimepassword:2.4.1")
-    implementation("me.zhanghai.android.fastscroll:library:1.3.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
     implementation("androidx.paging:paging-runtime-ktx:3.3.2")
-    implementation("androidx.room:room-paging:2.6.1")
-    implementation("com.google.zxing:core:3.5.1")
 }

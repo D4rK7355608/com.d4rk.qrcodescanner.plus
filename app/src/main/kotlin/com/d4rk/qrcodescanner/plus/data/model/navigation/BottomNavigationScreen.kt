@@ -11,7 +11,7 @@ import androidx.compose.material.icons.sharp.History
 import androidx.compose.material.icons.sharp.QrCode
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.d4rk.qrcodescanner.plus.R
-import com.d4rk.qrcodescanner.plus.constants.ui.bottombar.BottomBarRoutes
+import com.d4rk.qrcodescanner.plus.utils.constants.ui.bottombar.BottomBarRoutes
 
 sealed class BottomNavigationScreen(
     val route: String, val icon: ImageVector, val selectedIcon: ImageVector, val title: Int
@@ -21,16 +21,16 @@ sealed class BottomNavigationScreen(
     )
 
     data object Create : BottomNavigationScreen(
-        BottomBarRoutes.CREATE,
-        Icons.Sharp.Create,
-        Icons.Rounded.Create,
+        BottomBarRoutes.CREATE ,
+        Icons.Sharp.Create ,
+        Icons.Rounded.Create ,
         R.string.create
     )
 
     data object History : BottomNavigationScreen(
-        BottomBarRoutes.HISTORY,
-        Icons.Sharp.History,
-        Icons.Rounded.History,
+        BottomBarRoutes.HISTORY ,
+        Icons.Sharp.History ,
+        Icons.Rounded.History ,
         R.string.history
     )
 }

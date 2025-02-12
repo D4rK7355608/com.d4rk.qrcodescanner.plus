@@ -8,9 +8,9 @@ import android.provider.MediaStore
 import androidx.annotation.RequiresApi
 import com.d4rk.qrcodescanner.plus.data.model.Barcode
 import com.d4rk.qrcodescanner.plus.data.model.ExportBarcode
-import com.d4rk.qrcodescanner.plus.extension.endsWithIgnoreCase
-import com.d4rk.qrcodescanner.plus.extension.formatOrNull
-import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
+import com.d4rk.qrcodescanner.plus.utils.extensions.endsWithIgnoreCase
+import com.d4rk.qrcodescanner.plus.utils.extensions.formatOrNull
+import com.d4rk.qrcodescanner.plus.utils.extensions.unsafeLazy
 import com.google.zxing.BarcodeFormat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

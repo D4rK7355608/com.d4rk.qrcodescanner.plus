@@ -20,7 +20,6 @@
         </item>
         <item name="panelMenuListTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog.Centered
         </item>
-        <item name="android:fontFamily">@font/font_poppins</item>
     </style>
 
     <style name="AppBarLayoutStyle" parent="BaseAppBarLayoutStyle">

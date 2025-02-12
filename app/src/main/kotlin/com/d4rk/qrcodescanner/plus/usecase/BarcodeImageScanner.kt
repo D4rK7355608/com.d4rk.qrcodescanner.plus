@@ -1,7 +1,7 @@
 package com.d4rk.qrcodescanner.plus.usecase
 
 import android.graphics.Bitmap
-import com.d4rk.qrcodescanner.plus.extension.orZero
+import com.d4rk.qrcodescanner.plus.utils.extensions.orZero
 import com.google.zxing.BinaryBitmap
 import com.google.zxing.MultiFormatReader
 import com.google.zxing.RGBLuminanceSource

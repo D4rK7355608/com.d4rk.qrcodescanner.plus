@@ -25,14 +25,13 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.PreferenceItem
+import com.d4rk.android.libs.apptoolkit.ui.components.preferences.SwitchPreferenceItem
+import com.d4rk.android.libs.apptoolkit.utils.helpers.IntentsHelper
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.scanner.camera.ChooseCameraActivity
 import com.d4rk.qrcodescanner.plus.ui.screens.settings.scanner.formats.SupportedFormatsActivity
-import com.d4rk.qrcodescanner.plus.utils.IntentUtils
-import com.d4rk.qrcodescanner.plus.utils.compose.components.PreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.compose.components.SwitchPreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -58,7 +57,6 @@ fun ScannerSettingsComposable(activity: ScannerSettingsActivity) {
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection), topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.scanner)) }, navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
@@ -159,8 +157,7 @@ fun ScannerSettingsComposable(activity: ScannerSettingsActivity) {
                 PreferenceItem(
                     title = stringResource(R.string.camera)
                 ) {
-                    view.weakHapticFeedback()
-                    IntentUtils.openActivity(context , _root_ide_package_.com.d4rk.qrcodescanner.plus.ui.screens.settings.scanner.camera.ChooseCameraActivity::class.java)
+                    IntentsHelper.openActivity(context , _root_ide_package_.com.d4rk.qrcodescanner.plus.ui.screens.settings.scanner.camera.ChooseCameraActivity::class.java)
                 }
             }
 
@@ -168,8 +165,7 @@ fun ScannerSettingsComposable(activity: ScannerSettingsActivity) {
                 PreferenceItem(
                     title = stringResource(R.string.supported_formats)
                 ) {
-                    view.weakHapticFeedback()
-                    IntentUtils.openActivity(context, SupportedFormatsActivity::class.java)
+                    IntentsHelper.openActivity(context, SupportedFormatsActivity::class.java)
                 }
             }
         }

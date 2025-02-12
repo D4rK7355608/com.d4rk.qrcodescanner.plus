@@ -1,8 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/dev_mail"
-        android:icon="@drawable/ic_gmail"
-        android:title="@string/tooltip_mail_to_dev"
-        app:showAsAction="ifRoom" />
-</menu>

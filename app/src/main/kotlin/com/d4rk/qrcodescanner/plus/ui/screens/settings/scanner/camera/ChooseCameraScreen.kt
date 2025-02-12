@@ -27,8 +27,6 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
-import com.d4rk.qrcodescanner.plus.utils.compose.components.RadioButtonPreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -45,7 +43,6 @@ fun ChooseCameraScreen(activity : _root_ide_package_.com.d4rk.qrcodescanner.plus
     Scaffold(modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection) , topBar = {
         LargeTopAppBar(title = { Text(stringResource(R.string.camera)) } , navigationIcon = {
             IconButton(onClick = {
-                view.weakHapticFeedback()
                 activity.finish()
             }) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack , contentDescription = null)
@@ -58,7 +55,7 @@ fun ChooseCameraScreen(activity : _root_ide_package_.com.d4rk.qrcodescanner.plus
                     .padding(paddingValues) ,
         ) {
             item {
-                RadioButtonPreferenceItem(
+                /*RadioButtonPreferenceItem(
                     text = stringResource(R.string.back),
                     isChecked = isBackCamera
                 ) { isChecked ->
@@ -74,7 +71,7 @@ fun ChooseCameraScreen(activity : _root_ide_package_.com.d4rk.qrcodescanner.plus
                     scope.launch {
                         dataStore.saveIsBackCamera(!isChecked)
                     }
-                }
+                }*/
             }
         }
     }

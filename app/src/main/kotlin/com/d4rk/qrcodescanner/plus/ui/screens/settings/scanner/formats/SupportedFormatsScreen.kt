@@ -28,10 +28,8 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.data.datastore.DataStore
-import com.d4rk.qrcodescanner.plus.extension.toStringId
+import com.d4rk.qrcodescanner.plus.utils.extensions.toStringId
 import com.d4rk.qrcodescanner.plus.usecase.SupportedBarcodeFormats
-import com.d4rk.qrcodescanner.plus.utils.compose.components.CheckBoxPreferenceItem
-import com.d4rk.qrcodescanner.plus.utils.haptic.weakHapticFeedback
 import com.google.zxing.BarcodeFormat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -53,7 +51,6 @@ fun SupportedFormatsScreen(activity: SupportedFormatsActivity) {
         LargeTopAppBar(title = { Text(stringResource(R.string.supported_formats)) },
                        navigationIcon = {
                            IconButton(onClick = {
-                               view.weakHapticFeedback()
                                activity.finish()
                            }) {
                                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = null)
@@ -70,14 +67,14 @@ fun SupportedFormatsScreen(activity: SupportedFormatsActivity) {
                 val format: BarcodeFormat = formats[index]
                 val isChecked : Boolean by dataStore.isFormatSelected(format).collectAsState(initial = true)
 
-                CheckBoxPreferenceItem(
+               /* CheckBoxPreferenceItem(
                     title = stringResource(id = format.toStringId()),
                     checked = isChecked
                 ) { newIsChecked ->
                     scope.launch {
                         dataStore.setFormatSelected(format, newIsChecked)
                     }
-                }
+                }*/
             }
         }
     }
