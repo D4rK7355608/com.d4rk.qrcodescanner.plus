@@ -17,11 +17,6 @@
     <string name="beta_program">Beta program</string>
 
 
-
-
-
-
-
     <string name="settings">Settings</string>
 
     <string name="display">Display</string>
@@ -448,4 +443,5 @@
     <string name="hint_11_digits">11 digits</string>
     <string name="hint_text_in_upper_case_without_special_characters">Text in upper case without special characters</string>
     <string name="hint_even_number_of_digits">Even number of digits</string>
+    <string name="title_activity_qr">QrActivity</string>
 </resources>

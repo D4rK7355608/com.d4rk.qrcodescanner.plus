@@ -42,11 +42,9 @@
         <item name="android:popupBackground">@drawable/bg_overflow</item>
     </style>
 
-    <style name="switchPreferenceCompatStyle" parent="@style/Preference.SwitchPreferenceCompat.Material">
-    </style>
+    <style name="switchPreferenceCompatStyle" parent="@style/Preference.SwitchPreferenceCompat.Material"></style>
 
-    <style name="FontTheme" parent="TextAppearance.AppCompat">
-    </style>
+    <style name="FontTheme" parent="TextAppearance.AppCompat"></style>
 
     <style name="ScrollStyle">
         <item name="android:layout_width">match_parent</item>

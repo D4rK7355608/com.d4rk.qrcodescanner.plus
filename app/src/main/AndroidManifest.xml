@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -25,15 +26,17 @@
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false"/>
+        android:required="false" />
 
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
+
             <data android:scheme="https" />
         </intent>
         <intent>
             <action android:name="android.intent.action.PICK" />
+
             <data android:mimeType="vnd.android.cursor.dir/phone_v2" />
         </intent>
     </queries>
@@ -53,12 +56,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="33">
-
+        <activity
+            android:name=".ui.screens.qr.QrActivity"
+            android:exported="false"
+            android:label="@string/title_activity_qr"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.screens.startup.StartupActivity"
             android:noHistory="true"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.main.MainActivity"
             android:exported="true"
@@ -72,16 +78,15 @@
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
         <activity
             android:name=".ui.screens.support.SupportActivity"
             android:parentActivityName=".ui.screens.main.MainActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.lessons.LessonActivity"
             android:exported="true"
@@ -98,7 +103,6 @@
                     android:scheme="com.d4rk.androidtutorials" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.screens.settings.SettingsActivity"
             android:exported="true"
@@ -109,27 +113,22 @@
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.screens.settings.display.DisplaySettingsActivity"
             android:parentActivityName=".ui.screens.settings.SettingsActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.settings.display.theme.ThemeSettingsActivity"
             android:parentActivityName=".ui.screens.settings.display.DisplaySettingsActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.settings.advanced.AdvancedSettingsActivity"
             android:parentActivityName=".ui.screens.settings.SettingsActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.settings.privacy.PrivacySettingsActivity"
             android:parentActivityName=".ui.screens.settings.SettingsActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.settings.privacy.permissions.PermissionsSettingsActivity"
             android:exported="true"
@@ -143,58 +142,22 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.screens.settings.privacy.usage.UsageAndDiagnosticsActivity"
             android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.settings.privacy.ads.AdsSettingsActivity"
             android:parentActivityName=".ui.screens.settings.privacy.PrivacySettingsActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.settings.about.AboutSettingsActivity"
             android:parentActivityName=".ui.screens.settings.SettingsActivity"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.screens.help.HelpActivity"
             android:parentActivityName=".ui.screens.main.MainActivity"
             android:windowSoftInputMode="adjustResize" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <activity
             android:name=".ui.settings.scanner.ScannerSettingsActivity"
             android:parentActivityName=".ui.settings.SettingsActivity" />
@@ -204,14 +167,9 @@
         <activity
             android:name=".ui.settings.scanner.formats.SupportedFormatsActivity"
             android:parentActivityName=".ui.settings.scanner.ScannerSettingsActivity" />
-
         <activity
             android:name=".ui.settings.history.HistorySettingsActivity"
             android:parentActivityName=".ui.settings.SettingsActivity" />
-
-
-
-
         <activity
             android:name=".ui.screens.scan.file.ScanBarcodeFromFileActivity"
             android:configChanges="orientation|screenSize"
@@ -221,12 +179,16 @@
             tools:ignore="AppLinkUrlError">
             <intent-filter android:label="@string/scan_image">
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
             <intent-filter android:label="@string/scan_image">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
@@ -238,12 +200,16 @@
             android:windowSoftInputMode="stateVisible">
             <intent-filter android:label="@string/create_qr_code">
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
             <intent-filter android:label="@string/create_qr_code">
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/x-vcard" />
             </intent-filter>
         </activity>
@@ -284,7 +250,6 @@
             android:configChanges="orientation|screenSize"
             android:label="@string/export_history"
             android:parentActivityName=".ui.screens.history.export.ExportHistoryActivity" />
-
         <activity
             android:name=".ui.settings.advanced.search.ChooseSearchEngineActivity"
             android:configChanges="orientation|screenSize"
@@ -342,14 +307,14 @@
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
-
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
-            android:value="barcode_ui"/>
+            android:value="barcode_ui" />
 
         <property
             android:name="android.adservices.AD_SERVICES_CONFIG"
             android:resource="@xml/gma_ad_services_config"
             tools:replace="android:resource" />
     </application>
+
 </manifest>
