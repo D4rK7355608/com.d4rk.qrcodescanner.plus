@@ -727,13 +727,16 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
         startActivityIfExists(intent)
     }
     private fun startActivityIfExists(intent: Intent) {
-        intent.apply {
-            flags = flags or Intent.FLAG_ACTIVITY_NEW_TASK
-        }
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
-        } else {
-            snackBar(R.string.snack_no_app_found)
+        intent.flags = intent.flags or Intent.FLAG_ACTIVITY_NEW_TASK
+        lifecycleScope.launch {
+            val exists = withContext(Dispatchers.Default) {
+                intent.resolveActivity(packageManager) != null
+            }
+            if (exists) {
+                startActivity(intent)
+            } else {
+                snackBar(R.string.snack_no_app_found)
+            }
         }
     }
     private fun isAppInstalled(appPackage: String?): Boolean {

@@ -64,6 +64,10 @@ Bugs can be reported [here](https://github.com/D4rK7355608/com.d4rk.qrcodescanne
 - QR Codes are not recommended for use with confidential/secret information, as they can be easily decoded by anyone with a smartphone.
 - D4rK QR & Bar Code Scanner Plus uses the ZXing library, which is a popular and open-source library for decoding QR codes. It is available under the Apache License 2.0.
 
+Some QR code types (for example contact cards, OTP or Bitcoin URIs) rely on other applications. If the scanner shows "No app found for this action" please install a compatible contacts, authenticator or wallet app.
+
+The "Scan image" option may not work on some Android 11 Go devices due to system limitations.
+
 ## 💬 Feedback!
 We are constantly updating and improving QR & Bar Code Scanner Plus to give you the best possible experience. If you have any suggested features or improvements, please leave a review. In case something is not working correctly please let me know. When posting a low rating please describe what is wrong to give the possibility to fix that issue.
 
