@@ -17,15 +17,15 @@ import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.extension.textString
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.google.android.material.snackbar.Snackbar
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.first
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 
 class ExportHistoryActivity : BaseActivity() {
     private lateinit var binding: ActivityExportHistoryBinding
-    private val disposable = CompositeDisposable()
     companion object {
         private const val REQUEST_PERMISSIONS_CODE = 101
         private val PERMISSIONS = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -49,10 +49,6 @@ class ExportHistoryActivity : BaseActivity() {
         if (permissionsHelper.areAllPermissionsGranted(grantResults)) {
             exportHistory()
         }
-    }
-    override fun onDestroy() {
-        super.onDestroy()
-        disposable.clear()
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
@@ -85,23 +81,16 @@ class ExportHistoryActivity : BaseActivity() {
             else -> return
         }
         showLoading(true)
-        barcodeDatabase
-            .getAllForExport()
-            .flatMapCompletable { barcodes ->
-                saveFunc(this, fileName, barcodes)
+        lifecycleScope.launch {
+            try {
+                val barcodes = withContext(Dispatchers.IO) { barcodeDatabase.getAllForExport().first() }
+                withContext(Dispatchers.IO) { saveFunc(this@ExportHistoryActivity, fileName, barcodes) }
+                showHistoryExported()
+            } catch (error: Exception) {
+                showLoading(false)
+                showError(error)
             }
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                {
-                    showHistoryExported()
-                },
-                { error ->
-                    showLoading(false)
-                    showError(error)
-                }
-            )
-            .addTo(disposable)
+        }
     }
     private fun showLoading(isLoading: Boolean) {
         binding.progressBarLoading.isVisible = isLoading

@@ -9,14 +9,13 @@ import com.d4rk.qrcodescanner.plus.di.barcodeDatabase
 import com.d4rk.qrcodescanner.plus.extension.showError
 import com.d4rk.qrcodescanner.plus.ui.dialogs.DeleteConfirmationDialogFragment
 import com.d4rk.qrcodescanner.plus.ui.history.export.ExportHistoryActivity
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
     private lateinit var _binding: FragmentBarcodeHistoryBinding
     private val binding get() = _binding
-    private val disposable = CompositeDisposable()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding =  FragmentBarcodeHistoryBinding.inflate(inflater, container, false)
         return binding.root
@@ -31,10 +30,6 @@ class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.List
     override fun onDeleteConfirmed() {
         clearHistory()
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        disposable.clear()
-    }
     private fun initTabs() {
         binding.viewPager.adapter = BarcodeHistoryViewPagerAdapter(requireContext(), childFragmentManager)
         binding.tabLayout.setupWithViewPager(binding.viewPager)
@@ -43,7 +38,12 @@ class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.List
         ExportHistoryActivity.start(requireActivity())
     }
     private fun clearHistory() {
-        barcodeDatabase.deleteAll().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe({
-            }, ::showError).addTo(disposable)
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                withContext(Dispatchers.IO) { barcodeDatabase.deleteAll() }
+            } catch (e: Exception) {
+                showError(e)
+            }
+        }
     }
 }

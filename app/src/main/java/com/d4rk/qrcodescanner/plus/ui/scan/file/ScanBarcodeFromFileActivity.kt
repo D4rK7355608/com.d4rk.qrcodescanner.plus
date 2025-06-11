@@ -28,12 +28,11 @@ import com.d4rk.qrcodescanner.plus.model.Barcode
 import com.d4rk.qrcodescanner.plus.usecase.save
 import com.google.android.material.snackbar.Snackbar
 import com.google.zxing.Result
-import com.jakewharton.rxbinding2.view.touches
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
-import java.util.concurrent.TimeUnit
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 class ScanBarcodeFromFileActivity : BaseActivity() {
     private lateinit var binding: ActivityScanBarcodeFromFileBinding
     private lateinit var pickMediaLauncher: ActivityResultLauncher<Intent>
@@ -47,8 +46,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         }
     }
     private var lastScanResult: Result? = null
-    private val disposable = CompositeDisposable()
-    private val scanDisposable = CompositeDisposable()
+    private var scanJob: Job? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBarcodeFromFileBinding.inflate(layoutInflater)
@@ -80,8 +78,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     }
     override fun onDestroy() {
         super.onDestroy()
-        scanDisposable.clear()
-        disposable.clear()
+        scanJob?.cancel()
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
@@ -129,15 +126,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         }
     }
     private fun handleImageCropAreaChanged() {
-      /*  binding.cropImageView.touches()
-            .filter { it.action == ACTION_UP }
-            .debounce(400, TimeUnit.MILLISECONDS)
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { scanCroppedImage() },
-                { error -> showError(error) }
-            )
-            .addTo(disposable)*/
+        // TODO: implement if needed using coroutines or Flow
     }
     private fun handleScanButtonClicked() {
         binding.buttonScan.setOnClickListener {
@@ -147,21 +136,20 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         }
     }
     private fun scanCroppedImage() {
-        scanDisposable.clear()
+        scanJob?.cancel()
         lastScanResult = null
         //scanCroppedImage(binding.cropImageView.croppedBitmap)
     }
+
     private fun scanCroppedImage(image: Bitmap) {
-        barcodeImageScanner
-            .parse(image)
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { scanResult ->
-                    lastScanResult = scanResult
-                },
-                { error -> showError(error) }
-            )
-            .addTo(scanDisposable)
+        scanJob = lifecycleScope.launch {
+            try {
+                val result = withContext(Dispatchers.Default) { barcodeImageScanner.parse(image) }
+                lastScanResult = result
+            } catch (error: Exception) {
+                showError(error)
+            }
+        }
     }
     private fun saveScanResult() {
         val barcode = lastScanResult?.let(barcodeParser::parseResult) ?: return
@@ -169,18 +157,16 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
             navigateToBarcodeScreen(barcode)
             return
         }
-        barcodeDatabase.save(barcode, settings.doNotSaveDuplicates)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { id ->
-                    navigateToBarcodeScreen(barcode.copy(id = id))
-                },
-                { error ->
-                    showError(error)
+        lifecycleScope.launch {
+            try {
+                val id = withContext(Dispatchers.IO) {
+                    barcodeDatabase.save(barcode, settings.doNotSaveDuplicates)
                 }
-            )
-            .addTo(disposable)
+                navigateToBarcodeScreen(barcode.copy(id = id))
+            } catch (error: Exception) {
+                showError(error)
+            }
+        }
     }
     private fun navigateToBarcodeScreen(barcode: Barcode) {
         BarcodeActivity.start(this, barcode)

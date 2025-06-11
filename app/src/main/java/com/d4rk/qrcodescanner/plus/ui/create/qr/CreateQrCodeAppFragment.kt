@@ -13,14 +13,12 @@ import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.model.schema.App
 import com.d4rk.qrcodescanner.plus.model.schema.Schema
 import com.d4rk.qrcodescanner.plus.ui.create.BaseCreateBarcodeFragment
-import io.reactivex.Single
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 class CreateQrCodeAppFragment : BaseCreateBarcodeFragment() {
     private lateinit var binding: FragmentCreateQrCodeAppBinding
-    private val disposable = CompositeDisposable()
     private val appAdapter by unsafeLazy { AppAdapter(parentActivity) }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentCreateQrCodeAppBinding.inflate(inflater, container, false)
@@ -36,7 +34,6 @@ class CreateQrCodeAppFragment : BaseCreateBarcodeFragment() {
     }
     override fun onDestroyView() {
         super.onDestroyView()
-        disposable.clear()
     }
     private fun initRecyclerView() {
         binding.recyclerViewApps.apply {
@@ -46,20 +43,16 @@ class CreateQrCodeAppFragment : BaseCreateBarcodeFragment() {
     }
     private fun loadApps() {
         showLoading(true)
-        Single.just(getApps())
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { apps ->
-                    showLoading(false)
-                    showApps(apps)
-                },
-                { error ->
-                    showLoading(false)
-                    showError(error)
-                }
-            )
-            .addTo(disposable)
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                val apps = withContext(Dispatchers.IO) { getApps() }
+                showLoading(false)
+                showApps(apps)
+            } catch (error: Exception) {
+                showLoading(false)
+                showError(error)
+            }
+        }
     }
     private fun getApps(): List<ResolveInfo> {
         val mainIntent = Intent(Intent.ACTION_MAIN).apply {

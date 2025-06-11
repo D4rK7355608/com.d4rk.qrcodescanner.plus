@@ -11,12 +11,11 @@ import com.d4rk.qrcodescanner.plus.extension.applySystemWindowInsets
 import com.d4rk.qrcodescanner.plus.extension.orZero
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.model.schema.OtpAuth
-import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
-import java.util.concurrent.TimeUnit
 class OtpActivity : BaseActivity() {
     private lateinit var binding: ActivityBarcodeOtpBinding
     companion object {
@@ -28,7 +27,7 @@ class OtpActivity : BaseActivity() {
             context.startActivity(intent)
         }
     }
-    private val disposable = CompositeDisposable()
+    private var timerJob: Job? = null
     private lateinit var otp: OtpAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +43,7 @@ class OtpActivity : BaseActivity() {
     }
     override fun onDestroy() {
         super.onDestroy()
-        disposable.clear()
+        timerJob?.cancel()
     }
     private fun enableSecurity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
@@ -90,8 +89,16 @@ class OtpActivity : BaseActivity() {
         val period = otp.period ?: 30
         val currentTimeInSeconds = System.currentTimeMillis() / 1000
         val secondsPassed = currentTimeInSeconds % period
-        val secondsLeft = period - secondsPassed
-        Observable.interval(1, TimeUnit.SECONDS).map { it + 1 }.take(secondsLeft).map { secondsLeft - it }.startWith(secondsLeft).observeOn(AndroidSchedulers.mainThread()).doOnComplete { showOtp() }.subscribe(::showTime).addTo(disposable)
+        var secondsLeft = period - secondsPassed
+        timerJob?.cancel()
+        timerJob = lifecycleScope.launch {
+            while (secondsLeft >= 0) {
+                showTime(secondsLeft)
+                delay(1000)
+                secondsLeft--
+            }
+            showOtp()
+        }
     }
     private fun showTime(secondsLeft: Long) {
         val minutes = secondsLeft / 60
