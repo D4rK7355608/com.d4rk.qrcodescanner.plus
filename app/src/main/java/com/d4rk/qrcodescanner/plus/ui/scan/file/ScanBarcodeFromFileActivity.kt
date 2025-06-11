@@ -53,6 +53,26 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBarcodeFromFileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        pickMediaLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode != Activity.RESULT_OK) {
+                    Snackbar.make(binding.root, "Failed to retrieve media.", Snackbar.LENGTH_SHORT).show()
+                } else {
+                    val uri = it.data?.data
+                    if (uri != null) {
+                        /* binding.cropImageView.load(uri)
+                            .execute(object : LoadCallback {
+                                override fun onSuccess() {
+                                    scanCroppedImage()
+                                    binding.cropImageView.invalidate()
+                                }
+                                override fun onError(e: Throwable) {
+                                    showErrorOrRequestPermissions(e)
+                                }
+                            })*/
+                    }
+                }
+            }
         selectImage()
         supportEdgeToEdge()
         handleImageCropAreaChanged()
@@ -73,26 +93,6 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         }
     }
     private fun selectImage() {
-        pickMediaLauncher =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                if (it.resultCode != Activity.RESULT_OK) {
-                    Snackbar.make(binding.root, "Failed to retrieve media.", Snackbar.LENGTH_SHORT).show()
-                } else {
-                    val uri = it.data?.data
-                    if (uri != null) {
-                       /* binding.cropImageView.load(uri)
-                            .execute(object : LoadCallback {
-                                override fun onSuccess() {
-                                    scanCroppedImage()
-                                    binding.cropImageView.invalidate()
-                                }
-                                override fun onError(e: Throwable) {
-                                    showErrorOrRequestPermissions(e)
-                                }
-                            })*/
-                    }
-                }
-            }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && SdkExtensions.getExtensionVersion(Build.VERSION_CODES.R) >= 2) {
             pickMediaLauncher.launch(
                 Intent(MediaStore.ACTION_PICK_IMAGES)
