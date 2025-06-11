@@ -78,6 +78,7 @@ dependencies {
     ksp(dependencyNotation = libs.androidx.room.compiler)
     implementation(dependencyNotation = libs.androidx.room.ktx)
     implementation(dependencyNotation = libs.androidx.room.runtime)
+    implementation(dependencyNotation = libs.androidx.room.paging)
 
    // implementation("androidx.room:room-rxjava2:2.7.1") // todo del asap
     // TODO: Delete soon
@@ -89,7 +90,6 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.9.0")
     implementation("androidx.gridlayout:gridlayout:1.1.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("android.arch.paging:runtime:1.0.1")
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
     implementation("com.airbnb.android:lottie:6.1.0")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
