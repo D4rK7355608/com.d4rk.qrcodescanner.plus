@@ -4,8 +4,6 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
-        //noinspection JcenterRepositoryObsolete
-        jcenter()
         maven(url = "https://jitpack.io")
         mavenCentral()
     }
@@ -21,8 +19,6 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
-        //noinspection JcenterRepositoryObsolete
-        jcenter()
         maven(url = "https://jitpack.io")
         mavenCentral()
     }

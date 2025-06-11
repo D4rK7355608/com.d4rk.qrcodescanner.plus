@@ -1,9 +1,13 @@
 plugins {
-    id("com.android.application") version "8.1.0" apply false
-    id("com.android.library") version "8.1.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
-    id("com.google.devtools.ksp") version "1.9.0-1.0.13" apply false
-    id("com.google.gms.google-services") version "4.3.15" apply false
+    alias(notation = libs.plugins.androidApplication) apply false
+    alias(notation = libs.plugins.androidLibrary) apply false
+    alias(notation = libs.plugins.jetbrainsKotlinAndroid) apply false
+    alias(notation = libs.plugins.jetbrainsKotlinParcelize) apply false
+    alias(notation = libs.plugins.kotlin.serialization) apply false
+    alias(notation = libs.plugins.compose.compiler) apply false
+    alias(notation = libs.plugins.googlePlayServices) apply false
+    alias(notation = libs.plugins.googleFirebase) apply false
+    alias(notation = libs.plugins.devToolsKsp) apply false
+    alias(notation = libs.plugins.about.libraries) apply true
     id("com.google.android.gms.oss-licenses-plugin") version "0.10.6" apply false
-    id("com.google.firebase.crashlytics") version "2.9.2" apply false
 }

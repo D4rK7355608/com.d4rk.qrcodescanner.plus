@@ -15,7 +15,7 @@
         app:cardCornerRadius="24dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/button_scan">
-        <com.mayank.simplecropview.CropImageView
+<!--        <com.mayank.simplecropview.CropImageView
             android:id="@+id/crop_image_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -27,7 +27,7 @@
             custom:scv_handle_size="14dp"
             custom:scv_min_frame_size="50dp"
             custom:scv_touch_padding="8dp"
-            tools:ignore="ImageContrastCheck"/>
+            tools:ignore="ImageContrastCheck"/>-->
     </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.button.MaterialButton
         style="@style/Widget.Material3.Button.ElevatedButton"

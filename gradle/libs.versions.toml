@@ -1,0 +1,25 @@
+[versions]
+agp = "8.10.0"
+aboutlibraries = "11.3.0"
+kotlin = "2.1.21"
+google-services = "4.4.2"
+google-firebase-crashlytics = "3.0.3"
+google-devtools-ksp = "2.1.21-2.0.1"
+roomKtx = "2.7.1"
+
+[libraries]
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomKtx" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+jetbrainsKotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+googlePlayServices = { id = "com.google.gms.google-services", version.ref = "google-services" }
+googleFirebase = { id = "com.google.firebase.crashlytics", version.ref = "google-firebase-crashlytics" }
+devToolsKsp = { id = "com.google.devtools.ksp", version.ref = "google-devtools-ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+about-libraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutlibraries" }
