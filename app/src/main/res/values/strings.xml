@@ -247,7 +247,7 @@
     <string name="snack_copied_to_clipboard">Copied to clipboard! 📋</string>
     <string name="snack_saved_to_downloads">Saved to Downloads!</string>
     <string name="snack_saved_to_gallery">Saved to Gallery</string>
-    <string name="snack_no_app_found">No app found for this action</string>
+    <string name="snack_no_app_found">No app found for this action. Please install a compatible app.</string>
     <string name="snack_feedback">Thanks for rating us! ❤️</string>
     <string name="snack_support">Would you like to support our app? ❤️</string>
     <string name="tooltip_agree">Accept the terms and conditions.</string>
