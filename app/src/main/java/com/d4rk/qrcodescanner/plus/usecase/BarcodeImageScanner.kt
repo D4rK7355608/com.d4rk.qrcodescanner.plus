@@ -6,23 +6,13 @@ import com.google.zxing.MultiFormatReader
 import com.google.zxing.RGBLuminanceSource
 import com.google.zxing.Result
 import com.google.zxing.common.HybridBinarizer
-import io.reactivex.Single
-import io.reactivex.SingleEmitter
-import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 object BarcodeImageScanner {
     private var bitmapBuffer: IntArray? = null
-    fun parse(image: Bitmap): Single<Result> {
-        return Single
-            .create { emitter ->
-                parse(image, emitter)
-            }
-            .subscribeOn(Schedulers.newThread())
-    }
-    private fun parse(image: Bitmap, emitter: SingleEmitter<Result>) {
-        try {
-            emitter.onSuccess(tryParse(image))
-        } catch (ex: Exception) {
-            emitter.onError(ex)
+    suspend fun parse(image: Bitmap): Result {
+        return withContext(Dispatchers.Default) {
+            tryParse(image)
         }
     }
     private fun tryParse(image: Bitmap): Result {

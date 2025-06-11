@@ -30,10 +30,10 @@ import com.d4rk.qrcodescanner.plus.ui.create.qr.*
 import com.d4rk.qrcodescanner.plus.usecase.save
 import com.google.android.material.snackbar.Snackbar
 import com.google.zxing.BarcodeFormat
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
     private lateinit var binding: ActivityCreateBarcodeBinding
@@ -54,7 +54,7 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
             context.startActivity(intent)
         }
     }
-    private val disposable = CompositeDisposable()
+    
     private val barcodeFormat by unsafeLazy {
         BarcodeFormat.values().getOrNull(intent?.getIntExtra(BARCODE_FORMAT_KEY, -1) ?: -1)
             ?: BarcodeFormat.QR_CODE
@@ -287,16 +287,16 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
             navigateToBarcodeScreen(barcode, finish)
             return
         }
-        barcodeDatabase.save(barcode, settings.doNotSaveDuplicates)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(
-                { id ->
-                    navigateToBarcodeScreen(barcode.copy(id = id), finish)
-                },
-                ::showError
-            )
-            .addTo(disposable)
+        lifecycleScope.launch {
+            try {
+                val id = withContext(Dispatchers.IO) {
+                    barcodeDatabase.save(barcode, settings.doNotSaveDuplicates)
+                }
+                navigateToBarcodeScreen(barcode.copy(id = id), finish)
+            } catch (e: Exception) {
+                showError(e)
+            }
+        }
     }
     private fun getCurrentFragment(): BaseCreateBarcodeFragment {
         return supportFragmentManager.findFragmentById(R.id.container) as BaseCreateBarcodeFragment

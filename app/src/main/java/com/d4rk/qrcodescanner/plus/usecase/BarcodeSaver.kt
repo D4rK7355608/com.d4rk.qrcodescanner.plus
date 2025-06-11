@@ -11,7 +11,8 @@ import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.model.Barcode
 import com.d4rk.qrcodescanner.plus.model.ExportBarcode
 import com.google.zxing.BarcodeFormat
-import io.reactivex.Completable
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
@@ -28,46 +29,29 @@ object BarcodeSaver {
     private val dateFormatter by unsafeLazy {
         SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
     }
-    fun saveBarcodeAsJson(context: Context, barcode: Barcode): Completable {
-        return Completable.create { emitter ->
-            try {
-                val json = convertToJson(barcode)
-                saveToDownloads(context, barcode, json, JSON_FILE_EXTENSION, JSON_MIME_TYPE)
-                emitter.onComplete()
-            } catch (ex: Exception) {
-                emitter.onError(ex)
-            }
+    suspend fun saveBarcodeAsJson(context: Context, barcode: Barcode) {
+        withContext(Dispatchers.IO) {
+            val json = convertToJson(barcode)
+            saveToDownloads(context, barcode, json, JSON_FILE_EXTENSION, JSON_MIME_TYPE)
         }
     }
-    fun saveBarcodeAsCsv(context: Context, barcode: Barcode): Completable {
-        return Completable.create { emitter ->
-            try {
-                val csv = convertToCsv(barcode)
-                saveToDownloads(context, barcode, csv, CSV_FILE_EXTENSION, CSV_MIME_TYPE)
-                emitter.onComplete()
-            } catch (ex: Exception) {
-                emitter.onError(ex)
-            }
+
+    suspend fun saveBarcodeAsCsv(context: Context, barcode: Barcode) {
+        withContext(Dispatchers.IO) {
+            val csv = convertToCsv(barcode)
+            saveToDownloads(context, barcode, csv, CSV_FILE_EXTENSION, CSV_MIME_TYPE)
         }
     }
-    fun saveBarcodeHistoryAsJson(context: Context, fileName: String, barcodes: List<ExportBarcode>): Completable {
-        return Completable.create { emitter ->
-            try {
-                trySaveBarcodeHistoryAsJson(context, fileName, barcodes)
-                emitter.onComplete()
-            } catch (ex: Exception) {
-                emitter.onError(ex)
-            }
+
+    suspend fun saveBarcodeHistoryAsJson(context: Context, fileName: String, barcodes: List<ExportBarcode>) {
+        withContext(Dispatchers.IO) {
+            trySaveBarcodeHistoryAsJson(context, fileName, barcodes)
         }
     }
-    fun saveBarcodeHistoryAsCsv(context: Context, fileName: String, barcodes: List<ExportBarcode>): Completable {
-        return Completable.create { emitter ->
-            try {
-                trySaveBarcodeHistoryCsv(context, fileName, barcodes)
-                emitter.onComplete()
-            } catch (ex: Exception) {
-                emitter.onError(ex)
-            }
+
+    suspend fun saveBarcodeHistoryAsCsv(context: Context, fileName: String, barcodes: List<ExportBarcode>) {
+        withContext(Dispatchers.IO) {
+            trySaveBarcodeHistoryCsv(context, fileName, barcodes)
         }
     }
     private fun trySaveBarcodeHistoryAsJson(context: Context, fileName: String, barcodes: List<ExportBarcode>) {

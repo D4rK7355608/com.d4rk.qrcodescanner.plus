@@ -6,24 +6,21 @@ import com.google.zxing.EncodeHintType
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.common.BitMatrix
 import com.journeyapps.barcodescanner.BarcodeEncoder
-import io.reactivex.Single
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 object BarcodeImageGenerator {
     private val encoder = BarcodeEncoder()
     private val writer = MultiFormatWriter()
-    fun generateBitmapAsync(
+    suspend fun generateBitmapAsync(
         barcode: Barcode,
         width: Int,
         height: Int,
         margin: Int = 0,
         codeColor: Int = Color.BLACK,
         backgroundColor: Int = Color.WHITE
-    ): Single<Bitmap> {
-        return Single.create { emitter ->
-            try {
-                emitter.onSuccess(generateBitmap(barcode, width, height, margin, codeColor, backgroundColor))
-            } catch (ex: Exception) {
-                emitter.onError(ex)
-            }
+    ): Bitmap {
+        return withContext(Dispatchers.Default) {
+            generateBitmap(barcode, width, height, margin, codeColor, backgroundColor)
         }
     }
     fun generateBitmap(
@@ -47,13 +44,9 @@ object BarcodeImageGenerator {
             throw Exception("Unable to generate barcode image, ${barcode.format}, ${barcode.text}", ex)
         }
     }
-    fun generateSvgAsync(barcode: Barcode, width: Int, height: Int, margin: Int = 0): Single<String> {
-        return Single.create { emitter ->
-            try {
-                emitter.onSuccess(generateSvg(barcode, width, height, margin))
-            } catch (ex: Exception) {
-                emitter.onError(ex)
-            }
+    suspend fun generateSvgAsync(barcode: Barcode, width: Int, height: Int, margin: Int = 0): String {
+        return withContext(Dispatchers.Default) {
+            generateSvg(barcode, width, height, margin)
         }
     }
     private fun generateSvg(barcode: Barcode, width: Int, height: Int, margin: Int = 0): String {

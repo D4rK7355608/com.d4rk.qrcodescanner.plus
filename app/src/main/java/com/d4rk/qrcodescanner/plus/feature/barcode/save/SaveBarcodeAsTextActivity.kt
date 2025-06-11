@@ -15,10 +15,10 @@ import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.feature.BaseActivity
 import com.d4rk.qrcodescanner.plus.model.Barcode
 import com.google.android.material.snackbar.Snackbar
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.rxkotlin.addTo
-import io.reactivex.schedulers.Schedulers
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 class SaveBarcodeAsTextActivity : BaseActivity() {
     private lateinit var binding: ActivitySaveBarcodeAsTextBinding
@@ -37,7 +37,6 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     private val barcode by unsafeLazy {
         intent?.getSerializableExtra(BARCODE_KEY) as? Barcode ?: throw IllegalArgumentException("No barcode passed")
     }
-    private val disposable = CompositeDisposable()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySaveBarcodeAsTextBinding.inflate(layoutInflater)
@@ -52,10 +51,6 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
         if (permissionsHelper.areAllPermissionsGranted(grantResults)) {
             saveBarcode()
         }
-    }
-    override fun onDestroy() {
-        super.onDestroy()
-        disposable.clear()
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
@@ -80,15 +75,17 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
             else -> return
         }
         showLoading(true)
-        saveFunc(this, barcode).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe({
-                    showBarcodeSaved()
-                },
-                { error ->
-                    showLoading(false)
-                    showError(error)
+        lifecycleScope.launch {
+            try {
+                withContext(Dispatchers.IO) {
+                    saveFunc(this@SaveBarcodeAsTextActivity, barcode)
                 }
-            )
-            .addTo(disposable)
+                showBarcodeSaved()
+            } catch (error: Exception) {
+                showLoading(false)
+                showError(error)
+            }
+        }
     }
     private fun showLoading(isLoading: Boolean) {
         binding.progressBarLoading.isVisible = isLoading
