@@ -49,8 +49,8 @@
                 android:textColor="@android:color/white"/>
             <FrameLayout
                 android:id="@+id/layout_flash_container"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="@id/image_view_flash"
                 app:layout_constraintBottom_toBottomOf="@id/text_view_flash"
                 app:layout_constraintStart_toStartOf="@id/text_view_flash"
@@ -75,8 +75,8 @@
                 android:textColor="@android:color/white"/>
             <FrameLayout
                 android:id="@+id/layout_scan_from_file_container"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="@id/image_view_scan_from_file"
                 app:layout_constraintBottom_toBottomOf="@id/text_view_scan_from_file"
                 app:layout_constraintStart_toStartOf="@id/text_view_scan_from_file"
