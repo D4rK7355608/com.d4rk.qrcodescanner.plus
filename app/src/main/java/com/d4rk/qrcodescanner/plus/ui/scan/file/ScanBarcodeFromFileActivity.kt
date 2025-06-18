@@ -35,7 +35,26 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 class ScanBarcodeFromFileActivity : BaseActivity() {
     private lateinit var binding: ActivityScanBarcodeFromFileBinding
-    private lateinit var pickMediaLauncher: ActivityResultLauncher<Intent>
+    private val pickMediaLauncher: ActivityResultLauncher<Intent> =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode != Activity.RESULT_OK) {
+                Snackbar.make(binding.root, "Failed to retrieve media.", Snackbar.LENGTH_SHORT).show()
+            } else {
+                val uri = it.data?.data
+                if (uri != null) {
+                    /* binding.cropImageView.load(uri)
+                        .execute(object : LoadCallback {
+                            override fun onSuccess() {
+                                scanCroppedImage()
+                                binding.cropImageView.invalidate()
+                            }
+                            override fun onError(e: Throwable) {
+                                showErrorOrRequestPermissions(e)
+                            }
+                        })*/
+                }
+            }
+        }
     companion object {
         private const val CHOOSE_FILE_REQUEST_CODE = 12
         private const val PERMISSIONS_REQUEST_CODE = 14
@@ -51,26 +70,6 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityScanBarcodeFromFileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        pickMediaLauncher =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                if (it.resultCode != Activity.RESULT_OK) {
-                    Snackbar.make(binding.root, "Failed to retrieve media.", Snackbar.LENGTH_SHORT).show()
-                } else {
-                    val uri = it.data?.data
-                    if (uri != null) {
-                        /* binding.cropImageView.load(uri)
-                            .execute(object : LoadCallback {
-                                override fun onSuccess() {
-                                    scanCroppedImage()
-                                    binding.cropImageView.invalidate()
-                                }
-                                override fun onError(e: Throwable) {
-                                    showErrorOrRequestPermissions(e)
-                                }
-                            })*/
-                    }
-                }
-            }
         selectImage()
         supportEdgeToEdge()
         handleImageCropAreaChanged()
