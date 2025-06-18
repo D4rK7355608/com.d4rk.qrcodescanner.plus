@@ -49,7 +49,7 @@ object BarcodeImageGenerator {
             generateSvg(barcode, width, height, margin)
         }
     }
-    private fun generateSvg(barcode: Barcode, width: Int, height: Int, margin: Int = 0): String {
+    fun generateSvg(barcode: Barcode, width: Int, height: Int, margin: Int = 0): String {
         val matrix = writer.encode(
             barcode.text,
             barcode.format,

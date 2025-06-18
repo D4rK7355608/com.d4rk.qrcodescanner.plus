@@ -1,11 +1,11 @@
 [versions]
-agp = "8.10.0"
-aboutlibraries = "11.3.0"
+agp = "8.10.1"
+aboutlibraries = "12.2.3"
 kotlin = "2.1.21"
 google-services = "4.4.2"
-google-firebase-crashlytics = "3.0.3"
+google-firebase-crashlytics = "3.0.4"
 google-devtools-ksp = "2.1.21-2.0.1"
-roomKtx = "2.7.1"
+roomKtx = "2.7.2"
 
 [libraries]
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }

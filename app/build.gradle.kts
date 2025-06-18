@@ -1,3 +1,6 @@
+import java.util.Properties
+import kotlin.toString
+
 plugins {
     alias(notation = libs.plugins.androidApplication)
     alias(notation = libs.plugins.jetbrainsKotlinAndroid)
@@ -11,20 +14,61 @@ plugins {
     id("com.google.android.gms.oss-licenses-plugin")
 }
 android {
-    compileSdk = 35
+    compileSdk = 36
     namespace = "com.d4rk.qrcodescanner.plus"
     defaultConfig {
         applicationId = "com.d4rk.qrcodescanner.plus"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 30
         versionName = "3.1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        resourceConfigurations += listOf("en", "de", "es", "fr", "hi", "hu", "in", "it", "ja", "ro", "ru", "tr", "sv", "bg", "pl", "uk")
+        @Suppress("UnstableApiUsage") androidResources.localeFilters += listOf(
+            "ar-rEG" , "bg-rBG" , "bn-rBD" , "de-rDE" , "en" , "es-rGQ" , "es-rMX" , "fil-rPH" , "fr-rFR" , "hi-rIN" , "hu-rHU" , "in-rID" , "it-rIT" , "ja-rJP" , "ko-rKR" , "pl-rPL" , "pt-rBR" , "ro-rRO" , "ru-rRU" , "sv-rSE" , "th-rTH" , "tr-rTR" , "uk-rUA" , "ur-rPK" , "vi-rVN" , "zh-rTW"
+        )
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+        val githubProps = Properties()
+        val githubFile = rootProject.file("github.properties")
+        val githubToken = if (githubFile.exists()) {
+            githubProps.load(githubFile.inputStream())
+            githubProps["GITHUB_TOKEN"].toString()
+        } else {
+            ""
+        }
+        buildConfigField("String", "GITHUB_TOKEN", "\"$githubToken\"")
     }
+
+    signingConfigs {
+        create("release")
+
+        val signingProps = Properties()
+        val signingFile = rootProject.file("signing.properties")
+
+        if (signingFile.exists()) {
+            signingProps.load(signingFile.inputStream())
+
+            signingConfigs.getByName("release").apply {
+                storeFile = file(signingProps["STORE_FILE"].toString())
+                storePassword = signingProps["STORE_PASSWORD"].toString()
+                keyAlias = signingProps["KEY_ALIAS"].toString()
+                keyPassword = signingProps["KEY_PASSWORD"].toString()
+            }
+        }
+        else {
+            android.buildTypes.getByName("release").signingConfig = null
+        }
+    }
+
     buildTypes {
         release {
-            // signingConfig = signingConfigs.getByName("release")
+            val signingFile = rootProject.file("signing.properties")
+            signingConfig = if (signingFile.exists()) {
+                signingConfigs.getByName("release")
+            } else {
+                null
+            }
             isDebuggable = false
         }
         debug {
@@ -70,7 +114,7 @@ android {
 }
 dependencies {
     // App Core
-    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.12") {
+    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.28") {
         isTransitive = true
     }
 
@@ -91,7 +135,7 @@ dependencies {
     implementation("androidx.gridlayout:gridlayout:1.1.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
-    implementation("com.airbnb.android:lottie:6.1.0")
+    implementation("com.airbnb.android:lottie:6.6.0")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
    // implementation("com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0")
     implementation("commons-codec:commons-codec:1.16.0")
