@@ -29,6 +29,7 @@ class Settings(private val context: Context) {
 
     val barcodeBackgroundColor: Int
         get() = when {
+            AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES && areBarcodeColorsInversed -> Color.BLACK
             AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES && areBarcodeColorsInversed.not() -> Color.WHITE
             else -> Color.TRANSPARENT
         }

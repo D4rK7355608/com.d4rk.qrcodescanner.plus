@@ -141,7 +141,7 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
             scanMode = ScanMode.SINGLE
             isAutoFocusEnabled = true
             isFlashEnabled = settings.flash
-            isTouchFocusEnabled = false
+            isTouchFocusEnabled = true
             decodeCallback = DecodeCallback(::handleScannedBarcode)
             errorCallback = ErrorCallback(::showError)
         }
