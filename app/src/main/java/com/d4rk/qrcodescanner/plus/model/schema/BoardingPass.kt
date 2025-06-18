@@ -86,7 +86,7 @@ class BoardingPass(
                     dateJ, cabin, seat, seq, ticket, selectee,
                     ffAirline, ffNo, fasttrack,
                     text)
-            } catch(e: Exception) {
+            } catch (_: Exception) {
                 return null
             }
         }

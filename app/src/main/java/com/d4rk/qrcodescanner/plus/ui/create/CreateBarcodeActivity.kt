@@ -56,11 +56,11 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
     }
     
     private val barcodeFormat by unsafeLazy {
-        BarcodeFormat.values().getOrNull(intent?.getIntExtra(BARCODE_FORMAT_KEY, -1) ?: -1)
+        BarcodeFormat.entries.getOrNull(intent?.getIntExtra(BARCODE_FORMAT_KEY, -1) ?: -1)
             ?: BarcodeFormat.QR_CODE
     }
     private val barcodeSchema by unsafeLazy {
-        BarcodeSchema.values().getOrNull(intent?.getIntExtra(BARCODE_SCHEMA_KEY, -1) ?: -1)
+        BarcodeSchema.entries.getOrNull(intent?.getIntExtra(BARCODE_SCHEMA_KEY, -1) ?: -1)
     }
     private val defaultText by unsafeLazy {
         intent?.getStringExtra(DEFAULT_TEXT_KEY).orEmpty()
@@ -119,7 +119,6 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
     }
     override fun onDestroy() {
         super.onDestroy()
-        disposable.clear()
     }
     private fun supportEdgeToEdge() {
         binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
@@ -159,7 +158,7 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
     private fun readDataFromVCardUri(uri: Uri): String? {
         val stream = try {
             contentResolver.openInputStream(uri) ?: return null
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             return null
         }
         val fileContent = StringBuilder("")

@@ -117,7 +117,7 @@ object ContactHelper {
     private fun Cursor.getStringOrNull(columnName: String): String? {
         return try {
             getString(getColumnIndex(columnName))
-        } catch (ex: Exception) {
+        } catch (_: Exception) {
             null
         }
     }

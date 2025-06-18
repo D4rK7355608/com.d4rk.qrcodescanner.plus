@@ -605,7 +605,7 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
             if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO || settings.areBarcodeColorsInversed) {
                 binding.layoutBarcodeImageBackground.setPadding(0, 0, 0, 0)
             }
-        } catch (ex: Exception) {
+        } catch (_: Exception) {
             binding.imageViewBarcode.isVisible = false
         }
     }
