@@ -4,7 +4,7 @@ import java.util.Date
 fun DateFormat.parseOrNull(date: String?): Date? {
     return try {
         parse(date.orEmpty())
-    } catch (ex: Exception) {
+    } catch (_: Exception) {
         null
     }
 }
@@ -20,7 +20,7 @@ fun List<DateFormat>.parseOrNull(date: String?): Date? {
 fun DateFormat.formatOrNull(time: Long?): String? {
     return try {
         format(Date(time!!))
-    } catch (ex: Exception) {
+    } catch (_: Exception) {
         null
     }
 }

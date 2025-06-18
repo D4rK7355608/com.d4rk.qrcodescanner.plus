@@ -22,7 +22,7 @@ class NZCovidTracer(
             try {
                 decodedBytes = String(Base64().decode(text.removePrefixIgnoreCase(PREFIX)))
             }
-            catch (e: Exception) {
+            catch (_: Exception) {
                 return null
             }
             try {
@@ -30,7 +30,7 @@ class NZCovidTracer(
                 title = obj.getString("opn")
                 addr = obj.getString("adr")
             }
-            catch (e: JSONException) {
+            catch (_: JSONException) {
                 return null
             }
             addr = addr.replace("\\n", "\n")
