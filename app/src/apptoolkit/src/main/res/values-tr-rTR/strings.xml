@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">İş akışınızı daha verimli hale getirmek için tasarlanmış bu uygulama, görevlerinizde düzenli ve verimli kalmanıza yardımcı olacak temel araçlar ve özellikler sunar. 📱</string>
+    <string name="notification_update_title">Yeni bir güncelleme mevcut!</string>
+    <string name="summary_notification_update">Uygulamanın yeni bir sürümü mevcut. Güncellemek için tıklayın!</string>
+    <string name="notification_last_time_used_title">Uzun zamandır görüşmedik!</string>
+    <string name="default_notification_summary">Sizi bekleyen birçok özellik var. Uygulamayı açın!</string>
+
+    <string name="welcome">Hoş geldiniz</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Devam etmek için Hizmet Şartlarımızı ve Gizlilik Politikamızı okuyun ve kabul edin</string>
+    <string name="agree">Kabul et</string>
+    <string name="error_loading_consent_info">Onay bilgileri yüklenemedi</string>
+
+    <string name="skip_button_text">ATLA</string>
+    <string name="skip_button_content_description">Atla</string>
+    <string name="back_button_content_description">Geri</string>
+    <string name="back_button_text">GERİ</string>
+    <string name="done_button_content_description">Bitti</string>
+    <string name="done_button_text">BİTTİ</string>
+    <string name="next_button_content_description">İleri</string>
+    <string name="next_button_text">İLERİ</string>
+    <string name="onboarding_theme_title">Tarzınızı Seçin</string>
+    <string name="onboarding_theme_subtitle">Uygulamanın nasıl görünmesini istediğinizi seçin.</string>
+    <string name="onboarding_theme_light_desc">Parlak ve enerjik.</string>
+    <string name="onboarding_theme_dark_desc">Gözleri yormaz.</string>
+    <string name="onboarding_theme_system_desc">Cihazınızla eşleşir.</string>
+    <string name="onboarding_amoled_mode_desc">OLED ekranlar için daha derin siyahlar.</string>
+    <string name="selected">Seçili</string>
+    <string name="onboarding_crashlytics_title">Geliştirmemize Yardım Edin</string>
+    <string name="onboarding_crashlytics_description">Uygulamanın anonim kullanım verileri ve kilitlenme raporları göndermesine izin verin. Bu, hataları düzeltmemize ve deneyiminizi iyileştirmemize yardımcı olur. Hiçbir kişisel bilgi toplanmaz.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Veri raporlama aktif.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Veri raporlama pasif.</string>
+    <string name="onboarding_crashlytics_privacy_info">Gizliliğiniz önemlidir. Bu verileri yalnızca hataları düzeltmek ve özellikleri geliştirmek için kullanırız. Daha fazla ayrıntı için lütfen gizlilik politikamızı inceleyin.</string>
+    <string name="learn_more_privacy_policy">Gizlilik Politikamızı İnceleyin</string>
+    <string name="onboarding_crashlytics_title_dialog">Veri Onayını Yönet</string>
+    <string name="onboarding_crashlytics_description_dialog">Lütfen onay tercihlerinizi inceleyip onaylayın. Bu veriler uygulamayı geliştirmemize yardımcı olur ve Gizlilik Politikamıza uygun olarak işlenir.</string>
+    <string name="consent_analytics_storage_description_short">Uygulama kullanım analizi için veri toplanmasına izin verir.</string>
+    <string name="consent_ad_storage_description_short">Reklam amaçlı veri depolamaya izin verir.</string>
+    <string name="consent_ad_user_data_description_short">Reklamlar için kullanıcı verilerinin gönderilmesine izin verir.</string>
+    <string name="consent_ad_personalization_description_short">Kişiselleştirilmiş reklamları etkinleştirir.</string>
+    <string name="onboarding_crashlytics_show_details_button">Ayrıntılı Bilgileri Göster</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Kullanım ve tanılama hakkında ayrıntılı bilgileri göster</string>
+    <string name="button_acknowledge_consents">Kaydet ve Devam Et</string>
+    <string name="button_continue">Devam Et</string>
+    <string name="onboarding_complete_icon_desc">Başlangıç Tamamlandı</string>
+    <string name="onboarding_final_title">Her Şey Hazır!</string>
+    <string name="onboarding_final_description">Deneyiminizi kişiselleştirdiğiniz için teşekkürler. Artık tüm özellikleri keşfetmeye hazırsınız. Keyfini çıkarın!</string>
+
+    <string name="navigation_drawer_open">Gezinti çekmecesini aç</string>
+    <string name="go_back">Geri dön</string>
+    <string name="toast_review_already_done">Derecelendirdiğiniz için teşekkürler!</string>
+
+    <string name="error">Hata</string>
+    <string name="sort_by">Sırala:</string>
+    <string name="app_not_installed">Uygulama yüklü değil</string>
+    <string name="snack_app_updated">Uygulama başarıyla güncellendi</string>
+    <string name="snack_update_failed">Güncelleme işleminde bir sorun oluştu</string>
+    <string name="try_again">Tekrar dene</string>
+    <string name="summary_share_message">Bu harika uygulamaya bir göz atın! Kullanmakta olduğum ve ilginizi çekebilecek bazı harika özelliklere sahip. Play Store\'dan indirilebilir: %1$s</string>
+    <string name="learn_more">Daha fazla bilgi</string>
+    <string name="close">Kapat?</string>
+    <string name="summary_close">Çıkmak istediğinizden emin misiniz?</string>
+
+    <string name="home">Ana sayfa</string>
+
+    <string name="activity_not_found">Etkinlik bulunamadı.</string>
+    <string name="security_error">Bir güvenlik hatası oluştu. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="io_error">Bir giriş/çıkış hatası oluştu. Ağ bağlantınızı veya depolamanızı kontrol edin ve tekrar deneyin.</string>
+    <string name="illegal_argument_error">Geçersiz bir girdi veya argüman sağlandı. Lütfen bilgileri kontrol edin ve tekrar deneyin.</string>
+    <string name="unknown_error">Bilinmeyen bir hata oluştu.</string>
+    <string name="initialization_error">Başlatma başarısız oldu. Lütfen daha sonra tekrar deneyin.</string>
+
+    <string name="settings">Ayarlar</string>
+    <string name="long_settings_label">Uygulama Ayarları</string>
+    <string name="settings_disabled_message">Ayarlar şu anda kullanılamıyor.</string>
+    <string name="settings_placeholder_description">Seçilen bir ayar yok. Ayrıntıları görüntülemek için bir seçenek seçin.</string>
+    <string name="get_help">Yardım al</string>
+    <string name="error_no_settings_found">Ayar bulunamadı</string>
+    <string name="error_invalid_content_key">Geçersiz içerik anahtarı!</string>
+
+    <string name="display">Ekran</string>
+    <string name="summary_preference_settings_display">Uygulamanızın görünümünü ve hissini kişiselleştirin</string>
+
+    <string name="appearance">Görünüm</string>
+    <string name="dark_theme">Koyu tema</string>
+    <string name="will_turn_on_automatically_by_system">Sistem tarafından otomatik olarak açılacak</string>
+    <string name="will_never_turn_on_automatically">Hiçbir zaman otomatik olarak açılmayacak</string>
+    <string name="amoled_mode">AMOLED modu</string>
+    <string name="follow_system">Sistem modunu takip et</string>
+    <string name="light_mode">Aydınlık Mod</string>
+    <string name="dark_mode">Koyu Mod</string>
+    <string name="summary_dark_theme">Koyu tema, pil ömrünüzü uzatmaya yardımcı olmak için derin bir arka plan kullanır</string>
+
+    <string name="dynamic_colors">Dinamik renkler</string>
+    <string name="summary_preference_settings_dynamic_colors">Uygulama temasına duvar kağıtlarından renkler uygula</string>
+
+    <string name="app_behavior">Uygulama davranışı</string>
+    <string name="bounce_buttons">Tıklama animasyonu</string>
+    <string name="summary_preference_settings_bounce_buttons">Tıklanabilir öğelere hafif bir sıçrama animasyonu uygular</string>
+
+    <string name="navigation">Gezinti</string>
+    <string name="startup_page">Başlangıç sayfası</string>
+    <string name="summary_preference_settings_startup_page">Uygulama başlatıldığında görüntülenecek ekranı seçin.</string>
+
+    <string name="language">Dil</string>
+    <string name="summary_preference_settings_language">Uygulamada kullanılan dili değiştirin</string>
+
+    <string name="dialog_startup_subtitle">Tercih ettiğiniz başlangıç sayfasını seçin:</string>
+    <string name="dialog_info_startup">Uygulamanın açılışında kullanıcılara sunulan başlangıç ekranını yapılandırır.</string>
+
+    <string name="select_language_title">Dil Seç</string>
+    <string name="dialog_language_subtitle">Tercih ettiğiniz dili seçin</string>
+    <string name="dialog_info_language">Tercih ettiğiniz dille deneyiminizi kişiselleştirin</string>
+
+    <string name="notifications">Bildirimler</string>
+    <string name="summary_preference_settings_notifications">Uygulama bildirimlerini yönetin</string>
+
+    <string name="app_usage_notifications">Uygulama Kullanım Bildirimleri</string>
+    <string name="update_notifications">Güncelleme Bildirimleri</string>
+
+    <string name="advanced">Gelişmiş</string>
+    <string name="summary_preference_settings_advanced">Daha gelişmiş ayarları keşfedin</string>
+    <string name="issue_title_label">Başlık</string>
+    <string name="issue_description_label">Açıklama</string>
+    <string name="issue_section_label">Sorun</string>
+    <string name="login_section_label">Giriş yap</string>
+    <string name="use_github_account">GitHub hesabıyla gönder</string>
+    <string name="send_anonymously">Anonim gönder</string>
+    <string name="optional_placeholder">(İsteğe bağlı)</string>
+    <string name="issue_username_label">Kullanıcı adı</string>
+    <string name="issue_password_label">Şifre</string>
+    <string name="issue_email_label">E-posta</string>
+    <string name="issue_send">Gönder</string>
+    <string name="cd_expand_device_info">Cihaz bilgisini genişlet veya daralt</string>
+    <string name="view_on_github">GitHub\'a yönlendir</string>
+    <string name="snack_report_success">Rapor başarıyla gönderildi</string>
+    <string name="snack_report_failed">Rapor gönderilemedi</string>
+    <string name="error_invalid_report">Başlık ve açıklama boş olamaz</string>
+    <string name="issue_submitted_successfully">Başarılı bir şekilde gönderilen sorun</string>
+    <string name="open_issue_in_browser">Tarayıcıda açın</string>
+    <string name="open_button_label">Açık sorun</string>
+    <string name="issue_submitted">Sorununuz gönderildi!</string>
+    <string name="error_unauthorized">Yetkisiz: Geçersiz jeton</string>
+    <string name="error_forbidden">Yasak: Yetersiz izinler</string>
+    <string name="error_gone">API uç noktası kaldırıldı</string>
+    <string name="error_unprocessable">Sorun oluşturma için geçersiz veriler</string>
+
+    <string name="error_reporting">Hata raporlama</string>
+    <string name="bug_report">Hata raporu</string>
+    <string name="summary_preference_settings_bug_report">Hata raporları ve istekleri GitHub sorunlar sayfasına gönderin</string>
+    <string name="cache_management">Önbellek Yönetimi</string>
+    <string name="clear_cache">Önbelleği Temizle</string>
+    <string name="summary_preference_settings_clear_cache">Geçici uygulama verilerini temizle.</string>
+    <string name="cache_cleared_success">Önbellek başarıyla temizlendi</string>
+    <string name="cache_cleared_error">Önbellek bazı hatalarla temizlendi</string>
+
+    <string name="security_and_privacy">Güvenlik ve gizlilik</string>
+    <string name="summary_preference_settings_privacy_and_security">Gizlilik ayarlarınızı yönetin</string>
+
+    <string name="privacy">Gizlilik</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+    <string name="summary_preference_settings_privacy_policy">Verilerinizi nasıl ele aldığımızı açıklayan politikayı görüntüleyin</string>
+    <string name="terms_of_service">Hizmet Şartları</string>
+    <string name="summary_preference_settings_terms_of_service">Hizmetimizi kullanırken kabul ettiğiniz şartları gözden geçirin</string>
+    <string name="code_of_conduct">Davranış Kuralları</string>
+    <string name="summary_preference_settings_code_of_conduct">Hizmetimizdeki davranış kurallarını ve yönergelerini anlayın</string>
+
+    <string name="permissions">İzinler</string>
+    <string name="summary_preference_settings_permissions">Hizmetimize verilen izinleri yönetin</string>
+    <string name="normal">Normal</string>
+    <string name="runtime">Çalışma zamanı</string>
+    <string name="storage">Depolama</string>
+    <string name="special">Özel</string>
+    <string name="ad_id">Reklam kimliği [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Uygulamanın, kullanıcının cihazıyla ilişkili reklam tanımlayıcısını almasına ve kullanmasına, kişiselleştirilmiş reklamlar sunmasına, reklam etkinliğini ölçmesine ve Android 13 veya üzeri cihazlarda reklam göstermesine olanak tanır.</string>
+    <string name="internet">İnternet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Uygulamanın hata raporları göndermek veya güncellemeleri kontrol etmek için internet bağlantısı kurmasına olanak tanır.</string>
+    <string name="post_notifications">Bildirim gönder [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Uygulamanın Android 13 veya üzeri sürümlü cihazlarda bildirim görüntülemesine olanak tanır.</string>
+    <string name="access_network_state">Ağ durumuna eriş [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Uygulamanın ağ bağlantısını kontrol etmesine ve Wi-Fi hakkında bilgi almasına (etkinleştirilmiş durum ve bağlı Wi-Fi cihaz adları dahil) olanak tanır.</string>
+    <string name="access_notification_policy">Bildirim politikasına eriş [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Uygulamanın cihazın bildirim politikasına erişmesine ve değiştirmesine, bildirimlerin kullanıcıya nasıl ve ne zaman gösterileceğini kontrol etmesine ve özel bildirim yönetimi özellikleri sunmasına olanak tanır.</string>
+    <string name="billing">Faturalandırma [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Uygulamanın uygulama içi satın alımları ve bağışları işlemek için Google Play Faturalandırma Kitaplığı\'nı kullanmasına olanak tanır.</string>
+    <string name="check_license">Lisansı kontrol et [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Uygulamanın lisans sözleşmesine uygunluğunu doğrulamasına ve fikri mülkiyeti korumak için lisans koşullarını uygulamasına olanak tanır.</string>
+    <string name="foreground_service">Ön plan hizmeti [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Uygulamanın ön planda çalışan hizmetler oluşturmasına ve kullanmasına, onlara diğer arka plan işlemlerine göre öncelik vermesine ve performansı ve güvenilirliği artırmasına olanak tanır.</string>
+    <string name="wake_lock">Cihazı uyanık tut [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Uygulamanın, kritik işlemler sırasında kesintisiz tamamlanmalarını sağlamak için cihazın uyku moduna (ör. ekran karartma veya işlemci uyku modu) geçmesini engellemesine olanak tanır. Bu, pilden tasarruf etmek için idareli kullanılır.</string>
+
+    <string name="ads">Reklamlar</string>
+    <string name="summary_preference_settings_ads">Verilerinizi nasıl kullandığımızı kontrol edin</string>
+
+    <string name="display_ads">Reklam göster</string>
+    <string name="personalized_ads">Kişiselleştirilmiş reklamlar</string>
+    <string name="summary_ads_personalized_ads">Kişisel ilgi alanlarınıza göre reklamları nasıl özelleştirdiğimizi seçin</string>
+    <string name="summary_ads">Size uygun reklamları görün. Kişiselleştirilmiş reklamları yönetin</string>
+    <string name="ads_enabled">Reklamlar etkin</string>
+    <string name="ads_disabled">Reklamlar devre dışı</string>
+    <string name="error_failed_to_load_ads_settings">Reklam ayarları yüklenemedi</string>
+
+    <string name="usage_and_diagnostics">Kullanım ve teşhis</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Deneyimi geliştirmek için veri paylaşın</string>
+    <string name="summary_usage_and_diagnostics">Otomatik teşhis ve kullanım verilerini göndererek deneyiminizi iyileştirin</string>
+    <string name="privacy_settings_title">Gizlilik Ayarları</string>
+    <string name="consent_category_analytics_title">Analiz</string>
+    <string name="consent_category_advertising_title">Kişiselleştirilmiş Reklamcılık</string>
+    <string name="consent_analytics_storage_title">Analiz Verilerini Depola</string>
+    <string name="consent_analytics_storage_description">Analizi ve uygulama performansını iyileştirmek için uygulama kullanımı ve ziyaret süresi gibi verilerin depolanmasına izin verin.</string>
+    <string name="consent_ad_storage_title">Reklam Verilerini Depola</string>
+    <string name="consent_ad_storage_description">Reklam performansını ölçmek ve alakalı reklamlar göstermek için verilerin (cihaz tanımlayıcıları veya çerezler gibi) depolanmasını etkinleştirin.</string>
+    <string name="consent_ad_user_data_title">Reklamlar İçin Veri Gönder</string>
+    <string name="consent_ad_user_data_description">Dönüşümler ve kampanya optimizasyonu gibi reklamla ilgili özellikleri desteklemek için kullanım ve cihaz verilerinin Google\'a gönderilmesine izin verin.</string>
+    <string name="consent_ad_personalization_title">Kişiselleştirilmiş Reklamlar</string>
+    <string name="consent_ad_personalization_description">Google hizmetleri ve uygulamalarındaki etkinliğinize ve tercihlerinize göre kişiselleştirilmiş reklamları etkinleştirin.</string>
+    <string name="privacy_settings_info">Aşağıda veri tercihlerinizi yönetin. Bu ayarları istediğiniz zaman değiştirebilirsiniz. Daha fazla ayrıntı için lütfen <a href="%s">Gizlilik Politikamıza</a> bakın.</string>
+    <string name="learn_more_privacy_policy_settings">Gizlilik Politikamızda daha fazla bilgi edinin</string>
+    <string name="advanced_privacy_settings">Gelişmiş Gizlilik Ayarları</string>
+    <string name="icon_desc_expand_more">Genişlet</string>
+    <string name="icon_desc_expand_less">Daralt</string>
+    <string name="icon_desc_consent_category">Onay kategorisi simgesi</string>
+    <string name="icon_desc_switch_status">Anahtar durum simgesi</string>
+
+    <string name="legal">Yasal</string>
+    <string name="legal_notices">Yasal bildirimler</string>
+    <string name="summary_preference_settings_legal_notices">Hizmetimizle ilgili yasal bilgileri görüntüleyin</string>
+    <string name="license">Lisans</string>
+
+    <string name="about">Hakkında</string>
+    <string name="summary_preference_settings_about">Uygulama hakkında daha fazla bilgi edinin</string>
+
+    <string name="app_info">Uygulama bilgisi</string>
+    <string name="app_build_version">Uygulama sürümü</string>
+    <string name="oss_license_title">Açık kaynak lisansları</string>
+    <string name="summary_preference_settings_oss">Açık kaynak yazılım lisansları hakkında detaylar</string>
+
+    <string name="eula_title">Son Kullanıcı Lisans Sözleşmesi</string>
+    <string name="changelog_title">Uygulama Değişiklik Günlüğü</string>
+    <string name="loading_eula_message">Son Kullanıcı Lisans Sözleşmesi alınıyor…</string>
+    <string name="loading_changelog_message">Değişiklik günlüğü alınıyor…</string>
+    <string name="error_loading_eula_message">Son Kullanıcı Lisans Sözleşmesi yüklenemedi. Lütfen tekrar deneyin.</string>
+    <string name="error_loading_changelog_message">Değişiklik günlüğü yüklenemedi. Lütfen tekrar deneyin.</string>
+
+    <string name="device_info">Cihaz Bilgileri</string>
+    <string name="app_build">Uygulama Yapısı: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Hata ayıklama</string>
+    <string name="release">Yayın</string>
+    <string name="manufacturer">Üretici:</string>
+    <string name="device_model">Cihaz Modeli:</string>
+    <string name="android_version">Android Sürümü:</string>
+    <string name="api_level">API Seviyesi:</string>
+    <string name="snack_device_info_copied">Cihaz bilgileri panoya kopyalandı</string>
+
+    <string name="help_and_feedback">Yardım ve geri bildirim</string>
+    <string name="help">Yardım</string>
+    <string name="faq">SSS</string>
+    <string name="popular_help_resources">Popüler yardım kaynakları</string>
+    <string name="contact_us">Bize ulaşın</string>
+    <string name="contact_us_description">Daha fazla bilgi verin, size yardımcı olalım</string>
+    <string name="view_in_google_play_store">Google Play Store\'da görüntüle</string>
+    <string name="version_info">Sürüm bilgisi</string>
+    <string name="version">Sürüm %1$s</string>
+    <string name="beta_program">Beta programı</string>
+
+    <string name="feedback">Geri bildirim</string>
+
+    <string name="updates">Güncellemeler</string>
+
+    <string name="share">Paylaş</string>
+
+    <string name="support_us">Bizi destekle</string>
+    <string name="paid_support">Ücretli destek</string>
+    <string name="summary_donations">Bağışlarınız sayesinde uygulamamızı geliştirip devam ettirebiliriz. Cömertliğiniz için teşekkür ederiz!</string>
+    <string name="non_paid_support">Ücretsiz destek</string>
+    <string name="web_ad">Web Reklamı</string>
+    <string name="error_failed_to_load_sku_details">SKU ayrıntıları yüklenemedi</string>
+</resources>

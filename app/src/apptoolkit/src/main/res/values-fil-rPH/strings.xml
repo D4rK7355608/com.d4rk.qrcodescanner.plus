@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">Dinisenyo upang pasimplehin ang iyong daloy ng trabaho, ang app na ito ay nagbibigay ng mahahalagang tool at feature upang matulungan kang manatiling organisado at episyente sa anumang gawain. 📱</string>
+    <string name="notification_update_title">May bagong update na available!</string>
+    <string name="summary_notification_update">May bagong bersyon ng app na available. I-click para mag-update!</string>
+    <string name="notification_last_time_used_title">Matagal-tagal na rin!</string>
+    <string name="default_notification_summary">Napakaraming feature ang naghihintay sa iyo. Buksan ang app!</string>
+
+    <string name="welcome">Maligayang pagdating</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Basahin at sumang-ayon sa aming Mga Tuntunin ng Serbisyo at Patakaran sa Privacy upang magpatuloy</string>
+    <string name="agree">Sumang-ayon</string>
+    <string name="error_loading_consent_info">Nabigong i-load ang impormasyon ng pahintulot</string>
+
+    <string name="skip_button_text">LAKTAWAN</string>
+    <string name="skip_button_content_description">Laktawan</string>
+    <string name="back_button_content_description">Bumalik</string>
+    <string name="back_button_text">BUMALIK</string>
+    <string name="done_button_content_description">Tapos na</string>
+    <string name="done_button_text">TAPOS NA</string>
+    <string name="next_button_content_description">Susunod</string>
+    <string name="next_button_text">SUSUNOD</string>
+    <string name="onboarding_theme_title">Piliin ang Iyong Estilo</string>
+    <string name="onboarding_theme_subtitle">Piliin kung paano mo gustong magmukha ang app.</string>
+    <string name="onboarding_theme_light_desc">Maliwanag at masigla.</string>
+    <string name="onboarding_theme_dark_desc">Maginhawa sa mata.</string>
+    <string name="onboarding_theme_system_desc">Tumutugma sa iyong device.</string>
+    <string name="onboarding_amoled_mode_desc">Mas matingkad na itim para sa mga OLED screen.</string>
+    <string name="selected">Napili</string>
+    <string name="onboarding_crashlytics_title">Tulungan Kaming Mapabuti</string>
+    <string name="onboarding_crashlytics_description">Payagan ang app na magpadala ng anonymous na data ng paggamit at mga ulat ng pag-crash. Nakakatulong ito sa amin na ayusin ang mga bug at pagandahin ang iyong karanasan. Walang personal na impormasyon ang kailanman kinokolekta.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Aktibo ang pag-uulat ng data.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Hindi aktibo ang pag-uulat ng data.</string>
+    <string name="onboarding_crashlytics_privacy_info">Mahalaga ang iyong privacy. Ginagamit lang namin ang data na ito para ayusin ang mga bug at pagbutihin ang mga feature. Para sa karagdagang detalye, pakisuri ang aming patakaran sa privacy.</string>
+    <string name="learn_more_privacy_policy">Suriin ang aming Patakaran sa Privacy</string>
+    <string name="onboarding_crashlytics_title_dialog">Pamahalaan ang Pahintulot sa Data</string>
+    <string name="onboarding_crashlytics_description_dialog">Pakisuri at kumpirmahin ang iyong mga kagustuhan sa pahintulot. Nakakatulong ang data na ito sa amin na mapabuti ang app at pinangangasiwaan alinsunod sa aming Patakaran sa Privacy.</string>
+    <string name="consent_analytics_storage_description_short">Pinapayagan ang pagkolekta ng data para sa pagsusuri sa paggamit ng app.</string>
+    <string name="consent_ad_storage_description_short">Pinapayagan ang pag-iimbak ng data para sa mga layunin ng advertising.</string>
+    <string name="consent_ad_user_data_description_short">Pinapayagan ang pagpapadala ng data ng user para sa mga ad.</string>
+    <string name="consent_ad_personalization_description_short">Pinapagana ang personalized na advertising.</string>
+    <string name="onboarding_crashlytics_show_details_button">Ipakita ang Detalyadong Impormasyon</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Ipakita ang detalyadong impormasyon tungkol sa paggamit at diagnostics</string>
+    <string name="button_acknowledge_consents">I-save at Magpatuloy</string>
+    <string name="button_continue">Magpatuloy</string>
+    <string name="onboarding_complete_icon_desc">Kumpleto na ang Onboarding</string>
+    <string name="onboarding_final_title">Handa Ka Na!</string>
+    <string name="onboarding_final_description">Salamat sa pag-personalize ng iyong karanasan. Handa ka na ngayong tuklasin ang lahat ng feature. Magsaya!</string>
+
+    <string name="navigation_drawer_open">Buksan ang navigation drawer</string>
+    <string name="go_back">Bumalik</string>
+    <string name="toast_review_already_done">Salamat sa rating!</string>
+
+    <string name="sort_by">Pagbukud-bukurin ayon sa:</string>
+    <string name="error">Error</string>
+    <string name="app_not_installed">Hindi naka-install ang app</string>
+    <string name="snack_app_updated">Matagumpay na na-update ang app</string>
+    <string name="snack_update_failed">Nakaranas ng isyu ang proseso ng pag-update</string>
+    <string name="try_again">Subukang muli</string>
+    <string name="summary_share_message">Tingnan itong kamangha-manghang app na ginagamit ko! Mayroon itong ilang mga talagang cool na feature na maaaring makita mong interesante. Maaari mo itong i-download mula sa Play Store sa: %1$s</string>
+    <string name="learn_more">Matuto pa</string>
+    <string name="close">Isara?</string>
+    <string name="summary_close">Sigurado ka bang gusto mong lumabas?</string>
+
+    <string name="home">Home</string>
+
+    <string name="activity_not_found">Hindi nahanap ang aktibidad.</string>
+    <string name="security_error">Nagkaroon ng error sa seguridad. Pakisubukan muli mamaya.</string>
+    <string name="io_error">Nagkaroon ng input/output error. Pakisuri ang iyong koneksyon sa network o storage at subukang muli.</string>
+    <string name="illegal_argument_error">Hindi valid na input o argument ang ibinigay. Pakisuri ang impormasyon at subukang muli.</string>
+    <string name="unknown_error">Nagkaroon ng hindi kilalang error.</string>
+    <string name="initialization_error">Nabigo ang initialization. Pakisubukan muli mamaya.</string>
+
+    <string name="settings">Mga Setting</string>
+    <string name="long_settings_label">Mga Setting ng Application</string>
+    <string name="settings_disabled_message">Kasalukuyang hindi available ang mga setting.</string>
+    <string name="settings_placeholder_description">Walang napiling setting. Pumili ng opsyon para tingnan ang mga detalye nito dito.</string>
+    <string name="get_help">Humingi ng tulong</string>
+    <string name="error_no_settings_found">Walang nahanap na mga setting</string>
+    <string name="error_invalid_content_key">Hindi valid na content key!</string>
+
+    <string name="display">Display</string>
+    <string name="summary_preference_settings_display">I-personalize ang itsura at pakiramdam ng iyong app</string>
+
+    <string name="appearance">Itsura</string>
+    <string name="dark_theme">Madilim na tema</string>
+    <string name="will_turn_on_automatically_by_system">Awtomatikong mag-o-on sa pamamagitan ng system</string>
+    <string name="will_never_turn_on_automatically">Hindi kailanman awtomatikong mag-o-on</string>
+    <string name="amoled_mode">AMOLED mode</string>
+    <string name="follow_system">Sundin ang System Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="summary_dark_theme">Gumagamit ang madilim na tema ng malalim na background para makatulong na panatilihing mas matagal ang buhay ng iyong baterya</string>
+
+    <string name="dynamic_colors">Mga dinamikong kulay</string>
+    <string name="summary_preference_settings_dynamic_colors">Ilapat ang mga kulay mula sa mga wallpaper sa tema ng app</string>
+
+    <string name="app_behavior">Gawi ng app</string>
+    <string name="bounce_buttons">Bounce click</string>
+    <string name="summary_preference_settings_bounce_buttons">Naglalapat ng banayad na bounce animation sa lahat ng naki-click na elemento kapag na-click</string>
+
+    <string name="navigation">Nabigasyon</string>
+    <string name="startup_page">Startup page</string>
+    <string name="summary_preference_settings_startup_page">Piliin ang screen na ipapakita kapag nagsimula ang app.</string>
+
+    <string name="language">Wika</string>
+    <string name="summary_preference_settings_language">Binabago ang wikang ginagamit sa app</string>
+
+    <string name="dialog_startup_subtitle">Piliin ang iyong gustong startup page:</string>
+    <string name="dialog_info_startup">Kino-configure ang paunang screen na ipinapakita sa mga user sa paglunsad ng application. Nakakaimpluwensya ang setting na ito sa unang interaksyon ng user sa app at maaaring iakma sa mga partikular na segment ng user o layunin ng produkto.</string>
+
+    <string name="select_language_title">Pumili ng Wika</string>
+    <string name="dialog_language_subtitle">Piliin ang iyong gustong wika</string>
+    <string name="dialog_info_language">I-personalize ang iyong karanasan gamit ang iyong gustong wika. Anumang pagbabago sa wika na gagawin mo ay agad na magkakabisa, na tinitiyak ang isang tuluy-tuloy na karanasan sa iyong napiling wika</string>
+
+    <string name="notifications">Mga Notipikasyon</string>
+    <string name="summary_preference_settings_notifications">Pamahalaan ang mga notipikasyon ng app</string>
+
+    <string name="app_usage_notifications">Mga Notipikasyon sa Paggamit ng App</string>
+    <string name="update_notifications">Mga Notipikasyon sa Update</string>
+
+    <string name="advanced">Advanced</string>
+    <string name="summary_preference_settings_advanced">Galugarin ang mas maraming advanced na setting</string>
+    <string name="issue_title_label">Pamagat</string>
+    <string name="issue_description_label">Paglalarawan</string>
+    <string name="issue_section_label">Isyu</string>
+    <string name="login_section_label">Mag-login</string>
+    <string name="use_github_account">Ipadala gamit ang GitHub account</string>
+    <string name="send_anonymously">Ipadala nang hindi nagpapakilala</string>
+    <string name="optional_placeholder">(Opsyonal)</string>
+    <string name="issue_username_label">Username</string>
+    <string name="issue_password_label">Password</string>
+    <string name="issue_email_label">Email</string>
+    <string name="issue_send">Ipadala</string>
+    <string name="cd_expand_device_info">Palawakin o itago ang impormasyon ng device</string>
+    <string name="view_on_github">I-redirect sa GitHub</string>
+    <string name="snack_report_success">Matagumpay na naipadala ang ulat</string>
+    <string name="snack_report_failed">Nabigo ang pagpapadala ng ulat</string>
+    <string name="error_invalid_report">Hindi maaaring walang laman ang pamagat at paglalarawan</string>
+    <string name="issue_submitted_successfully">Matagumpay na isinumite ang isyu</string>
+    <string name="open_issue_in_browser">Buksan sa browser</string>
+    <string name="open_button_label">Bukas na isyu</string>
+    <string name="issue_submitted">Isinumite ang iyong isyu!</string>
+    <string name="error_unauthorized">Hindi awtorisado: Di -wastong token</string>
+    <string name="error_forbidden">Ipinagbabawal: Hindi sapat na pahintulot</string>
+    <string name="error_gone">Inalis ang endpoint ng API</string>
+    <string name="error_unprocessable">Di -wastong data para sa paglikha ng isyu</string>
+
+    <string name="error_reporting">Pag-uulat ng error</string>
+    <string name="bug_report">Ulat ng bug</string>
+    <string name="summary_preference_settings_bug_report">Magpadala ng mga ulat ng bug at mga hiling na feature sa pahina ng mga isyu ng GitHub repository ng app</string>
+    <string name="cache_management">Pamamahala ng Cache</string>
+    <string name="clear_cache">I-clear ang Cache</string>
+    <string name="summary_preference_settings_clear_cache">I-clear ang pansamantalang data ng application.</string>
+    <string name="cache_cleared_success">Matagumpay na na-clear ang cache</string>
+    <string name="cache_cleared_error">Na-clear ang cache na may ilang error</string>
+
+    <string name="security_and_privacy">Seguridad &amp; Pribasya</string>
+    <string name="summary_preference_settings_privacy_and_security">Pamahalaan ang iyong mga setting ng privacy</string>
+
+    <string name="privacy">Pribasya</string>
+    <string name="privacy_policy">Patakaran sa Privacy</string>
+    <string name="summary_preference_settings_privacy_policy">Tingnan ang patakaran na namamahala kung paano namin hinahawakan ang iyong data</string>
+    <string name="terms_of_service">Mga Tuntunin ng Serbisyo</string>
+    <string name="summary_preference_settings_terms_of_service">Suriin ang mga tuntunin na sinasang-ayunan mo kapag ginagamit ang aming serbisyo</string>
+    <string name="code_of_conduct">Kodigo ng Pag-uugali</string>
+    <string name="summary_preference_settings_code_of_conduct">Unawain ang mga patakaran at alituntunin para sa pag-uugali sa loob ng aming serbisyo</string>
+
+    <string name="permissions">Mga Pahintulot</string>
+    <string name="summary_preference_settings_permissions">Pamahalaan ang mga pahintulot na ibinigay sa aming serbisyo</string>
+    <string name="normal">Normal</string>
+    <string name="runtime">Runtime</string>
+    <string name="storage">Storage</string>
+    <string name="special">Espesyal</string>
+    <string name="ad_id">Ad ID [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Pinapayagan ang app na kunin at gamitin ang advertising identifier na nauugnay sa device ng user, na nagbibigay ng mga personalized na ad, sumusukat sa pagiging epektibo ng ad, at nagpapakita ng mga ad sa mga device na may Android 13 o mas bago.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Pinapayagan ang app na magtatag ng koneksyon sa internet para magpadala ng mga ulat ng error o tumingin ng mga update.</string>
+    <string name="post_notifications">Mag-post ng mga notipikasyon [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Pinapayagan ang app na magpakita ng mga notipikasyon sa mga device na may Android 13 o mas bago.</string>
+    <string name="access_network_state">I-access ang estado ng network [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Pinapayagan ang app na suriin ang koneksyon sa network at kunin ang impormasyon tungkol sa Wi-Fi, kabilang ang enabled status at mga pangalan ng konektadong Wi-Fi device.</string>
+    <string name="access_notification_policy">I-access ang patakaran sa notipikasyon [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Pinapayagan ang app na i-access at baguhin ang patakaran sa notipikasyon ng device, na kinokontrol kung paano at kailan ipinapakita ang mga notipikasyon sa user at nagbibigay ng mga custom na feature sa pamamahala ng notipikasyon.</string>
+    <string name="billing">Pagsingil [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Pinapayagan ang app na gamitin ang Google Play Billing Library para pangasiwaan ang mga in-app na pagbili at donasyon.</string>
+    <string name="check_license">Suriin ang lisensya [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Pinapayagan ang app na i-verify ang pagsunod nito sa kasunduan sa lisensya at ipatupad ang mga tuntunin sa paglilisensya para protektahan ang intellectual property.</string>
+    <string name="foreground_service">Serbisyo sa foreground [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Pinapayagan ang app na lumikha at gumamit ng mga serbisyong tumatakbo sa foreground, na nagbibigay sa kanila ng priyoridad kaysa sa ibang mga proseso sa background at nagpapahusay sa performance at reliability.</string>
+    <string name="wake_lock">Panatilihing gising ang device [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Pinapayagan ang app na pigilan ang device na mag-sleep (hal., pagdidilim ng screen o pag-sleep ng processor) habang may mga kritikal na operasyon para matiyak na makukumpleto ang mga ito nang walang abala. Ginagamit ito nang matipid para makatipid ng baterya.</string>
+
+    <string name="ads">Mga Ad</string>
+    <string name="summary_preference_settings_ads">Kontrolin kung paano namin ginagamit ang iyong impormasyon para ipakita sa iyo ang mga nauugnay na ad</string>
+
+    <string name="display_ads">Ipakita ang mga ad</string>
+    <string name="personalized_ads">Mga personalized na ad</string>
+    <string name="summary_ads_personalized_ads">Piliin kung paano namin pini-personalize ang mga ad para sa iyo batay sa iyong mga interes</string>
+    <string name="summary_ads">Tingnan ang mga ad na nauugnay sa iyo. Pamahalaan ang impormasyong ginagamit para ipakita ang mga personalized na ad batay sa iyong aktibidad sa app. Maaari mong palaging i-off ang personalization dito.\n</string>
+    <string name="ads_enabled">Naka-enable ang mga ad</string>
+    <string name="ads_disabled">Naka-disable ang mga ad</string>
+    <string name="error_failed_to_load_ads_settings">Nabigong i-load ang mga setting ng ad</string>
+
+    <string name="usage_and_diagnostics">Paggamit at mga diagnostic</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Ibahagi ang data para makatulong na mapabuti ang karanasan sa loob ng app</string>
+    <string name="summary_usage_and_diagnostics">Tumulong na mapabuti ang iyong karanasan sa pamamagitan ng awtomatikong pagpapadala ng data ng diagnostic, device, at paggamit ng app sa amin. Makakatulong ito na mapabuti ang performance ng app, katatagan, at iba pang mga pagpapahusay. Makakatulong din ang ilang pinagsama-samang data sa aming mga app.\n\nIto ay pangkalahatang impormasyon tungkol sa iyong device at kung paano mo ginagamit ang aming mga app (tulad ng antas ng baterya, aktibidad ng system at app, at mga error). Gagamitin ang data para mapabuti ang aming mga app\n\nHindi naaapektuhan ng pag-off sa feature na ito ang kakayahan ng iyong device na ipadala ang impormasyong kailangan para sa mahahalagang serbisyo tulad ng mga update sa app at seguridad.\n</string>
+    <string name="privacy_settings_title">Mga Setting ng Privacy</string>
+    <string name="consent_category_analytics_title">Analytics</string>
+    <string name="consent_category_advertising_title">Personalized na Advertising</string>
+    <string name="consent_analytics_storage_title">Mag-imbak ng Data ng Analytics</string>
+    <string name="consent_analytics_storage_description">Payagan ang pag-iimbak ng data tulad ng paggamit ng app at tagal ng pagbisita para mapahusay ang analytics at performance ng app.</string>
+    <string name="consent_ad_storage_title">Mag-imbak ng Data ng Advertising</string>
+    <string name="consent_ad_storage_description">Paganahin ang pag-iimbak ng data (tulad ng mga identifier ng device o cookies) para sa pagsukat ng performance ng ad at pagpapakita ng mga nauugnay na ad.</string>
+    <string name="consent_ad_user_data_title">Magpadala ng Data para sa Mga Ad</string>
+    <string name="consent_ad_user_data_description">Payagan ang pagpapadala ng data ng paggamit at device sa Google para suportahan ang mga feature na nauugnay sa ad tulad ng mga conversion at pag-optimize ng campaign.</string>
+    <string name="consent_ad_personalization_title">Mga Personalized na Ad</string>
+    <string name="consent_ad_personalization_description">Paganahin ang mga personalized na ad batay sa iyong aktibidad at mga kagustuhan sa mga serbisyo at app ng Google.</string>
+    <string name="privacy_settings_info">Pamahalaan ang iyong mga kagustuhan sa data sa ibaba. Maaari mong baguhin ang mga setting na ito anumang oras. Para sa higit pang detalye, pakitingnan ang aming <a href="%s">Patakaran sa Privacy</a>.</string>
+    <string name="learn_more_privacy_policy_settings">Matuto pa sa aming Patakaran sa Privacy</string>
+    <string name="advanced_privacy_settings">Mga Advanced na Setting ng Privacy</string>
+    <string name="icon_desc_expand_more">Palawakin pa</string>
+    <string name="icon_desc_expand_less">I-collapse</string>
+    <string name="icon_desc_consent_category">Icon ng kategorya ng pahintulot</string>
+    <string name="icon_desc_switch_status">Icon ng status ng switch</string>
+
+    <string name="legal">Legal</string>
+    <string name="legal_notices">Mga legal na paunawa</string>
+    <string name="summary_preference_settings_legal_notices">Tingnan ang legal na impormasyon tungkol sa aming serbisyo</string>
+    <string name="license">Lisensya</string>
+
+    <string name="about">Tungkol sa</string>
+    <string name="summary_preference_settings_about">Matuto pa tungkol sa app</string>
+
+    <string name="app_info">Impormasyon ng app</string>
+    <string name="app_build_version">Bersyon ng build ng application</string>
+    <string name="oss_license_title">Mga lisensya ng open source</string>
+    <string name="summary_preference_settings_oss">Mga detalye ng lisensya para sa open source software</string>
+
+    <string name="eula_title">EULA</string>
+    <string name="changelog_title">Changelog ng App</string>
+    <string name="loading_eula_message">Kinukuha ang End User License Agreement…</string>
+    <string name="loading_changelog_message">Kinukuha ang changelog ng application…</string>
+    <string name="error_loading_eula_message">Hindi ma-load ang End User License Agreement. Pakisubukan muli.</string>
+    <string name="error_loading_changelog_message">Hindi ma-load ang changelog ng application. Pakisubukan muli.</string>
+
+    <string name="device_info">Impormasyon ng Device</string>
+    <string name="app_build">Build ng App: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Debug</string>
+    <string name="release">Release</string>
+    <string name="manufacturer">Manufacturer:</string>
+    <string name="device_model">Modelo ng Device:</string>
+    <string name="android_version">Bersyon ng Android:</string>
+    <string name="api_level">Antas ng API:</string>
+    <string name="snack_device_info_copied">Nakopya sa clipboard ang impormasyon ng device</string>
+
+    <string name="help_and_feedback">Tulong &amp; Feedback</string>
+    <string name="help">Tulong</string>
+    <string name="faq">FAQ</string>
+    <string name="popular_help_resources">Mga sikat na mapagkukunan ng tulong</string>
+    <string name="contact_us">Makipag-ugnayan sa amin</string>
+    <string name="contact_us_description">Sabihin sa amin ang higit pa at tutulungan ka naming makarating doon</string>
+    <string name="view_in_google_play_store">Tingnan sa Google Play Store</string>
+    <string name="version_info">Impormasyon ng bersyon</string>
+    <string name="version">Bersyon %1$s</string>
+    <string name="beta_program">Beta program</string>
+
+    <string name="feedback">Feedback</string>
+
+    <string name="updates">Mga Update</string>
+
+    <string name="share">Ibahagi</string>
+
+    <string name="support_us">Suportahan Kami</string>
+    <string name="paid_support">Bayad na Suporta</string>
+    <string name="summary_donations">Gaano man kalaki ang iyong ido-donate, matutulungan mo kaming panatilihing tumatakbo ang aming app at mapabuti ang aming mga feature. Pinahahalagahan namin ang iyong kabutihang-loob at kabaitan!</string>
+    <string name="non_paid_support">Hindi Bayad na Suporta</string>
+    <string name="web_ad">Web Ad</string>
+    <string name="error_failed_to_load_sku_details">Nabigong i-load ang mga detalye ng SKU</string>
+</resources>

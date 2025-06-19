@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="preference_language_entries">
+        <item>@string/arabic</item>
+        <item>@string/bengali</item>
+        <item>@string/brazilian_portuguese</item>
+        <item>@string/bulgarian</item>
+        <item>@string/english</item>
+        <item>@string/filipino</item>
+        <item>@string/french</item>
+        <item>@string/german</item>
+        <item>@string/hindi</item>
+        <item>@string/hungarian</item>
+        <item>@string/indonesian</item>
+        <item>@string/italian</item>
+        <item>@string/japanese</item>
+        <item>@string/korean</item>
+        <item>@string/polish</item>
+        <item>@string/romanian</item>
+        <item>@string/russian</item>
+        <item>@string/spanish</item>
+        <item>@string/spanish_mexico</item>
+        <item>@string/swedish</item>
+        <item>@string/thai</item>
+        <item>@string/traditional_chinese</item>
+        <item>@string/turkish</item>
+        <item>@string/ukrainian</item>
+        <item>@string/urdu</item>
+        <item>@string/vietnamese</item>
+    </string-array>
+
+    <string-array name="preference_language_values">
+        <item>ar</item>
+        <item>bn</item>
+        <item>pt</item>
+        <item>bg</item>
+        <item>en</item>
+        <item>fil</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>hi</item>
+        <item>hu</item>
+        <item>in</item>
+        <item>it</item>
+        <item>ja</item>
+        <item>ko</item>
+        <item>pl</item>
+        <item>ro</item>
+        <item>ru</item>
+        <item>es</item>
+        <item>es-MX</item>
+        <item>sv</item>
+        <item>th</item>
+        <item>zh-Hant</item>
+        <item>tr</item>
+        <item>uk</item>
+        <item>ur</item>
+        <item>vi</item>
+    </string-array>
+</resources>

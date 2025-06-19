@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">Цей додаток створений для оптимізації вашого робочого процесу, надаючи важливі інструменти та функції для підтримання порядку та ефективності у виконанні будь-яких завдань. 📱</string>
+    <string name="notification_update_title">Доступне нове оновлення!</string>
+    <string name="summary_notification_update">Доступна нова версія додатка. Натисніть, щоб оновити!</string>
+    <string name="notification_last_time_used_title">Минуло багато часу!</string>
+    <string name="default_notification_summary">На вас чекає багато нових функцій. Відкрийте додаток!</string>
+
+    <string name="welcome">Ласкаво просимо</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Прочитайте та погодьтеся з нашими Умовами використання та Політикою конфіденційності, щоб продовжити</string>
+    <string name="agree">Погодитися</string>
+    <string name="error_loading_consent_info">Не вдалося завантажити інформацію про згоду</string>
+
+    <string name="skip_button_text">ПРОПУСТИТИ</string>
+    <string name="skip_button_content_description">Пропустити</string>
+    <string name="back_button_content_description">Назад</string>
+    <string name="back_button_text">НАЗАД</string>
+    <string name="done_button_content_description">Готово</string>
+    <string name="done_button_text">ГОТОВО</string>
+    <string name="next_button_content_description">Далі</string>
+    <string name="next_button_text">ДАЛІ</string>
+    <string name="onboarding_theme_title">Оберіть свій стиль</string>
+    <string name="onboarding_theme_subtitle">Виберіть, як має виглядати додаток.</string>
+    <string name="onboarding_theme_light_desc">Яскравий та енергійний.</string>
+    <string name="onboarding_theme_dark_desc">Приємний для очей.</string>
+    <string name="onboarding_theme_system_desc">Відповідає налаштуванням вашого пристрою.</string>
+    <string name="onboarding_amoled_mode_desc">Глибші чорні кольори для OLED екранів.</string>
+    <string name="selected">Вибрано</string>
+    <string name="onboarding_crashlytics_title">Допоможіть нам покращити</string>
+    <string name="onboarding_crashlytics_description">Дозвольте додатку надсилати анонімні дані про використання та звіти про збої. Це допомагає нам виправляти помилки та покращувати ваш досвід. Особиста інформація ніколи не збирається.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Звітність даних активна.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Звітність даних неактивна.</string>
+    <string name="onboarding_crashlytics_privacy_info">Ваша конфіденційність важлива. Ми використовуємо ці дані лише для виправлення помилок та покращення функцій. Для отримання додаткової інформації, будь ласка, перегляньте нашу політику конфіденційності.</string>
+    <string name="learn_more_privacy_policy">Переглянути нашу Політику конфіденційності</string>
+    <string name="onboarding_crashlytics_title_dialog">Керування згодою на використання даних</string>
+    <string name="onboarding_crashlytics_description_dialog">Будь ласка, перегляньте та підтвердьте ваші налаштування згоди. Ці дані допомагають нам покращувати застосунок та обробляються згідно з нашою Політикою конфіденційності.</string>
+    <string name="consent_analytics_storage_description_short">Дозволяє збір даних для аналізу використання застосунку.</string>
+    <string name="consent_ad_storage_description_short">Дозволяє зберігання даних для рекламних цілей.</string>
+    <string name="consent_ad_user_data_description_short">Дозволяє надсилання даних користувача для реклами.</string>
+    <string name="consent_ad_personalization_description_short">Вмикає персоналізовану рекламу.</string>
+    <string name="onboarding_crashlytics_show_details_button">Показати детальну інформацію</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Показати детальну інформацію про використання та діагностику</string>
+    <string name="button_acknowledge_consents">Зберегти та продовжити</string>
+    <string name="button_continue">Продовжити</string>
+    <string name="onboarding_complete_icon_desc">Початкове налаштування завершено</string>
+    <string name="onboarding_final_title">Ви все налаштували!</string>
+    <string name="onboarding_final_description">Дякуємо за персоналізацію вашого досвіду. Тепер ви готові досліджувати всі функції. Насолоджуйтесь!</string>
+
+    <string name="navigation_drawer_open">Відкрити меню навігації</string>
+    <string name="go_back">Повернутися</string>
+    <string name="toast_review_already_done">Дякую за рейтинг!</string>
+
+    <string name="error">Помилка</string>
+    <string name="sort_by">Сортувати за:</string>
+    <string name="app_not_installed">Додаток не встановлено</string>
+    <string name="snack_app_updated">Додаток успішно оновлено</string>
+    <string name="snack_update_failed">Виникла проблема під час оновлення</string>
+    <string name="try_again">Спробувати знову</string>
+    <string name="summary_share_message">Перегляньте цей чудовий додаток, яким я користуюся! У ньому є цікаві функції, які можуть вас зацікавити. Ви можете завантажити його з Play Store за посиланням: %1$s</string>
+    <string name="learn_more">Дізнатися більше</string>
+    <string name="close">Закрити?</string>
+    <string name="summary_close">Ви впевнені, що хочете вийти?</string>
+
+    <string name="home">Головна</string>
+
+    <string name="activity_not_found">Активність не знайдено.</string>
+    <string name="security_error">Виникла помилка безпеки. Будь ласка, спробуйте пізніше.</string>
+    <string name="io_error">Виникла помилка вводу/виводу. Перевірте з\'єднання з мережею або сховище та спробуйте ще раз.</string>
+    <string name="illegal_argument_error">Введено неправильний параметр або аргумент. Перевірте інформацію та спробуйте ще раз.</string>
+    <string name="unknown_error">Виникла невідома помилка.</string>
+    <string name="initialization_error">Ініціалізація не вдалася. Будь ласка, спробуйте пізніше.</string>
+
+    <string name="settings">Налаштування</string>
+    <string name="long_settings_label">Налаштування додатку</string>
+    <string name="settings_disabled_message">Наразі налаштування недоступні.</string>
+    <string name="settings_placeholder_description">Налаштування не вибрано. Виберіть опцію, щоб переглянути її деталі.</string>
+    <string name="get_help">Отримати допомогу</string>
+    <string name="error_no_settings_found">Налаштування не знайдено</string>
+    <string name="error_invalid_content_key">Недійсний ключ вмісту!</string>
+
+    <string name="display">Екран</string>
+    <string name="summary_preference_settings_display">Персоналізуйте вигляд та функціонал вашого додатка</string>
+
+    <string name="appearance">Зовнішній вигляд</string>
+    <string name="dark_theme">Темна тема</string>
+    <string name="will_turn_on_automatically_by_system">Автоматично увімкнеться системою</string>
+    <string name="will_never_turn_on_automatically">Ніколи не буде ввімкнено автоматично</string>
+    <string name="amoled_mode">Режим AMOLED</string>
+    <string name="follow_system">Дотримуватися системного режиму</string>
+    <string name="light_mode">Світла тема</string>
+    <string name="dark_mode">Темна тема</string>
+    <string name="summary_dark_theme">Темна тема використовує глибокий фон для збереження заряду батареї</string>
+
+    <string name="dynamic_colors">Динамічні кольори</string>
+    <string name="summary_preference_settings_dynamic_colors">Застосуйте кольори з шпалер до теми додатка</string>
+
+    <string name="app_behavior">Робота додатка</string>
+    <string name="bounce_buttons">Анімація натискання</string>
+    <string name="summary_preference_settings_bounce_buttons">Додає легку анімацію відскоку для всіх натисканих елементів</string>
+
+    <string name="navigation">Навігація</string>
+    <string name="startup_page">Початкова сторінка</string>
+    <string name="summary_preference_settings_startup_page">Виберіть екран, який відображатиметься при запуску додатка.</string>
+
+    <string name="language">Мова</string>
+    <string name="summary_preference_settings_language">Змінити мову додатка</string>
+
+    <string name="dialog_startup_subtitle">Виберіть бажану початкову сторінку:</string>
+    <string name="dialog_info_startup">Налаштуйте початковий екран, який буде відображатися при запуску додатка.</string>
+
+    <string name="select_language_title">Виберіть мову</string>
+    <string name="dialog_language_subtitle">Виберіть бажану мову</string>
+    <string name="dialog_info_language">Персоналізуйте свій досвід, використовуючи бажану мову</string>
+
+    <string name="notifications">Сповіщення</string>
+    <string name="summary_preference_settings_notifications">Керуйте сповіщеннями додатка</string>
+
+    <string name="app_usage_notifications">Сповіщення про використання додатка</string>
+    <string name="update_notifications">Сповіщення про оновлення</string>
+
+    <string name="advanced">Додаткові налаштування</string>
+    <string name="summary_preference_settings_advanced">Досліджуйте більше розширених налаштувань</string>
+    <string name="issue_title_label">Заголовок</string>
+    <string name="issue_description_label">Опис</string>
+    <string name="issue_section_label">Проблема</string>
+    <string name="login_section_label">Увійти</string>
+    <string name="use_github_account">Надіслати через обліковий запис GitHub</string>
+    <string name="send_anonymously">Надіслати анонімно</string>
+    <string name="optional_placeholder">(Необов\'язково)</string>
+    <string name="issue_username_label">Ім\'я користувача</string>
+    <string name="issue_password_label">Пароль</string>
+    <string name="issue_email_label">Електронна пошта</string>
+    <string name="issue_send">Надіслати</string>
+    <string name="cd_expand_device_info">Розгорнути або згорнути інформацію про пристрій</string>
+    <string name="view_on_github">Перенаправити на GitHub</string>
+    <string name="snack_report_success">Звіт успішно надіслано</string>
+    <string name="snack_report_failed">Не вдалося надіслати звіт</string>
+    <string name="error_invalid_report">Заголовок і опис не можуть бути порожніми</string>
+    <string name="issue_submitted_successfully">Проблема подано успішно</string>
+    <string name="open_issue_in_browser">Відкрито в браузері</string>
+    <string name="open_button_label">Відкритий випуск</string>
+    <string name="issue_submitted">Ваше питання було подано!</string>
+    <string name="error_unauthorized">Несанкціонований: Недійсний маркер</string>
+    <string name="error_forbidden">Заборонено: недостатньо дозволів</string>
+    <string name="error_gone">Кінцева точка API видалена</string>
+    <string name="error_unprocessable">Недійсні дані для створення випусків</string>
+
+    <string name="error_reporting">Звіт про помилки</string>
+    <string name="bug_report">Звіт про помилку</string>
+    <string name="summary_preference_settings_bug_report">Надішліть звіти про помилки та побажання через сторінку GitHub</string>
+    <string name="cache_management">Управління кешем</string>
+    <string name="clear_cache">Очистити кеш</string>
+    <string name="summary_preference_settings_clear_cache">Очистити тимчасові дані застосунку.</string>
+    <string name="cache_cleared_success">Кеш успішно очищено</string>
+    <string name="cache_cleared_error">Кеш очищено з деякими помилками</string>
+
+    <string name="security_and_privacy">Безпека та конфіденційність</string>
+    <string name="summary_preference_settings_privacy_and_security">Керуйте своїми налаштуваннями конфіденційності</string>
+
+    <string name="privacy">Конфіденційність</string>
+    <string name="privacy_policy">Політика конфіденційності</string>
+    <string name="summary_preference_settings_privacy_policy">Перегляньте політику обробки ваших даних</string>
+    <string name="terms_of_service">Умови використання</string>
+    <string name="summary_preference_settings_terms_of_service">Ознайомтеся з умовами використання нашого сервісу</string>
+    <string name="code_of_conduct">Кодекс поведінки</string>
+    <string name="summary_preference_settings_code_of_conduct">Дізнайтеся правила та керівні принципи поведінки</string>
+
+    <string name="permissions">Дозволи</string>
+    <string name="summary_preference_settings_permissions">Керуйте дозволами, наданими нашій службі</string>
+    <string name="normal">Нормальні</string>
+    <string name="runtime">Час виконання</string>
+    <string name="storage">Сховище</string>
+    <string name="special">Спеціальний</string>
+    <string name="ad_id">Ідентифікатор реклами [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Дозволяє додатку отримувати та використовувати рекламний ідентифікатор, пов\'язаний з пристроєм користувача, надаючи персоналізовану рекламу, вимірюючи ефективність реклами та показуючи рекламу на пристроях з Android 13 або новіших версій.</string>
+    <string name="internet">Інтернет [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Дозволяє додатку встановлювати інтернет-з\'єднання для надсилання звітів про помилки або перевірки оновлень.</string>
+    <string name="post_notifications">Публікувати сповіщення [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Дозволяє додатку відображати сповіщення на пристроях з Android 13 або новіших версій.</string>
+    <string name="access_network_state">Доступ до стану мережі [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Дозволяє додатку перевіряти підключення до мережі та отримувати інформацію про Wi-Fi, включаючи стан увімкнення та назви підключених пристроїв Wi-Fi.</string>
+    <string name="access_notification_policy">Доступ до політики сповіщень [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Дозволяє додатку отримувати доступ та змінювати політику сповіщень пристрою, контролюючи, як і коли сповіщення відображаються користувачеві, та надаючи власні функції керування сповіщеннями.</string>
+    <string name="billing">Платежі [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Дозволяє додатку використовувати бібліотеку Google Play Billing для обробки покупок у додатку та пожертв.</string>
+    <string name="check_license">Перевірка ліцензії [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Дозволяє додатку перевіряти його відповідність ліцензійній угоді та застосовувати умови ліцензування для захисту інтелектуальної власності.</string>
+    <string name="foreground_service">Служба переднього плану [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Дозволяє додатку створювати та використовувати служби, що працюють на передньому плані, надаючи їм пріоритет над іншими фоновими процесами та покращуючи продуктивність і надійність.</string>
+    <string name="wake_lock">Залишати пристрій увімкненим [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Дозволяє програмі запобігати переходу пристрою в режим сну (наприклад, затемнення екрана або перехід процесора в режим сну) під час критичних операцій, щоб забезпечити їх завершення без переривань. Використовується економно для збереження заряду батареї.</string>
+
+    <string name="ads">Реклама</string>
+    <string name="summary_preference_settings_ads">Керуйте інформацією для показу реклами</string>
+
+    <string name="display_ads">Показувати рекламу</string>
+    <string name="personalized_ads">Персоналізована реклама</string>
+    <string name="summary_ads_personalized_ads">Виберіть, як персоналізувати рекламу відповідно до ваших інтересів</string>
+    <string name="summary_ads">Переглядайте релевантну рекламу та керуйте налаштуваннями</string>
+    <string name="ads_enabled">Реклама увімкнена</string>
+    <string name="ads_disabled">Реклама вимкнена</string>
+    <string name="error_failed_to_load_ads_settings">Не вдалося завантажити налаштування реклами</string>
+
+    <string name="usage_and_diagnostics">Використання та діагностика</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Поділіться даними для покращення роботи додатка</string>
+    <string name="summary_usage_and_diagnostics">Автоматично надсилайте діагностичні дані для покращення роботи додатка</string>
+    <string name="privacy_settings_title">Налаштування конфіденційності</string>
+    <string name="consent_category_analytics_title">Аналітика</string>
+    <string name="consent_category_advertising_title">Персоналізована реклама</string>
+    <string name="consent_analytics_storage_title">Зберігати дані аналітики</string>
+    <string name="consent_analytics_storage_description">Дозволити зберігання даних, таких як використання додатка та тривалість відвідування, для покращення аналітики та продуктивності додатка.</string>
+    <string name="consent_ad_storage_title">Зберігати рекламні дані</string>
+    <string name="consent_ad_storage_description">Увімкнути зберігання даних (наприклад, ідентифікаторів пристрою або файлів cookie) для вимірювання ефективності реклами та показу релевантних оголошень.</string>
+    <string name="consent_ad_user_data_title">Надсилати дані для реклами</string>
+    <string name="consent_ad_user_data_description">Дозволити надсилання даних про використання та пристрій до Google для підтримки функцій, пов’язаних із рекламою, таких як конверсії та оптимізація кампаній.</string>
+    <string name="consent_ad_personalization_title">Персоналізовані оголошення</string>
+    <string name="consent_ad_personalization_description">Увімкнути персоналізовані оголошення на основі вашої активності та вподобань у сервісах і додатках Google.</string>
+    <string name="privacy_settings_info">Керуйте своїми параметрами даних нижче. Ви можете змінити ці налаштування будь-коли. Щоб дізнатися більше, перегляньте нашу <a href="%s">Політику конфіденційності</a>.</string>
+    <string name="learn_more_privacy_policy_settings">Дізнайтеся більше в нашій Політиці конфіденційності</string>
+    <string name="advanced_privacy_settings">Розширені налаштування конфіденційності</string>
+    <string name="icon_desc_expand_more">Розгорнути</string>
+    <string name="icon_desc_expand_less">Згорнути</string>
+    <string name="icon_desc_consent_category">Значок категорії згоди</string>
+    <string name="icon_desc_switch_status">Значок стану перемикача</string>
+
+    <string name="legal">Юридична інформація</string>
+    <string name="legal_notices">Юридичні повідомлення</string>
+    <string name="summary_preference_settings_legal_notices">Перегляньте юридичну інформацію про наш сервіс</string>
+    <string name="license">Ліцензія</string>
+
+    <string name="about">Про додаток</string>
+    <string name="summary_preference_settings_about">Дізнайтеся більше про додаток</string>
+
+    <string name="app_info">Інформація про додаток</string>
+    <string name="app_build_version">Версія додатка</string>
+    <string name="oss_license_title">Ліцензії з відкритим кодом</string>
+    <string name="summary_preference_settings_oss">Деталі ліцензій на програмне забезпечення з відкритим кодом</string>
+
+    <string name="eula_title">Ліцензійна угода</string>
+    <string name="changelog_title">Журнал змін</string>
+    <string name="loading_eula_message">Отримання ліцензійної угоди…</string>
+    <string name="loading_changelog_message">Отримання журналу змін…</string>
+    <string name="error_loading_eula_message">Не вдалося завантажити ліцензійну угоду. Будь ласка, спробуйте знову.</string>
+    <string name="error_loading_changelog_message">Не вдалося завантажити журнал змін. Будь ласка, спробуйте знову.</string>
+
+    <string name="device_info">Інформація про пристрій</string>
+    <string name="app_build">Збірка додатка: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Налагодження</string>
+    <string name="release">Реліз</string>
+    <string name="manufacturer">Виробник:</string>
+    <string name="device_model">Модель пристрою:</string>
+    <string name="android_version">Версія Android:</string>
+    <string name="api_level">Рівень API:</string>
+    <string name="snack_device_info_copied">Інформацію про пристрій скопійовано до буфера обміну</string>
+
+    <string name="help_and_feedback">Допомога та зворотній зв\'язок</string>
+    <string name="help">Допомога</string>
+    <string name="faq">Часті запитання</string>
+    <string name="popular_help_resources">Популярні ресурси допомоги</string>
+    <string name="contact_us">Зв\'яжіться з нами</string>
+    <string name="contact_us_description">Розкажіть нам більше, і ми допоможемо вам</string>
+    <string name="view_in_google_play_store">Переглянути в Google Play Store</string>
+    <string name="version_info">Інформація про версію</string>
+    <string name="version">Версія %1$s</string>
+    <string name="beta_program">Бета-програма</string>
+
+    <string name="feedback">Зворотній зв\'язок</string>
+
+    <string name="updates">Оновлення</string>
+
+    <string name="share">Поділитися</string>
+
+    <string name="support_us">Підтримайте нас</string>
+    <string name="paid_support">Платна підтримка</string>
+    <string name="summary_donations">Ваші пожертви допоможуть нам підтримувати роботу додатка та розвивати його функції. Дякуємо за вашу щедрість!</string>
+    <string name="non_paid_support">Безкоштовна підтримка</string>
+    <string name="web_ad">Веб-реклама</string>
+    <string name="error_failed_to_load_sku_details">Не вдалося завантажити деталі SKU</string>
+</resources>

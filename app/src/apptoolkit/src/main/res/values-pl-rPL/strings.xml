@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">Zapewniając niezbędne narzędzia i funkcje, ta aplikacja została zaprojektowana, aby usprawnić Twoją pracę i pomóc Ci pozostać zorganizowanym oraz efektywnym w każdej czynności. 📱</string>
+    <string name="notification_update_title">Dostępna jest nowa aktualizacja!</string>
+    <string name="summary_notification_update">Dostępna jest nowa wersja aplikacji. Kliknij, aby zaktualizować!</string>
+    <string name="notification_last_time_used_title">Minęło trochę czasu!</string>
+    <string name="default_notification_summary">Czeka na Ciebie wiele funkcji. Otwórz aplikację!</string>
+
+    <string name="welcome">Witamy</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Przeczytaj i zaakceptuj nasze Warunki korzystania z usługi oraz Politykę prywatności, aby kontynuować</string>
+    <string name="agree">Zgadzam się</string>
+    <string name="error_loading_consent_info">Nie udało się załadować informacji o zgodzie</string>
+
+    <string name="skip_button_text">POMIŃ</string>
+    <string name="skip_button_content_description">Pomiń</string>
+    <string name="back_button_content_description">Wstecz</string>
+    <string name="back_button_text">WSTECZ</string>
+    <string name="done_button_content_description">Gotowe</string>
+    <string name="done_button_text">GOTOWE</string>
+    <string name="next_button_content_description">Dalej</string>
+    <string name="next_button_text">DALEJ</string>
+    <string name="onboarding_theme_title">Wybierz swój styl</string>
+    <string name="onboarding_theme_subtitle">Wybierz, jak ma wyglądać aplikacja.</string>
+    <string name="onboarding_theme_light_desc">Jasny i energiczny.</string>
+    <string name="onboarding_theme_dark_desc">Przyjemny dla oczu.</string>
+    <string name="onboarding_theme_system_desc">Dopasowany do Twojego urządzenia.</string>
+    <string name="onboarding_amoled_mode_desc">Głębsze czernie dla ekranów OLED.</string>
+    <string name="selected">Wybrano</string>
+    <string name="onboarding_crashlytics_title">Pomóż nam ulepszyć</string>
+    <string name="onboarding_crashlytics_description">Zezwól aplikacji na wysyłanie anonimowych danych użytkowania i raportów o awariach. Pomaga nam to naprawiać błędy i poprawiać Twoje doświadczenia. Nigdy nie zbieramy danych osobowych.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Raportowanie danych jest aktywne.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Raportowanie danych jest nieaktywne.</string>
+    <string name="onboarding_crashlytics_privacy_info">Twoja prywatność jest ważna. Używamy tych danych wyłącznie do naprawy błędów i ulepszania funkcji. Aby uzyskać więcej szczegółów, zapoznaj się z naszą polityką prywatności.</string>
+    <string name="learn_more_privacy_policy">Zapoznaj się z naszą Polityką prywatności</string>
+    <string name="onboarding_crashlytics_title_dialog">Zarządzaj zgodą na przetwarzanie danych</string>
+    <string name="onboarding_crashlytics_description_dialog">Przejrzyj i potwierdź swoje preferencje dotyczące zgody. Te dane pomagają nam ulepszać aplikację i są przetwarzane zgodnie z naszą Polityką Prywatności.</string>
+    <string name="consent_analytics_storage_description_short">Zezwala na zbieranie danych do analizy użytkowania aplikacji.</string>
+    <string name="consent_ad_storage_description_short">Zezwala na przechowywanie danych w celach reklamowych.</string>
+    <string name="consent_ad_user_data_description_short">Zezwala na wysyłanie danych użytkownika w celach reklamowych.</string>
+    <string name="consent_ad_personalization_description_short">Włącza spersonalizowane reklamy.</string>
+    <string name="onboarding_crashlytics_show_details_button">Pokaż szczegółowe informacje</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Pokaż szczegółowe informacje o użytkowaniu i diagnostyce</string>
+    <string name="button_acknowledge_consents">Zapisz i kontynuuj</string>
+    <string name="button_continue">Kontynuuj</string>
+    <string name="onboarding_complete_icon_desc">Wprowadzenie ukończone</string>
+    <string name="onboarding_final_title">Wszystko gotowe!</string>
+    <string name="onboarding_final_description">Dziękujemy za spersonalizowanie swoich ustawień. Jesteś teraz gotowy do odkrywania wszystkich funkcji. Baw się dobrze!</string>
+
+    <string name="navigation_drawer_open">Otwórz menu nawigacyjne</string>
+    <string name="go_back">Wróć</string>
+    <string name="toast_review_already_done">Dzięki za ocenę!</string>
+
+    <string name="error">Błąd</string>
+    <string name="sort_by">Sortuj według:</string>
+    <string name="app_not_installed">Aplikacja nie jest zainstalowana</string>
+    <string name="snack_app_updated">Aplikacja została pomyślnie zaktualizowana</string>
+    <string name="snack_update_failed">Wystąpił problem podczas aktualizacji</string>
+    <string name="try_again">Spróbuj ponownie</string>
+    <string name="summary_share_message">Sprawdź tę niesamowitą aplikację, której używam! Ma kilka naprawdę ciekawych funkcji, które mogą Ci się spodobać. Pobierz ją z Play Store pod adresem: %1$s</string>
+    <string name="learn_more">Dowiedz się więcej</string>
+    <string name="close">Zamknąć?</string>
+    <string name="summary_close">Czy na pewno chcesz zakończyć?</string>
+
+    <string name="home">Strona główna</string>
+
+    <string name="activity_not_found">Nie znaleziono aktywności.</string>
+    <string name="security_error">Wystąpił błąd bezpieczeństwa. Spróbuj ponownie później.</string>
+    <string name="io_error">Wystąpił błąd wejścia/wyjścia. Sprawdź połączenie sieciowe lub pamięć i spróbuj ponownie.</string>
+    <string name="illegal_argument_error">Podano nieprawidłowe dane lub argument. Sprawdź informacje i spróbuj ponownie.</string>
+    <string name="unknown_error">Wystąpił nieznany błąd.</string>
+    <string name="initialization_error">Inicjalizacja nie powiodła się. Spróbuj ponownie później.</string>
+
+    <string name="settings">Ustawienia</string>
+    <string name="long_settings_label">Ustawienia aplikacji</string>
+    <string name="settings_disabled_message">Ustawienia są obecnie niedostępne.</string>
+    <string name="settings_placeholder_description">Nie wybrano żadnych ustawień. Wybierz opcję, aby wyświetlić jej szczegóły tutaj.</string>
+    <string name="get_help">Uzyskaj pomoc</string>
+    <string name="error_no_settings_found">Nie znaleziono ustawień</string>
+    <string name="error_invalid_content_key">Nieprawidłowy klucz treści!</string>
+
+    <string name="display">Wyświetlanie</string>
+    <string name="summary_preference_settings_display">Spersonalizuj wygląd i działanie swojej aplikacji</string>
+
+    <string name="appearance">Wygląd</string>
+    <string name="dark_theme">Motyw ciemny</string>
+    <string name="will_turn_on_automatically_by_system">Zostanie automatycznie włączony przez system</string>
+    <string name="will_never_turn_on_automatically">Nigdy nie włączy się automatycznie</string>
+    <string name="amoled_mode">Tryb AMOLED</string>
+    <string name="follow_system">Podążaj za ustawieniami systemu</string>
+    <string name="light_mode">Tryb jasny</string>
+    <string name="dark_mode">Tryb ciemny</string>
+    <string name="summary_dark_theme">Motyw ciemny wykorzystuje głębokie tło, aby pomóc przedłużyć żywotność baterii</string>
+
+    <string name="dynamic_colors">Kolory dynamiczne</string>
+    <string name="summary_preference_settings_dynamic_colors">Zastosuj kolory z tapet do motywu aplikacji</string>
+
+    <string name="app_behavior">Zachowanie aplikacji</string>
+    <string name="bounce_buttons">Efekt kliknięcia</string>
+    <string name="summary_preference_settings_bounce_buttons">Zastosuj subtelną animację przy kliknięciu do wszystkich elementów klikalnych</string>
+
+    <string name="navigation">Nawigacja</string>
+    <string name="startup_page">Strona startowa</string>
+    <string name="summary_preference_settings_startup_page">Wybierz ekran, który ma być wyświetlany przy uruchomieniu aplikacji.</string>
+
+    <string name="language">Język</string>
+    <string name="summary_preference_settings_language">Zmień język używany w aplikacji</string>
+
+    <string name="dialog_startup_subtitle">Wybierz preferowaną stronę startową:</string>
+    <string name="dialog_info_startup">Konfiguruje ekran początkowy wyświetlany użytkownikom przy uruchamianiu aplikacji. To ustawienie wpływa na pierwszą interakcję użytkownika z aplikacją.</string>
+
+    <string name="select_language_title">Wybierz język</string>
+    <string name="dialog_language_subtitle">Wybierz preferowany język</string>
+    <string name="dialog_info_language">Spersonalizuj swoje doświadczenie za pomocą preferowanego języka. Wszelkie zmiany języka zostaną zastosowane natychmiast.</string>
+
+    <string name="notifications">Powiadomienia</string>
+    <string name="summary_preference_settings_notifications">Zarządzaj powiadomieniami aplikacji</string>
+
+    <string name="app_usage_notifications">Powiadomienia o użyciu aplikacji</string>
+    <string name="update_notifications">Powiadomienia o aktualizacjach</string>
+
+    <string name="advanced">Zaawansowane</string>
+    <string name="summary_preference_settings_advanced">Odkryj więcej zaawansowanych ustawień</string>
+    <string name="issue_title_label">Tytuł</string>
+    <string name="issue_description_label">Opis</string>
+    <string name="issue_section_label">Zgłoszenie</string>
+    <string name="login_section_label">Logowanie</string>
+    <string name="use_github_account">Wyślij za pomocą konta GitHub</string>
+    <string name="send_anonymously">Wyślij anonimowo</string>
+    <string name="optional_placeholder">(Opcjonalnie)</string>
+    <string name="issue_username_label">Nazwa użytkownika</string>
+    <string name="issue_password_label">Hasło</string>
+    <string name="issue_email_label">Email</string>
+    <string name="issue_send">Wyślij</string>
+    <string name="cd_expand_device_info">Rozwiń lub zwiń informacje o urządzeniu</string>
+    <string name="view_on_github">Przekieruj do GitHub</string>
+    <string name="snack_report_success">Zgłoszenie wysłane pomyślnie</string>
+    <string name="snack_report_failed">Nie udało się wysłać zgłoszenia</string>
+    <string name="error_invalid_report">Tytuł i opis nie mogą być puste</string>
+    <string name="issue_submitted_successfully">Problem złożony pomyślnie</string>
+    <string name="open_issue_in_browser">Otwarte w przeglądarce</string>
+    <string name="open_button_label">Problem otwarty</string>
+    <string name="issue_submitted">Twój problem został przesłany!</string>
+    <string name="error_unauthorized">Nieautoryzowany: Nieprawidłowy token</string>
+    <string name="error_forbidden">Zakazane: niewystarczające uprawnienia</string>
+    <string name="error_gone">Usunięty punkt końcowy API</string>
+    <string name="error_unprocessable">Nieprawidłowe dane dotyczące tworzenia problemów</string>
+
+    <string name="error_reporting">Zgłaszanie błędów</string>
+    <string name="bug_report">Raport o błędzie</string>
+    <string name="summary_preference_settings_bug_report">Prześlij raporty o błędach i żądania funkcji na stronę zgłoszeń problemów w repozytorium GitHub aplikacji</string>
+    <string name="cache_management">Zarządzanie pamięcią podręczną</string>
+    <string name="clear_cache">Wyczyść pamięć podręczną</string>
+    <string name="summary_preference_settings_clear_cache">Wyczyść tymczasowe dane aplikacji.</string>
+    <string name="cache_cleared_success">Pamięć podręczna została pomyślnie wyczyszczona</string>
+    <string name="cache_cleared_error">Pamięć podręczna została wyczyszczona z pewnymi błędami</string>
+
+    <string name="security_and_privacy">Bezpieczeństwo i prywatność</string>
+    <string name="summary_preference_settings_privacy_and_security">Zarządzaj ustawieniami prywatności</string>
+
+    <string name="privacy">Prywatność</string>
+    <string name="privacy_policy">Polityka prywatności</string>
+    <string name="summary_preference_settings_privacy_policy">Wyświetl zasady dotyczące tego, jak przetwarzamy Twoje dane</string>
+    <string name="terms_of_service">Warunki świadczenia usług</string>
+    <string name="summary_preference_settings_terms_of_service">Przejrzyj warunki, na które się zgadzasz, korzystając z naszej usługi</string>
+    <string name="code_of_conduct">Kodeks postępowania</string>
+    <string name="summary_preference_settings_code_of_conduct">Zrozum zasady i wytyczne dotyczące zachowania w naszej usłudze</string>
+
+    <string name="permissions">Uprawnienia</string>
+    <string name="summary_preference_settings_permissions">Zarządzaj uprawnieniami przyznanymi naszej usłudze</string>
+    <string name="normal">Normalne</string>
+    <string name="runtime">Czas wykonywania</string>
+    <string name="storage">Pamięć</string>
+    <string name="special">Specjalny</string>
+    <string name="ad_id">Identyfikator reklamowy [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Pozwala aplikacji pobierać i używać identyfikatora reklamowego powiązanego z urządzeniem użytkownika, dostarczając spersonalizowane reklamy, mierząc skuteczność reklam i wyświetlając reklamy na urządzeniach z systemem Android 13 lub nowszym.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Pozwala aplikacji nawiązać połączenie internetowe w celu wysyłania raportów o błędach lub sprawdzania aktualizacji.</string>
+    <string name="post_notifications">Publikuj powiadomienia [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Pozwala aplikacji wyświetlać powiadomienia na urządzeniach z systemem Android 13 lub nowszym.</string>
+    <string name="access_network_state">Dostęp do stanu sieci [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Pozwala aplikacji sprawdzać łączność sieciową i pobierać informacje o Wi-Fi, w tym stan włączenia i nazwy podłączonych urządzeń Wi-Fi.</string>
+    <string name="access_notification_policy">Dostęp do polityki powiadomień [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Pozwala aplikacji uzyskiwać dostęp i modyfikować politykę powiadomień urządzenia, kontrolując sposób i czas wyświetlania powiadomień użytkownikowi oraz udostępniając niestandardowe funkcje zarządzania powiadomieniami.</string>
+    <string name="billing">Rozliczenia [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Pozwala aplikacji korzystać z Biblioteki Rozliczeniowej Google Play do obsługi zakupów w aplikacji i darowizn.</string>
+    <string name="check_license">Sprawdź licencję [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Pozwala aplikacji weryfikować zgodność z umową licencyjną i egzekwować warunki licencyjne w celu ochrony własności intelektualnej.</string>
+    <string name="foreground_service">Usługa pierwszoplanowa [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Pozwala aplikacji tworzyć i używać usług działających na pierwszym planie, nadając im priorytet nad innymi procesami w tle oraz poprawiając wydajność i niezawodność.</string>
+    <string name="wake_lock">Utrzymuj urządzenie w stanie czuwania [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Pozwala aplikacji zapobiegać przechodzeniu urządzenia w stan uśpienia (np. przyciemnianie ekranu lub usypianie procesora) podczas krytycznych operacji, aby zapewnić ich ukończenie bez przerw. Jest to używane oszczędnie w celu oszczędzania baterii.</string>
+
+    <string name="ads">Reklamy</string>
+    <string name="summary_preference_settings_ads">Kontroluj, jak używamy Twoich informacji do wyświetlania odpowiednich reklam</string>
+
+    <string name="display_ads">Wyświetlaj reklamy</string>
+    <string name="personalized_ads">Spersonalizowane reklamy</string>
+    <string name="summary_ads_personalized_ads">Wybierz sposób personalizacji reklam na podstawie swoich zainteresowań</string>
+    <string name="summary_ads">Wyświetlaj reklamy dostosowane do Ciebie. Zarządzaj informacjami używanymi do wyświetlania spersonalizowanych reklam. Możesz zawsze wyłączyć personalizację tutaj.</string>
+    <string name="ads_enabled">Reklamy włączone</string>
+    <string name="ads_disabled">Reklamy wyłączone</string>
+    <string name="error_failed_to_load_ads_settings">Nie udało się załadować ustawień reklam</string>
+
+    <string name="usage_and_diagnostics">Użycie i diagnostyka</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Udostępnij dane, aby pomóc ulepszyć doświadczenia w aplikacji</string>
+    <string name="summary_usage_and_diagnostics">Pomóż poprawić swoje doświadczenia, automatycznie przesyłając dane diagnostyczne, dane urządzenia i użytkowania aplikacji.</string>
+    <string name="privacy_settings_title">Ustawienia prywatności</string>
+    <string name="consent_category_analytics_title">Analityka</string>
+    <string name="consent_category_advertising_title">Spersonalizowane reklamy</string>
+    <string name="consent_analytics_storage_title">Przechowywanie danych analitycznych</string>
+    <string name="consent_analytics_storage_description">Zezwól na przechowywanie danych, takich jak użycie aplikacji i czas trwania wizyty, w celu ulepszenia analityki i wydajności aplikacji.</string>
+    <string name="consent_ad_storage_title">Przechowywanie danych reklamowych</string>
+    <string name="consent_ad_storage_description">Włącz przechowywanie danych (takich jak identyfikatory urządzenia lub pliki cookie) w celu pomiaru skuteczności reklam i wyświetlania trafnych reklam.</string>
+    <string name="consent_ad_user_data_title">Wysyłanie danych do celów reklamowych</string>
+    <string name="consent_ad_user_data_description">Zezwól na wysyłanie danych o użytkowaniu i urządzeniu do Google w celu obsługi funkcji związanych z reklamami, takich jak konwersje i optymalizacja kampanii.</string>
+    <string name="consent_ad_personalization_title">Spersonalizowane reklamy</string>
+    <string name="consent_ad_personalization_description">Włącz spersonalizowane reklamy na podstawie Twojej aktywności i preferencji w usługach i aplikacjach Google.</string>
+    <string name="privacy_settings_info">Zarządzaj swoimi preferencjami dotyczącymi danych poniżej. Możesz zmienić te ustawienia w dowolnym momencie. Aby uzyskać więcej informacji, zapoznaj się z naszą <a href="%s">Polityką Prywatności</a>.</string>
+    <string name="learn_more_privacy_policy_settings">Dowiedz się więcej w naszej Polityce Prywatności</string>
+    <string name="advanced_privacy_settings">Zaawansowane ustawienia prywatności</string>
+    <string name="icon_desc_expand_more">Rozwiń więcej</string>
+    <string name="icon_desc_expand_less">Zwiń</string>
+    <string name="icon_desc_consent_category">Ikona kategorii zgody</string>
+    <string name="icon_desc_switch_status">Ikona statusu przełącznika</string>
+
+    <string name="legal">Informacje prawne</string>
+    <string name="legal_notices">Noty prawne</string>
+    <string name="summary_preference_settings_legal_notices">Wyświetl informacje prawne dotyczące naszej usługi</string>
+    <string name="license">Licencja</string>
+
+    <string name="about">O aplikacji</string>
+    <string name="summary_preference_settings_about">Dowiedz się więcej o aplikacji</string>
+
+    <string name="app_info">Informacje o aplikacji</string>
+    <string name="app_build_version">Wersja kompilacji aplikacji</string>
+    <string name="oss_license_title">Licencje open source</string>
+    <string name="summary_preference_settings_oss">Szczegóły licencji na oprogramowanie open source</string>
+
+    <string name="eula_title">Umowa licencyjna użytkownika końcowego</string>
+    <string name="changelog_title">Dziennik zmian aplikacji</string>
+    <string name="loading_eula_message">Pobieranie umowy licencyjnej użytkownika końcowego…</string>
+    <string name="loading_changelog_message">Pobieranie dziennika zmian aplikacji…</string>
+    <string name="error_loading_eula_message">Nie można załadować umowy licencyjnej użytkownika końcowego. Spróbuj ponownie.</string>
+    <string name="error_loading_changelog_message">Nie można załadować dziennika zmian aplikacji. Spróbuj ponownie.</string>
+
+    <string name="device_info">Informacje o urządzeniu</string>
+    <string name="app_build">Kompilacja aplikacji: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Debugowanie</string>
+    <string name="release">Wydanie</string>
+    <string name="manufacturer">Producent:</string>
+    <string name="device_model">Model urządzenia:</string>
+    <string name="android_version">Wersja Androida:</string>
+    <string name="api_level">Poziom API:</string>
+    <string name="snack_device_info_copied">Informacje o urządzeniu zostały skopiowane do schowka</string>
+
+    <string name="help_and_feedback">Pomoc i opinie</string>
+    <string name="help">Pomoc</string>
+    <string name="faq">Często zadawane pytania</string>
+    <string name="popular_help_resources">Popularne zasoby pomocy</string>
+    <string name="contact_us">Skontaktuj się z nami</string>
+    <string name="contact_us_description">Opowiedz nam więcej, a my Ci pomożemy</string>
+    <string name="view_in_google_play_store">Zobacz w Google Play Store</string>
+    <string name="version_info">Informacje o wersji</string>
+    <string name="version">Wersja %1$s</string>
+    <string name="beta_program">Program beta</string>
+
+    <string name="feedback">Opinie</string>
+
+    <string name="updates">Aktualizacje</string>
+
+    <string name="share">Udostępnij</string>
+
+    <string name="support_us">Wesprzyj nas</string>
+    <string name="paid_support">Wsparcie płatne</string>
+    <string name="summary_donations">Bez względu na kwotę darowizny, pomożesz nam utrzymać aplikację i ulepszać jej funkcje. Doceniamy Twoją hojność i życzliwość!</string>
+    <string name="non_paid_support">Wsparcie bezpłatne</string>
+    <string name="web_ad">Reklama internetowa</string>
+    <string name="error_failed_to_load_sku_details">Nie udało się załadować szczegółów SKU</string>
+</resources>

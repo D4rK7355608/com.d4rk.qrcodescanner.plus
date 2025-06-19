@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">Dirancang untuk menyederhanakan alur kerja Anda, aplikasi ini menyediakan alat dan fitur penting untuk membantu Anda tetap terorganisir dan efisien dalam setiap tugas. 📱</string>
+    <string name="notification_update_title">Pembaruan baru tersedia!</string>
+    <string name="summary_notification_update">Versi baru dari aplikasi tersedia. Klik untuk memperbarui!</string>
+    <string name="notification_last_time_used_title">Sudah lama tidak bertemu!</string>
+    <string name="default_notification_summary">Ada banyak fitur yang menunggu Anda. Buka aplikasinya!</string>
+
+    <string name="welcome">Selamat datang</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Baca dan setujui Ketentuan Layanan dan Kebijakan Privasi kami untuk melanjutkan</string>
+    <string name="agree">Setuju</string>
+    <string name="error_loading_consent_info">Gagal memuat informasi persetujuan</string>
+
+    <string name="skip_button_text">LEWATI</string>
+    <string name="skip_button_content_description">Lewati</string>
+    <string name="back_button_content_description">Kembali</string>
+    <string name="back_button_text">KEMBALI</string>
+    <string name="done_button_content_description">Selesai</string>
+    <string name="done_button_text">SELESAI</string>
+    <string name="next_button_content_description">Selanjutnya</string>
+    <string name="next_button_text">SELANJUTNYA</string>
+    <string name="onboarding_theme_title">Pilih Gaya Anda</string>
+    <string name="onboarding_theme_subtitle">Pilih bagaimana Anda ingin tampilan aplikasi.</string>
+    <string name="onboarding_theme_light_desc">Terang dan energik.</string>
+    <string name="onboarding_theme_dark_desc">Nyaman di mata.</string>
+    <string name="onboarding_theme_system_desc">Sesuai dengan perangkat Anda.</string>
+    <string name="onboarding_amoled_mode_desc">Hitam lebih pekat untuk layar OLED.</string>
+    <string name="selected">Terpilih</string>
+    <string name="onboarding_crashlytics_title">Bantu Kami Meningkatkan</string>
+    <string name="onboarding_crashlytics_description">Izinkan aplikasi mengirim data penggunaan anonim dan laporan kerusakan. Ini membantu kami memperbaiki bug dan membuat pengalaman Anda lebih baik. Tidak ada informasi pribadi yang pernah dikumpulkan.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Pelaporan data aktif.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Pelaporan data tidak aktif.</string>
+    <string name="onboarding_crashlytics_privacy_info">Privasi Anda penting. Kami hanya menggunakan data ini untuk memperbaiki bug dan meningkatkan fitur. Untuk lebih jelasnya, harap tinjau kebijakan privasi kami.</string>
+    <string name="learn_more_privacy_policy">Tinjau Kebijakan Privasi kami</string>
+    <string name="onboarding_crashlytics_title_dialog">Kelola Izin Data</string>
+    <string name="onboarding_crashlytics_description_dialog">Harap tinjau dan konfirmasi preferensi izin Anda. Data ini membantu kami meningkatkan aplikasi dan ditangani sesuai Kebijakan Privasi kami.</string>
+    <string name="consent_analytics_storage_description_short">Mengizinkan pengumpulan data untuk analisis penggunaan aplikasi.</string>
+    <string name="consent_ad_storage_description_short">Mengizinkan penyimpanan data untuk tujuan periklanan.</string>
+    <string name="consent_ad_user_data_description_short">Mengizinkan pengiriman data pengguna untuk iklan.</string>
+    <string name="consent_ad_personalization_description_short">Mengaktifkan iklan yang dipersonalisasi.</string>
+    <string name="onboarding_crashlytics_show_details_button">Tampilkan Informasi Detail</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Tampilkan informasi detail tentang penggunaan dan diagnostik</string>
+    <string name="button_acknowledge_consents">Simpan dan Lanjutkan</string>
+    <string name="button_continue">Lanjutkan</string>
+    <string name="onboarding_complete_icon_desc">Orientasi Selesai</string>
+    <string name="onboarding_final_title">Anda Siap!</string>
+    <string name="onboarding_final_description">Terima kasih telah mempersonalisasi pengalaman Anda. Sekarang Anda siap untuk menjelajahi semua fitur. Selamat menikmati!</string>
+
+    <string name="navigation_drawer_open">Buka menu navigasi</string>
+    <string name="go_back">Kembali</string>
+    <string name="toast_review_already_done">Terima kasih atas peringkatnya!</string>
+
+    <string name="error">Kesalahan</string>
+    <string name="sort_by">Urutkan berdasarkan:</string>
+    <string name="app_not_installed">Aplikasi tidak terpasang</string>
+    <string name="snack_app_updated">Aplikasi berhasil diperbarui</string>
+    <string name="snack_update_failed">Proses pembaruan mengalami masalah</string>
+    <string name="try_again">Coba lagi</string>
+    <string name="summary_share_message">Lihat aplikasi luar biasa yang saya gunakan ini! Aplikasi ini memiliki beberapa fitur keren yang mungkin menarik bagi Anda. Unduh dari Play Store di: %1$s</string>
+    <string name="learn_more">Pelajari lebih lanjut</string>
+    <string name="close">Tutup?</string>
+    <string name="summary_close">Apakah Anda yakin ingin keluar?</string>
+
+    <string name="home">Beranda</string>
+
+    <string name="activity_not_found">Aktivitas tidak ditemukan.</string>
+    <string name="security_error">Terjadi kesalahan keamanan. Silakan coba lagi nanti.</string>
+    <string name="io_error">Terjadi kesalahan input/output. Periksa koneksi jaringan atau penyimpanan Anda, lalu coba lagi.</string>
+    <string name="illegal_argument_error">Input atau argumen tidak valid. Periksa informasi dan coba lagi.</string>
+    <string name="unknown_error">Terjadi kesalahan yang tidak diketahui.</string>
+    <string name="initialization_error">Inisialisasi gagal. Silakan coba lagi nanti.</string>
+
+    <string name="settings">Pengaturan</string>
+    <string name="long_settings_label">Pengaturan Aplikasi</string>
+    <string name="settings_disabled_message">Pengaturan saat ini tidak tersedia.</string>
+    <string name="settings_placeholder_description">Tidak ada pengaturan yang dipilih. Pilih opsi untuk melihat detailnya di sini.</string>
+    <string name="get_help">Dapatkan bantuan</string>
+    <string name="error_no_settings_found">Tidak ada pengaturan ditemukan</string>
+    <string name="error_invalid_content_key">Kunci konten tidak valid!</string>
+
+    <string name="display">Tampilan</string>
+    <string name="summary_preference_settings_display">Personalisasi tampilan dan nuansa aplikasi Anda</string>
+
+    <string name="appearance">Tampilan</string>
+    <string name="dark_theme">Tema gelap</string>
+    <string name="will_turn_on_automatically_by_system">Akan diaktifkan secara otomatis oleh sistem</string>
+    <string name="will_never_turn_on_automatically">Tidak akan pernah diaktifkan secara otomatis</string>
+    <string name="amoled_mode">Mode AMOLED</string>
+    <string name="follow_system">Ikuti mode sistem</string>
+    <string name="light_mode">Mode terang</string>
+    <string name="dark_mode">Mode gelap</string>
+    <string name="summary_dark_theme">Tema gelap menggunakan latar belakang dalam untuk membantu memperpanjang daya baterai Anda</string>
+
+    <string name="dynamic_colors">Warna dinamis</string>
+    <string name="summary_preference_settings_dynamic_colors">Terapkan warna dari wallpaper ke tema aplikasi</string>
+
+    <string name="app_behavior">Perilaku aplikasi</string>
+    <string name="bounce_buttons">Klik pantulan</string>
+    <string name="summary_preference_settings_bounce_buttons">Menerapkan animasi pantulan halus pada semua elemen yang dapat diklik saat diklik</string>
+
+    <string name="navigation">Navigasi</string>
+    <string name="startup_page">Halaman awal</string>
+    <string name="summary_preference_settings_startup_page">Pilih layar yang akan ditampilkan saat aplikasi dimulai.</string>
+
+    <string name="language">Bahasa</string>
+    <string name="summary_preference_settings_language">Mengubah bahasa yang digunakan dalam aplikasi</string>
+
+    <string name="dialog_startup_subtitle">Pilih halaman awal yang Anda sukai:</string>
+    <string name="dialog_info_startup">Mengonfigurasi layar awal yang disajikan kepada pengguna saat meluncurkan aplikasi. Pengaturan ini memengaruhi interaksi pertama pengguna dengan aplikasi.</string>
+
+    <string name="select_language_title">Pilih Bahasa</string>
+    <string name="dialog_language_subtitle">Pilih bahasa pilihan Anda</string>
+    <string name="dialog_info_language">Personalisasi pengalaman Anda dengan bahasa pilihan Anda. Perubahan bahasa yang Anda buat akan langsung berlaku.</string>
+
+    <string name="notifications">Notifikasi</string>
+    <string name="summary_preference_settings_notifications">Kelola notifikasi aplikasi</string>
+
+    <string name="app_usage_notifications">Notifikasi penggunaan aplikasi</string>
+    <string name="update_notifications">Notifikasi pembaruan</string>
+
+    <string name="advanced">Lanjutan</string>
+    <string name="summary_preference_settings_advanced">Jelajahi lebih banyak pengaturan lanjutan</string>
+    <string name="issue_title_label">Judul</string>
+    <string name="issue_description_label">Deskripsi</string>
+    <string name="issue_section_label">Masalah</string>
+    <string name="login_section_label">Masuk</string>
+    <string name="use_github_account">Kirim menggunakan akun GitHub</string>
+    <string name="send_anonymously">Kirim secara anonim</string>
+    <string name="optional_placeholder">(Opsional)</string>
+    <string name="issue_username_label">Nama pengguna</string>
+    <string name="issue_password_label">Kata sandi</string>
+    <string name="issue_email_label">Email</string>
+    <string name="issue_send">Kirim</string>
+    <string name="cd_expand_device_info">Perluas atau ciutkan informasi perangkat</string>
+    <string name="view_on_github">Arahkan ke GitHub</string>
+    <string name="snack_report_success">Laporan berhasil dikirim</string>
+    <string name="snack_report_failed">Gagal mengirim laporan</string>
+    <string name="error_invalid_report">Judul dan deskripsi tidak boleh kosong</string>
+    <string name="issue_submitted_successfully">Masalah yang berhasil diserahkan</string>
+    <string name="open_issue_in_browser">Buka di browser</string>
+    <string name="open_button_label">Masalah terbuka</string>
+    <string name="issue_submitted">Masalah Anda telah diajukan!</string>
+    <string name="error_unauthorized">Tidak sah: token tidak valid</string>
+    <string name="error_forbidden">Terlarang: Izin yang tidak mencukupi</string>
+    <string name="error_gone">Titik akhir API dihapus</string>
+    <string name="error_unprocessable">Data tidak valid untuk pembuatan masalah</string>
+
+    <string name="error_reporting">Pelaporan kesalahan</string>
+    <string name="bug_report">Laporan bug</string>
+    <string name="summary_preference_settings_bug_report">Kirim laporan bug dan permintaan fitur ke halaman masalah di repositori GitHub aplikasi</string>
+    <string name="cache_management">Manajemen Cache</string>
+    <string name="clear_cache">Bersihkan Cache</string>
+    <string name="summary_preference_settings_clear_cache">Bersihkan data aplikasi sementara.</string>
+    <string name="cache_cleared_success">Cache berhasil dibersihkan</string>
+    <string name="cache_cleared_error">Cache dibersihkan dengan beberapa kesalahan</string>
+
+    <string name="security_and_privacy">Keamanan &amp; privasi</string>
+    <string name="summary_preference_settings_privacy_and_security">Kelola pengaturan privasi Anda</string>
+
+    <string name="privacy">Privasi</string>
+    <string name="privacy_policy">Kebijakan Privasi</string>
+    <string name="summary_preference_settings_privacy_policy">Lihat kebijakan yang mengatur bagaimana kami menangani data Anda</string>
+    <string name="terms_of_service">Ketentuan Layanan</string>
+    <string name="summary_preference_settings_terms_of_service">Tinjau ketentuan yang Anda setujui saat menggunakan layanan kami</string>
+    <string name="code_of_conduct">Kode Etik</string>
+    <string name="summary_preference_settings_code_of_conduct">Pahami aturan dan pedoman perilaku dalam layanan kami</string>
+
+    <string name="permissions">Izin</string>
+    <string name="summary_preference_settings_permissions">Kelola izin yang diberikan kepada layanan kami</string>
+    <string name="normal">Normal</string>
+    <string name="runtime">Runtime</string>
+    <string name="storage">Penyimpanan</string>
+    <string name="special">Spesial</string>
+    <string name="ad_id">Id iklan [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Memungkinkan aplikasi untuk mengambil dan menggunakan pengidentifikasi iklan yang terkait dengan perangkat pengguna, menyediakan iklan yang dipersonalisasi, mengukur efektivitas iklan, dan menampilkan iklan di perangkat Android 13 atau yang lebih baru.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Memungkinkan aplikasi untuk membuat koneksi internet untuk mengirim laporan kesalahan atau memeriksa pembaruan.</string>
+    <string name="post_notifications">Posting notifikasi [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Memungkinkan aplikasi untuk menampilkan notifikasi di perangkat dengan Android 13 atau yang lebih baru.</string>
+    <string name="access_network_state">Akses status jaringan [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Memungkinkan aplikasi untuk memeriksa konektivitas jaringan dan mengambil informasi tentang Wi-Fi, termasuk status diaktifkan dan nama perangkat Wi-Fi yang terhubung.</string>
+    <string name="access_notification_policy">Akses kebijakan notifikasi [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Memungkinkan aplikasi untuk mengakses dan mengubah kebijakan notifikasi perangkat, mengontrol bagaimana dan kapan notifikasi ditampilkan kepada pengguna dan menyediakan fitur manajemen notifikasi khusus.</string>
+    <string name="billing">Penagihan [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Memungkinkan aplikasi untuk menggunakan Google Play Billing Library untuk menangani pembelian dalam aplikasi dan donasi</string>
+    <string name="check_license">Periksa lisensi [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Memungkinkan aplikasi untuk memverifikasi kepatuhannya terhadap perjanjian lisensi dan memberlakukan persyaratan lisensi untuk melindungi kekayaan intelektual.</string>
+    <string name="foreground_service">Layanan latar depan [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Memungkinkan aplikasi untuk membuat dan menggunakan layanan yang berjalan di latar depan, memberi mereka prioritas di atas proses latar belakang lainnya dan meningkatkan kinerja dan keandalan.</string>
+    <string name="wake_lock">Jaga perangkat tetap aktif [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Mengizinkan aplikasi untuk mencegah perangkat beralih ke mode tidur (misalnya, peredupan layar atau mode tidur prosesor) selama operasi penting untuk memastikan operasi tersebut selesai tanpa gangguan. Ini digunakan secukupnya untuk menghemat baterai.</string>
+
+    <string name="ads">Iklan</string>
+    <string name="summary_preference_settings_ads">Kendalikan bagaimana kami menggunakan informasi Anda untuk menampilkan iklan yang relevan</string>
+
+    <string name="display_ads">Tampilkan iklan</string>
+    <string name="personalized_ads">Iklan yang dipersonalisasi</string>
+    <string name="summary_ads_personalized_ads">Pilih cara kami mempersonalisasi iklan untuk Anda berdasarkan minat Anda</string>
+    <string name="summary_ads">Lihat iklan yang relevan bagi Anda. Kelola informasi yang digunakan untuk menampilkan iklan yang dipersonalisasi. Anda selalu dapat mematikan personalisasi di sini.</string>
+    <string name="ads_enabled">Iklan diaktifkan</string>
+    <string name="ads_disabled">Iklan dinonaktifkan</string>
+    <string name="error_failed_to_load_ads_settings">Gagal memuat pengaturan iklan</string>
+
+    <string name="usage_and_diagnostics">Penggunaan dan diagnostik</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Bagikan data untuk membantu meningkatkan pengalaman dalam aplikasi</string>
+    <string name="summary_usage_and_diagnostics">Bantu tingkatkan pengalaman Anda dengan mengirimkan data diagnostik, perangkat, dan penggunaan aplikasi secara otomatis kepada kami.</string>
+    <string name="privacy_settings_title">Pengaturan Privasi</string>
+    <string name="consent_category_analytics_title">Analitik</string>
+    <string name="consent_category_advertising_title">Iklan yang Dipersonalisasi</string>
+    <string name="consent_analytics_storage_title">Simpan Data Analitik</string>
+    <string name="consent_analytics_storage_description">Izinkan penyimpanan data seperti penggunaan aplikasi dan durasi kunjungan untuk meningkatkan analitik dan performa aplikasi.</string>
+    <string name="consent_ad_storage_title">Simpan Data Iklan</string>
+    <string name="consent_ad_storage_description">Aktifkan penyimpanan data (seperti ID perangkat atau cookie) untuk mengukur performa iklan dan menampilkan iklan yang relevan.</string>
+    <string name="consent_ad_user_data_title">Kirim Data untuk Iklan</string>
+    <string name="consent_ad_user_data_description">Izinkan pengiriman data penggunaan dan perangkat ke Google untuk mendukung fitur terkait iklan seperti konversi dan optimalisasi kampanye.</string>
+    <string name="consent_ad_personalization_title">Iklan yang Dipersonalisasi</string>
+    <string name="consent_ad_personalization_description">Aktifkan iklan yang dipersonalisasi berdasarkan aktivitas dan preferensi Anda di seluruh layanan dan aplikasi Google.</string>
+    <string name="privacy_settings_info">Kelola preferensi data Anda di bawah ini. Anda dapat mengubah setelan ini kapan saja. Untuk detail selengkapnya, lihat <a href="%s">Kebijakan Privasi</a> kami.</string>
+    <string name="learn_more_privacy_policy_settings">Pelajari lebih lanjut di Kebijakan Privasi kami</string>
+    <string name="advanced_privacy_settings">Pengaturan Privasi Lanjutan</string>
+    <string name="icon_desc_expand_more">Perluas</string>
+    <string name="icon_desc_expand_less">Ciutkan</string>
+    <string name="icon_desc_consent_category">Ikon kategori izin</string>
+    <string name="icon_desc_switch_status">Ikon status tombol</string>
+
+    <string name="legal">Hukum</string>
+    <string name="legal_notices">Pemberitahuan hukum</string>
+    <string name="summary_preference_settings_legal_notices">Lihat informasi hukum tentang layanan kami</string>
+    <string name="license">Lisensi</string>
+
+    <string name="about">Tentang</string>
+    <string name="summary_preference_settings_about">Pelajari lebih lanjut tentang aplikasi</string>
+
+    <string name="app_info">Info aplikasi</string>
+    <string name="app_build_version">Versi build aplikasi</string>
+    <string name="oss_license_title">Lisensi sumber terbuka</string>
+    <string name="summary_preference_settings_oss">Detail lisensi untuk perangkat lunak sumber terbuka</string>
+
+    <string name="eula_title">Perjanjian Lisensi Pengguna Akhir</string>
+    <string name="changelog_title">Catatan Perubahan Aplikasi</string>
+    <string name="loading_eula_message">Mengambil Perjanjian Lisensi Pengguna Akhir…</string>
+    <string name="loading_changelog_message">Mengambil catatan perubahan aplikasi…</string>
+    <string name="error_loading_eula_message">Tidak dapat memuat Perjanjian Lisensi Pengguna Akhir. Silakan coba lagi.</string>
+    <string name="error_loading_changelog_message">Tidak dapat memuat catatan perubahan aplikasi. Silakan coba lagi.</string>
+
+    <string name="device_info">Informasi Perangkat</string>
+    <string name="app_build">Build Aplikasi: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Debug</string>
+    <string name="release">Rilis</string>
+    <string name="manufacturer">Pabrikan:</string>
+    <string name="device_model">Model perangkat:</string>
+    <string name="android_version">Versi Android:</string>
+    <string name="api_level">Level API:</string>
+    <string name="snack_device_info_copied">Informasi perangkat disalin ke papan klip</string>
+
+    <string name="help_and_feedback">Bantuan &amp; umpan balik</string>
+    <string name="help">Bantuan</string>
+    <string name="faq">FAQ</string>
+    <string name="popular_help_resources">Sumber daya bantuan populer</string>
+    <string name="contact_us">Hubungi kami</string>
+    <string name="contact_us_description">Beritahu kami lebih banyak dan kami akan membantu Anda</string>
+    <string name="view_in_google_play_store">Lihat di Google Play Store</string>
+    <string name="version_info">Info versi</string>
+    <string name="version">Versi %1$s</string>
+    <string name="beta_program">Program beta</string>
+
+    <string name="feedback">Umpan balik</string>
+
+    <string name="updates">Pembaruan</string>
+
+    <string name="share">Bagikan</string>
+
+    <string name="support_us">Dukung kami</string>
+    <string name="paid_support">Dukungan berbayar</string>
+    <string name="summary_donations">Berapa pun jumlah yang Anda sumbangkan, Anda akan membantu kami menjaga aplikasi tetap berjalan dan meningkatkan fitur kami. Kami menghargai kemurahan hati dan kebaikan Anda!</string>
+    <string name="non_paid_support">Dukungan tidak berbayar</string>
+    <string name="web_ad">Iklan web</string>
+    <string name="error_failed_to_load_sku_details">Gagal memuat detail SKU</string>
+</resources>

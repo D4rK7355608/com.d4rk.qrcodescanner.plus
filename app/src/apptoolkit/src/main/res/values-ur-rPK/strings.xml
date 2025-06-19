@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">آپ کے ورک فلو کو منظم کرنے کے لیے ڈیزائن کیا گیا، یہ ایپ ضروری ٹولز اور خصوصیات فراہم کرتی ہے تاکہ آپ کو کسی بھی کام میں منظم اور موثر رہنے میں مدد ملے۔ 📱</string>
+    <string name="notification_update_title">ایک نئی اپ ڈیٹ دستیاب ہے!</string>
+    <string name="summary_notification_update">ایپ کا نیا ورژن دستیاب ہے۔ اپ ڈیٹ کرنے کے لیے کلک کریں!</string>
+    <string name="notification_last_time_used_title">کافی وقت ہو گیا ہے!</string>
+    <string name="default_notification_summary">بہت ساری خصوصیات آپ کا انتظار کر رہی ہیں۔ ایپ کھولیں!</string>
+
+    <string name="welcome">خوش آمدید</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">جاری رکھنے کے لیے ہماری سروس کی شرائط اور رازداری کی پالیسی کو پڑھیں اور ان سے اتفاق کریں</string>
+    <string name="agree">متفق ہوں</string>
+    <string name="error_loading_consent_info">رضامندی کی معلومات لوڈ کرنے میں ناکام</string>
+
+    <string name="skip_button_text">اسکپ کریں</string>
+    <string name="skip_button_content_description">اسکپ کریں</string>
+    <string name="back_button_content_description">پیچھے</string>
+    <string name="back_button_text">پیچھے</string>
+    <string name="done_button_content_description">ہو گیا</string>
+    <string name="done_button_text">ہو گیا</string>
+    <string name="next_button_content_description">آگے</string>
+    <string name="next_button_text">آگے</string>
+    <string name="onboarding_theme_title">اپنا انداز منتخب کریں</string>
+    <string name="onboarding_theme_subtitle">منتخب کریں کہ آپ ایپ کو کیسا دیکھنا چاہیں گے۔</string>
+    <string name="onboarding_theme_light_desc">روشن اور توانا۔</string>
+    <string name="onboarding_theme_dark_desc">آنکھوں کے لیے آرام دہ۔</string>
+    <string name="onboarding_theme_system_desc">آپ کے آلے سے مطابقت رکھتا ہے۔</string>
+    <string name="onboarding_amoled_mode_desc">OLED اسکرینوں کے لیے گہرے سیاہ رنگ۔</string>
+    <string name="selected">منتخب کردہ</string>
+    <string name="onboarding_crashlytics_title">بہتر بنانے میں ہماری مدد کریں</string>
+    <string name="onboarding_crashlytics_description">ایپ کو گمنام استعمال کا ڈیٹا اور کریش رپورٹس بھیجنے کی اجازت دیں۔ اس سے ہمیں کیڑے ٹھیک کرنے اور آپ کے تجربے کو بہتر بنانے میں مدد ملتی ہے۔ کوئی ذاتی معلومات کبھی جمع نہیں کی جاتیں۔</string>
+    <string name="onboarding_crashlytics_enabled_desc">ڈیٹا رپورٹنگ فعال ہے۔</string>
+    <string name="onboarding_crashlytics_disabled_desc">ڈیٹا رپورٹنگ غیر فعال ہے۔</string>
+    <string name="onboarding_crashlytics_privacy_info">آپ کی رازداری اہم ہے۔ ہم اس ڈیٹا کو صرف کیڑے ٹھیک کرنے اور خصوصیات کو بہتر بنانے کے لیے استعمال کرتے ہیں۔ مزید تفصیلات کے لیے، براہ کرم ہماری رازداری کی پالیسی کا جائزہ لیں۔</string>
+    <string name="learn_more_privacy_policy">ہماری رازداری کی پالیسی کا جائزہ لیں</string>
+    <string name="onboarding_crashlytics_title_dialog">ڈیٹا کی رضامندی کا نظم کریں</string>
+    <string name="onboarding_crashlytics_description_dialog">براہ کرم اپنی رضامندی کی ترجیحات کا جائزہ لیں اور تصدیق کریں۔ یہ ڈیٹا ہمیں ایپ کو بہتر بنانے میں مدد کرتا ہے اور اسے ہماری پرائیویسی پالیسی کے مطابق ہینڈل کیا جاتا ہے۔</string>
+    <string name="consent_analytics_storage_description_short">ایپ کے استعمال کے تجزیے کے لیے ڈیٹا اکٹھا کرنے کی اجازت دیتا ہے۔</string>
+    <string name="consent_ad_storage_description_short">اشتہاری مقاصد کے لیے ڈیٹا ذخیرہ کرنے کی اجازت دیتا ہے۔</string>
+    <string name="consent_ad_user_data_description_short">اشتہارات کے لیے صارف کا ڈیٹا بھیجنے کی اجازت دیتا ہے۔</string>
+    <string name="consent_ad_personalization_description_short">ذاتی نوعیت کی تشہیر کو فعال کرتا ہے۔</string>
+    <string name="onboarding_crashlytics_show_details_button">تفصیلی معلومات دکھائیں</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">استعمال اور تشخیص کے بارے میں تفصیلی معلومات دکھائیں</string>
+    <string name="button_acknowledge_consents">محفوظ کریں اور جاری رکھیں</string>
+    <string name="button_continue">جاری رکھیں</string>
+    <string name="onboarding_complete_icon_desc">آن بورڈنگ مکمل</string>
+    <string name="onboarding_final_title">آپ پوری طرح تیار ہیں!</string>
+    <string name="onboarding_final_description">اپنے تجربے کو ذاتی بنانے کا شکریہ۔ اب آپ تمام خصوصیات کو دریافت کرنے کے لیے تیار ہیں۔ لطف اٹھائیں!</string>
+
+    <string name="navigation_drawer_open">نیویگیشن دراز کھولیں</string>
+    <string name="go_back">پیچھے جائیں</string>
+    <string name="toast_review_already_done">درجہ بندی کے لئے شکریہ!</string>
+
+    <string name="sort_by">ترتیب دیں:</string>
+    <string name="error">خرابی</string>
+    <string name="app_not_installed">ایپ انسٹال نہیں ہے</string>
+    <string name="snack_app_updated">ایپ کامیابی سے اپ ڈیٹ ہو گئی ہے</string>
+    <string name="snack_update_failed">اپ ڈیٹ کے عمل میں ایک مسئلہ درپیش ہوا</string>
+    <string name="try_again">دوبارہ کوشش کریں</string>
+    <string name="summary_share_message">یہ حیرت انگیز ایپ دیکھیں جو میں استعمال کر رہا ہوں! اس میں کچھ واقعی عمدہ خصوصیات ہیں جو آپ کو دلچسپ لگ سکتی ہیں۔ آپ اسے پلے اسٹور سے یہاں سے ڈاؤن لوڈ کر سکتے ہیں: %1$s</string>
+    <string name="learn_more">مزید جانیں</string>
+    <string name="close">بند کریں؟</string>
+    <string name="summary_close">کیا آپ واقعی باہر نکلنا چاہتے ہیں؟</string>
+
+    <string name="home">ہوم</string>
+
+    <string name="activity_not_found">سرگرمی نہیں ملی۔</string>
+    <string name="security_error">ایک سیکیورٹی خرابی پیش آئی۔ براہ کرم بعد میں دوبارہ کوشش کریں۔</string>
+    <string name="io_error">ایک ان پٹ/آؤٹ پٹ خرابی پیش آئی۔ براہ کرم اپنے نیٹ ورک کنکشن یا اسٹوریج کو چیک کریں اور دوبارہ کوشش کریں۔</string>
+    <string name="illegal_argument_error">غلط ان پٹ یا دلیل فراہم کی گئی۔ براہ کرم معلومات کو چیک کریں اور دوبارہ کوشش کریں۔</string>
+    <string name="unknown_error">ایک نامعلوم خرابی پیش آئی۔</string>
+    <string name="initialization_error">شروع کرنے میں ناکامی۔ براہ کرم بعد میں دوبارہ کوشش کریں۔</string>
+
+    <string name="settings">ترتیبات</string>
+    <string name="long_settings_label">ایپلیکیشن کی ترتیبات</string>
+    <string name="settings_disabled_message">ترتیبات فی الحال دستیاب نہیں ہیں۔</string>
+    <string name="settings_placeholder_description">کوئی ترتیبات منتخب نہیں ہیں۔ اس کی تفصیلات یہاں دیکھنے کے لیے ایک آپشن منتخب کریں۔</string>
+    <string name="get_help">مدد حاصل کریں</string>
+    <string name="error_no_settings_found">کوئی ترتیبات نہیں ملیں</string>
+    <string name="error_invalid_content_key">غلط مواد کی کلید!</string>
+
+    <string name="display">ڈسپلے</string>
+    <string name="summary_preference_settings_display">اپنی ایپ کی شکل و صورت کو ذاتی بنائیں</string>
+
+    <string name="appearance">ظاہری شکل</string>
+    <string name="dark_theme">ڈارک تھیم</string>
+    <string name="will_turn_on_automatically_by_system">سسٹم کے ذریعے خود بخود آن ہو جائے گا</string>
+    <string name="will_never_turn_on_automatically">کبھی خود بخود آن نہیں ہوگا</string>
+    <string name="amoled_mode">AMOLED موڈ</string>
+    <string name="follow_system">سسٹم موڈ فالو کریں</string>
+    <string name="light_mode">لائٹ موڈ</string>
+    <string name="dark_mode">ڈارک موڈ</string>
+    <string name="summary_dark_theme">ڈارک تھیم گہری پس منظر استعمال کرتا ہے تاکہ آپ کی بیٹری زیادہ دیر تک چل سکے۔</string>
+
+    <string name="dynamic_colors">متحرک رنگ</string>
+    <string name="summary_preference_settings_dynamic_colors">وال پیپرز سے رنگ ایپ تھیم پر لاگو کریں</string>
+
+    <string name="app_behavior">ایپ کا برتاؤ</string>
+    <string name="bounce_buttons">باؤنس کلک</string>
+    <string name="summary_preference_settings_bounce_buttons">کلک کرنے پر تمام کلک کے قابل عناصر پر ایک لطیف باؤنس اینیمیشن لاگو کرتا ہے</string>
+
+    <string name="navigation">نیویگیشن</string>
+    <string name="startup_page">شروعاتی صفحہ</string>
+    <string name="summary_preference_settings_startup_page">ایپ شروع ہونے پر دکھائی جانے والی اسکرین منتخب کریں۔</string>
+
+    <string name="language">زبان</string>
+    <string name="summary_preference_settings_language">ایپ میں استعمال ہونے والی زبان کو تبدیل کرتا ہے</string>
+
+    <string name="dialog_startup_subtitle">اپنی ترجیحی شروعاتی صفحہ منتخب کریں:</string>
+    <string name="dialog_info_startup">ایپلیکیشن لانچ کرنے پر صارفین کو پیش کی جانے والی ابتدائی اسکرین کو کنفیگر کرتا ہے۔ یہ ترتیب صارف کے ایپ کے ساتھ پہلے تعامل پر اثر انداز ہوتی ہے اور اسے مخصوص صارف طبقات یا مصنوعات کے اہداف کے مطابق بنایا جا سکتا ہے۔</string>
+
+    <string name="select_language_title">زبان منتخب کریں</string>
+    <string name="dialog_language_subtitle">اپنی پسندیدہ زبان منتخب کریں</string>
+    <string name="dialog_info_language">اپنی پسندیدہ زبان کے ساتھ اپنے تجربے کو ذاتی بنائیں۔ آپ جو بھی زبان کی تبدیلیاں کرتے ہیں وہ فوراً لاگو ہوتی ہیں، جس سے آپ کی منتخب کردہ زبان میں بغیر کسی رکاوٹ کے تجربہ یقینی ہوتا ہے۔</string>
+
+    <string name="notifications">اطلاعات</string>
+    <string name="summary_preference_settings_notifications">ایپ اطلاعات کا نظم کریں</string>
+
+    <string name="app_usage_notifications">ایپ کے استعمال کی اطلاعات</string>
+    <string name="update_notifications">اپ ڈیٹ اطلاعات</string>
+
+    <string name="advanced">جدید</string>
+    <string name="summary_preference_settings_advanced">مزید جدید ترتیبات دریافت کریں</string>
+    <string name="issue_title_label">عنوان</string>
+    <string name="issue_description_label">تفصیل</string>
+    <string name="issue_section_label">مسئلہ</string>
+    <string name="login_section_label">لاگ ان</string>
+    <string name="use_github_account">GitHub اکاؤنٹ استعمال کرکے بھیجیں</string>
+    <string name="send_anonymously">گمنام بھیجیں</string>
+    <string name="optional_placeholder">(اختیاری)</string>
+    <string name="issue_username_label">صارف نام</string>
+    <string name="issue_password_label">پاس ورڈ</string>
+    <string name="issue_email_label">ای میل</string>
+    <string name="issue_send">بھیجیں</string>
+    <string name="cd_expand_device_info">آلہ کی معلومات کو پھیلائیں یا سمیٹیں</string>
+    <string name="view_on_github">GitHub پر ری ڈائریکٹ کریں</string>
+    <string name="snack_report_success">رپورٹ کامیابی سے بھیج دی گئی</string>
+    <string name="snack_report_failed">رپورٹ بھیجنے میں ناکام</string>
+    <string name="error_invalid_report">عنوان اور تفصیل خالی نہیں ہوسکتے</string>
+    <string name="issue_submitted_successfully">مسئلہ کامیابی کے ساتھ جمع کرایا گیا</string>
+    <string name="open_issue_in_browser">براؤزر میں کھلا</string>
+    <string name="open_button_label">کھلا مسئلہ</string>
+    <string name="issue_submitted">آپ کا مسئلہ پیش کیا گیا تھا!</string>
+    <string name="error_unauthorized">غیر مجاز: غلط ٹوکن</string>
+    <string name="error_forbidden">ممنوع: ناکافی اجازتیں</string>
+    <string name="error_gone">API اختتامی نقطہ ہٹا دیا گیا</string>
+    <string name="error_unprocessable">جاری کرنے کے لئے غلط ڈیٹا</string>
+
+    <string name="error_reporting">خرابی کی اطلاع دینا</string>
+    <string name="bug_report">بگ رپورٹ</string>
+    <string name="summary_preference_settings_bug_report">بگ رپورٹس اور فیچر کی درخواستیں ایپ کے گٹ ہب ریپوزٹری کے ایشوز پیج پر بھیجیں</string>
+    <string name="cache_management">کیشے کا انتظام</string>
+    <string name="clear_cache">کیشے صاف کریں</string>
+    <string name="summary_preference_settings_clear_cache">عارضی ایپلیکیشن ڈیٹا صاف کریں۔</string>
+    <string name="cache_cleared_success">کیشے کامیابی سے صاف ہو گیا</string>
+    <string name="cache_cleared_error">کچھ خرابیوں کے ساتھ کیشے صاف ہوا</string>
+
+    <string name="security_and_privacy">سیکیورٹی اور رازداری</string>
+    <string name="summary_preference_settings_privacy_and_security">اپنی رازداری کی ترتیبات کا نظم کریں</string>
+
+    <string name="privacy">رازداری</string>
+    <string name="privacy_policy">رازداری کی پالیسی</string>
+    <string name="summary_preference_settings_privacy_policy">وہ پالیسی دیکھیں جو یہ کنٹرول کرتی ہے کہ ہم آپ کے ڈیٹا کو کیسے سنبھالتے ہیں</string>
+    <string name="terms_of_service">سروس کی شرائط</string>
+    <string name="summary_preference_settings_terms_of_service">ان شرائط کا جائزہ لیں جن سے آپ ہماری سروس استعمال کرتے وقت اتفاق کرتے ہیں</string>
+    <string name="code_of_conduct">ضابطہ اخلاق</string>
+    <string name="summary_preference_settings_code_of_conduct">ہماری سروس کے اندر رویے کے لیے قواعد و ضوابط کو سمجھیں</string>
+
+    <string name="permissions">اجازتیں</string>
+    <string name="summary_preference_settings_permissions">ہماری سروس کو دی گئی اجازتوں کا نظم کریں</string>
+    <string name="normal">عام</string>
+    <string name="runtime">رن ٹائم</string>
+    <string name="storage">اسٹوریج</string>
+    <string name="special">خاص</string>
+    <string name="ad_id">اشتہار کی شناخت [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">ایپ کو صارف کے آلے سے وابستہ اشتہاری شناخت کنندہ کو بازیافت کرنے اور استعمال کرنے کی اجازت دیتا ہے، ذاتی نوعیت کے اشتہارات فراہم کرتا ہے، اشتہار کی تاثیر کی پیمائش کرتا ہے، اور Android 13 یا بعد کے آلات پر اشتہارات دکھاتا ہے۔</string>
+    <string name="internet">انٹرنیٹ [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">ایپ کو غلطی کی رپورٹس بھیجنے یا اپ ڈیٹس چیک کرنے کے لیے انٹرنیٹ کنکشن قائم کرنے کی اجازت دیتا ہے۔</string>
+    <string name="post_notifications">اطلاعات پوسٹ کریں [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">ایپ کو Android 13 یا اس کے بعد والے آلات پر اطلاعات دکھانے کی اجازت دیتا ہے۔</string>
+    <string name="access_network_state">نیٹ ورک کی حالت تک رسائی [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">ایپ کو نیٹ ورک کنیکٹیویٹی چیک کرنے اور وائی فائی کے بارے میں معلومات بازیافت کرنے کی اجازت دیتا ہے، بشمول فعال حیثیت اور منسلک وائی فائی ڈیوائس کے نام۔</string>
+    <string name="access_notification_policy">اطلاعاتی پالیسی تک رسائی [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">ایپ کو آلے کی اطلاعاتی پالیسی تک رسائی حاصل کرنے اور اس میں ترمیم کرنے، صارف کو اطلاعات کب اور کیسے دکھائی جائیں اس کو کنٹرول کرنے، اور حسب ضرورت اطلاعات کے انتظام کی خصوصیات فراہم کرنے کی اجازت دیتا ہے۔</string>
+    <string name="billing">بلنگ [BILLING]</string>
+    <string name="summary_preference_permissions_billing">ایپ کو ایپ میں خریداریوں اور عطیات کو سنبھالنے کے لیے گوگل پلے بلنگ لائبریری استعمال کرنے کی اجازت دیتا ہے۔</string>
+    <string name="check_license">لائسنس چیک کریں [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">ایپ کو لائسنس کے معاہدے کی تعمیل کی توثیق کرنے اور دانشورانہ املاک کے تحفظ کے لیے لائسنس کی شرائط نافذ کرنے کی اجازت دیتا ہے۔</string>
+    <string name="foreground_service">پیش منظر سروس [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">ایپ کو پیش منظر میں چلنے والی خدمات بنانے اور استعمال کرنے کی اجازت دیتا ہے، جس سے انہیں دیگر پس منظر کے عمل پر فوقیت ملتی ہے اور کارکردگی اور وشوسنییتا بہتر ہوتی ہے۔</string>
+    <string name="wake_lock">ڈیوائس کو بیدار رکھیں [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">ایپ کو اہم کارروائیوں کے دوران ڈیوائس کو سلیپ موڈ (مثلاً، اسکرین کا مدھم ہونا یا پروسیسر کا سلیپ موڈ) میں جانے سے روکنے کی اجازت دیتا ہے تاکہ یہ یقینی بنایا جا سکے کہ وہ بغیر کسی رکاوٹ کے مکمل ہوں۔ بیٹری بچانے کے لیے اسے किफایت سے استعمال کیا جاتا ہے۔</string>
+
+    <string name="ads">اشتہارات</string>
+    <string name="summary_preference_settings_ads">کنٹرول کریں کہ ہم آپ کو متعلقہ اشتہارات دکھانے کے لیے آپ کی معلومات کیسے استعمال کرتے ہیں</string>
+
+    <string name="display_ads">اشتہارات دکھائیں</string>
+    <string name="personalized_ads">ذاتی نوعیت کے اشتہارات</string>
+    <string name="summary_ads_personalized_ads">منتخب کریں کہ ہم آپ کی دلچسپیوں کی بنیاد پر آپ کے لیے اشتہارات کو کیسے ذاتی بناتے ہیں</string>
+    <string name="summary_ads">وہ اشتہارات دیکھیں جو آپ سے متعلقہ ہوں۔ اپنی ایپ سرگرمی کی بنیاد پر ذاتی نوعیت کے اشتہارات دکھانے کے لیے استعمال ہونے والی معلومات کا نظم کریں۔ آپ یہاں ہمیشہ ذاتی نوعیت کو بند کر سکتے ہیں۔\n</string>
+    <string name="ads_enabled">اشتہارات فعال ہیں</string>
+    <string name="ads_disabled">اشتہارات غیر فعال ہیں</string>
+    <string name="error_failed_to_load_ads_settings">اشتہارات کی ترتیبات لوڈ کرنے میں ناکام</string>
+
+    <string name="usage_and_diagnostics">استعمال اور تشخیص</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">ایپ میں تجربے کو بہتر بنانے میں مدد کے لیے ڈیٹا شیئر کریں</string>
+    <string name="summary_usage_and_diagnostics">تشخیصی، ڈیوائس، اور ایپ کے استعمال کا ڈیٹا خود بخود ہمیں بھیج کر اپنے تجربے کو بہتر بنانے میں مدد کریں۔ اس سے ایپ کی کارکردگی، استحکام، اور دیگر اضافہ جات کو بہتر بنانے میں مدد ملے گی۔ کچھ مجموعی ڈیٹا ہماری ایپس کی بھی مدد کرے گا۔\n\nیہ آپ کے ڈیوائس اور آپ ہماری ایپس کو کیسے استعمال کرتے ہیں (جیسے بیٹری لیول، سسٹم اور ایپ کی سرگرمی، اور خرابیاں) کے بارے میں عمومی معلومات ہیں۔ ڈیٹا ہماری ایپس کو بہتر بنانے کے لیے استعمال کیا جائے گا\n\nاس خصوصیت کو بند کرنے سے آپ کے ڈیوائس کی ضروری خدمات جیسے ایپ اپ ڈیٹس اور سیکیورٹی کے لیے درکار معلومات بھیجنے کی صلاحیت متاثر نہیں ہوتی۔\n</string>
+    <string name="privacy_settings_title">رازداری کی ترتیبات</string>
+    <string name="consent_category_analytics_title">تجزیات</string>
+    <string name="consent_category_advertising_title">ذاتی نوعیت کے اشتہارات</string>
+    <string name="consent_analytics_storage_title">تجزیاتی ڈیٹا اسٹور کریں</string>
+    <string name="consent_analytics_storage_description">ایپ کے استعمال اور وزٹ کے دورانیے جیسے ڈیٹا کو اسٹور کرنے کی اجازت دیں تاکہ تجزیات اور ایپ کی کارکردگی کو بہتر بنایا جا سکے۔</string>
+    <string name="consent_ad_storage_title">اشتہاری ڈیٹا اسٹور کریں</string>
+    <string name="consent_ad_storage_description">اشتہار کی کارکردگی کی پیمائش کرنے اور متعلقہ اشتہارات دکھانے کے لیے ڈیٹا (جیسے ڈیوائس شناخت کنندگان یا کوکیز) کو اسٹور کرنا فعال کریں۔</string>
+    <string name="consent_ad_user_data_title">اشتہارات کے لیے ڈیٹا بھیجیں</string>
+    <string name="consent_ad_user_data_description">استعمال اور ڈیوائس کا ڈیٹا Google کو بھیجنے کی اجازت دیں تاکہ اشتہار سے متعلق خصوصیات جیسے تبادلوں اور مہم کی اصلاح میں مدد مل سکے۔</string>
+    <string name="consent_ad_personalization_title">ذاتی نوعیت کے اشتہارات</string>
+    <string name="consent_ad_personalization_description">Google سروسز اور ایپس پر آپ کی سرگرمی اور ترجیحات کی بنیاد پر ذاتی نوعیت کے اشتہارات فعال کریں۔</string>
+    <string name="privacy_settings_info">نیچے اپنی ڈیٹا ترجیحات کا نظم کریں۔ آپ کسی بھی وقت یہ ترتیبات تبدیل کر سکتے ہیں۔ مزید تفصیلات کے لیے، براہ کرم ہماری <a href="%s">رازداری کی پالیسی</a> دیکھیں۔</string>
+    <string name="learn_more_privacy_policy_settings">ہماری رازداری کی پالیسی میں مزید جانیں</string>
+    <string name="advanced_privacy_settings">اعلیٰ رازداری کی ترتیبات</string>
+    <string name="icon_desc_expand_more">مزید پھیلائیں</string>
+    <string name="icon_desc_expand_less">سکیڑیں</string>
+    <string name="icon_desc_consent_category">رضامندی کے زمرے کا آئیکن</string>
+    <string name="icon_desc_switch_status">سوئچ اسٹیٹس آئیکن</string>
+
+    <string name="legal">قانونی</string>
+    <string name="legal_notices">قانونی نوٹس</string>
+    <string name="summary_preference_settings_legal_notices">ہماری سروس کے بارے میں قانونی معلومات دیکھیں</string>
+    <string name="license">لائسنس</string>
+
+    <string name="about">کے بارے میں</string>
+    <string name="summary_preference_settings_about">ایپ کے بارے میں مزید جانیں</string>
+
+    <string name="app_info">ایپ کی معلومات</string>
+    <string name="app_build_version">ایپلیکیشن بلڈ ورژن</string>
+    <string name="oss_license_title">اوپن سورس لائسنس</string>
+    <string name="summary_preference_settings_oss">اوپن سورس سافٹ ویئر کے لیے لائسنس کی تفصیلات</string>
+
+    <string name="eula_title">EULA</string>
+    <string name="changelog_title">ایپ چینج لاگ</string>
+    <string name="loading_eula_message">اینڈ یوزر لائسنس ایگریمنٹ حاصل کیا جا رہا ہے…</string>
+    <string name="loading_changelog_message">ایپلیکیشن چینج لاگ حاصل کیا جا رہا ہے…</string>
+    <string name="error_loading_eula_message">اینڈ یوزر لائسنس ایگریمنٹ لوڈ کرنے سے قاصر۔ براہ کرم دوبارہ کوشش کریں۔</string>
+    <string name="error_loading_changelog_message">ایپلیکیشن چینج لاگ لوڈ کرنے سے قاصر۔ براہ کرم دوبارہ کوشش کریں۔</string>
+
+    <string name="device_info">ڈیوائس کی معلومات</string>
+    <string name="app_build">ایپ بلڈ: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">ڈیبگ</string>
+    <string name="release">ریلیز</string>
+    <string name="manufacturer">مینوفیکچرر:</string>
+    <string name="device_model">ڈیوائس ماڈل:</string>
+    <string name="android_version">اینڈرائیڈ ورژن:</string>
+    <string name="api_level">API لیول:</string>
+    <string name="snack_device_info_copied">ڈیوائس کی معلومات کلپ بورڈ پر کاپی ہو گئیں</string>
+
+    <string name="help_and_feedback">مدد اور رائے</string>
+    <string name="help">مدد</string>
+    <string name="faq">اکثر پوچھے گئے سوالات</string>
+    <string name="popular_help_resources">مشہور امدادی وسائل</string>
+    <string name="contact_us">ہم سے رابطہ کریں</string>
+    <string name="contact_us_description">ہمیں مزید بتائیں اور ہم آپ کو وہاں پہنچنے میں مدد کریں گے</string>
+    <string name="view_in_google_play_store">گوگل پلے اسٹور میں دیکھیں</string>
+    <string name="version_info">ورژن کی معلومات</string>
+    <string name="version">ورژن %1$s</string>
+    <string name="beta_program">بیٹا پروگرام</string>
+
+    <string name="feedback">رائے</string>
+
+    <string name="updates">اپ ڈیٹس</string>
+
+    <string name="share">شیئر کریں</string>
+
+    <string name="support_us">ہماری مدد کریں</string>
+    <string name="paid_support">بامعاوضہ سپورٹ</string>
+    <string name="summary_donations">چاہے آپ کتنا ہی عطیہ دیں، آپ ہماری ایپ کو چلانے اور ہماری خصوصیات کو بہتر بنانے میں ہماری مدد کریں گے۔ ہم آپ کی فراخدلی اور مہربانی کی تعریف کرتے ہیں!</string>
+    <string name="non_paid_support">بغیر معاوضہ سپورٹ</string>
+    <string name="web_ad">ویب اشتہار</string>
+    <string name="error_failed_to_load_sku_details">SKU تفصیلات لوڈ کرنے میں ناکام</string>
+</resources>

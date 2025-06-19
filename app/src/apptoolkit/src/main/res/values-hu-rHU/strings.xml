@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">A munkafolyamat egyszerűsítésére tervezett alkalmazás alapvető eszközöket és funkciókat biztosít, hogy bármilyen feladatnál szervezett és hatékony maradhass. 📱</string>
+    <string name="notification_update_title">Új frissítés érhető el!</string>
+    <string name="summary_notification_update">Az alkalmazás új verziója elérhető. Kattints a frissítéshez!</string>
+    <string name="notification_last_time_used_title">Régen jártál itt!</string>
+    <string name="default_notification_summary">Rengeteg új funkció vár rád. Nyisd meg az alkalmazást!</string>
+
+    <string name="welcome">Üdvözlünk</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Olvasd el és fogadd el a Szolgáltatási feltételeinket és az Adatvédelmi irányelveinket a folytatáshoz</string>
+    <string name="agree">Elfogadom</string>
+    <string name="error_loading_consent_info">A hozzájárulási információ betöltése sikertelen</string>
+
+    <string name="skip_button_text">KIHAGYÁS</string>
+    <string name="skip_button_content_description">Kihagyás</string>
+    <string name="back_button_content_description">Vissza</string>
+    <string name="back_button_text">VISSZA</string>
+    <string name="done_button_content_description">Kész</string>
+    <string name="done_button_text">KÉSZ</string>
+    <string name="next_button_content_description">Tovább</string>
+    <string name="next_button_text">TOVÁBB</string>
+    <string name="onboarding_theme_title">Válassza ki a stílusát</string>
+    <string name="onboarding_theme_subtitle">Válassza ki, hogyan nézzen ki az alkalmazás.</string>
+    <string name="onboarding_theme_light_desc">Világos és energikus.</string>
+    <string name="onboarding_theme_dark_desc">Kíméletes a szemnek.</string>
+    <string name="onboarding_theme_system_desc">Megfelel az eszközének.</string>
+    <string name="onboarding_amoled_mode_desc">Mélyebb feketék OLED képernyőkhöz.</string>
+    <string name="selected">Kiválasztva</string>
+    <string name="onboarding_crashlytics_title">Segítsen nekünk fejlődni</string>
+    <string name="onboarding_crashlytics_description">Engedélyezze az alkalmazásnak, hogy névtelen használati adatokat és összeomlási jelentéseket küldjön. Ez segít nekünk kijavítani a hibákat és javítani az élményét. Soha nem gyűjtünk személyes adatokat.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Az adatok jelentése aktív.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Az adatok jelentése inaktív.</string>
+    <string name="onboarding_crashlytics_privacy_info">Az Ön adatvédelme fontos. Ezeket az adatokat csak hibajavításra és funkciófejlesztésre használjuk. További részletekért kérjük, tekintse át adatvédelmi irányelveinket.</string>
+    <string name="learn_more_privacy_policy">Tekintse át adatvédelmi irányelveinket</string>
+    <string name="onboarding_crashlytics_title_dialog">Adathozzájárulás kezelése</string>
+    <string name="onboarding_crashlytics_description_dialog">Kérjük, tekintse át és erősítse meg hozzájárulási beállításait. Ezek az adatok segítenek nekünk az alkalmazás fejlesztésében, és az Adatvédelmi irányelveinknek megfelelően kezeljük őket.</string>
+    <string name="consent_analytics_storage_description_short">Lehetővé teszi az adatgyűjtést az alkalmazáshasználat elemzéséhez.</string>
+    <string name="consent_ad_storage_description_short">Engedélyezi az adatok tárolását hirdetési célokra.</string>
+    <string name="consent_ad_user_data_description_short">Lehetővé teszi a felhasználói adatok küldését hirdetésekhez.</string>
+    <string name="consent_ad_personalization_description_short">Engedélyezi a személyre szabott hirdetéseket.</string>
+    <string name="onboarding_crashlytics_show_details_button">Részletes információk megjelenítése</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Részletes információk megjelenítése a használatról és a diagnosztikáról</string>
+    <string name="button_acknowledge_consents">Mentés és folytatás</string>
+    <string name="button_continue">Folytatás</string>
+    <string name="onboarding_complete_icon_desc">Bevezetés befejezve</string>
+    <string name="onboarding_final_title">Minden készen áll!</string>
+    <string name="onboarding_final_description">Köszönjük, hogy személyre szabta az élményét. Most már készen áll az összes funkció felfedezésére. Jó szórakozást!</string>
+
+    <string name="navigation_drawer_open">Navigációs menü megnyitása</string>
+    <string name="go_back">Vissza</string>
+    <string name="toast_review_already_done">Köszönöm a besorolást!</string>
+
+    <string name="error">Hiba</string>
+    <string name="sort_by">Rendezés:</string>
+    <string name="app_not_installed">Az alkalmazás nincs telepítve</string>
+    <string name="snack_app_updated">Az alkalmazás sikeresen frissült</string>
+    <string name="snack_update_failed">Probléma merült fel a frissítés során</string>
+    <string name="try_again">Próbáld újra</string>
+    <string name="summary_share_message">Nézd meg ezt a fantasztikus alkalmazást, amit használok! Nagyon érdekes funkciói vannak, amik neked is tetszhetnek. Letöltheted a Play Áruházból itt: %1$s</string>
+    <string name="learn_more">Tudj meg többet</string>
+    <string name="close">Bezárás?</string>
+    <string name="summary_close">Biztosan kilépsz?</string>
+
+    <string name="home">Főoldal</string>
+
+    <string name="activity_not_found">A tevékenység nem található.</string>
+    <string name="security_error">Biztonsági hiba történt. Kérlek, próbáld újra később.</string>
+    <string name="io_error">Bemeneti/kimeneti hiba történt. Ellenőrizd a hálózati kapcsolatot vagy a tárhelyet, majd próbáld újra.</string>
+    <string name="illegal_argument_error">Érvénytelen adat vagy argumentum. Ellenőrizd az információt, majd próbáld újra.</string>
+    <string name="unknown_error">Ismeretlen hiba történt.</string>
+    <string name="initialization_error">Az inicializálás sikertelen. Próbáld újra később.</string>
+
+    <string name="settings">Beállítások</string>
+    <string name="long_settings_label">Alkalmazás beállításai</string>
+    <string name="settings_disabled_message">A beállítások jelenleg nem érhetők el.</string>
+    <string name="settings_placeholder_description">Nincs kiválasztott beállítás. Válassz egy lehetőséget a részletek megtekintéséhez.</string>
+    <string name="get_help">Segítség kérése</string>
+    <string name="error_no_settings_found">Nincs beállítás található</string>
+    <string name="error_invalid_content_key">Érvénytelen tartalomkulcs!</string>
+
+    <string name="display">Kijelző</string>
+    <string name="summary_preference_settings_display">Személyre szabhatod az alkalmazás megjelenését</string>
+
+    <string name="appearance">Megjelenés</string>
+    <string name="dark_theme">Sötét téma</string>
+    <string name="will_turn_on_automatically_by_system">Automatikusan bekapcsol a rendszer által</string>
+    <string name="will_never_turn_on_automatically">Soha nem kapcsol be automatikusan</string>
+    <string name="amoled_mode">AMOLED mód</string>
+    <string name="follow_system">Rendszerbeállítás követése</string>
+    <string name="light_mode">Világos mód</string>
+    <string name="dark_mode">Sötét mód</string>
+    <string name="summary_dark_theme">A sötét téma mély hátteret használ, hogy az akkumulátor élettartama hosszabb legyen</string>
+
+    <string name="dynamic_colors">Dinamikus színek</string>
+    <string name="summary_preference_settings_dynamic_colors">Alkalmazd a háttérképek színeit az alkalmazás témájára</string>
+
+    <string name="app_behavior">Alkalmazás viselkedése</string>
+    <string name="bounce_buttons">Gomb visszapattanás</string>
+    <string name="summary_preference_settings_bounce_buttons">Halvány visszapattanási animációt alkalmaz minden kattintható elemre</string>
+
+    <string name="navigation">Navigáció</string>
+    <string name="startup_page">Indítóoldal</string>
+    <string name="summary_preference_settings_startup_page">Válaszd ki a képernyőt, amely megjelenik az alkalmazás indításakor.</string>
+
+    <string name="language">Nyelv</string>
+    <string name="summary_preference_settings_language">Módosítja az alkalmazásban használt nyelvet</string>
+
+    <string name="dialog_startup_subtitle">Válaszd ki a kedvenc indítóoldaladat:</string>
+    <string name="dialog_info_startup">Az indítóképernyő beállításai, amelyek befolyásolják a felhasználók első interakcióját az alkalmazással.</string>
+
+    <string name="select_language_title">Nyelv kiválasztása</string>
+    <string name="dialog_language_subtitle">Válaszd ki a kívánt nyelvet</string>
+    <string name="dialog_info_language">Személyre szabhatod a tapasztalataidat a választott nyelveddel. A nyelvi változtatások azonnal érvénybe lépnek.</string>
+
+    <string name="notifications">Értesítések</string>
+    <string name="summary_preference_settings_notifications">Alkalmazás értesítéseinek kezelése</string>
+
+    <string name="app_usage_notifications">Alkalmazáshasználati értesítések</string>
+    <string name="update_notifications">Frissítési értesítések</string>
+
+    <string name="advanced">Haladó</string>
+    <string name="summary_preference_settings_advanced">Fedezd fel a további haladó beállításokat</string>
+    <string name="issue_title_label">Cím</string>
+    <string name="issue_description_label">Leírás</string>
+    <string name="issue_section_label">Hiba</string>
+    <string name="login_section_label">Bejelentkezés</string>
+    <string name="use_github_account">Küldés GitHub fiókkal</string>
+    <string name="send_anonymously">Küldés névtelenül</string>
+    <string name="optional_placeholder">(Opcionális)</string>
+    <string name="issue_username_label">Felhasználónév</string>
+    <string name="issue_password_label">Jelszó</string>
+    <string name="issue_email_label">E-mail</string>
+    <string name="issue_send">Küldés</string>
+    <string name="cd_expand_device_info">Eszközinformációk kibontása vagy összecsukása</string>
+    <string name="view_on_github">Átirányítás GitHubra</string>
+    <string name="snack_report_success">A jelentés sikeresen elküldve</string>
+    <string name="snack_report_failed">A jelentés elküldése nem sikerült</string>
+    <string name="error_invalid_report">A cím és a leírás nem lehet üres</string>
+    <string name="issue_submitted_successfully">A kiadás sikeresen benyújtva</string>
+    <string name="open_issue_in_browser">Nyissa meg a böngészőben</string>
+    <string name="open_button_label">Nyitott kérdés</string>
+    <string name="issue_submitted">A kérdését benyújtották!</string>
+    <string name="error_unauthorized">Jogosulatlan: Érvénytelen token</string>
+    <string name="error_forbidden">Tiltott: Nem elegendő engedély</string>
+    <string name="error_gone">Az API végpontja eltávolítva</string>
+    <string name="error_unprocessable">Érvénytelen adatok a kiadás létrehozásához</string>
+
+    <string name="error_reporting">Hibajelentés</string>
+    <string name="bug_report">Hibajelentés</string>
+    <string name="summary_preference_settings_bug_report">Küldj hibajelentéseket és funkciókéréseket az alkalmazás GitHub-archívumának hibajelentő oldalára</string>
+    <string name="cache_management">Gyorsítótár-kezelés</string>
+    <string name="clear_cache">Gyorsítótár törlése</string>
+    <string name="summary_preference_settings_clear_cache">Törölje az ideiglenes alkalmazásadatokat.</string>
+    <string name="cache_cleared_success">A gyorsítótár sikeresen törölve</string>
+    <string name="cache_cleared_error">A gyorsítótár törlése néhány hibával történt</string>
+
+    <string name="security_and_privacy">Biztonság és adatvédelem</string>
+    <string name="summary_preference_settings_privacy_and_security">Kezeld az adatvédelmi beállításaidat</string>
+
+    <string name="privacy">Adatvédelem</string>
+    <string name="privacy_policy">Adatvédelmi irányelvek</string>
+    <string name="summary_preference_settings_privacy_policy">Tekintsd meg az adatkezelési irányelveinket</string>
+    <string name="terms_of_service">Szolgáltatási feltételek</string>
+    <string name="summary_preference_settings_terms_of_service">Tekintsd át a szolgáltatási feltételeket</string>
+    <string name="code_of_conduct">Magatartási kódex</string>
+    <string name="summary_preference_settings_code_of_conduct">Ismerd meg a szolgáltatásban elvárt viselkedési szabályokat</string>
+
+    <string name="permissions">Engedélyek</string>
+    <string name="summary_preference_settings_permissions">Kezelje a szolgáltatásunkhoz adott engedélyeket</string>
+    <string name="normal">Normál</string>
+    <string name="runtime">Futásidő</string>
+    <string name="storage">Tárhely</string>
+    <string name="special">Különleges</string>
+    <string name="ad_id">Hirdetési azonosító [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Lehetővé teszi az alkalmazás számára, hogy lekérje és használja a felhasználó eszközéhez társított hirdetési azonosítót, személyre szabott hirdetéseket biztosítva, a hirdetések hatékonyságát mérve, és hirdetéseket jelenítve meg Android 13 vagy újabb rendszert futtató eszközökön.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Lehetővé teszi az alkalmazás számára, hogy internetkapcsolatot létesítsen hibajelentések küldéséhez vagy frissítések kereséséhez.</string>
+    <string name="post_notifications">Értesítések közzététele [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Lehetővé teszi az alkalmazás számára, hogy értesítéseket jelenítsen meg Android 13 vagy újabb rendszert futtató eszközökön.</string>
+    <string name="access_network_state">Hálózati állapot elérése [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Lehetővé teszi az alkalmazás számára, hogy ellenőrizze a hálózati kapcsolatot, és információkat kérjen le a Wi-Fi-ről, beleértve az engedélyezett állapotot és a csatlakoztatott Wi-Fi eszközök nevét.</string>
+    <string name="access_notification_policy">Értesítési irányelv elérése [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Lehetővé teszi az alkalmazás számára, hogy hozzáférjen és módosítsa az eszköz értesítési irányelvét, szabályozva, hogy az értesítések hogyan és mikor jelenjenek meg a felhasználónak, és egyéni értesítéskezelési funkciókat biztosítva.</string>
+    <string name="billing">Számlázás [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Lehetővé teszi az alkalmazás számára a Google Play Számlázási Könyvtár használatát az alkalmazáson belüli vásárlások és adományok kezeléséhez.</string>
+    <string name="check_license">Licenc ellenőrzése [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Lehetővé teszi az alkalmazás számára, hogy ellenőrizze a licencmegállapodásnak való megfelelését, és érvényesítse a licencfeltételeket a szellemi tulajdon védelme érdekében.</string>
+    <string name="foreground_service">Előtérben futó szolgáltatás [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Lehetővé teszi az alkalmazás számára, hogy előtérben futó szolgáltatásokat hozzon létre és használjon, prioritást biztosítva számukra más háttérfolyamatokkal szemben, valamint javítva a teljesítményt és a megbízhatóságot.</string>
+    <string name="wake_lock">Eszköz ébren tartása [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Lehetővé teszi az alkalmazás számára, hogy megakadályozza az eszköz alvó állapotba kerülését (pl. képernyő elsötétítése vagy processzor alvó állapota) kritikus műveletek során, biztosítva azok megszakítás nélküli befejezését. Ezt takarékosan használják az akkumulátor kímélése érdekében.</string>
+
+    <string name="ads">Hirdetések</string>
+    <string name="summary_preference_settings_ads">Szabályozd, hogyan használjuk az információidat a releváns hirdetések megjelenítéséhez</string>
+
+    <string name="display_ads">Hirdetések megjelenítése</string>
+    <string name="personalized_ads">Személyre szabott hirdetések</string>
+    <string name="summary_ads_personalized_ads">Válaszd ki, hogyan személyre szabjuk a hirdetéseket az érdeklődési köreid alapján</string>
+    <string name="summary_ads">Nézz meg számodra releváns hirdetéseket. A személyre szabást bármikor kikapcsolhatod itt.</string>
+    <string name="ads_enabled">Hirdetések engedélyezve</string>
+    <string name="ads_disabled">Hirdetések letiltva</string>
+    <string name="error_failed_to_load_ads_settings">A hirdetésbeállítások betöltése sikertelen</string>
+
+    <string name="usage_and_diagnostics">Használat és diagnosztika</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Oszd meg az adatokat az alkalmazásélmény javítása érdekében</string>
+    <string name="summary_usage_and_diagnostics">Javítsd a tapasztalataidat azáltal, hogy automatikusan küldöd a diagnosztikai, eszköz- és alkalmazáshasználati adatokat.</string>
+    <string name="privacy_settings_title">Adatvédelmi beállítások</string>
+    <string name="consent_category_analytics_title">Analitika</string>
+    <string name="consent_category_advertising_title">Személyre szabott hirdetés</string>
+    <string name="consent_analytics_storage_title">Analitikai adatok tárolása</string>
+    <string name="consent_analytics_storage_description">Engedélyezi az adatok, például az alkalmazáshasználat és a látogatás időtartamának tárolását az analitika és az alkalmazás teljesítményének javítása érdekében.</string>
+    <string name="consent_ad_storage_title">Hirdetési adatok tárolása</string>
+    <string name="consent_ad_storage_description">Engedélyezi az adatok (például eszközazonosítók vagy sütik) tárolását a hirdetési teljesítmény mérésére és releváns hirdetések megjelenítésére.</string>
+    <string name="consent_ad_user_data_title">Adatok küldése hirdetésekhez</string>
+    <string name="consent_ad_user_data_description">Engedélyezi a használati és eszközadatok Google-nak való elküldését a hirdetésekkel kapcsolatos funkciók, például a konverziók és a kampányoptimalizálás támogatásához.</string>
+    <string name="consent_ad_personalization_title">Személyre szabott hirdetések</string>
+    <string name="consent_ad_personalization_description">Engedélyezi a személyre szabott hirdetéseket a Google-szolgáltatásokban és -alkalmazásokban végzett tevékenységei és preferenciái alapján.</string>
+    <string name="privacy_settings_info">Az alábbiakban kezelheti adatkezelési beállításait. Ezeket a beállításokat bármikor módosíthatja. További részletekért tekintse meg <a href="%s">Adatvédelmi irányelveinket</a>.</string>
+    <string name="learn_more_privacy_policy_settings">Tudjon meg többet Adatvédelmi irányelveinkből</string>
+    <string name="advanced_privacy_settings">Speciális adatvédelmi beállítások</string>
+    <string name="icon_desc_expand_more">Kibontás</string>
+    <string name="icon_desc_expand_less">Összecsukás</string>
+    <string name="icon_desc_consent_category">Hozzájárulási kategória ikonja</string>
+    <string name="icon_desc_switch_status">Kapcsoló állapotikonja</string>
+
+    <string name="legal">Jogi</string>
+    <string name="legal_notices">Jogi közlemények</string>
+    <string name="summary_preference_settings_legal_notices">Tekintsd meg a szolgáltatásunk jogi információit</string>
+    <string name="license">Licenc</string>
+
+    <string name="about">Névjegy</string>
+    <string name="summary_preference_settings_about">Tudjon meg többet az alkalmazásról</string>
+
+    <string name="app_info">Alkalmazásinformáció</string>
+    <string name="app_build_version">Alkalmazásverzió</string>
+    <string name="oss_license_title">Nyílt forráskódú licencek</string>
+    <string name="summary_preference_settings_oss">Nyílt forráskódú szoftverek licenc részletei</string>
+
+    <string name="eula_title">Végfelhasználói licencszerződés</string>
+    <string name="changelog_title">Alkalmazás változásnapló</string>
+    <string name="loading_eula_message">A végfelhasználói licencszerződés letöltése…</string>
+    <string name="loading_changelog_message">Az alkalmazás változásnaplójának betöltése…</string>
+    <string name="error_loading_eula_message">Nem sikerült betölteni a végfelhasználói licencszerződést. Próbáld újra.</string>
+    <string name="error_loading_changelog_message">Nem sikerült betölteni az alkalmazás változásnaplóját. Próbáld újra.</string>
+
+    <string name="device_info">Eszközinformációk</string>
+    <string name="app_build">Alkalmazásverzió: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Hibakeresés</string>
+    <string name="release">Kiadás</string>
+    <string name="manufacturer">Gyártó:</string>
+    <string name="device_model">Eszközmodell:</string>
+    <string name="android_version">Android verzió:</string>
+    <string name="api_level">API szint:</string>
+    <string name="snack_device_info_copied">Eszközinformáció másolva a vágólapra</string>
+
+    <string name="help_and_feedback">Segítség és visszajelzés</string>
+    <string name="help">Segítség</string>
+    <string name="faq">GYIK</string>
+    <string name="popular_help_resources">Népszerű segítségforrások</string>
+    <string name="contact_us">Lépj kapcsolatba velünk</string>
+    <string name="contact_us_description">Mondj el többet, és segítünk neked</string>
+    <string name="view_in_google_play_store">Megtekintés a Google Play Áruházban</string>
+    <string name="version_info">Verzió információ</string>
+    <string name="version">Verzió: %1$s</string>
+    <string name="beta_program">Béta program</string>
+
+    <string name="feedback">Visszajelzés</string>
+
+    <string name="updates">Frissítések</string>
+
+    <string name="share">Megosztás</string>
+
+    <string name="support_us">Támogass minket</string>
+    <string name="paid_support">Fizetett támogatás</string>
+    <string name="summary_donations">Akármennyit adományozol, segítesz az alkalmazásunk működésének fenntartásában és a funkciók javításában. Nagyra értékeljük a nagylelkűségedet és kedvességedet!</string>
+    <string name="non_paid_support">Nem fizetett támogatás</string>
+    <string name="web_ad">Webes hirdetés</string>
+    <string name="error_failed_to_load_sku_details">Nem sikerült betölteni az SKU részleteit</string>
+</resources>

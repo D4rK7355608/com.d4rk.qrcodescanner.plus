@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">Được thiết kế để hợp lý hóa quy trình làm việc của bạn, ứng dụng này cung cấp các công cụ và tính năng thiết yếu để giúp bạn luôn ngăn nắp và hiệu quả trong mọi tác vụ. 📱</string>
+    <string name="notification_update_title">Có bản cập nhật mới!</string>
+    <string name="summary_notification_update">Đã có phiên bản mới của ứng dụng. Nhấp để cập nhật!</string>
+    <string name="notification_last_time_used_title">Lâu rồi không gặp!</string>
+    <string name="default_notification_summary">Có rất nhiều tính năng đang chờ bạn. Hãy mở ứng dụng!</string>
+
+    <string name="welcome">Chào mừng</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Đọc và đồng ý với Điều khoản dịch vụ và Chính sách quyền riêng tư của chúng tôi để tiếp tục</string>
+    <string name="agree">Đồng ý</string>
+    <string name="error_loading_consent_info">Không thể tải thông tin chấp thuận</string>
+
+    <string name="skip_button_text">BỎ QUA</string>
+    <string name="skip_button_content_description">Bỏ qua\"</string>
+    <string name="back_button_content_description">Quay lại</string>
+    <string name="back_button_text">QUAY LẠI</string>
+    <string name="done_button_content_description">Xong</string>
+    <string name="done_button_text">XONG</string>
+    <string name="next_button_content_description">Tiếp theo</string>
+    <string name="next_button_text">TIẾP THEO</string>
+    <string name="onboarding_theme_title">Chọn phong cách của bạn</string>
+    <string name="onboarding_theme_subtitle">Chọn giao diện bạn muốn cho ứng dụng.</string>
+    <string name="onboarding_theme_light_desc">Sáng sủa và năng động.</string>
+    <string name="onboarding_theme_dark_desc">Dịu mắt.</string>
+    <string name="onboarding_theme_system_desc">Phù hợp với thiết bị của bạn.</string>
+    <string name="onboarding_amoled_mode_desc">Màu đen sâu hơn cho màn hình OLED.</string>
+    <string name="selected">Đã chọn</string>
+    <string name="onboarding_crashlytics_title">Giúp chúng tôi cải thiện</string>
+    <string name="onboarding_crashlytics_description">Cho phép ứng dụng gửi dữ liệu sử dụng ẩn danh và báo cáo sự cố. Điều này giúp chúng tôi sửa lỗi và cải thiện trải nghiệm của bạn. Không có thông tin cá nhân nào được thu thập.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Báo cáo dữ liệu đang hoạt động.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Báo cáo dữ liệu không hoạt động.</string>
+    <string name="onboarding_crashlytics_privacy_info">Quyền riêng tư của bạn rất quan trọng. Chúng tôi chỉ sử dụng dữ liệu này để sửa lỗi và cải thiện các tính năng. Để biết thêm chi tiết, vui lòng xem lại chính sách quyền riêng tư của chúng tôi.</string>
+    <string name="learn_more_privacy_policy">Xem lại Chính sách quyền riêng tư của chúng tôi</string>
+    <string name="onboarding_crashlytics_title_dialog">Quản lý sự đồng ý sử dụng dữ liệu</string>
+    <string name="onboarding_crashlytics_description_dialog">Vui lòng xem lại và xác nhận các tùy chọn đồng ý của bạn. Dữ liệu này giúp chúng tôi cải thiện ứng dụng và được xử lý theo Chính sách quyền riêng tư của chúng tôi.</string>
+    <string name="consent_analytics_storage_description_short">Cho phép thu thập dữ liệu để phân tích việc sử dụng ứng dụng.</string>
+    <string name="consent_ad_storage_description_short">Cho phép lưu trữ dữ liệu cho mục đích quảng cáo.</string>
+    <string name="consent_ad_user_data_description_short">Cho phép gửi dữ liệu người dùng cho quảng cáo.</string>
+    <string name="consent_ad_personalization_description_short">Bật quảng cáo được cá nhân hóa.</string>
+    <string name="onboarding_crashlytics_show_details_button">Hiển thị thông tin chi tiết</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Hiển thị thông tin chi tiết về việc sử dụng và chẩn đoán</string>
+    <string name="button_acknowledge_consents">Lưu và Tiếp tục</string>
+    <string name="button_continue">Tiếp tục</string>
+    <string name="onboarding_complete_icon_desc">Hoàn tất giới thiệu</string>
+    <string name="onboarding_final_title">Bạn đã sẵn sàng!</string>
+    <string name="onboarding_final_description">Cảm ơn bạn đã cá nhân hóa trải nghiệm của mình. Bây giờ bạn đã sẵn sàng khám phá tất cả các tính năng. Chúc bạn vui vẻ!</string>
+
+    <string name="navigation_drawer_open">Mở ngăn điều hướng</string>
+    <string name="go_back">Quay lại</string>
+    <string name="toast_review_already_done">Cảm ơn đã đánh giá!</string>
+
+    <string name="sort_by">Sắp xếp theo:</string>
+    <string name="error">Lỗi</string>
+    <string name="app_not_installed">Ứng dụng chưa được cài đặt</string>
+    <string name="snack_app_updated">Ứng dụng đã được cập nhật thành công</string>
+    <string name="snack_update_failed">Quá trình cập nhật đã gặp sự cố</string>
+    <string name="try_again">Thử lại</string>
+    <string name="summary_share_message">Hãy xem ứng dụng tuyệt vời này mà tôi đang dùng! Nó có một số tính năng rất thú vị mà bạn có thể thấy hay. Bạn có thể tải xuống từ Play Store tại: %1$s</string>
+    <string name="learn_more">Tìm hiểu thêm</string>
+    <string name="close">Đóng?</string>
+    <string name="summary_close">Bạn có chắc chắn muốn thoát không?</string>
+
+    <string name="home">Trang chủ</string>
+
+    <string name="activity_not_found">Không tìm thấy hoạt động.</string>
+    <string name="security_error">Đã xảy ra lỗi bảo mật. Vui lòng thử lại sau.</string>
+    <string name="io_error">Đã xảy ra lỗi nhập/xuất. Vui lòng kiểm tra kết nối mạng hoặc bộ nhớ của bạn và thử lại.</string>
+    <string name="illegal_argument_error">Đã cung cấp đầu vào hoặc đối số không hợp lệ. Vui lòng kiểm tra thông tin và thử lại.</string>
+    <string name="unknown_error">Đã xảy ra lỗi không xác định.</string>
+    <string name="initialization_error">Khởi tạo không thành công. Vui lòng thử lại sau.</string>
+
+    <string name="settings">Cài đặt</string>
+    <string name="long_settings_label">Cài đặt ứng dụng</string>
+    <string name="settings_disabled_message">Cài đặt hiện không khả dụng.</string>
+    <string name="settings_placeholder_description">Chưa chọn cài đặt nào. Chọn một tùy chọn để xem chi tiết tại đây.</string>
+    <string name="get_help">Nhận trợ giúp</string>
+    <string name="error_no_settings_found">Không tìm thấy cài đặt nào</string>
+    <string name="error_invalid_content_key">Khóa nội dung không hợp lệ!</string>
+
+    <string name="display">Hiển thị</string>
+    <string name="summary_preference_settings_display">Cá nhân hóa giao diện và cảm nhận của ứng dụng</string>
+
+    <string name="appearance">Giao diện</string>
+    <string name="dark_theme">Chủ đề tối</string>
+    <string name="will_turn_on_automatically_by_system">Sẽ tự động bật theo hệ thống</string>
+    <string name="will_never_turn_on_automatically">Sẽ không bao giờ tự động bật</string>
+    <string name="amoled_mode">Chế độ AMOLED</string>
+    <string name="follow_system">Theo chế độ hệ thống</string>
+    <string name="light_mode">Chế độ sáng</string>
+    <string name="dark_mode">Chế độ tối</string>
+    <string name="summary_dark_theme">Chủ đề tối sử dụng nền tối để giúp pin của bạn dùng được lâu hơn</string>
+
+    <string name="dynamic_colors">Màu sắc động</string>
+    <string name="summary_preference_settings_dynamic_colors">Áp dụng màu từ hình nền vào chủ đề ứng dụng</string>
+
+    <string name="app_behavior">Hành vi ứng dụng</string>
+    <string name="bounce_buttons">Nhấp nảy</string>
+    <string name="summary_preference_settings_bounce_buttons">Áp dụng hiệu ứng nảy tinh tế cho tất cả các yếu tố có thể nhấp khi được nhấp</string>
+
+    <string name="navigation">Điều hướng</string>
+    <string name="startup_page">Trang khởi động</string>
+    <string name="summary_preference_settings_startup_page">Chọn màn hình sẽ hiển thị khi ứng dụng khởi động.</string>
+
+    <string name="language">Ngôn ngữ</string>
+    <string name="summary_preference_settings_language">Thay đổi ngôn ngữ được sử dụng trong ứng dụng</string>
+
+    <string name="dialog_startup_subtitle">Chọn trang khởi động ưa thích của bạn:</string>
+    <string name="dialog_info_startup">Cấu hình màn hình ban đầu được hiển thị cho người dùng khi khởi chạy ứng dụng. Cài đặt này ảnh hưởng đến tương tác đầu tiên của người dùng với ứng dụng và có thể được điều chỉnh cho các phân khúc người dùng cụ thể hoặc mục tiêu sản phẩm.</string>
+
+    <string name="select_language_title">Chọn ngôn ngữ</string>
+    <string name="dialog_language_subtitle">Chọn ngôn ngữ ưa thích của bạn</string>
+    <string name="dialog_info_language">Cá nhân hóa trải nghiệm của bạn với ngôn ngữ ưa thích. Mọi thay đổi ngôn ngữ bạn thực hiện sẽ có hiệu lực ngay lập tức, đảm bảo trải nghiệm liền mạch bằng ngôn ngữ bạn đã chọn</string>
+
+    <string name="notifications">Thông báo</string>
+    <string name="summary_preference_settings_notifications">Quản lý thông báo ứng dụng</string>
+
+    <string name="app_usage_notifications">Thông báo sử dụng ứng dụng</string>
+    <string name="update_notifications">Thông báo cập nhật</string>
+
+    <string name="advanced">Nâng cao</string>
+    <string name="summary_preference_settings_advanced">Khám phá thêm các cài đặt nâng cao</string>
+    <string name="issue_title_label">Tiêu đề</string>
+    <string name="issue_description_label">Mô tả</string>
+    <string name="issue_section_label">Vấn đề</string>
+    <string name="login_section_label">Đăng nhập</string>
+    <string name="use_github_account">Gửi bằng tài khoản GitHub</string>
+    <string name="send_anonymously">Gửi ẩn danh</string>
+    <string name="optional_placeholder">(Tùy chọn)</string>
+    <string name="issue_username_label">Tên người dùng</string>
+    <string name="issue_password_label">Mật khẩu</string>
+    <string name="issue_email_label">Email</string>
+    <string name="issue_send">Gửi</string>
+    <string name="cd_expand_device_info">Mở rộng hoặc thu gọn thông tin thiết bị</string>
+    <string name="view_on_github">Chuyển hướng tới GitHub</string>
+    <string name="snack_report_success">Báo cáo đã được gửi thành công</string>
+    <string name="snack_report_failed">Gửi báo cáo thất bại</string>
+    <string name="error_invalid_report">Tiêu đề và mô tả không được để trống</string>
+    <string name="issue_submitted_successfully">Vấn đề được gửi thành công</string>
+    <string name="open_issue_in_browser">Mở trong trình duyệt</string>
+    <string name="open_button_label">Vấn đề mở</string>
+    <string name="issue_submitted">Vấn đề của bạn đã được gửi!</string>
+    <string name="error_unauthorized">Nhập học: Mã thông báo không hợp lệ</string>
+    <string name="error_forbidden">Cấm: Không đủ quyền</string>
+    <string name="error_gone">Đã xóa điểm cuối API</string>
+    <string name="error_unprocessable">Dữ liệu không hợp lệ để tạo ra vấn đề</string>
+
+    <string name="error_reporting">Báo cáo lỗi</string>
+    <string name="bug_report">Báo cáo lỗi</string>
+    <string name="summary_preference_settings_bug_report">Gửi báo cáo lỗi và yêu cầu tính năng đến trang vấn đề của kho lưu trữ GitHub của ứng dụng</string>
+    <string name="cache_management">Quản lý bộ nhớ đệm</string>
+    <string name="clear_cache">Xóa bộ nhớ đệm</string>
+    <string name="summary_preference_settings_clear_cache">Xóa dữ liệu ứng dụng tạm thời.</string>
+    <string name="cache_cleared_success">Đã xóa bộ nhớ đệm thành công</string>
+    <string name="cache_cleared_error">Đã xóa bộ nhớ đệm với một số lỗi</string>
+
+    <string name="security_and_privacy">Bảo mật &amp; quyền riêng tư</string>
+    <string name="summary_preference_settings_privacy_and_security">Quản lý cài đặt quyền riêng tư của bạn</string>
+
+    <string name="privacy">Quyền riêng tư</string>
+    <string name="privacy_policy">Chính sách quyền riêng tư</string>
+    <string name="summary_preference_settings_privacy_policy">Xem chính sách quy định cách chúng tôi xử lý dữ liệu của bạn</string>
+    <string name="terms_of_service">Điều khoản dịch vụ</string>
+    <string name="summary_preference_settings_terms_of_service">Xem lại các điều khoản bạn đồng ý khi sử dụng dịch vụ của chúng tôi</string>
+    <string name="code_of_conduct">Quy tắc ứng xử</string>
+    <string name="summary_preference_settings_code_of_conduct">Hiểu các quy tắc và hướng dẫn về hành vi trong dịch vụ của chúng tôi</string>
+
+    <string name="permissions">Quyền</string>
+    <string name="summary_preference_settings_permissions">Quản lý các quyền được cấp cho dịch vụ của chúng tôi</string>
+    <string name="normal">Bình thường</string>
+    <string name="runtime">Thời gian chạy</string>
+    <string name="storage">Bộ nhớ</string>
+    <string name="special">Đặc biệt</string>
+    <string name="ad_id">ID quảng cáo [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Cho phép ứng dụng truy xuất và sử dụng mã nhận dạng quảng cáo được liên kết với thiết bị của người dùng, cung cấp quảng cáo được cá nhân hóa, đo lường hiệu quả quảng cáo và hiển thị quảng cáo trên các thiết bị Android 13 trở lên.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Cho phép ứng dụng thiết lập kết nối internet để gửi báo cáo lỗi hoặc kiểm tra cập nhật.</string>
+    <string name="post_notifications">Gửi thông báo [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Cho phép ứng dụng hiển thị thông báo trên các thiết bị chạy Android 13 trở lên.</string>
+    <string name="access_network_state">Truy cập trạng thái mạng [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Cho phép ứng dụng kiểm tra kết nối mạng và truy xuất thông tin về Wi-Fi, bao gồm trạng thái bật và tên thiết bị Wi-Fi đã kết nối.</string>
+    <string name="access_notification_policy">Truy cập chính sách thông báo [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Cho phép ứng dụng truy cập và sửa đổi chính sách thông báo của thiết bị, kiểm soát cách thức và thời điểm hiển thị thông báo cho người dùng cũng như cung cấp các tính năng quản lý thông báo tùy chỉnh.</string>
+    <string name="billing">Thanh toán [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Cho phép ứng dụng sử dụng Thư viện thanh toán Google Play để xử lý các giao dịch mua trong ứng dụng và quyên góp.</string>
+    <string name="check_license">Kiểm tra giấy phép [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Cho phép ứng dụng xác minh việc tuân thủ thỏa thuận cấp phép và thực thi các điều khoản cấp phép để bảo vệ tài sản trí tuệ.</string>
+    <string name="foreground_service">Dịch vụ nền trước [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Cho phép ứng dụng tạo và sử dụng các dịch vụ chạy trên nền trước, ưu tiên chúng hơn các quy trình nền khác và cải thiện hiệu suất cũng như độ tin cậy.</string>
+    <string name="wake_lock">Giữ thiết bị luôn bật [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Cho phép ứng dụng ngăn thiết bị chuyển sang chế độ ngủ (ví dụ: làm mờ màn hình hoặc bộ xử lý ngủ) trong các hoạt động quan trọng để đảm bảo chúng hoàn thành mà không bị gián đoạn. Điều này được sử dụng một cách tiết kiệm để bảo tồn pin.</string>
+
+    <string name="ads">Quảng cáo</string>
+    <string name="summary_preference_settings_ads">Kiểm soát cách chúng tôi sử dụng thông tin của bạn để hiển thị quảng cáo phù hợp</string>
+
+    <string name="display_ads">Hiển thị quảng cáo</string>
+    <string name="personalized_ads">Quảng cáo được cá nhân hóa</string>
+    <string name="summary_ads_personalized_ads">Chọn cách chúng tôi cá nhân hóa quảng cáo cho bạn dựa trên sở thích của bạn</string>
+    <string name="summary_ads">Xem quảng cáo phù hợp với bạn. Quản lý thông tin được sử dụng để hiển thị quảng cáo được cá nhân hóa dựa trên hoạt động ứng dụng của bạn. Bạn luôn có thể tắt cá nhân hóa tại đây.\n</string>
+    <string name="ads_enabled">Đã bật quảng cáo</string>
+    <string name="ads_disabled">Đã tắt quảng cáo</string>
+    <string name="error_failed_to_load_ads_settings">Không thể tải cài đặt quảng cáo</string>
+
+    <string name="usage_and_diagnostics">Sử dụng và chẩn đoán</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Chia sẻ dữ liệu để giúp cải thiện trải nghiệm trong ứng dụng</string>
+    <string name="summary_usage_and_diagnostics">Giúp cải thiện trải nghiệm của bạn bằng cách tự động gửi dữ liệu chẩn đoán, thiết bị và sử dụng ứng dụng cho chúng tôi. Điều này sẽ giúp cải thiện hiệu suất, độ ổn định của ứng dụng và các cải tiến khác. Một số dữ liệu tổng hợp cũng sẽ giúp ích cho các ứng dụng của chúng tôi.\n\nĐây là thông tin chung về thiết bị của bạn và cách bạn sử dụng các ứng dụng của chúng tôi (chẳng hạn như mức pin, hoạt động của hệ thống và ứng dụng cũng như lỗi). Dữ liệu sẽ được sử dụng để cải thiện các ứng dụng của chúng tôi\n\nViệc tắt tính năng này không ảnh hưởng đến khả năng thiết bị của bạn gửi thông tin cần thiết cho các dịch vụ thiết yếu như cập nhật ứng dụng và bảo mật.\n</string>
+    <string name="privacy_settings_title">Cài đặt quyền riêng tư</string>
+    <string name="consent_category_analytics_title">Phân tích</string>
+    <string name="consent_category_advertising_title">Quảng cáo được cá nhân hóa</string>
+    <string name="consent_analytics_storage_title">Lưu trữ dữ liệu phân tích</string>
+    <string name="consent_analytics_storage_description">Cho phép lưu trữ dữ liệu như mức sử dụng ứng dụng và thời lượng truy cập để cải thiện phân tích và hiệu suất ứng dụng.</string>
+    <string name="consent_ad_storage_title">Lưu trữ dữ liệu quảng cáo</string>
+    <string name="consent_ad_storage_description">Cho phép lưu trữ dữ liệu (như mã nhận dạng thiết bị hoặc cookie) để đo lường hiệu suất quảng cáo và hiển thị quảng cáo phù hợp.</string>
+    <string name="consent_ad_user_data_title">Gửi dữ liệu cho quảng cáo</string>
+    <string name="consent_ad_user_data_description">Cho phép gửi dữ liệu sử dụng và dữ liệu thiết bị cho Google để hỗ trợ các tính năng liên quan đến quảng cáo như lượt chuyển đổi và tối ưu hóa chiến dịch.</string>
+    <string name="consent_ad_personalization_title">Quảng cáo được cá nhân hóa</string>
+    <string name="consent_ad_personalization_description">Cho phép quảng cáo được cá nhân hóa dựa trên hoạt động và tùy chọn của bạn trên các dịch vụ và ứng dụng của Google.</string>
+    <string name="privacy_settings_info">Quản lý tùy chọn dữ liệu của bạn bên dưới. Bạn có thể thay đổi các cài đặt này bất kỳ lúc nào. Để biết thêm chi tiết, vui lòng xem <a href="%s">Chính sách quyền riêng tư</a> của chúng tôi.</string>
+    <string name="learn_more_privacy_policy_settings">Tìm hiểu thêm trong Chính sách quyền riêng tư của chúng tôi</string>
+    <string name="advanced_privacy_settings">Cài đặt quyền riêng tư nâng cao</string>
+    <string name="icon_desc_expand_more">Mở rộng</string>
+    <string name="icon_desc_expand_less">Thu gọn</string>
+    <string name="icon_desc_consent_category">Biểu tượng danh mục sự đồng ý</string>
+    <string name="icon_desc_switch_status">Biểu tượng trạng thái nút gạt</string>
+
+    <string name="legal">Pháp lý</string>
+    <string name="legal_notices">Thông báo pháp lý</string>
+    <string name="summary_preference_settings_legal_notices">Xem thông tin pháp lý về dịch vụ của chúng tôi</string>
+    <string name="license">Giấy phép</string>
+
+    <string name="about">Giới thiệu</string>
+    <string name="summary_preference_settings_about">Tìm hiểu thêm về ứng dụng</string>
+
+    <string name="app_info">Thông tin ứng dụng</string>
+    <string name="app_build_version">Phiên bản xây dựng ứng dụng</string>
+    <string name="oss_license_title">Giấy phép nguồn mở</string>
+    <string name="summary_preference_settings_oss">Chi tiết giấy phép cho phần mềm nguồn mở</string>
+
+    <string name="eula_title">EULA</string>
+    <string name="changelog_title">Nhật ký thay đổi ứng dụng</string>
+    <string name="loading_eula_message">Đang truy xuất Thỏa thuận cấp phép người dùng cuối…</string>
+    <string name="loading_changelog_message">Đang tìm nạp nhật ký thay đổi ứng dụng…</string>
+    <string name="error_loading_eula_message">Không thể tải Thỏa thuận cấp phép người dùng cuối. Vui lòng thử lại.</string>
+    <string name="error_loading_changelog_message">Không thể tải nhật ký thay đổi ứng dụng. Vui lòng thử lại.</string>
+
+    <string name="device_info">Thông tin thiết bị</string>
+    <string name="app_build">Bản dựng ứng dụng: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Gỡ lỗi</string>
+    <string name="release">Phát hành</string>
+    <string name="manufacturer">Nhà sản xuất:</string>
+    <string name="device_model">Kiểu máy:</string>
+    <string name="android_version">Phiên bản Android:</string>
+    <string name="api_level">Cấp API:</string>
+    <string name="snack_device_info_copied">Đã sao chép thông tin thiết bị vào khay nhớ tạm</string>
+
+    <string name="help_and_feedback">Trợ giúp &amp; phản hồi</string>
+    <string name="help">Trợ giúp</string>
+    <string name="faq">Câu hỏi thường gặp</string>
+    <string name="popular_help_resources">Tài nguyên trợ giúp phổ biến</string>
+    <string name="contact_us">Liên hệ với chúng tôi</string>
+    <string name="contact_us_description">Hãy cho chúng tôi biết thêm và chúng tôi sẽ giúp bạn</string>
+    <string name="view_in_google_play_store">Xem trên Google Play Store</string>
+    <string name="version_info">Thông tin phiên bản</string>
+    <string name="version">Phiên bản %1$s</string>
+    <string name="beta_program">Chương trình beta</string>
+
+    <string name="feedback">Phản hồi</string>
+
+    <string name="updates">Cập nhật</string>
+
+    <string name="share">Chia sẻ</string>
+
+    <string name="support_us">Ủng hộ chúng tôi</string>
+    <string name="paid_support">Hỗ trợ trả phí</string>
+    <string name="summary_donations">Dù bạn quyên góp bao nhiêu, bạn cũng sẽ giúp chúng tôi duy trì hoạt động của ứng dụng và cải thiện các tính năng. Chúng tôi đánh giá cao sự hào phóng và lòng tốt của bạn!</string>
+    <string name="non_paid_support">Hỗ trợ không trả phí</string>
+    <string name="web_ad">Quảng cáo web</string>
+    <string name="error_failed_to_load_sku_details">Không thể tải chi tiết SKU</string>
+</resources>

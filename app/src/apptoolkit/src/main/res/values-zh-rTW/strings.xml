@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">此應用程式專為簡化您的工作流程而設計，提供必要的工具和功能，幫助您在執行任何任務時保持有序和高效。📱</string>
+    <string name="notification_update_title">有可用的更新！</string>
+    <string name="summary_notification_update">應用程式的新版本已可用。點擊以更新！</string>
+    <string name="notification_last_time_used_title">好久不見！</string>
+    <string name="default_notification_summary">有許多功能等待您探索。打開應用程式吧！</string>
+
+    <string name="welcome">歡迎</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">閱讀並同意我們的服務條款和隱私政策以繼續</string>
+    <string name="agree">同意</string>
+    <string name="error_loading_consent_info">載入同意資訊失敗</string>
+
+    <string name="skip_button_text">跳過</string>
+    <string name="skip_button_content_description">跳過</string>
+    <string name="back_button_content_description">返回</string>
+    <string name="back_button_text">返回</string>
+    <string name="done_button_content_description">完成</string>
+    <string name="done_button_text">完成</string>
+    <string name="next_button_content_description">下一步</string>
+    <string name="next_button_text">下一步</string>
+    <string name="onboarding_theme_title">選擇您的風格</string>
+    <string name="onboarding_theme_subtitle">選擇您希望應用程式顯示的方式。</string>
+    <string name="onboarding_theme_light_desc">明亮且充滿活力。</string>
+    <string name="onboarding_theme_dark_desc">對眼睛溫和。</string>
+    <string name="onboarding_theme_system_desc">與您的裝置設定相符。</string>
+    <string name="onboarding_amoled_mode_desc">OLED 螢幕可呈現更深邃的黑色。</string>
+    <string name="selected">已選取</string>
+    <string name="onboarding_crashlytics_title">協助我們改進</string>
+    <string name="onboarding_crashlytics_description">允許應用程式傳送匿名使用資料和當機報告。這有助於我們修復錯誤並改善您的體驗。我們絕不會收集個人資訊。</string>
+    <string name="onboarding_crashlytics_enabled_desc">資料報告已啟用。</string>
+    <string name="onboarding_crashlytics_disabled_desc">資料報告已停用。</string>
+    <string name="onboarding_crashlytics_privacy_info">您的隱私非常重要。我們僅將這些資料用於修復錯誤和改進功能。如需更多詳細資訊，請查閱我們的隱私權政策。</string>
+    <string name="learn_more_privacy_policy">查閱我們的隱私權政策</string>
+    <string name="onboarding_crashlytics_title_dialog">管理資料同意設定</string>
+    <string name="onboarding_crashlytics_description_dialog">請檢閱並確認您的同意偏好設定。此資料有助於我們改善應用程式，並將根據我們的《隱私權政策》進行處理。</string>
+    <string name="consent_analytics_storage_description_short">允許收集資料以進行應用程式使用分析。</string>
+    <string name="consent_ad_storage_description_short">允許儲存資料以供廣告用途。</string>
+    <string name="consent_ad_user_data_description_short">允許傳送使用者資料用於廣告。</string>
+    <string name="consent_ad_personalization_description_short">啟用個人化廣告。</string>
+    <string name="onboarding_crashlytics_show_details_button">顯示詳細資訊</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">顯示有關使用情況與診斷的詳細資訊</string>
+    <string name="button_acknowledge_consents">儲存並繼續</string>
+    <string name="button_continue">繼續</string>
+    <string name="onboarding_complete_icon_desc">引導完成</string>
+    <string name="onboarding_final_title">一切就緒！</string>
+    <string name="onboarding_final_description">感謝您個人化您的體驗。您現在已準備好探索所有功能。祝您使用愉快！</string>
+
+    <string name="navigation_drawer_open">打開導覽抽屜</string>
+    <string name="go_back">返回</string>
+    <string name="toast_review_already_done">感謝您的評分！</string>
+
+    <string name="error">錯誤</string>
+    <string name="sort_by">排序依據：</string>
+    <string name="app_not_installed">應用程式未安裝</string>
+    <string name="snack_app_updated">應用程式已成功更新</string>
+    <string name="snack_update_failed">更新過程中發生問題</string>
+    <string name="try_again">再試一次</string>
+    <string name="summary_share_message">看看我正在使用的這個很棒的應用程式！它有一些您可能感興趣的酷炫功能。您可以從 Play 商店下載：%1$s</string>
+    <string name="learn_more">了解更多</string>
+    <string name="close">關閉？</string>
+    <string name="summary_close">您確定要退出嗎？</string>
+
+    <string name="home">主頁</string>
+
+    <string name="activity_not_found">找不到活動。</string>
+    <string name="security_error">發生安全錯誤。請稍後再試。</string>
+    <string name="io_error">發生輸入/輸出錯誤。請檢查您的網路連接或儲存空間後再試一次。</string>
+    <string name="illegal_argument_error">提供的輸入或參數無效。請檢查資訊並再試一次。</string>
+    <string name="unknown_error">發生未知錯誤。</string>
+    <string name="initialization_error">初始化失敗。請稍後再試。</string>
+
+    <string name="settings">設定</string>
+    <string name="long_settings_label">應用程式設定</string>
+    <string name="settings_disabled_message">目前無法使用設定。</string>
+    <string name="settings_placeholder_description">未選擇設定。選擇一個選項以在此查看詳細資訊。</string>
+    <string name="get_help">獲取幫助</string>
+    <string name="error_no_settings_found">找不到設定</string>
+    <string name="error_invalid_content_key">內容金鑰無效！</string>
+
+    <string name="display">顯示</string>
+    <string name="summary_preference_settings_display">個性化您的應用程式外觀和感受</string>
+
+    <string name="appearance">外觀</string>
+    <string name="dark_theme">深色主題</string>
+    <string name="will_turn_on_automatically_by_system">將由系統自動啟用</string>
+    <string name="will_never_turn_on_automatically">永遠不會自動啟用</string>
+    <string name="amoled_mode">AMOLED 模式</string>
+    <string name="follow_system">跟隨系統模式</string>
+    <string name="light_mode">淺色模式</string>
+    <string name="dark_mode">深色模式</string>
+    <string name="summary_dark_theme">深色主題使用深色背景，幫助延長電池壽命</string>
+
+    <string name="dynamic_colors">動態色彩</string>
+    <string name="summary_preference_settings_dynamic_colors">將桌布的顏色應用到應用程式主題</string>
+
+    <string name="app_behavior">應用程式行為</string>
+    <string name="bounce_buttons">按鈕彈跳效果</string>
+    <string name="summary_preference_settings_bounce_buttons">在點擊時對所有可點擊元素應用輕微彈跳動畫</string>
+
+    <string name="navigation">導航</string>
+    <string name="startup_page">啟動頁面</string>
+    <string name="summary_preference_settings_startup_page">選擇應用程式啟動時要顯示的畫面。</string>
+
+    <string name="language">語言</string>
+    <string name="summary_preference_settings_language">變更應用程式的語言</string>
+
+    <string name="dialog_startup_subtitle">選擇您偏好的啟動頁面：</string>
+    <string name="dialog_info_startup">設定應用程式啟動時呈現給使用者的初始畫面。</string>
+
+    <string name="select_language_title">選擇語言</string>
+    <string name="dialog_language_subtitle">選擇您偏好的語言</string>
+    <string name="dialog_info_language">使用您偏好的語言個性化您的體驗。任何語言更改將立即生效。</string>
+
+    <string name="notifications">通知</string>
+    <string name="summary_preference_settings_notifications">管理應用程式通知</string>
+
+    <string name="app_usage_notifications">應用程式使用通知</string>
+    <string name="update_notifications">更新通知</string>
+
+    <string name="advanced">進階</string>
+    <string name="summary_preference_settings_advanced">探索更多進階設定</string>
+    <string name="issue_title_label">標題</string>
+    <string name="issue_description_label">描述</string>
+    <string name="issue_section_label">問題</string>
+    <string name="login_section_label">登入</string>
+    <string name="use_github_account">使用 GitHub 帳戶傳送</string>
+    <string name="send_anonymously">匿名傳送</string>
+    <string name="optional_placeholder">(可選)</string>
+    <string name="issue_username_label">使用者名稱</string>
+    <string name="issue_password_label">密碼</string>
+    <string name="issue_email_label">電子郵件</string>
+    <string name="issue_send">傳送</string>
+    <string name="cd_expand_device_info">展開或收合裝置資訊</string>
+    <string name="view_on_github">重新導向到 GitHub</string>
+    <string name="snack_report_success">報告已成功送出</string>
+    <string name="snack_report_failed">無法傳送報告</string>
+    <string name="error_invalid_report">標題和描述不能為空</string>
+    <string name="issue_submitted_successfully">問題成功提交</string>
+    <string name="open_issue_in_browser">在瀏覽器中打開</string>
+    <string name="open_button_label">公開問題</string>
+    <string name="issue_submitted">您的問題已提交！</string>
+    <string name="error_unauthorized">未經授權：無效令牌</string>
+    <string name="error_forbidden">禁止：權限不足</string>
+    <string name="error_gone">刪除了API端點</string>
+    <string name="error_unprocessable">發行創建的無效數據</string>
+
+    <string name="error_reporting">錯誤回報</string>
+    <string name="bug_report">錯誤回報</string>
+    <string name="summary_preference_settings_bug_report">將錯誤回報和功能請求發送至應用程式的 GitHub 問題頁面</string>
+    <string name="cache_management">快取管理</string>
+    <string name="clear_cache">清除快取</string>
+    <string name="summary_preference_settings_clear_cache">清除臨時應用資料</string>
+    <string name="cache_cleared_success">快取已成功清除</string>
+    <string name="cache_cleared_error">快取清除時出現一些錯誤</string>
+
+    <string name="security_and_privacy">安全與隱私</string>
+    <string name="summary_preference_settings_privacy_and_security">管理您的隱私設定</string>
+
+    <string name="privacy">隱私</string>
+    <string name="privacy_policy">隱私政策</string>
+    <string name="summary_preference_settings_privacy_policy">檢視我們如何處理您數據的政策</string>
+    <string name="terms_of_service">服務條款</string>
+    <string name="summary_preference_settings_terms_of_service">檢視您使用我們服務時同意的條款</string>
+    <string name="code_of_conduct">行為準則</string>
+    <string name="summary_preference_settings_code_of_conduct">了解服務中的行為規範和指南</string>
+
+    <string name="permissions">權限</string>
+    <string name="summary_preference_settings_permissions">管理授予我們服務的權限</string>
+    <string name="normal">一般</string>
+    <string name="runtime">執行時</string>
+    <string name="storage">儲存空間</string>
+    <string name="special">特別</string>
+    <string name="ad_id">廣告 ID [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">允許應用程式擷取並使用與使用者裝置相關聯的廣告識別碼，提供個人化廣告、衡量廣告成效，以及在 Android 13 或更新版本的裝置上顯示廣告。</string>
+    <string name="internet">網際網路 [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">允許應用程式建立網際網路連線以傳送錯誤報告或檢查更新。</string>
+    <string name="post_notifications">張貼通知 [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">允許應用程式在搭載 Android 13 或更新版本的裝置上顯示通知。</string>
+    <string name="access_network_state">存取網路狀態 [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">允許應用程式檢查網路連線並擷取 Wi-Fi 相關資訊，包括啟用狀態和已連線的 Wi-Fi 裝置名稱。</string>
+    <string name="access_notification_policy">存取通知政策 [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">允許應用程式存取並修改裝置的通知政策，控制通知向使用者顯示的方式和時間，並提供自訂通知管理功能。</string>
+    <string name="billing">計費 [BILLING]</string>
+    <string name="summary_preference_permissions_billing">允許應用程式使用 Google Play 計費程式庫處理應用程式內購買和捐贈</string>
+    <string name="check_license">檢查授權 [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">允許應用程式驗證其是否符合授權協議，並強制執行授權條款以保護智慧財產權。</string>
+    <string name="foreground_service">前景服務 [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">允許應用程式建立並使用在前景執行的服務，賦予它們優先於其他背景處理程序的權限，並改善效能和可靠性。</string>
+    <string name="wake_lock">保持裝置喚醒 [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">允許應用程式在關鍵作業期間防止裝置進入休眠狀態 (例如螢幕變暗或處理器休眠)，以確保作業不中斷並順利完成。此功能會謹慎使用以節省電池電量。</string>
+
+    <string name="ads">廣告</string>
+    <string name="summary_preference_settings_ads">管理我們如何使用您的資訊來顯示相關廣告</string>
+
+    <string name="display_ads">顯示廣告</string>
+    <string name="personalized_ads">個性化廣告</string>
+    <string name="summary_ads_personalized_ads">選擇我們如何根據您的興趣個性化廣告</string>
+    <string name="summary_ads">查看與您相關的廣告。管理應用程式活動所用資訊。</string>
+    <string name="ads_enabled">廣告已啟用</string>
+    <string name="ads_disabled">廣告已停用</string>
+    <string name="error_failed_to_load_ads_settings">載入廣告設定失敗</string>
+
+    <string name="usage_and_diagnostics">使用與診斷</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">分享數據以幫助改進應用程式體驗</string>
+    <string name="summary_usage_and_diagnostics">通過自動發送診斷、設備和應用程式使用數據來改進您的體驗。</string>
+    <string name="privacy_settings_title">隱私權設定</string>
+    <string name="consent_category_analytics_title">分析</string>
+    <string name="consent_category_advertising_title">個人化廣告</string>
+    <string name="consent_analytics_storage_title">儲存分析資料</string>
+    <string name="consent_analytics_storage_description">允許儲存應用程式使用情況和造訪持續時間等資料，以改善分析和應用程式效能。</string>
+    <string name="consent_ad_storage_title">儲存廣告資料</string>
+    <string name="consent_ad_storage_description">啟用儲存資料 (例如裝置 ID 或 Cookie)，以便評估廣告成效並顯示相關廣告。</string>
+    <string name="consent_ad_user_data_title">傳送廣告資料</string>
+    <string name="consent_ad_user_data_description">允許將使用情況和裝置資料傳送給 Google，以支援廣告相關功能 (例如轉換和廣告活動最佳化)。</string>
+    <string name="consent_ad_personalization_title">個人化廣告</string>
+    <string name="consent_ad_personalization_description">根據您在 Google 各項服務和應用程式中的活動和偏好設定，啟用個人化廣告。</string>
+    <string name="privacy_settings_info">您可以在下方管理資料偏好設定，並隨時變更這些設定。如需更多詳細資訊，請參閱我們的<a href="%s">隱私權政策</a>。</string>
+    <string name="learn_more_privacy_policy_settings">在我們的隱私權政策中進一步瞭解</string>
+    <string name="advanced_privacy_settings">進階隱私權設定</string>
+    <string name="icon_desc_expand_more">展開更多</string>
+    <string name="icon_desc_expand_less">收合</string>
+    <string name="icon_desc_consent_category">同意聲明類別圖示</string>
+    <string name="icon_desc_switch_status">切換開關狀態圖示</string>
+
+    <string name="legal">法律</string>
+    <string name="legal_notices">法律通知</string>
+    <string name="summary_preference_settings_legal_notices">檢視服務的法律資訊</string>
+    <string name="license">許可證</string>
+
+    <string name="about">關於</string>
+    <string name="summary_preference_settings_about">了解更多關於應用程式</string>
+
+    <string name="app_info">應用程式資訊</string>
+    <string name="app_build_version">應用程式構建版本</string>
+    <string name="oss_license_title">開源許可證</string>
+    <string name="summary_preference_settings_oss">開源軟體的許可證詳情</string>
+
+    <string name="eula_title">最終用戶許可協議</string>
+    <string name="changelog_title">應用程式變更紀錄</string>
+    <string name="loading_eula_message">檢索最終用戶許可協議中…</string>
+    <string name="loading_changelog_message">獲取應用程式變更紀錄中…</string>
+    <string name="error_loading_eula_message">無法加載最終用戶許可協議。請再試一次。</string>
+    <string name="error_loading_changelog_message">無法加載應用程式變更紀錄。請再試一次。</string>
+
+    <string name="device_info">設備資訊</string>
+    <string name="app_build">應用程式構建：%6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">除錯</string>
+    <string name="release">發行</string>
+    <string name="manufacturer">製造商：</string>
+    <string name="device_model">設備型號：</string>
+    <string name="android_version">Android 版本：</string>
+    <string name="api_level">API 等級：</string>
+    <string name="snack_device_info_copied">設備資訊已複製到剪貼板</string>
+
+    <string name="help_and_feedback">幫助與反饋</string>
+    <string name="help">幫助</string>
+    <string name="faq">常見問題</string>
+    <string name="popular_help_resources">熱門幫助資源</string>
+    <string name="contact_us">聯絡我們</string>
+    <string name="contact_us_description">告訴我們更多資訊，我們會協助您</string>
+    <string name="view_in_google_play_store">在 Google Play 商店中查看</string>
+    <string name="version_info">版本資訊</string>
+    <string name="version">版本 %1$s</string>
+    <string name="beta_program">Beta 計劃</string>
+
+    <string name="feedback">反饋</string>
+
+    <string name="updates">更新</string>
+
+    <string name="share">分享</string>
+
+    <string name="support_us">支持我們</string>
+    <string name="paid_support">付費支持</string>
+    <string name="summary_donations">無論您捐贈多少，都能幫助我們維持應用程式運行並改進功能。</string>
+    <string name="non_paid_support">非付費支持</string>
+    <string name="web_ad">網頁廣告</string>
+    <string name="error_failed_to_load_sku_details">載入 SKU 詳細資料失敗</string>
+</resources>

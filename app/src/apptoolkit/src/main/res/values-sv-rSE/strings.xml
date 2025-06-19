@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">Utformad för att effektivisera ditt arbetsflöde, den här appen erbjuder viktiga verktyg och funktioner som hjälper dig att hålla dig organiserad och effektiv i alla uppgifter. 📱</string>
+    <string name="notification_update_title">En ny uppdatering är tillgänglig!</string>
+    <string name="summary_notification_update">En ny version av appen är tillgänglig. Klicka för att uppdatera!</string>
+    <string name="notification_last_time_used_title">Det var ett tag sedan!</string>
+    <string name="default_notification_summary">Det finns många nya funktioner som väntar på dig. Öppna appen!</string>
+
+    <string name="welcome">Välkommen</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">Läs och godkänn våra användarvillkor och integritetspolicy för att fortsätta</string>
+    <string name="agree">Godkänn</string>
+    <string name="error_loading_consent_info">Misslyckades med att läsa in samtyckesinformationen</string>
+
+    <string name="skip_button_text">HOPPA ÖVER</string>
+    <string name="skip_button_content_description">Hoppa över</string>
+    <string name="back_button_content_description">Tillbaka</string>
+    <string name="back_button_text">TILLBAKA</string>
+    <string name="done_button_content_description">Klar</string>
+    <string name="done_button_text">KLAR</string>
+    <string name="next_button_content_description">Nästa</string>
+    <string name="next_button_text">NÄSTA</string>
+    <string name="onboarding_theme_title">Välj din stil</string>
+    <string name="onboarding_theme_subtitle">Välj hur du vill att appen ska se ut.</string>
+    <string name="onboarding_theme_light_desc">Ljust och energiskt.</string>
+    <string name="onboarding_theme_dark_desc">Behagligt för ögonen.</string>
+    <string name="onboarding_theme_system_desc">Matchar din enhet.</string>
+    <string name="onboarding_amoled_mode_desc">Djupare svärta för OLED-skärmar.</string>
+    <string name="selected">Vald</string>
+    <string name="onboarding_crashlytics_title">Hjälp oss att förbättra</string>
+    <string name="onboarding_crashlytics_description">Tillåt appen att skicka anonym användningsdata och kraschrapporter. Detta hjälper oss att åtgärda buggar och förbättra din upplevelse. Ingen personlig information samlas in.</string>
+    <string name="onboarding_crashlytics_enabled_desc">Datarapportering är aktiv.</string>
+    <string name="onboarding_crashlytics_disabled_desc">Datarapportering är inaktiv.</string>
+    <string name="onboarding_crashlytics_privacy_info">Din integritet är viktig. Vi använder endast dessa data för att åtgärda buggar och förbättra funktioner. För mer information, läs vår integritetspolicy.</string>
+    <string name="learn_more_privacy_policy">Granska vår integritetspolicy</string>
+    <string name="onboarding_crashlytics_title_dialog">Hantera datasamtycke</string>
+    <string name="onboarding_crashlytics_description_dialog">Granska och bekräfta dina samtyckespreferenser. Dessa data hjälper oss att förbättra appen och hanteras enligt vår integritetspolicy.</string>
+    <string name="consent_analytics_storage_description_short">Tillåter datainsamling för analys av appanvändning.</string>
+    <string name="consent_ad_storage_description_short">Tillåter lagring av data för reklamsyften.</string>
+    <string name="consent_ad_user_data_description_short">Tillåter sändning av användardata för annonser.</string>
+    <string name="consent_ad_personalization_description_short">Aktiverar anpassad reklam.</string>
+    <string name="onboarding_crashlytics_show_details_button">Visa detaljerad information</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">Visa detaljerad information om användning och diagnostik</string>
+    <string name="button_acknowledge_consents">Spara och fortsätt</string>
+    <string name="button_continue">Fortsätt</string>
+    <string name="onboarding_complete_icon_desc">Introduktion klar</string>
+    <string name="onboarding_final_title">Allt är klart!</string>
+    <string name="onboarding_final_description">Tack för att du anpassade din upplevelse. Du är nu redo att utforska alla funktioner. Ha så kul!</string>
+
+    <string name="navigation_drawer_open">Öppna navigationsmeny</string>
+    <string name="go_back">Tillbaka</string>
+    <string name="toast_review_already_done">Tack för betyg!</string>
+
+    <string name="error">Fel</string>
+    <string name="sort_by">Sortera efter:</string>
+    <string name="app_not_installed">Appen är inte installerad</string>
+    <string name="snack_app_updated">Appen har uppdaterats framgångsrikt</string>
+    <string name="snack_update_failed">Ett problem uppstod under uppdateringen</string>
+    <string name="try_again">Försök igen</string>
+    <string name="summary_share_message">Kolla in den här fantastiska appen som jag använder! Den har några riktigt coola funktioner som du kanske tycker är intressanta. Du kan ladda ner den från Play Store på: %1$s</string>
+    <string name="learn_more">Läs mer</string>
+    <string name="close">Stäng?</string>
+    <string name="summary_close">Är du säker på att du vill avsluta?</string>
+
+    <string name="home">Hem</string>
+
+    <string name="activity_not_found">Aktiviteten hittades inte.</string>
+    <string name="security_error">Ett säkerhetsfel inträffade. Försök igen senare.</string>
+    <string name="io_error">Ett in- och utmatningsfel inträffade. Kontrollera din nätverksanslutning eller lagring och försök igen.</string>
+    <string name="illegal_argument_error">Ogiltig indata eller argument angavs. Kontrollera informationen och försök igen.</string>
+    <string name="unknown_error">Ett okänt fel inträffade.</string>
+    <string name="initialization_error">Initialiseringen misslyckades. Försök igen senare.</string>
+
+    <string name="settings">Inställningar</string>
+    <string name="long_settings_label">Appinställningar</string>
+    <string name="settings_disabled_message">Inställningarna är för närvarande inte tillgängliga.</string>
+    <string name="settings_placeholder_description">Inga inställningar valda. Välj ett alternativ för att se detaljer här.</string>
+    <string name="get_help">Få hjälp</string>
+    <string name="error_no_settings_found">Inga inställningar hittades</string>
+    <string name="error_invalid_content_key">Ogiltig innehållsnyckel!</string>
+
+    <string name="display">Skärm</string>
+    <string name="summary_preference_settings_display">Anpassa appens utseende och känsla</string>
+
+    <string name="appearance">Utseende</string>
+    <string name="dark_theme">Mörkt tema</string>
+    <string name="will_turn_on_automatically_by_system">Kommer att aktiveras automatiskt av systemet</string>
+    <string name="will_never_turn_on_automatically">Kommer aldrig att aktiveras automatiskt</string>
+    <string name="amoled_mode">AMOLED-läge</string>
+    <string name="follow_system">Följ systeminställningar</string>
+    <string name="light_mode">Ljust läge</string>
+    <string name="dark_mode">Mörkt läge</string>
+    <string name="summary_dark_theme">Mörkt tema använder en djup bakgrund för att hjälpa till att spara batteritid</string>
+
+    <string name="dynamic_colors">Dynamiska färger</string>
+    <string name="summary_preference_settings_dynamic_colors">Applicera färger från tapeten till appens tema</string>
+
+    <string name="app_behavior">Appbeteende</string>
+    <string name="bounce_buttons">Klickanimation</string>
+    <string name="summary_preference_settings_bounce_buttons">Tillämpa en subtil studsande animation på klickbara element</string>
+
+    <string name="navigation">Navigering</string>
+    <string name="startup_page">Startsida</string>
+    <string name="summary_preference_settings_startup_page">Välj vilken skärm som ska visas vid appens start.</string>
+
+    <string name="language">Språk</string>
+    <string name="summary_preference_settings_language">Ändra det språk som används i appen</string>
+
+    <string name="dialog_startup_subtitle">Välj din föredragna startsida:</string>
+    <string name="dialog_info_startup">Konfigurerar den första skärmen som presenteras för användarna vid appstart.</string>
+
+    <string name="select_language_title">Välj språk</string>
+    <string name="dialog_language_subtitle">Välj ditt föredragna språk</string>
+    <string name="dialog_info_language">Anpassa din upplevelse med ditt föredragna språk. Ändringarna träder i kraft omedelbart.</string>
+
+    <string name="notifications">Notifikationer</string>
+    <string name="summary_preference_settings_notifications">Hantera appnotifikationer</string>
+
+    <string name="app_usage_notifications">Notifikationer om appanvändning</string>
+    <string name="update_notifications">Uppdateringsnotifikationer</string>
+
+    <string name="advanced">Avancerat</string>
+    <string name="summary_preference_settings_advanced">Utforska mer avancerade inställningar</string>
+    <string name="issue_title_label">Titel</string>
+    <string name="issue_description_label">Beskrivning</string>
+    <string name="issue_section_label">Problem</string>
+    <string name="login_section_label">Logga in</string>
+    <string name="use_github_account">Skicka med GitHub-konto</string>
+    <string name="send_anonymously">Skicka anonymt</string>
+    <string name="optional_placeholder">(Valfritt)</string>
+    <string name="issue_username_label">Användarnamn</string>
+    <string name="issue_password_label">Lösenord</string>
+    <string name="issue_email_label">E-post</string>
+    <string name="issue_send">Skicka</string>
+    <string name="cd_expand_device_info">Expandera eller fäll ihop enhetsinformation</string>
+    <string name="view_on_github">Omdirigera till GitHub</string>
+    <string name="snack_report_success">Rapporten skickades</string>
+    <string name="snack_report_failed">Det gick inte att skicka rapporten</string>
+    <string name="error_invalid_report">Titel och beskrivning får inte vara tomma</string>
+    <string name="issue_submitted_successfully">Utfärdas framgångsrikt</string>
+    <string name="open_issue_in_browser">Öppet i webbläsaren</string>
+    <string name="open_button_label">Öppen fråga</string>
+    <string name="issue_submitted">Ditt problem lämnades in!</string>
+    <string name="error_unauthorized">Obehörig: Ogiltig token</string>
+    <string name="error_forbidden">Förbjudet: Otillräckliga behörigheter</string>
+    <string name="error_gone">API -slutpunkten borttagen</string>
+    <string name="error_unprocessable">Ogiltiga data för skapande av problem</string>
+
+    <string name="error_reporting">Felrapportering</string>
+    <string name="bug_report">Felrapport</string>
+    <string name="summary_preference_settings_bug_report">Skicka felrapporter och funktionsförfrågningar till appens GitHub-sida</string>
+    <string name="cache_management">Cachehantering</string>
+    <string name="clear_cache">Rensa cache</string>
+    <string name="summary_preference_settings_clear_cache">Rensa tillfälliga applikationsdata.</string>
+    <string name="cache_cleared_success">Cache rensades framgångsrikt</string>
+    <string name="cache_cleared_error">Cache rensades med vissa fel</string>
+
+    <string name="security_and_privacy">Säkerhet och integritet</string>
+    <string name="summary_preference_settings_privacy_and_security">Hantera dina sekretessinställningar</string>
+
+    <string name="privacy">Sekretess</string>
+    <string name="privacy_policy">Integritetspolicy</string>
+    <string name="summary_preference_settings_privacy_policy">Se policyn för hur vi hanterar dina data</string>
+    <string name="terms_of_service">Användarvillkor</string>
+    <string name="summary_preference_settings_terms_of_service">Granska villkoren du godkänner vid användning av vår tjänst</string>
+    <string name="code_of_conduct">Uppförandekod</string>
+    <string name="summary_preference_settings_code_of_conduct">Förstå reglerna och riktlinjerna för beteende inom vår tjänst</string>
+
+    <string name="permissions">Behörigheter</string>
+    <string name="summary_preference_settings_permissions">Hantera de behörigheter som beviljats vår tjänst</string>
+    <string name="normal">Normal</string>
+    <string name="runtime">Körningstid</string>
+    <string name="storage">Lagring</string>
+    <string name="special">Speciell</string>
+    <string name="ad_id">Annons-ID [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">Tillåter appen att hämta och använda annonseringsidentifieraren som är kopplad till användarens enhet, för att tillhandahålla personliga annonser, mäta annonseffektivitet och visa annonser på Android 13-enheter eller senare.</string>
+    <string name="internet">Internet [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">Tillåter appen att upprätta en internetanslutning för att skicka felrapporter eller söka efter uppdateringar.</string>
+    <string name="post_notifications">Skicka aviseringar [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">Tillåter appen att visa aviseringar på enheter med Android 13 eller senare.</string>
+    <string name="access_network_state">Åtkomst till nätverksstatus [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">Tillåter appen att kontrollera nätverksanslutning och hämta information om Wi-Fi, inklusive aktiverad status och namn på anslutna Wi-Fi-enheter.</string>
+    <string name="access_notification_policy">Åtkomst till aviseringspolicy [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">Tillåter appen att komma åt och ändra enhetens aviseringspolicy, kontrollera hur och när aviseringar visas för användaren och tillhandahålla anpassade aviseringshanteringsfunktioner.</string>
+    <string name="billing">Fakturering [BILLING]</string>
+    <string name="summary_preference_permissions_billing">Tillåter appen att använda Google Play Billing Library för att hantera köp i appen och donationer</string>
+    <string name="check_license">Kontrollera licens [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">Tillåter appen att verifiera sin överensstämmelse med licensavtalet och upprätthålla licensvillkor för att skydda immateriella rättigheter.</string>
+    <string name="foreground_service">Förgrundstjänst [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">Tillåter appen att skapa och använda tjänster som körs i förgrunden, vilket ger dem prioritet över andra bakgrundsprocesser och förbättrar prestanda och tillförlitlighet.</string>
+    <string name="wake_lock">Håll enheten vaken [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">Tillåter appen att förhindra att enheten går i viloläge (t.ex. skärmdimning или processorvila) under kritiska operationer för att säkerställa att de slutförs utan avbrott. Detta används sparsamt för att spara batteri.</string>
+
+    <string name="ads">Reklam</string>
+    <string name="summary_preference_settings_ads">Kontrollera hur vi använder din information för att visa relevanta annonser</string>
+
+    <string name="display_ads">Visa annonser</string>
+    <string name="personalized_ads">Personliga annonser</string>
+    <string name="summary_ads_personalized_ads">Välj hur vi personaliserar annonser baserat på dina intressen</string>
+    <string name="summary_ads">Se annonser som är relevanta för dig. Hantera informationen som används för personaliserade annonser.</string>
+    <string name="ads_enabled">Annonser aktiverade</string>
+    <string name="ads_disabled">Annonser inaktiverade</string>
+    <string name="error_failed_to_load_ads_settings">Det gick inte att ladda annonsinställningarna</string>
+
+    <string name="usage_and_diagnostics">Användning och diagnostik</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">Dela data för att hjälpa till att förbättra appupplevelsen</string>
+    <string name="summary_usage_and_diagnostics">Hjälp oss förbättra din upplevelse genom att automatiskt skicka diagnostikdata.</string>
+    <string name="privacy_settings_title">Sekretessinställningar</string>
+    <string name="consent_category_analytics_title">Analys</string>
+    <string name="consent_category_advertising_title">Anpassad annonsering</string>
+    <string name="consent_analytics_storage_title">Lagra analysdata</string>
+    <string name="consent_analytics_storage_description">Tillåt lagring av data såsom appanvändning och besökslängd för att förbättra analys och appens prestanda.</string>
+    <string name="consent_ad_storage_title">Lagra annonsdata</string>
+    <string name="consent_ad_storage_description">Aktivera lagring av data (som enhetsidentifierare eller cookies) för att mäta annonsprestanda och visa relevanta annonser.</string>
+    <string name="consent_ad_user_data_title">Skicka data för annonser</string>
+    <string name="consent_ad_user_data_description">Tillåt att användnings- och enhetsdata skickas till Google för att stödja annonsrelaterade funktioner såsom konverteringar och kampanjoptimering.</string>
+    <string name="consent_ad_personalization_title">Anpassade annonser</string>
+    <string name="consent_ad_personalization_description">Aktivera anpassade annonser baserat på din aktivitet och dina preferenser i Googles tjänster och appar.</string>
+    <string name="privacy_settings_info">Hantera dina datapreferenser nedan. Du kan ändra dessa inställningar när som helst. För mer information, se vår <a href="%s">Sekretesspolicy</a>.</string>
+    <string name="learn_more_privacy_policy_settings">Läs mer i vår Sekretesspolicy</string>
+    <string name="advanced_privacy_settings">Avancerade sekretessinställningar</string>
+    <string name="icon_desc_expand_more">Visa mer</string>
+    <string name="icon_desc_expand_less">Visa mindre</string>
+    <string name="icon_desc_consent_category">Ikon för samtyckeskategori</string>
+    <string name="icon_desc_switch_status">Ikon för växlingsstatus</string>
+
+    <string name="legal">Juridisk information</string>
+    <string name="legal_notices">Juridiska meddelanden</string>
+    <string name="summary_preference_settings_legal_notices">Visa juridisk information om vår tjänst</string>
+    <string name="license">Licens</string>
+
+    <string name="about">Om appen</string>
+    <string name="summary_preference_settings_about">Läs mer om appen</string>
+
+    <string name="app_info">Appinformation</string>
+    <string name="app_build_version">Byggversion</string>
+    <string name="oss_license_title">Öppen källkodslicenser</string>
+    <string name="summary_preference_settings_oss">Licensinformation för programvara med öppen källkod</string>
+
+    <string name="eula_title">Licensavtal</string>
+    <string name="changelog_title">Ändringslogg</string>
+    <string name="loading_eula_message">Hämtar licensavtal…</string>
+    <string name="loading_changelog_message">Hämtar ändringslogg…</string>
+    <string name="error_loading_eula_message">Det gick inte att ladda licensavtalet. Försök igen.</string>
+    <string name="error_loading_changelog_message">Det gick inte att ladda ändringsloggen. Försök igen.</string>
+
+    <string name="device_info">Enhetsinformation</string>
+    <string name="app_build">Appversion: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">Felsökning</string>
+    <string name="release">Utgåva</string>
+    <string name="manufacturer">Tillverkare:</string>
+    <string name="device_model">Enhetsmodell:</string>
+    <string name="android_version">Android-version:</string>
+    <string name="api_level">API-nivå:</string>
+    <string name="snack_device_info_copied">Enhetsinformation kopierad till urklipp</string>
+
+    <string name="help_and_feedback">Hjälp och feedback</string>
+    <string name="help">Hjälp</string>
+    <string name="faq">Vanliga frågor</string>
+    <string name="popular_help_resources">Populära hjälpresurser</string>
+    <string name="contact_us">Kontakta oss</string>
+    <string name="contact_us_description">Berätta mer så hjälper vi dig</string>
+    <string name="view_in_google_play_store">Visa i Google Play Store</string>
+    <string name="version_info">Versionsinformation</string>
+    <string name="version">Version %1$s</string>
+    <string name="beta_program">Betaprogram</string>
+
+    <string name="feedback">Feedback</string>
+
+    <string name="updates">Uppdateringar</string>
+
+    <string name="share">Dela</string>
+
+    <string name="support_us">Stöd oss</string>
+    <string name="paid_support">Betalt stöd</string>
+    <string name="summary_donations">Oavsett hur mycket du donerar, hjälper du oss att hålla appen igång och förbättra funktionerna. Vi uppskattar din generositet och vänlighet!</string>
+    <string name="non_paid_support">Obetalt stöd</string>
+    <string name="web_ad">Webbannons</string>
+    <string name="error_failed_to_load_sku_details">Det gick inte att läsa in SKU-detaljer</string>
+</resources>

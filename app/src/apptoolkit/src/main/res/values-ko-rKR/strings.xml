@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">작업 흐름을 간소화하도록 설계된 이 앱은 모든 작업에서 체계적이고 효율적으로 작업할 수 있도록 필수 도구와 기능을 제공합니다. 📱</string>
+    <string name="notification_update_title">새로운 업데이트가 있습니다!</string>
+    <string name="summary_notification_update">앱의 새 버전을 사용할 수 있습니다. 클릭하여 업데이트하세요!</string>
+    <string name="notification_last_time_used_title">오랜만입니다!</string>
+    <string name="default_notification_summary">다양한 기능이 여러분을 기다리고 있습니다. 앱을 여세요!</string>
+
+    <string name="welcome">환영합니다</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">계속하려면 서비스 약관 및 개인정보처리방침을 읽고 동의하세요.</string>
+    <string name="agree">동의</string>
+    <string name="error_loading_consent_info">동의 정보를 로드하지 못했습니다.</string>
+
+    <string name="skip_button_text">건너뛰기</string>
+    <string name="skip_button_content_description">건너뛰기</string>
+    <string name="back_button_content_description">뒤로</string>
+    <string name="back_button_text">뒤로</string>
+    <string name="done_button_content_description">완료</string>
+    <string name="done_button_text">완료</string>
+    <string name="next_button_content_description">다음</string>
+    <string name="next_button_text">다음</string>
+    <string name="onboarding_theme_title">스타일 선택</string>
+    <string name="onboarding_theme_subtitle">앱의 모양을 선택하세요.</string>
+    <string name="onboarding_theme_light_desc">밝고 활기찬 스타일.</string>
+    <string name="onboarding_theme_dark_desc">눈이 편안한 스타일.</string>
+    <string name="onboarding_theme_system_desc">기기 설정과 일치.</string>
+    <string name="onboarding_amoled_mode_desc">OLED 화면을 위한 더 깊은 검은색.</string>
+    <string name="selected">선택됨</string>
+    <string name="onboarding_crashlytics_title">개선에 도움을 주세요</string>
+    <string name="onboarding_crashlytics_description">앱이 익명의 사용 데이터 및 충돌 보고서를 전송하도록 허용하세요. 이를 통해 버그를 수정하고 사용자 환경을 개선할 수 있습니다. 개인 정보는 절대 수집되지 않습니다.</string>
+    <string name="onboarding_crashlytics_enabled_desc">데이터 보고가 활성화되었습니다.</string>
+    <string name="onboarding_crashlytics_disabled_desc">데이터 보고가 비활성화되었습니다.</string>
+    <string name="onboarding_crashlytics_privacy_info">귀하의 개인 정보는 중요합니다. 이 데이터는 버그 수정 및 기능 개선에만 사용됩니다. 자세한 내용은 개인정보처리방침을 검토하세요.</string>
+    <string name="learn_more_privacy_policy">개인정보처리방침 검토</string>
+    <string name="onboarding_crashlytics_title_dialog">데이터 동의 관리</string>
+    <string name="onboarding_crashlytics_description_dialog">동의 환경 설정을 검토하고 확인해 주십시오. 이 데이터는 앱 개선에 도움이 되며 개인정보처리방침에 따라 처리됩니다.</string>
+    <string name="consent_analytics_storage_description_short">앱 사용 분석을 위한 데이터 수집을 허용합니다.</string>
+    <string name="consent_ad_storage_description_short">광고 목적으로 데이터를 저장하도록 허용합니다.</string>
+    <string name="consent_ad_user_data_description_short">광고를 위해 사용자 데이터를 전송하도록 허용합니다.</string>
+    <string name="consent_ad_personalization_description_short">맞춤 광고를 사용 설정합니다.</string>
+    <string name="onboarding_crashlytics_show_details_button">자세한 정보 표시</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">사용 및 진단에 대한 자세한 정보 표시</string>
+    <string name="button_acknowledge_consents">저장하고 계속하기</string>
+    <string name="button_continue">계속하기</string>
+    <string name="onboarding_complete_icon_desc">온보딩 완료</string>
+    <string name="onboarding_final_title">모든 준비가 완료되었습니다!</string>
+    <string name="onboarding_final_description">환경을 맞춤 설정해 주셔서 감사합니다. 이제 모든 기능을 탐색할 준비가 되었습니다. 즐겁게 사용하세요!</string>
+
+    <string name="navigation_drawer_open">탐색 창 열기</string>
+    <string name="go_back">뒤로 가기</string>
+    <string name="toast_review_already_done">평가 주셔서 감사합니다!</string>
+
+    <string name="sort_by">정렬 기준:</string>
+    <string name="error">오류</string>
+    <string name="app_not_installed">앱이 설치되지 않음</string>
+    <string name="snack_app_updated">앱이 성공적으로 업데이트되었습니다.</string>
+    <string name="snack_update_failed">업데이트 과정에서 문제가 발생했습니다.</string>
+    <string name="try_again">다시 시도</string>
+    <string name="summary_share_message">제가 사용 중인 이 멋진 앱을 확인해 보세요! 흥미로운 기능이 많이 있습니다. Play 스토어에서 다운로드할 수 있습니다: %1$s</string>
+    <string name="learn_more">더 알아보기</string>
+    <string name="close">닫겠습니까?</string>
+    <string name="summary_close">종료하시겠습니까?</string>
+
+    <string name="home">홈</string>
+
+    <string name="activity_not_found">활동을 찾을 수 없습니다.</string>
+    <string name="security_error">보안 오류가 발생했습니다. 나중에 다시 시도해 주세요.</string>
+    <string name="io_error">입력/출력 오류가 발생했습니다. 네트워크 연결 또는 저장 공간을 확인하고 다시 시도해 주세요.</string>
+    <string name="illegal_argument_error">잘못된 입력 또는 인수가 제공되었습니다. 정보를 확인하고 다시 시도해 주세요.</string>
+    <string name="unknown_error">알 수 없는 오류가 발생했습니다.</string>
+    <string name="initialization_error">초기화에 실패했습니다. 나중에 다시 시도해 주세요.</string>
+
+    <string name="settings">설정</string>
+    <string name="long_settings_label">애플리케이션 설정</string>
+    <string name="settings_disabled_message">현재 설정을 사용할 수 없습니다.</string>
+    <string name="settings_placeholder_description">선택된 설정이 없습니다. 여기서 세부 정보를 보려면 옵션을 선택하세요.</string>
+    <string name="get_help">도움 받기</string>
+    <string name="error_no_settings_found">설정을 찾을 수 없음</string>
+    <string name="error_invalid_content_key">잘못된 콘텐츠 키입니다!</string>
+
+    <string name="display">디스플레이</string>
+    <string name="summary_preference_settings_display">앱의 모양과 느낌을 맞춤 설정하세요.</string>
+
+    <string name="appearance">화면 모양</string>
+    <string name="dark_theme">어두운 테마</string>
+    <string name="will_turn_on_automatically_by_system">시스템에 의해 자동으로 켜집니다.</string>
+    <string name="will_never_turn_on_automatically">자동으로 켜지지 않습니다.</string>
+    <string name="amoled_mode">AMOLED 모드</string>
+    <string name="follow_system">시스템 모드 따르기</string>
+    <string name="light_mode">라이트 모드</string>
+    <string name="dark_mode">다크 모드</string>
+    <string name="summary_dark_theme">어두운 테마는 어두운 배경을 사용하여 배터리 수명을 더 오래 유지하는 데 도움을 줍니다.</string>
+
+    <string name="dynamic_colors">동적 색상</string>
+    <string name="summary_preference_settings_dynamic_colors">배경화면의 색상을 앱 테마에 적용</string>
+
+    <string name="app_behavior">앱 동작</string>
+    <string name="bounce_buttons">클릭 시 바운스 효과</string>
+    <string name="summary_preference_settings_bounce_buttons">클릭 가능한 모든 요소에 클릭 시 미세한 바운스 애니메이션을 적용합니다.</string>
+
+    <string name="navigation">탐색</string>
+    <string name="startup_page">시작 페이지</string>
+    <string name="summary_preference_settings_startup_page">앱 시작 시 표시될 화면을 선택하세요.</string>
+
+    <string name="language">언어</string>
+    <string name="summary_preference_settings_language">앱에서 사용되는 언어를 변경합니다.</string>
+
+    <string name="dialog_startup_subtitle">선호하는 시작 페이지를 선택하세요:</string>
+    <string name="dialog_info_startup">애플리케이션 실행 시 사용자에게 표시되는 초기 화면을 구성합니다. 이 설정은 사용자의 앱과의 첫 번째 상호 작용에 영향을 미치며 특정 사용자 세그먼트 또는 제품 목표에 맞게 조정할 수 있습니다.</string>
+
+    <string name="select_language_title">언어 선택</string>
+    <string name="dialog_language_subtitle">선호하는 언어를 선택하세요.</string>
+    <string name="dialog_info_language">선호하는 언어로 환경을 맞춤 설정하세요. 변경한 언어는 즉시 적용되어 선택한 언어로 원활한 환경을 보장합니다.</string>
+
+    <string name="notifications">알림</string>
+    <string name="summary_preference_settings_notifications">앱 알림 관리</string>
+
+    <string name="app_usage_notifications">앱 사용 알림</string>
+    <string name="update_notifications">업데이트 알림</string>
+
+    <string name="advanced">고급</string>
+    <string name="summary_preference_settings_advanced">더 많은 고급 설정 살펴보기</string>
+    <string name="issue_title_label">제목</string>
+    <string name="issue_description_label">설명</string>
+    <string name="issue_section_label">문제</string>
+    <string name="login_section_label">로그인</string>
+    <string name="use_github_account">GitHub 계정으로 보내기</string>
+    <string name="send_anonymously">익명으로 보내기</string>
+    <string name="optional_placeholder">(선택 사항)</string>
+    <string name="issue_username_label">사용자 이름</string>
+    <string name="issue_password_label">비밀번호</string>
+    <string name="issue_email_label">이메일</string>
+    <string name="issue_send">보내기</string>
+    <string name="cd_expand_device_info">디바이스 정보를 확장하거나 접기</string>
+    <string name="view_on_github">GitHub로 리디렉션</string>
+    <string name="snack_report_success">보고서가 성공적으로 전송되었습니다</string>
+    <string name="snack_report_failed">보고서 전송 실패</string>
+    <string name="error_invalid_report">제목과 설명은 비워 둘 수 없습니다</string>
+    <string name="issue_submitted_successfully">문제가 성공적으로 제출되었습니다</string>
+    <string name="open_issue_in_browser">브라우저에서 열립니다</string>
+    <string name="open_button_label">열린 문제</string>
+    <string name="issue_submitted">귀하의 문제가 제출되었습니다!</string>
+    <string name="error_unauthorized">무단 : 유효하지 않은 토큰</string>
+    <string name="error_forbidden">금지 : 불충분 한 권한</string>
+    <string name="error_gone">API 엔드 포인트가 제거되었습니다</string>
+    <string name="error_unprocessable">이슈 생성을위한 잘못된 데이터</string>
+
+    <string name="error_reporting">오류 보고</string>
+    <string name="bug_report">버그 신고</string>
+    <string name="summary_preference_settings_bug_report">버그 신고 및 기능 요청을 앱의 GitHub 저장소 문제 페이지로 보내세요.</string>
+    <string name="cache_management">캐시 관리</string>
+    <string name="clear_cache">캐시 지우기</string>
+    <string name="summary_preference_settings_clear_cache">임시 애플리케이션 데이터를 지웁니다.</string>
+    <string name="cache_cleared_success">캐시가 성공적으로 지워졌습니다.</string>
+    <string name="cache_cleared_error">일부 오류와 함께 캐시가 지워졌습니다.</string>
+
+    <string name="security_and_privacy">보안 &amp; 개인 정보 보호</string>
+    <string name="summary_preference_settings_privacy_and_security">개인 정보 설정을 관리합니다.</string>
+
+    <string name="privacy">개인 정보 보호</string>
+    <string name="privacy_policy">개인정보처리방침</string>
+    <string name="summary_preference_settings_privacy_policy">데이터 처리 방식을 규정하는 정책 보기</string>
+    <string name="terms_of_service">서비스 약관</string>
+    <string name="summary_preference_settings_terms_of_service">서비스 사용 시 동의하는 약관 검토</string>
+    <string name="code_of_conduct">행동 강령</string>
+    <string name="summary_preference_settings_code_of_conduct">서비스 내 행동 규칙 및 지침 이해</string>
+
+    <string name="permissions">권한</string>
+    <string name="summary_preference_settings_permissions">서비스에 부여된 권한 관리</string>
+    <string name="normal">일반</string>
+    <string name="runtime">런타임</string>
+    <string name="storage">저장 공간</string>
+    <string name="special">특별</string>
+    <string name="ad_id">광고 ID [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">앱이 사용자의 기기와 연결된 광고 식별자를 검색하고 사용하여 맞춤 광고를 제공하고, 광고 효과를 측정하며, Android 13 이상 기기에 광고를 표시하도록 허용합니다.</string>
+    <string name="internet">인터넷 [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">앱이 오류 보고서를 보내거나 업데이트를 확인하기 위해 인터넷 연결을 설정하도록 허용합니다.</string>
+    <string name="post_notifications">알림 게시 [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">앱이 Android 13 이상이 설치된 기기에서 알림을 표시하도록 허용합니다.</string>
+    <string name="access_network_state">네트워크 상태 액세스 [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">앱이 네트워크 연결 상태를 확인하고 활성화 상태 및 연결된 Wi-Fi 기기 이름을 포함한 Wi-Fi 정보를 검색하도록 허용합니다.</string>
+    <string name="access_notification_policy">알림 정책 액세스 [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">앱이 기기의 알림 정책에 액세스하고 수정하여 사용자에게 알림이 표시되는 방식과 시기를 제어하고 맞춤 알림 관리 기능을 제공하도록 허용합니다.</string>
+    <string name="billing">결제 [BILLING]</string>
+    <string name="summary_preference_permissions_billing">앱이 인앱 구매 및 기부를 처리하기 위해 Google Play 결제 라이브러리를 사용하도록 허용합니다.</string>
+    <string name="check_license">라이선스 확인 [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">앱이 라이선스 계약 준수 여부를 확인하고 지적 재산권을 보호하기 위해 라이선스 조건을 시행하도록 허용합니다.</string>
+    <string name="foreground_service">포그라운드 서비스 [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">앱이 포그라운드에서 실행되는 서비스를 만들고 사용하여 다른 백그라운드 프로세스보다 우선순위를 부여하고 성능과 안정성을 향상시키도록 허용합니다.</string>
+    <string name="wake_lock">기기를 절전 모드로 전환하지 않음 [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">앱이 중요한 작업을 수행하는 동안 기기가 절전 모드(예: 화면 어두워짐 또는 프로세서 절전)로 전환되는 것을 방지하여 중단 없이 완료되도록 합니다. 배터리를 절약하기 위해 최소한으로 사용됩니다.</string>
+
+    <string name="ads">광고</string>
+    <string name="summary_preference_settings_ads">관련 광고를 표시하기 위해 귀하의 정보를 사용하는 방법 제어</string>
+
+    <string name="display_ads">광고 표시</string>
+    <string name="personalized_ads">맞춤 광고</string>
+    <string name="summary_ads_personalized_ads">관심사를 기반으로 광고를 맞춤 설정하는 방법 선택</string>
+    <string name="summary_ads">귀하와 관련된 광고를 확인하세요. 앱 활동을 기반으로 맞춤 광고를 표시하는 데 사용되는 정보를 관리합니다. 언제든지 여기에서 맞춤 설정을 끌 수 있습니다.\n</string>
+    <string name="ads_enabled">광고 사용</string>
+    <string name="ads_disabled">광고 사용 안 함</string>
+    <string name="error_failed_to_load_ads_settings">광고 설정을 로드하지 못했습니다.</string>
+
+    <string name="usage_and_diagnostics">사용량 &amp; 진단</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">인앱 환경 개선을 위해 데이터 공유</string>
+    <string name="summary_usage_and_diagnostics">진단, 기기 및 앱 사용량 데이터를 자동으로 전송하여 환경 개선에 도움을 주세요. 이를 통해 앱 성능, 안정성 및 기타 향상 기능을 개선하는 데 도움이 됩니다. 일부 집계 데이터는 앱 개선에도 도움이 됩니다.\n\n이는 기기 및 앱 사용 방식(예: 배터리 수준, 시스템 및 앱 활동, 오류)에 대한 일반 정보입니다. 이 데이터는 앱 개선에 사용됩니다.\n\n이 기능을 꺼도 앱 업데이트 및 보안과 같은 필수 서비스에 필요한 정보를 기기에서 전송하는 기능에는 영향을 미치지 않습니다.\n</string>
+    <string name="privacy_settings_title">개인 정보 보호 설정</string>
+    <string name="consent_category_analytics_title">분석</string>
+    <string name="consent_category_advertising_title">맞춤 광고</string>
+    <string name="consent_analytics_storage_title">분석 데이터 저장</string>
+    <string name="consent_analytics_storage_description">앱 사용량 및 방문 기간과 같은 데이터 저장을 허용하여 분석 및 앱 성능을 개선합니다.</string>
+    <string name="consent_ad_storage_title">광고 데이터 저장</string>
+    <string name="consent_ad_storage_description">광고 실적 측정 및 관련 광고 표시를 위해 데이터(기기 식별자 또는 쿠키 등) 저장을 사용 설정합니다.</string>
+    <string name="consent_ad_user_data_title">광고용 데이터 전송</string>
+    <string name="consent_ad_user_data_description">전환 및 캠페인 최적화와 같은 광고 관련 기능을 지원하기 위해 사용량 및 기기 데이터를 Google에 전송하는 것을 허용합니다.</string>
+    <string name="consent_ad_personalization_title">맞춤 광고</string>
+    <string name="consent_ad_personalization_description">Google 서비스 및 앱 전반의 활동 및 환경설정을 기반으로 맞춤 광고를 사용 설정합니다.</string>
+    <string name="privacy_settings_info">아래에서 데이터 환경설정을 관리하세요. 언제든지 이 설정을 변경할 수 있습니다. 자세한 내용은 <a href="%s">개인정보처리방침</a>을 참조하세요.</string>
+    <string name="learn_more_privacy_policy_settings">개인정보처리방침에서 자세히 알아보기</string>
+    <string name="advanced_privacy_settings">고급 개인 정보 보호 설정</string>
+    <string name="icon_desc_expand_more">펼치기</string>
+    <string name="icon_desc_expand_less">접기</string>
+    <string name="icon_desc_consent_category">동의 카테고리 아이콘</string>
+    <string name="icon_desc_switch_status">스위치 상태 아이콘</string>
+
+    <string name="legal">법률 정보</string>
+    <string name="legal_notices">법적 고지</string>
+    <string name="summary_preference_settings_legal_notices">서비스 관련 법률 정보 보기</string>
+    <string name="license">라이선스</string>
+
+    <string name="about">정보</string>
+    <string name="summary_preference_settings_about">앱에 대해 자세히 알아보기</string>
+
+    <string name="app_info">앱 정보</string>
+    <string name="app_build_version">애플리케이션 빌드 버전</string>
+    <string name="oss_license_title">오픈 소스 라이선스</string>
+    <string name="summary_preference_settings_oss">오픈 소스 소프트웨어 라이선스 세부 정보</string>
+
+    <string name="eula_title">EULA</string>
+    <string name="changelog_title">앱 변경 로그</string>
+    <string name="loading_eula_message">최종 사용자 사용권 계약을 검색 중입니다…</string>
+    <string name="loading_changelog_message">애플리케이션 변경 로그를 가져오는 중입니다…</string>
+    <string name="error_loading_eula_message">최종 사용자 사용권 계약을 로드할 수 없습니다. 다시 시도해 주세요.</string>
+    <string name="error_loading_changelog_message">애플리케이션 변경 로그를 로드할 수 없습니다. 다시 시도해 주세요.</string>
+
+    <string name="device_info">기기 정보</string>
+    <string name="app_build">앱 빌드: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">디버그</string>
+    <string name="release">릴리스</string>
+    <string name="manufacturer">제조업체:</string>
+    <string name="device_model">기기 모델:</string>
+    <string name="android_version">Android 버전:</string>
+    <string name="api_level">API 레벨:</string>
+    <string name="snack_device_info_copied">기기 정보가 클립보드에 복사되었습니다.</string>
+
+    <string name="help_and_feedback">도움말 &amp; 의견</string>
+    <string name="help">도움말</string>
+    <string name="faq">FAQ</string>
+    <string name="popular_help_resources">많이 찾는 도움말 리소스</string>
+    <string name="contact_us">문의하기</string>
+    <string name="contact_us_description">자세히 알려주시면 도움을 드리겠습니다.</string>
+    <string name="view_in_google_play_store">Google Play 스토어에서 보기</string>
+    <string name="version_info">버전 정보</string>
+    <string name="version">버전 %1$s</string>
+    <string name="beta_program">베타 프로그램</string>
+
+    <string name="feedback">의견</string>
+
+    <string name="updates">업데이트</string>
+
+    <string name="share">공유</string>
+
+    <string name="support_us">지원하기</string>
+    <string name="paid_support">유료 지원</string>
+    <string name="summary_donations">기부 금액에 관계없이 앱을 계속 운영하고 기능을 개선하는 데 도움이 됩니다. 귀하의 관대함과 친절에 감사드립니다!</string>
+    <string name="non_paid_support">무료 지원</string>
+    <string name="web_ad">웹 광고</string>
+    <string name="error_failed_to_load_sku_details">SKU 세부 정보를 로드하지 못했습니다.</string>
+</resources>

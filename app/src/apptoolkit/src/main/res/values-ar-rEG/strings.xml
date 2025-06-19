@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_short_description">صُمم هذا التطبيق لتبسيط سير عملك، وهو يوفر أدوات وميزات أساسية لمساعدتك على البقاء منظمًا وفعالاً في أي مهمة. 📱</string>
+    <string name="notification_update_title">يتوفر تحديث جديد!</string>
+    <string name="summary_notification_update">يتوفر إصدار جديد من التطبيق. اضغط للتحديث!</string>
+    <string name="notification_last_time_used_title">لقد مر وقت طويل!</string>
+    <string name="default_notification_summary">هناك العديد من الميزات في انتظارك. افتح التطبيق!</string>
+
+    <string name="welcome">مرحباً</string>
+    <string name="summary_browse_terms_of_service_and_privacy_policy">اقرأ ووافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا للمتابعة</string>
+    <string name="agree">أوافق</string>
+    <string name="error_loading_consent_info">فشل تحميل معلومات الموافقة</string>
+
+    <string name="skip_button_text">تخطي</string>
+    <string name="skip_button_content_description">تخطي</string>
+    <string name="back_button_content_description">رجوع</string>
+    <string name="back_button_text">رجوع</string>
+    <string name="done_button_content_description">تم</string>
+    <string name="done_button_text">تم</string>
+    <string name="next_button_content_description">التالي</string>
+    <string name="next_button_text">التالي</string>
+    <string name="onboarding_theme_title">اختر طرازك</string>
+    <string name="onboarding_theme_subtitle">حدد كيف تريد أن يبدو التطبيق.</string>
+    <string name="onboarding_theme_light_desc">مشرق وحيوي.</string>
+    <string name="onboarding_theme_dark_desc">مريح للعينين.</string>
+    <string name="onboarding_theme_system_desc">يطابق جهازك.</string>
+    <string name="onboarding_amoled_mode_desc">أسود أعمق لشاشات OLED.</string>
+    <string name="selected">محدد</string>
+    <string name="onboarding_crashlytics_title">ساعدنا على التحسين</string>
+    <string name="onboarding_crashlytics_description">اسمح للتطبيق بإرسال بيانات استخدام مجهولة وتقارير الأعطال. يساعدنا هذا في إصلاح الأخطاء وتحسين تجربتك. لا يتم جمع أي معلومات شخصية على الإطلاق.</string>
+    <string name="onboarding_crashlytics_enabled_desc">الإبلاغ عن البيانات نشط.</string>
+    <string name="onboarding_crashlytics_disabled_desc">الإبلاغ عن البيانات غير نشط.</string>
+    <string name="onboarding_crashlytics_privacy_info">خصوصيتك مهمة. نحن نستخدم هذه البيانات فقط لإصلاح الأخطاء وتحسين الميزات. لمزيد من التفاصيل، يرجى مراجعة سياسة الخصوصية الخاصة بنا.</string>
+    <string name="learn_more_privacy_policy">مراجعة سياسة الخصوصية الخاصة بنا</string>
+    <string name="onboarding_crashlytics_title_dialog">إدارة موافقة البيانات</string>
+    <string name="onboarding_crashlytics_description_dialog">يرجى مراجعة وتأكيد تفضيلات موافقتك. تساعدنا هذه البيانات في تحسين التطبيق ويتم التعامل معها وفقًا لسياسة الخصوصية الخاصة بنا.</string>
+    <string name="consent_analytics_storage_description_short">يسمح بجمع البيانات لتحليل استخدام التطبيق.</string>
+    <string name="consent_ad_storage_description_short">يسمح بتخزين البيانات لأغراض إعلانية.</string>
+    <string name="consent_ad_user_data_description_short">يسمح بإرسال بيانات المستخدم للإعلانات.</string>
+    <string name="consent_ad_personalization_description_short">يمكّن الإعلانات المخصصة.</string>
+    <string name="onboarding_crashlytics_show_details_button">عرض معلومات تفصيلية</string>
+    <string name="onboarding_crashlytics_show_details_button_cd">عرض معلومات تفصيلية حول الاستخدام والتشخيصات</string>
+    <string name="button_acknowledge_consents">حفظ ومتابعة</string>
+    <string name="button_continue">متابعة</string>
+    <string name="onboarding_complete_icon_desc">اكتمل الإعداد الأولي</string>
+    <string name="onboarding_final_title">أنت جاهز تمامًا!</string>
+    <string name="onboarding_final_description">شكرًا لتخصيص تجربتك. أنت الآن جاهز لاستكشاف جميع الميزات. استمتع!</string>
+
+    <string name="navigation_drawer_open">فتح قائمة التنقل</string>
+    <string name="go_back">العودة</string>
+    <string name="toast_review_already_done">شكرا على التصنيف!</string>
+
+    <string name="sort_by">فرز حسب:</string>
+    <string name="error">خطأ</string>
+    <string name="app_not_installed">التطبيق غير مثبت</string>
+    <string name="snack_app_updated">تم تحديث التطبيق بنجاح</string>
+    <string name="snack_update_failed">واجهت عملية التحديث مشكلة</string>
+    <string name="try_again">حاول مرة أخرى</string>
+    <string name="summary_share_message">اطلع على هذا التطبيق الرائع الذي أستخدمه! يحتوي على بعض الميزات الرائعة التي قد تجدها مثيرة للاهتمام. يمكنك تنزيله من متجر Play على: %1$s</string>
+    <string name="learn_more">اعرف المزيد</string>
+    <string name="close">إغلاق؟</string>
+    <string name="summary_close">هل أنت متأكد أنك تريد الخروج؟</string>
+
+    <string name="home">الرئيسية</string>
+
+    <string name="activity_not_found">النشاط غير موجود.</string>
+    <string name="security_error">حدث خطأ أمني. يرجى المحاولة مرة أخرى لاحقًا.</string>
+    <string name="io_error">حدث خطأ في الإدخال/الإخراج. يرجى التحقق من اتصال الشبكة أو التخزين وحاول مرة أخرى.</string>
+    <string name="illegal_argument_error">تم تقديم إدخال أو وسيطة غير صالحة. يرجى التحقق من المعلومات وحاول مرة أخرى.</string>
+    <string name="unknown_error">حدث خطأ غير معروف.</string>
+    <string name="initialization_error">فشل التهيئة. يرجى المحاولة مرة أخرى لاحقًا.</string>
+
+    <string name="settings">الإعدادات</string>
+    <string name="long_settings_label">إعدادات التطبيق</string>
+    <string name="settings_disabled_message">الإعدادات غير متوفرة حاليًا.</string>
+    <string name="settings_placeholder_description">لم يتم تحديد أي إعدادات. اختر خيارًا لعرض تفاصيله هنا.</string>
+    <string name="get_help">احصل على مساعدة</string>
+    <string name="error_no_settings_found">لم يتم العثور على إعدادات</string>
+    <string name="error_invalid_content_key">مفتاح محتوى غير صالح!</string>
+
+    <string name="display">العرض</string>
+    <string name="summary_preference_settings_display">خصص شكل ومظهر تطبيقك</string>
+
+    <string name="appearance">المظهر</string>
+    <string name="dark_theme">المظهر الداكن</string>
+    <string name="will_turn_on_automatically_by_system">سيتم تشغيله تلقائيًا بواسطة النظام</string>
+    <string name="will_never_turn_on_automatically">لن يتم تشغيله تلقائيًا أبدًا</string>
+    <string name="amoled_mode">وضع AMOLED</string>
+    <string name="follow_system">اتباع وضع النظام</string>
+    <string name="light_mode">الوضع الفاتح</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="summary_dark_theme">يستخدم المظهر الداكن خلفية داكنة للمساعدة في الحفاظ على عمر البطارية لفترة أطول</string>
+
+    <string name="dynamic_colors">الألوان الديناميكية</string>
+    <string name="summary_preference_settings_dynamic_colors">تطبيق الألوان من الخلفيات على سمة التطبيق</string>
+
+    <string name="app_behavior">سلوك التطبيق</string>
+    <string name="bounce_buttons">نقر مرن</string>
+    <string name="summary_preference_settings_bounce_buttons">يطبق رسومًا متحركة مرنة خفية على جميع العناصر القابلة للنقر عند النقر عليها</string>
+
+    <string name="navigation">التنقل</string>
+    <string name="startup_page">صفحة البدء</string>
+    <string name="summary_preference_settings_startup_page">اختر الشاشة التي سيتم عرضها عند بدء تشغيل التطبيق.</string>
+
+    <string name="language">اللغة</string>
+    <string name="summary_preference_settings_language">يغير اللغة المستخدمة في التطبيق</string>
+
+    <string name="dialog_startup_subtitle">اختر صفحة البدء المفضلة لديك:</string>
+    <string name="dialog_info_startup">يقوم بتكوين الشاشة الأولية المقدمة للمستخدمين عند تشغيل التطبيق. يؤثر هذا الإعداد على التفاعل الأول للمستخدم مع التطبيق ويمكن تخصيصه لشرائح مستخدمين محددة أو أهداف المنتج.</string>
+
+    <string name="select_language_title">اختر اللغة</string>
+    <string name="dialog_language_subtitle">اختر لغتك المفضلة</string>
+    <string name="dialog_info_language">خصص تجربتك بلغتك المفضلة. أي تغييرات لغة تجريها تدخل حيز التنفيذ على الفور، مما يضمن تجربة سلسة بلغتك المختارة</string>
+
+    <string name="notifications">الإشعارات</string>
+    <string name="summary_preference_settings_notifications">إدارة إشعارات التطبيق</string>
+
+    <string name="app_usage_notifications">إشعارات استخدام التطبيق</string>
+    <string name="update_notifications">إشعارات التحديث</string>
+
+    <string name="advanced">متقدم</string>
+    <string name="summary_preference_settings_advanced">استكشف المزيد من الإعدادات المتقدمة</string>
+    <string name="issue_title_label">العنوان</string>
+    <string name="issue_description_label">الوصف</string>
+    <string name="issue_section_label">المشكلة</string>
+    <string name="login_section_label">تسجيل الدخول</string>
+    <string name="use_github_account">أرسل باستخدام حساب GitHub</string>
+    <string name="send_anonymously">أرسل مجهولاً</string>
+    <string name="optional_placeholder">(اختياري)</string>
+    <string name="issue_username_label">اسم المستخدم</string>
+    <string name="issue_password_label">كلمة المرور</string>
+    <string name="issue_email_label">البريد الإلكتروني</string>
+    <string name="issue_send">إرسال</string>
+    <string name="cd_expand_device_info">توسيع أو طي معلومات الجهاز</string>
+    <string name="view_on_github">إعادة التوجيه إلى GitHub</string>
+    <string name="snack_report_success">تم إرسال التقرير بنجاح</string>
+    <string name="snack_report_failed">فشل في إرسال التقرير</string>
+    <string name="error_invalid_report">لا يمكن أن يكون العنوان والوصف فارغين</string>
+    <string name="issue_submitted_successfully">تم تقديم القضية بنجاح</string>
+    <string name="open_issue_in_browser">مفتوح في المتصفح</string>
+    <string name="open_button_label">قضية مفتوحة</string>
+    <string name="issue_submitted">تم تقديم مشكلتك!</string>
+    <string name="error_unauthorized">غير مصرح به: رمز غير صالح</string>
+    <string name="error_forbidden">ممنوع: أذونات غير كافية</string>
+    <string name="error_gone">أزياء نقطة نهاية API</string>
+    <string name="error_unprocessable">بيانات غير صالحة لإنشاء المشكلات</string>
+
+    <string name="error_reporting">الإبلاغ عن الأخطاء</string>
+    <string name="bug_report">تقرير خطأ</string>
+    <string name="summary_preference_settings_bug_report">أرسل تقارير الأخطاء وطلبات الميزات إلى صفحة مشكلات مستودع GitHub الخاص بالتطبيق</string>
+    <string name="cache_management">إدارة ذاكرة التخزين المؤقت</string>
+    <string name="clear_cache">مسح ذاكرة التخزين المؤقت</string>
+    <string name="summary_preference_settings_clear_cache">مسح بيانات التطبيق المؤقتة.</string>
+    <string name="cache_cleared_success">تم مسح ذاكرة التخزين المؤقت بنجاح</string>
+    <string name="cache_cleared_error">تم مسح ذاكرة التخزين المؤقت مع بعض الأخطاء</string>
+
+    <string name="security_and_privacy">الأمان والخصوصية</string>
+    <string name="summary_preference_settings_privacy_and_security">إدارة إعدادات الخصوصية الخاصة بك</string>
+
+    <string name="privacy">الخصوصية</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="summary_preference_settings_privacy_policy">عرض السياسة التي تحكم كيفية تعاملنا مع بياناتك</string>
+    <string name="terms_of_service">شروط الخدمة</string>
+    <string name="summary_preference_settings_terms_of_service">مراجعة الشروط التي توافق عليها عند استخدام خدمتنا</string>
+    <string name="code_of_conduct">مدونة قواعد السلوك</string>
+    <string name="summary_preference_settings_code_of_conduct">فهم القواعد والإرشادات للسلوك داخل خدمتنا</string>
+
+    <string name="permissions">الأذونات</string>
+    <string name="summary_preference_settings_permissions">إدارة الأذونات الممنوحة لخدمتنا</string>
+    <string name="normal">عادي</string>
+    <string name="runtime">وقت التشغيل</string>
+    <string name="storage">التخزين</string>
+    <string name="special">خاص</string>
+    <string name="ad_id">معرّف الإعلان [AD_ID]</string>
+    <string name="summary_preference_permissions_ad_id">يسمح للتطبيق باسترجاع واستخدام معرّف الإعلانات المرتبط بجهاز المستخدم، مما يوفر إعلانات مخصصة، ويقيس فعالية الإعلانات، ويعرض الإعلانات على أجهزة أندرويد 13 أو الأحدث.</string>
+    <string name="internet">الإنترنت [INTERNET]</string>
+    <string name="summary_preference_permissions_internet">يسمح للتطبيق بإنشاء اتصال بالإنترنت لإرسال تقارير الأخطاء أو التحقق من وجود تحديثات.</string>
+    <string name="post_notifications">إرسال الإشعارات [POST_NOTIFICATIONS]</string>
+    <string name="summary_preference_permissions_post_notifications">يسمح للتطبيق بعرض الإشعارات على الأجهزة التي تعمل بنظام أندرويد 13 أو الأحدث.</string>
+    <string name="access_network_state">الوصول لحالة الشبكة [ACCESS_NETWORK_STATE]</string>
+    <string name="summary_preference_permissions_access_network_state">يسمح للتطبيق بالتحقق من اتصال الشبكة واسترجاع معلومات عن شبكة الواي فاي، بما في ذلك حالة التشغيل وأسماء أجهزة الواي فاي المتصلة.</string>
+    <string name="access_notification_policy">الوصول لسياسة الإشعارات [ACCESS_NOTIFICATION_POLICY]</string>
+    <string name="summary_preference_permissions_access_notification_policy">يسمح للتطبيق بالوصول إلى سياسة إشعارات الجهاز وتعديلها، والتحكم في كيفية ووقت عرض الإشعارات للمستخدم، وتوفير ميزات مخصصة لإدارة الإشعارات.</string>
+    <string name="billing">الفوترة [BILLING]</string>
+    <string name="summary_preference_permissions_billing">يسمح للتطبيق باستخدام مكتبة جوجل بلاي للفوترة لمعالجة عمليات الشراء داخل التطبيق والتبرعات.</string>
+    <string name="check_license">التحقق من الترخيص [CHECK_LICENSE]</string>
+    <string name="summary_preference_permissions_check_license">يسمح للتطبيق بالتحقق من امتثاله لاتفاقية الترخيص وفرض شروط الترخيص لحماية الملكية الفكرية.</string>
+    <string name="foreground_service">خدمة تعمل في المقدمة [FOREGROUND_SERVICE]</string>
+    <string name="summary_preference_permissions_foreground_service">يسمح للتطبيق بإنشاء واستخدام خدمات تعمل في المقدمة، مما يمنحها الأولوية على عمليات الخلفية الأخرى ويحسن الأداء والموثوقية.</string>
+    <string name="wake_lock">إبقاء الجهاز مستيقظًا [WAKE_LOCK]</string>
+    <string name="summary_preference_permissions_wake_lock">يسمح للتطبيق بمنع الجهاز من الدخول في وضع السكون (على سبيل المثال، تعتيم الشاشة أو وضع سكون المعالج) أثناء العمليات الحرجة لضمان إكمالها دون انقطاع. يُستخدم هذا بشكل مقتصد للحفاظ على طاقة البطارية.</string>
+
+    <string name="ads">الإعلانات</string>
+    <string name="summary_preference_settings_ads">تحكم في كيفية استخدامنا لمعلوماتك لعرض إعلانات ذات صلة بك</string>
+
+    <string name="display_ads">عرض الإعلانات</string>
+    <string name="personalized_ads">الإعلانات المخصصة</string>
+    <string name="summary_ads_personalized_ads">اختر كيف نخصص الإعلانات لك بناءً على اهتماماتك</string>
+    <string name="summary_ads">شاهد الإعلانات ذات الصلة بك. قم بإدارة المعلومات المستخدمة لعرض الإعلانات المخصصة بناءً على نشاطك في التطبيق. يمكنك دائمًا إيقاف التخصيص هنا.\n</string>
+    <string name="ads_enabled">الإعلانات مفعلة</string>
+    <string name="ads_disabled">الإعلانات معطلة</string>
+    <string name="error_failed_to_load_ads_settings">فشل تحميل إعدادات الإعلانات</string>
+
+    <string name="usage_and_diagnostics">الاستخدام والتشخيصات</string>
+    <string name="summary_preference_settings_usage_and_diagnostics">شارك البيانات للمساعدة في تحسين التجربة داخل التطبيق</string>
+    <string name="summary_usage_and_diagnostics">ساعد في تحسين تجربتك عن طريق إرسال بيانات التشخيص والجهاز واستخدام التطبيق إلينا تلقائيًا. سيساعد هذا في تحسين أداء التطبيق واستقراره وتحسينات أخرى. ستساعد بعض البيانات المجمعة أيضًا تطبيقاتنا.\n\nهذه معلومات عامة حول جهازك وكيفية استخدامك لتطبيقاتنا (مثل مستوى البطارية ونشاط النظام والتطبيق والأخطاء). سيتم استخدام البيانات لتحسين تطبيقاتنا\n\nلا يؤثر إيقاف تشغيل هذه الميزة على قدرة جهازك على إرسال المعلومات اللازمة للخدمات الأساسية مثل تحديثات التطبيق والأمان.\n</string>
+    <string name="privacy_settings_title">إعدادات الخصوصية</string>
+    <string name="consent_category_analytics_title">التحليلات</string>
+    <string name="consent_category_advertising_title">الإعلانات المخصصة</string>
+    <string name="consent_analytics_storage_title">تخزين بيانات التحليلات</string>
+    <string name="consent_analytics_storage_description">السماح بتخزين البيانات مثل استخدام التطبيق ومدة الزيارة لتحسين التحليلات وأداء التطبيق.</string>
+    <string name="consent_ad_storage_title">تخزين بيانات الإعلانات</string>
+    <string name="consent_ad_storage_description">تمكين تخزين البيانات (مثل معرفات الجهاز أو ملفات تعريف الارتباط) لقياس أداء الإعلانات وعرض الإعلانات ذات الصلة.</string>
+    <string name="consent_ad_user_data_title">إرسال البيانات للإعلانات</string>
+    <string name="consent_ad_user_data_description">السماح بإرسال بيانات الاستخدام والجهاز إلى Google لدعم الميزات المتعلقة بالإعلانات مثل التحويلات وتحسين الحملات.</string>
+    <string name="consent_ad_personalization_title">الإعلانات المخصصة</string>
+    <string name="consent_ad_personalization_description">تمكين الإعلانات المخصصة بناءً على نشاطك وتفضيلاتك عبر خدمات وتطبيقات Google.</string>
+    <string name="privacy_settings_info">إدارة تفضيلات بياناتك أدناه. يمكنك تغيير هذه الإعدادات في أي وقت. لمزيد من التفاصيل، يرجى الاطلاع على <a href="%s">سياسة الخصوصية</a> الخاصة بنا.</string>
+    <string name="learn_more_privacy_policy_settings">اعرف المزيد في سياسة الخصوصية الخاصة بنا</string>
+    <string name="advanced_privacy_settings">إعدادات الخصوصية المتقدمة</string>
+    <string name="icon_desc_expand_more">توسيع</string>
+    <string name="icon_desc_expand_less">طي</string>
+    <string name="icon_desc_consent_category">أيقونة فئة الموافقة</string>
+    <string name="icon_desc_switch_status">أيقونة حالة المفتاح</string>
+
+    <string name="legal">قانوني</string>
+    <string name="legal_notices">إشعارات قانونية</string>
+    <string name="summary_preference_settings_legal_notices">عرض المعلومات القانونية حول خدمتنا</string>
+    <string name="license">الترخيص</string>
+
+    <string name="about">حول</string>
+    <string name="summary_preference_settings_about">اعرف المزيد عن التطبيق</string>
+
+    <string name="app_info">معلومات التطبيق</string>
+    <string name="app_build_version">إصدار بناء التطبيق</string>
+    <string name="oss_license_title">تراخيص المصادر المفتوحة</string>
+    <string name="summary_preference_settings_oss">تفاصيل الترخيص للبرامج مفتوحة المصدر</string>
+
+    <string name="eula_title">اتفاقية ترخيص المستخدم النهائي</string>
+    <string name="changelog_title">سجل تغييرات التطبيق</string>
+    <string name="loading_eula_message">جارٍ استرداد اتفاقية ترخيص المستخدم النهائي…</string>
+    <string name="loading_changelog_message">جارٍ جلب سجل تغييرات التطبيق…</string>
+    <string name="error_loading_eula_message">تعذر تحميل اتفاقية ترخيص المستخدم النهائي. يرجى المحاولة مرة أخرى.</string>
+    <string name="error_loading_changelog_message">تعذر تحميل سجل تغييرات التطبيق. يرجى المحاولة مرة أخرى.</string>
+
+    <string name="device_info">معلومات الجهاز</string>
+    <string name="app_build">إصدار التطبيق: %6$s\n%1$s\n%2$s\n%3$s\n%4$s\n%5$s</string>
+    <string name="debug">تصحيح</string>
+    <string name="release">إصدار</string>
+    <string name="manufacturer">الشركة المصنعة:</string>
+    <string name="device_model">طراز الجهاز:</string>
+    <string name="android_version">إصدار أندرويد:</string>
+    <string name="api_level">مستوى API:</string>
+    <string name="snack_device_info_copied">تم نسخ معلومات الجهاز إلى الحافظة</string>
+
+    <string name="help_and_feedback">المساعدة والملاحظات</string>
+    <string name="help">مساعدة</string>
+    <string name="faq">الأسئلة الشائعة</string>
+    <string name="popular_help_resources">مصادر المساعدة الشائعة</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="contact_us_description">أخبرنا المزيد وسنساعدك في الوصول إلى هناك</string>
+    <string name="view_in_google_play_store">عرض في متجر Google Play</string>
+    <string name="version_info">معلومات الإصدار</string>
+    <string name="version">الإصدار %1$s</string>
+    <string name="beta_program">برنامج تجريبي</string>
+
+    <string name="feedback">الملاحظات</string>
+
+    <string name="updates">التحديثات</string>
+
+    <string name="share">مشاركة</string>
+
+    <string name="support_us">ادعمنا</string>
+    <string name="paid_support">دعم مدفوع</string>
+    <string name="summary_donations">بغض النظر عن المبلغ الذي تتبرع به، ستساعدنا في الحفاظ على تشغيل تطبيقنا وتحسين ميزاتنا. نحن نقدر كرمك ولطفك!</string>
+    <string name="non_paid_support">دعم غير مدفوع</string>
+    <string name="web_ad">إعلان ويب</string>
+    <string name="error_failed_to_load_sku_details">فشل تحميل تفاصيل SKU</string>
+</resources>
