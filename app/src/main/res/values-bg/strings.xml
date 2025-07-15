@@ -167,7 +167,7 @@
     <string name="decrease_brightness">Намаляване на яркостта</string>
     <string name="unable_to_generate_password">Неуспешно генериране на парола</string>
     <string name="counter">Брояч: %s</string>
-    <string name="timer_left">%s:%s остават</string>
+    <string name="timer_left">%1$s:%2$s остават</string>
     <string name="refresh">Опресняване</string>
     <string name="youtube_url">URL адрес на Youtube</string>
     <string name="share_subject">Опитайте го сега!!!</string>

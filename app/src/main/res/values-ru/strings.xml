@@ -167,7 +167,7 @@
     <string name="decrease_brightness">Уменьшить яркость</string>
     <string name="unable_to_generate_password">Невозможно сгенерировать пароль</string>
     <string name="counter">Счетчик: %s</string>
-    <string name="timer_left">%s:%s осталось</string>
+    <string name="timer_left">%1$s:%2$s осталось</string>
     <string name="refresh">Обновить</string>
     <string name="youtube_url">Ссылка на YouTube</string>
     <string name="share_subject">Попробуйте сейчас!!!</string>

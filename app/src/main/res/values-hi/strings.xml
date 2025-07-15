@@ -167,7 +167,7 @@
     <string name="decrease_brightness">चमकदारता कम करें</string>
     <string name="unable_to_generate_password">पासवर्ड बनाने में असमर्थ</string>
     <string name="counter">गिनती: %s</string>
-    <string name="timer_left">%s:%s बचे हुए</string>
+    <string name="timer_left">%1$s:%2$s बचे हुए</string>
     <string name="refresh">ताजगी करें</string>
     <string name="youtube_url">Youtube URL</string>
     <string name="share_subject">अभी आजमाएं!!!</string>

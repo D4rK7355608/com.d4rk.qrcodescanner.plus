@@ -166,7 +166,7 @@
     <string name="decrease_brightness">Zmniejsz jasność</string>
     <string name="unable_to_generate_password">Nie można wygenerować hasła</string>
     <string name="counter">Licznik: %s</string>
-    <string name="timer_left">%s:%s pozostało</string>
+    <string name="timer_left">%1$s:%2$s pozostało</string>
     <string name="refresh">Odśwież</string>
     <string name="youtube_url">Adres URL w YouTube</string>
     <string name="share_subject">Spróbuj teraz!!!</string>

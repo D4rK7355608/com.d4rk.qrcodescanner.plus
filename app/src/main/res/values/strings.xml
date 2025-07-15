@@ -166,7 +166,7 @@
     <string name="decrease_brightness">Decrease brightness</string>
     <string name="unable_to_generate_password">Unable to generate password</string>
     <string name="counter">Counter: %s</string>
-    <string name="timer_left">%s:%s left</string>
+    <string name="timer_left">%1$s:%2$s left</string>
     <string name="refresh">Refresh</string>
     <string name="youtube_url">Youtube URL</string>
     <string name="share_subject">Try it now!!!</string>

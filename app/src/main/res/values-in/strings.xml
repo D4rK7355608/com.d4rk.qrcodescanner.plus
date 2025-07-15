@@ -167,7 +167,7 @@
     <string name="decrease_brightness">Kurangi kecerahan</string>
     <string name="unable_to_generate_password">Tidak dapat membuat kata sandi</string>
     <string name="counter">Penghitung: %s</string>
-    <string name="timer_left">%s:%s tersisa</string>
+    <string name="timer_left">%1$s:%2$s tersisa</string>
     <string name="refresh">Segarkan</string>
     <string name="youtube_url">URL Youtube</string>
     <string name="share_subject">Coba sekarang!!!</string>

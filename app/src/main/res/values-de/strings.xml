@@ -166,7 +166,7 @@
     <string name="decrease_brightness">Helligkeit verringern</string>
     <string name="unable_to_generate_password">Kennwort kann nicht generiert werden</string>
     <string name="counter">Zähler: %s</string>
-    <string name="timer_left">%s:%s übrig</string>
+    <string name="timer_left">%1$s:%2$s übrig</string>
     <string name="refresh">Aktualisieren</string>
     <string name="youtube_url">Youtube-URL</string>
     <string name="share_subject">Jetzt ausprobieren!!!</string>

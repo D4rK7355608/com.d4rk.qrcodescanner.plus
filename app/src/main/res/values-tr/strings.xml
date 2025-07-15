@@ -167,7 +167,7 @@
     <string name="decrease_brightness">Parlaklığı azalt</string>
     <string name="unable_to_generate_password">Şifre oluşturulamadı</string>
     <string name="counter">Sayıcı: %s</string>
-    <string name="timer_left">%s:%s kaldı</string>
+    <string name="timer_left">%1$s:%2$s kaldı</string>
     <string name="refresh">Yenile</string>
     <string name="youtube_url">Youtube URL\'si</string>
     <string name="share_subject">Hemen deneyin!!!</string>

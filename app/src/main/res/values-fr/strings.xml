@@ -166,7 +166,7 @@
     <string name="decrease_brightness">Diminuer la luminosité</string>
     <string name="unable_to_generate_password">Impossible de générer le mot de passe</string>
     <string name="counter">Compteur : %s</string>
-    <string name="timer_left">Temps restant : %s:%s</string>
+    <string name="timer_left">Temps restant : %1$s:%2$s</string>
     <string name="refresh">Actualiser</string>
     <string name="youtube_url">URL YouTube</string>
     <string name="share_subject">Essayez-le dès maintenant!!!</string>
