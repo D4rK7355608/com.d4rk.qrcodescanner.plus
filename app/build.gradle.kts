@@ -1,5 +1,4 @@
 import java.util.Properties
-import kotlin.toString
 
 plugins {
     alias(notation = libs.plugins.androidApplication)
@@ -20,10 +19,11 @@ android {
         applicationId = "com.d4rk.qrcodescanner.plus"
         minSdk = 26
         targetSdk = 36
-        versionCode = 30
+        versionCode = 31
         versionName = "3.1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        @Suppress("UnstableApiUsage") androidResources.localeFilters += listOf(
+        @Suppress("UnstableApiUsage")
+        androidResources.localeFilters += listOf(
             "ar-rEG" , "bg-rBG" , "bn-rBD" , "de-rDE" , "en" , "es-rGQ" , "es-rMX" , "fil-rPH" , "fr-rFR" , "hi-rIN" , "hu-rHU" , "in-rID" , "it-rIT" , "ja-rJP" , "ko-rKR" , "pl-rPL" , "pt-rBR" , "ro-rRO" , "ru-rRU" , "sv-rSE" , "th-rTH" , "tr-rTR" , "uk-rUA" , "ur-rPK" , "vi-rVN" , "zh-rTW"
         )
         vectorDrawables {
@@ -127,19 +127,19 @@ dependencies {
    // implementation("androidx.room:room-rxjava2:2.7.1") // todo del asap
     // TODO: Delete soon
     implementation( "androidx.paging:paging-runtime-ktx:3.3.6")
-    implementation("com.googlecode.ez-vcard:ez-vcard:0.12.0")
-    implementation("com.google.android.gms:play-services-oss-licenses:17.1.0")
+    implementation("com.googlecode.ez-vcard:ez-vcard:0.12.1")
+    implementation("com.google.android.gms:play-services-oss-licenses:17.2.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.9.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.9.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.1")
     implementation("androidx.gridlayout:gridlayout:1.1.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
-    implementation("com.airbnb.android:lottie:6.6.0")
+    implementation("com.airbnb.android:lottie:6.6.7")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
    // implementation("com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0")
-    implementation("commons-codec:commons-codec:1.16.0")
-    implementation("dev.turingcomplete:kotlin-onetimepassword:2.4.0")
+    implementation("commons-codec:commons-codec:1.18.0")
+    implementation("dev.turingcomplete:kotlin-onetimepassword:2.4.1")
     //implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
     implementation("me.zhanghai.android.fastscroll:library:1.3.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
