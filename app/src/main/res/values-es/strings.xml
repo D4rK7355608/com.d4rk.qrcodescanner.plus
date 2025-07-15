@@ -167,7 +167,7 @@
     <string name="decrease_brightness">Disminuir brillo</string>
     <string name="unable_to_generate_password">No se puede generar la contraseña</string>
     <string name="counter">Contador: %s</string>
-    <string name="timer_left">%s:%s restante</string>
+    <string name="timer_left">%1$s:%2$s restante</string>
     <string name="refresh">Actualizar</string>
     <string name="youtube_url">URL de YouTube</string>
     <string name="share_subject">¡Pruébalo ahora!</string>

@@ -166,7 +166,7 @@
     <string name="decrease_brightness">Fényerő csökkentése</string>
     <string name="unable_to_generate_password">Nem sikerült jelszót létrehozni</string>
     <string name="counter">Számláló: %s</string>
-    <string name="timer_left">%s:%s hátralévő idő</string>
+    <string name="timer_left">%1$s:%2$s hátralévő idő</string>
     <string name="refresh">Frissítés</string>
     <string name="youtube_url">YouTube URL</string>
     <string name="share_subject">Próbáld ki most!!!</string>

@@ -166,7 +166,7 @@
     <string name="decrease_brightness">Зменшити яскравість</string>
     <string name="unable_to_generate_password">Неможливо створити пароль</string>
     <string name="counter">Лічильник: %s</string>
-    <string name="timer_left">%s:%s залишилося</string>
+    <string name="timer_left">%1$s:%2$s залишилося</string>
     <string name="refresh">Оновити</string>
     <string name="youtube_url">URL-адреса YouTube</string>
     <string name="share_subject">Спробуйте зараз!!!</string>

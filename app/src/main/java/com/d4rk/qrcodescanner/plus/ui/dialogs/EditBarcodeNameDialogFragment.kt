@@ -50,7 +50,6 @@ class EditBarcodeNameDialogFragment : DialogFragment() {
             requestFocus()
         }
         val manager = requireContext().getSystemService(Activity.INPUT_METHOD_SERVICE) as? InputMethodManager
-        @Suppress("DEPRECATION")
-        manager?.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+        manager?.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT)
     }
 }

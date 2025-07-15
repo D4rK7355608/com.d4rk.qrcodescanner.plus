@@ -166,7 +166,7 @@
     <string name="decrease_brightness">Minska ljusstyrkan</string>
     <string name="unable_to_generate_password">Kan inte generera lösenord</string>
     <string name="counter">Räknare: %s</string>
-    <string name="timer_left">%s:%s kvar</string>
+    <string name="timer_left">%1$s:%2$s kvar</string>
     <string name="refresh">Uppdatera</string>
     <string name="youtube_url">Youtube URL</string>
     <string name="share_subject">Prova nu!!!</string>

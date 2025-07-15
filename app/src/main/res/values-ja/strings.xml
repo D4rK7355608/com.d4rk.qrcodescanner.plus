@@ -166,7 +166,7 @@
     <string name="decrease_brightness">明るさを下げる</string>
     <string name="unable_to_generate_password">パスワードを生成できません</string>
     <string name="counter">カウンター: %s</string>
-    <string name="timer_left">%s:%s 残り</string>
+    <string name="timer_left">%1$s:%2$s 残り</string>
     <string name="refresh">更新</string>
     <string name="youtube_url">YouTube URL</string>
     <string name="share_subject">今すぐ試してみてください！</string>
