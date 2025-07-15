@@ -4,6 +4,8 @@ import android.app.NotificationManager
 import android.content.Context
 import androidx.core.app.NotificationCompat
 import com.d4rk.qrcodescanner.plus.R
+import androidx.core.content.edit
+
 class AppUsageNotificationsManager(private val context: Context) {
     private val appUsageChannelId = "app_usage_channel"
     private val appUsageNotificationId = 0
@@ -23,6 +25,6 @@ class AppUsageNotificationsManager(private val context: Context) {
                 .setAutoCancel(true)
             notificationManager.notify(appUsageNotificationId, notificationBuilder.build())
         }
-        prefs.edit().putLong("last_used", currentTimestamp).apply()
+        prefs.edit { putLong("last_used", currentTimestamp) }
     }
 }

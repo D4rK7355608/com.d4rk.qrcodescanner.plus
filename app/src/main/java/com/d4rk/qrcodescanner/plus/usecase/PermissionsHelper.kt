@@ -10,7 +10,7 @@ object PermissionsHelper {
             activity.onRequestPermissionsResult(
                 requestCode,
                 permissions,
-                IntArray(permissions.size) { PackageManager.PERMISSION_GRANTED }
+                IntArray(permissions.size)
             )
             return
         }

@@ -2,6 +2,8 @@ package com.d4rk.qrcodescanner.plus.model.schema
 import android.net.Uri
 import com.d4rk.qrcodescanner.plus.extension.appendQueryParameterIfNotNullOrBlank
 import java.io.Serializable
+import androidx.core.net.toUri
+
 data class OtpAuth(
     val type: String? = null,
     val label: String? = null,
@@ -23,7 +25,7 @@ data class OtpAuth(
         private const val COUNTER_KEY = "counter"
         private const val PERIOD_KEY = "period"
         fun parse(text: String): OtpAuth? {
-            val uri = Uri.parse(text)
+            val uri = text.toUri()
             if (uri.scheme != URI_SCHEME) {
                 return null
             }

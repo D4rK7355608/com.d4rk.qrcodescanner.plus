@@ -273,21 +273,16 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
         val newBarcode = originalBarcode.copy(isFavorite = barcode.isFavorite.not())
         // Launch a coroutine in the lifecycleScope
         lifecycleScope.launch {
-            try {
-                // Perform the database operation on a background thread
+            runCatching {
                 withContext(Dispatchers.IO) {
-                    barcodeDatabase.save(newBarcode) // Assuming barcodeDatabase.save() is a suspend function
-                    // or you'll need to wrap it appropriately
-                    // e.g., using suspendCoroutine or a Flow
+                    barcodeDatabase.save(newBarcode)
                 }
-                // Update UI on the main thread
+            }.onSuccess {
                 barcode.isFavorite = newBarcode.isFavorite
                 showBarcodeIsFavorite(newBarcode.isFavorite)
-            } catch (e: Exception) {
-                // Handle errors on the main thread
-                // You might want to show an error message to the user here
+            }.onFailure { error ->
+                showError(error)
             }
-            // No need to call .addTo(disposable) as lifecycleScope handles cancellation.
         }
     }
 
@@ -407,8 +402,8 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
     }
     private fun sendEmail(email: String?) {
         val uri = "mailto:${email.orEmpty()}".toUri()
-        val intent = Intent(Intent.ACTION_SEND, uri).apply {
-            type = "text/plain"
+        val intent = Intent(Intent.ACTION_SENDTO, uri).apply {
+            setDataAndType(uri, "text/plain")
             putExtra(Intent.EXTRA_EMAIL, arrayOf(email.orEmpty()))
             putExtra(Intent.EXTRA_SUBJECT, barcode.emailSubject.orEmpty())
             putExtra(Intent.EXTRA_TEXT, barcode.emailBody.orEmpty())
@@ -649,7 +644,7 @@ class BarcodeActivity : BaseActivity(), DeleteConfirmationDialogFragment.Listene
     }
     private fun buildFullCountryName(country: String): String {
         val currentLocale = currentLocale ?: return ""
-        val countryName = Locale("", country).getDisplayName(currentLocale)
+        val countryName = Locale.Builder().setRegion(country).build().getDisplayName(currentLocale)
         val countryEmoji = country.toCountryEmoji()
         return "$countryEmoji $countryName"
     }

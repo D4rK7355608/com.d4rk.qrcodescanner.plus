@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.d4rk.qrcodescanner.plus.extension.unsafeLazy
 import com.d4rk.qrcodescanner.plus.model.SearchEngine
 import com.google.zxing.BarcodeFormat
+import androidx.core.content.edit
+
 class Settings(private val context: Context) {
     companion object {
         private const val SHARED_PREFERENCES_NAME = "SHARED_PREFERENCES_NAME"
@@ -61,19 +63,19 @@ class Settings(private val context: Context) {
         return sharedPreferences.getBoolean(format.name, true)
     }
     fun setFormatSelected(format: BarcodeFormat, isSelected: Boolean) {
-        sharedPreferences.edit().putBoolean(format.name, isSelected).apply()
+        sharedPreferences.edit { putBoolean(format.name, isSelected) }
     }
     private fun get(key: Key, default: Boolean = false): Boolean {
         return sharedPreferences.getBoolean(key.name, default)
     }
     private fun set(key: Key, value: Boolean) {
-        sharedPreferences.edit().putBoolean(key.name, value).apply()
+        sharedPreferences.edit { putBoolean(key.name, value) }
     }
     private fun get(key: Key, default: SearchEngine = SearchEngine.NONE): SearchEngine {
         val rawValue = sharedPreferences.getString(key.name, null) ?: default.name
         return SearchEngine.valueOf(rawValue)
     }
     private fun set(key: Key, value: SearchEngine) {
-        sharedPreferences.edit().putString(key.name, value.name).apply()
+        sharedPreferences.edit { putString(key.name, value.name) }
     }
 }

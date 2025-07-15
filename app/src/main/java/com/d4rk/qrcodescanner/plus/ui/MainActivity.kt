@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.edit
 import androidx.core.os.LocaleListCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
@@ -23,7 +24,6 @@ import com.d4rk.qrcodescanner.plus.ui.settings.support.SupportActivity
 import com.d4rk.qrcodescanner.plus.ui.startup.StartupActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.appupdate.AppUpdateManager
@@ -33,6 +33,7 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var appUpdateManager: AppUpdateManager
@@ -118,27 +119,15 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-    @Deprecated("Deprecated in Java")
-    @Suppress("DEPRECATION")
-    override fun onBackPressed() {
-        MaterialAlertDialogBuilder(this)
-            .setTitle(R.string.close)
-            .setMessage(R.string.summary_close)
-            .setPositiveButton(android.R.string.yes) { _, _ ->
-                super.onBackPressed()
-                moveTaskToBack(true)
-            }
-            .setNegativeButton(android.R.string.no, null)
-            .apply { show() }
-    }
+
     override fun onResume() {
         super.onResume()
         if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.key_firebase), true)) {
             FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(false)
-            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(false)
+            FirebaseCrashlytics.getInstance().isCrashlyticsCollectionEnabled = false
         } else {
             FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(true)
-            FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
+            FirebaseCrashlytics.getInstance().isCrashlyticsCollectionEnabled = true
         }
         val appUsageNotificationsManager = AppUsageNotificationsManager(this)
         appUsageNotificationsManager.checkAndSendAppUsageNotification()
@@ -154,7 +143,7 @@ class MainActivity : AppCompatActivity() {
     private fun startupScreen() {
         val startupPreference = getSharedPreferences("startup", MODE_PRIVATE)
         if (startupPreference.getBoolean("value", true)) {
-            startupPreference.edit().putBoolean("value", false).apply()
+            startupPreference.edit { putBoolean("value", false) }
             startActivity(Intent(this, StartupActivity::class.java))
         }
     }

@@ -13,6 +13,8 @@ import com.d4rk.qrcodescanner.plus.databinding.ActivityHelpBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.review.ReviewManager
 import com.google.android.play.core.review.ReviewManagerFactory
+import androidx.core.net.toUri
+
 class HelpActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHelpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +41,8 @@ class HelpActivity : AppCompatActivity() {
                     reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
                 }
                 .addOnFailureListener {
-                    val uri = Uri.parse("https://play.google.com/store/apps/details?id=${requireContext().packageName}&showAllReviews=true")
+                    val uri =
+                        "https://play.google.com/store/apps/details?id=${requireContext().packageName}&showAllReviews=true".toUri()
                     val intent = Intent(Intent.ACTION_VIEW, uri)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     try {
