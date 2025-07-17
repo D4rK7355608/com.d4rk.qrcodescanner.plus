@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.Properties
 
 plugins {
@@ -24,7 +25,32 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         @Suppress("UnstableApiUsage")
         androidResources.localeFilters += listOf(
-            "ar-rEG" , "bg-rBG" , "bn-rBD" , "de-rDE" , "en" , "es-rGQ" , "es-rMX" , "fil-rPH" , "fr-rFR" , "hi-rIN" , "hu-rHU" , "in-rID" , "it-rIT" , "ja-rJP" , "ko-rKR" , "pl-rPL" , "pt-rBR" , "ro-rRO" , "ru-rRU" , "sv-rSE" , "th-rTH" , "tr-rTR" , "uk-rUA" , "ur-rPK" , "vi-rVN" , "zh-rTW"
+            "ar-rEG",
+            "bg-rBG",
+            "bn-rBD",
+            "de-rDE",
+            "en",
+            "es-rGQ",
+            "es-rMX",
+            "fil-rPH",
+            "fr-rFR",
+            "hi-rIN",
+            "hu-rHU",
+            "in-rID",
+            "it-rIT",
+            "ja-rJP",
+            "ko-rKR",
+            "pl-rPL",
+            "pt-rBR",
+            "ro-rRO",
+            "ru-rRU",
+            "sv-rSE",
+            "th-rTH",
+            "tr-rTR",
+            "uk-rUA",
+            "ur-rPK",
+            "vi-rVN",
+            "zh-rTW"
         )
         vectorDrawables {
             useSupportLibrary = true
@@ -55,8 +81,7 @@ android {
                 keyAlias = signingProps["KEY_ALIAS"].toString()
                 keyPassword = signingProps["KEY_PASSWORD"].toString()
             }
-        }
-        else {
+        } else {
             android.buildTypes.getByName("release").signingConfig = null
         }
     }
@@ -81,7 +106,10 @@ android {
             multiDexEnabled = true
             isMinifyEnabled = false
             isShrinkResources = false
-            proguardFiles(getDefaultProguardFile(name = "proguard-android-optimize.txt") , "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile(name = "proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
@@ -90,8 +118,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    kotlinOptions {
-        jvmTarget = "21"
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_21)
+        }
     }
 
     buildFeatures {
@@ -114,7 +144,7 @@ android {
 }
 dependencies {
     // App Core
-    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.28") {
+    implementation(dependencyNotation = "com.github.D4rK7355608:AppToolkit:1.0.38") {
         isTransitive = true
     }
 
@@ -124,23 +154,20 @@ dependencies {
     implementation(dependencyNotation = libs.androidx.room.runtime)
     implementation(dependencyNotation = libs.androidx.room.paging)
 
-   // implementation("androidx.room:room-rxjava2:2.7.1") // todo del asap
     // TODO: Delete soon
-    implementation( "androidx.paging:paging-runtime-ktx:3.3.6")
+    implementation("androidx.paging:paging-runtime-ktx:3.3.6")
     implementation("com.googlecode.ez-vcard:ez-vcard:0.12.1")
     implementation("com.google.android.gms:play-services-oss-licenses:17.2.1")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.9.1")
-    implementation("androidx.navigation:navigation-ui-ktx:2.9.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.2")
     implementation("androidx.gridlayout:gridlayout:1.1.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
     implementation("com.github.yuriy-budiyev:code-scanner:2.3.2")
     implementation("com.airbnb.android:lottie:6.6.7")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
-   // implementation("com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.2.0")
     implementation("commons-codec:commons-codec:1.18.0")
     implementation("dev.turingcomplete:kotlin-onetimepassword:2.4.1")
-    //implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
     implementation("me.zhanghai.android.fastscroll:library:1.3.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 }
