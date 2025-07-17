@@ -23,5 +23,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "QR & Bar Code Scanner Plus"
+rootProject.name = "QR & Bar Code Scanner for Android"
 include(":app")
