@@ -116,21 +116,6 @@
                 app:iconBackground="?attr/colorPrimary"
                 app:text="@string/itf"
                 app:isDelimiterVisible="false"/>
-            <com.google.android.material.card.MaterialCardView
-                style="@style/Widget.Material3.CardView.Outlined"
-                android:id="@+id/card_view_ad"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/default_margin_big"
-                android:layout_marginHorizontal="@dimen/default_margin"
-                app:layout_constraintTop_toBottomOf="@id/card_view_about">
-                <com.google.android.gms.ads.AdView
-                    android:id="@+id/ad_view"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    ads:adSize="FULL_BANNER"
-                    ads:adUnitId="ca-app-pub-5294151573817700/5823012328"/>
-            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

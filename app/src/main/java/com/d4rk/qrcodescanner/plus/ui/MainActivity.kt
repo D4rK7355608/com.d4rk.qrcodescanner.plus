@@ -1,8 +1,6 @@
 package com.d4rk.qrcodescanner.plus.ui
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -20,12 +18,10 @@ import com.d4rk.qrcodescanner.plus.databinding.ActivityMainBinding
 import com.d4rk.qrcodescanner.plus.notifications.AppUpdateNotificationsManager
 import com.d4rk.qrcodescanner.plus.notifications.AppUsageNotificationsManager
 import com.d4rk.qrcodescanner.plus.ui.settings.SettingsActivity
-import com.d4rk.qrcodescanner.plus.ui.settings.support.SupportActivity
 import com.d4rk.qrcodescanner.plus.ui.startup.StartupActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.navigation.NavigationBarView
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.ActivityResult
@@ -39,8 +35,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appUpdateManager: AppUpdateManager
     private val requestUpdateCode = 1
     private lateinit var appUpdateNotificationsManager: AppUpdateNotificationsManager
-    private val handler = Handler(Looper.getMainLooper())
-    private val snackbarInterval: Long = 60L * 24 * 60 * 60 * 1000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
@@ -54,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         applyAppSettings()
-        handler.postDelayed(::showSnackbar, snackbarInterval)
     }
     private fun applyAppSettings() {
         val themeValues = resources.getStringArray(R.array.preference_theme_values)
@@ -82,7 +75,6 @@ class MainActivity : AppCompatActivity() {
             defaultTabValues[0] -> R.id.navigation_scan
             defaultTabValues[1] -> R.id.navigation_create
             defaultTabValues[2] -> R.id.navigation_history
-            defaultTabValues[3] -> R.id.navigation_about
             else -> R.id.navigation_scan
         }
         navController.graph.setStartDestination(startFragmentId)
@@ -94,17 +86,8 @@ class MainActivity : AppCompatActivity() {
             bottomNavigationBarLabelsValues[2] -> NavigationBarView.LABEL_VISIBILITY_UNLABELED
             else -> NavigationBarView.LABEL_VISIBILITY_AUTO
         }
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history, R.id.navigation_about))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history))
         setupActionBarWithNavController(navController, appBarConfiguration)
-    }
-    private fun showSnackbar() {
-        Snackbar.make(binding.root, getString(R.string.snack_support), Snackbar.LENGTH_LONG)
-            .setAction(getString(android.R.string.ok)) {
-                val intent = Intent(this, SupportActivity::class.java)
-                startActivity(intent)
-            }
-            .show()
-        handler.postDelayed(::showSnackbar, snackbarInterval)
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)

@@ -22,8 +22,6 @@ class CreateBarcodeAllActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateBarcodeAllBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        MobileAds.initialize(this)
-        binding.adView.loadAd(AdRequest.Builder().build())
         supportEdgeToEdge()
         handleButtonsClicked()
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()

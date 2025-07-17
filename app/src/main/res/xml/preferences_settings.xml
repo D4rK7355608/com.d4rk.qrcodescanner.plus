@@ -246,7 +246,7 @@
             app:summary="@string/summary_preference_settings_support_developer">
             <intent
                 android:targetPackage="com.d4rk.qrcodescanner.plus"
-                android:targetClass="com.d4rk.qrcodescanner.plus.ui.settings.support.SupportActivity"/>
+                android:targetClass="com.d4rk.android.libs.apptoolkit.app.support.ui.SupportActivity"/>
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
     <androidx.preference.PreferenceCategory

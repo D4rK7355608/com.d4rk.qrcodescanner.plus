@@ -20,8 +20,6 @@ class CreateBarcodeFragment : Fragment() {
         binding = FragmentCreateBarcodeBinding.inflate(inflater, container, false)
         FastScrollerBuilder(binding.scrollView).useMd2Style().build()
         MobileAds.initialize(requireContext())
-        val adRequestBuilder = AdRequest.Builder().build()
-        binding.adView.loadAd(adRequestBuilder)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
