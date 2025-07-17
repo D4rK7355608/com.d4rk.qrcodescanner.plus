@@ -5,6 +5,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.core.content.edit
 import androidx.core.os.LocaleListCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appUpdateManager: AppUpdateManager
     private val requestUpdateCode = 1
     private lateinit var appUpdateNotificationsManager: AppUpdateNotificationsManager
+    private lateinit var drawerToggle: ActionBarDrawerToggle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
@@ -46,7 +49,15 @@ class MainActivity : AppCompatActivity() {
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateNotificationsManager = AppUpdateNotificationsManager(this)
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        drawerToggle = ActionBarDrawerToggle(
+            this,
+            binding.drawerLayout,
+            binding.toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
+        )
+        binding.drawerLayout.addDrawerListener(drawerToggle)
+        drawerToggle.syncState()
         applyAppSettings()
     }
     private fun applyAppSettings() {
@@ -94,6 +105,9 @@ class MainActivity : AppCompatActivity() {
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (drawerToggle.onOptionsItemSelected(item)) {
+            return true
+        }
         return when (item.itemId) {
             R.id.settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
