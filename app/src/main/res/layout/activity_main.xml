@@ -9,6 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
         android:layout_height="wrap_content">
 
         <!-- Removed custom toolbar, using system ActionBar instead -->
@@ -38,7 +39,6 @@
             app:itemTextAppearanceActive="@style/TextAppearance.Material3.BodyMedium"
             app:itemTextAppearanceInactive="@style/TextAppearance.Material3.BodySmall"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:itemBackground="?attr/colorSurface"
             app:menu="@menu/bottom_nav_menu"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
