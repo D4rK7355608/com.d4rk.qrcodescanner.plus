@@ -3,12 +3,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.net.Uri
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.core.content.edit
+import androidx.core.net.toUri
 import androidx.core.os.LocaleListCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
@@ -16,6 +16,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
+import com.d4rk.android.libs.apptoolkit.app.support.ui.SupportActivity
+import com.d4rk.qrcodescanner.plus.BuildConfig
 import com.d4rk.qrcodescanner.plus.R
 import com.d4rk.qrcodescanner.plus.databinding.ActivityMainBinding
 import com.d4rk.qrcodescanner.plus.notifications.AppUpdateNotificationsManager
@@ -23,7 +25,6 @@ import com.d4rk.qrcodescanner.plus.notifications.AppUsageNotificationsManager
 import com.d4rk.qrcodescanner.plus.ui.settings.SettingsActivity
 import com.d4rk.qrcodescanner.plus.ui.settings.help.HelpActivity
 import com.d4rk.qrcodescanner.plus.ui.startup.StartupActivity
-import com.d4rk.qrcodescanner.plus.BuildConfig
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.navigation.NavigationBarView
@@ -34,7 +35,6 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
-import com.d4rk.android.libs.apptoolkit.app.support.ui.SupportActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner.plus/master/CHANGELOG.md"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -76,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.drawer_updates -> {
-                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(changelogUrl)))
+                    startActivity(Intent(Intent.ACTION_VIEW, changelogUrl.toUri()))
                     true
                 }
                 R.id.drawer_share -> {
@@ -166,7 +167,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment).navController
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
     override fun onResume() {
