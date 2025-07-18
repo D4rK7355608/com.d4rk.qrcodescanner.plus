@@ -56,11 +56,10 @@ class MainActivity : AppCompatActivity() {
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateNotificationsManager = AppUpdateNotificationsManager(this)
-        setSupportActionBar(binding.toolbar)
+        // Use system action bar instead of custom toolbar
         drawerToggle = ActionBarDrawerToggle(
             this,
             binding.drawerLayout,
-            binding.toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
