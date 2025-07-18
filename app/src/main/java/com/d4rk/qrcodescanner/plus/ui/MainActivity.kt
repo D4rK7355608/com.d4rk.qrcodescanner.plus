@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateNotificationsManager = AppUpdateNotificationsManager(this)
-        // Use system action bar instead of custom toolbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         drawerToggle = ActionBarDrawerToggle(
             this,
             binding.drawerLayout,
@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             R.string.navigation_drawer_close
         )
         binding.drawerLayout.addDrawerListener(drawerToggle)
+        drawerToggle.isDrawerIndicatorEnabled = true
         drawerToggle.syncState()
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
             val handled = when (menuItem.itemId) {
@@ -141,7 +142,10 @@ class MainActivity : AppCompatActivity() {
             setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history),
             binding.drawerLayout
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        supportActionBar?.let{
+            setupActionBarWithNavController(navController, appBarConfiguration)
+        }
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
