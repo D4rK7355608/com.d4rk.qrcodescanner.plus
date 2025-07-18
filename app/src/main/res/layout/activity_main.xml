@@ -9,10 +9,22 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:fitsSystemWindows="true"
         android:layout_height="wrap_content">
 
-        <!-- Removed custom toolbar, using system ActionBar instead -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:background="@android:color/transparent"
+            style="@style/AppBarLayoutStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/nav_host_fragment_activity_main"
@@ -21,7 +33,7 @@
             android:layout_height="0dp"
             app:defaultNavHost="true"
             app:navGraph="@navigation/mobile_navigation"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
             app:layout_constraintBottom_toTopOf="@id/ad_view"/>
 
         <com.google.android.gms.ads.AdView
@@ -39,6 +51,7 @@
             app:itemTextAppearanceActive="@style/TextAppearance.Material3.BodyMedium"
             app:itemTextAppearanceInactive="@style/TextAppearance.Material3.BodySmall"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:itemBackground="?attr/colorSurface"
             app:menu="@menu/bottom_nav_menu"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,7 @@ import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.core.os.LocaleListCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -42,8 +43,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appUpdateManager: AppUpdateManager
     private val requestUpdateCode = 1
     private lateinit var appUpdateNotificationsManager: AppUpdateNotificationsManager
-    private lateinit var drawerToggle: ActionBarDrawerToggle
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var navController: NavController
     private val changelogUrl =
         "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner.plus/master/CHANGELOG.md"
 
@@ -53,18 +54,13 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+
         MobileAds.initialize(this)
         binding.adView.loadAd(AdRequest.Builder().build())
         appUpdateManager = AppUpdateManagerFactory.create(this)
         appUpdateNotificationsManager = AppUpdateNotificationsManager(this)
-
-        drawerToggle = ActionBarDrawerToggle(
-            this,
-            binding.drawerLayout,
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close
-        )
-        binding.drawerLayout.addDrawerListener(drawerToggle)
 
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
             val handled = when (menuItem.itemId) {
@@ -122,7 +118,7 @@ class MainActivity : AppCompatActivity() {
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageCode))
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
-        val navController = navHostFragment.navController
+        navController = navHostFragment.navController
 
         val startFragmentId = when (sharedPreferences.getString(defaultTabKey, defaultTabValue)) {
             defaultTabValues[0] -> R.id.navigation_scan
@@ -141,19 +137,13 @@ class MainActivity : AppCompatActivity() {
             bottomNavigationBarLabelsValues[2] -> NavigationBarView.LABEL_VISIBILITY_UNLABELED
             else -> NavigationBarView.LABEL_VISIBILITY_AUTO
         }
+
         appBarConfiguration = AppBarConfiguration(
-            topLevelDestinationIds = setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history),
-            drawerLayout = binding.drawerLayout
+            setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history),
+            binding.drawerLayout
         )
 
-        supportActionBar?.let{
-            setupActionBarWithNavController(navController, appBarConfiguration)
-        }
-    }
-
-    override fun onPostCreate(savedInstanceState: Bundle?) {
-        super.onPostCreate(savedInstanceState)
-        drawerToggle.syncState()
+        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -162,9 +152,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (drawerToggle.onOptionsItemSelected(item)) {
-            return true
-        }
         return when (item.itemId) {
             R.id.settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
@@ -179,15 +166,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment).navController
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     override fun onResume() {
         super.onResume()
-        val enableFirebase = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.key_firebase), true)
-        FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(enableFirebase)
-        FirebaseCrashlytics.getInstance().isCrashlyticsCollectionEnabled = enableFirebase
+        if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.key_firebase), true)) {
+            FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(false)
+            FirebaseCrashlytics.getInstance().isCrashlyticsCollectionEnabled = false
+        } else {
+            FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(true)
+            FirebaseCrashlytics.getInstance().isCrashlyticsCollectionEnabled = true
+        }
         val appUsageNotificationsManager = AppUsageNotificationsManager(this)
         appUsageNotificationsManager.checkAndSendAppUsageNotification()
         appUpdateNotificationsManager.checkAndSendUpdateNotification()
