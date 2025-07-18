@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
     private val requestUpdateCode = 1
     private lateinit var appUpdateNotificationsManager: AppUpdateNotificationsManager
     private lateinit var drawerToggle: ActionBarDrawerToggle
+    private lateinit var appBarConfiguration: AppBarConfiguration
     private val changelogUrl =
         "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner.plus/master/CHANGELOG.md"
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -136,7 +137,10 @@ class MainActivity : AppCompatActivity() {
             bottomNavigationBarLabelsValues[2] -> NavigationBarView.LABEL_VISIBILITY_UNLABELED
             else -> NavigationBarView.LABEL_VISIBILITY_AUTO
         }
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history))
+        appBarConfiguration = AppBarConfiguration(
+            setOf(R.id.navigation_scan, R.id.navigation_create, R.id.navigation_history),
+            binding.drawerLayout
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -158,6 +162,11 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment).navController
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     override fun onResume() {
