@@ -3,6 +3,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -20,7 +21,9 @@ import com.d4rk.qrcodescanner.plus.databinding.ActivityMainBinding
 import com.d4rk.qrcodescanner.plus.notifications.AppUpdateNotificationsManager
 import com.d4rk.qrcodescanner.plus.notifications.AppUsageNotificationsManager
 import com.d4rk.qrcodescanner.plus.ui.settings.SettingsActivity
+import com.d4rk.qrcodescanner.plus.ui.settings.help.HelpActivity
 import com.d4rk.qrcodescanner.plus.ui.startup.StartupActivity
+import com.d4rk.qrcodescanner.plus.BuildConfig
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.material.navigation.NavigationBarView
@@ -31,6 +34,7 @@ import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.d4rk.android.libs.apptoolkit.app.support.ui.SupportActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -38,6 +42,8 @@ class MainActivity : AppCompatActivity() {
     private val requestUpdateCode = 1
     private lateinit var appUpdateNotificationsManager: AppUpdateNotificationsManager
     private lateinit var drawerToggle: ActionBarDrawerToggle
+    private val changelogUrl =
+        "https://raw.githubusercontent.com/D4rK7355608/com.d4rk.qrcodescanner.plus/master/CHANGELOG.md"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
@@ -58,6 +64,39 @@ class MainActivity : AppCompatActivity() {
         )
         binding.drawerLayout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
+        binding.navigationView.setNavigationItemSelectedListener { menuItem ->
+            val handled = when (menuItem.itemId) {
+                R.id.drawer_settings -> {
+                    startActivity(Intent(this, SettingsActivity::class.java))
+                    true
+                }
+                R.id.drawer_help -> {
+                    startActivity(Intent(this, HelpActivity::class.java))
+                    true
+                }
+                R.id.drawer_updates -> {
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(changelogUrl)))
+                    true
+                }
+                R.id.drawer_share -> {
+                    val sharingIntent = Intent(Intent.ACTION_SEND).apply {
+                        type = "text/plain"
+                        putExtra(
+                            Intent.EXTRA_TEXT,
+                            "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID
+                        )
+                        putExtra(Intent.EXTRA_SUBJECT, R.string.share_subject)
+                    }
+                    startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_using)))
+                    true
+                }
+                else -> false
+            }
+            if (handled) {
+                binding.drawerLayout.closeDrawers()
+            }
+            handled
+        }
         applyAppSettings()
     }
     private fun applyAppSettings() {
@@ -111,6 +150,10 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
+                true
+            }
+            R.id.support -> {
+                startActivity(Intent(this, SupportActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)
